@@ -17,11 +17,13 @@ class Tracker:
         self.matrices = list()
         self.losses = list()
         self.timestamps = list()
+        self.hashes = list()
 
     def track(self, mat, loss, score=0):
         matrix = mat.cpu()
         tpr, fpr = utils.calculate_tpr_fpr(self.gt_matrix, matrix)
         acc = utils.calculate_accuracy(self.gt_matrix, matrix)
+        hash = utils.hash_tensor(matrix)
 
         if self.start_time is None:
             timestamp = 0
@@ -36,11 +38,13 @@ class Tracker:
         self.matrices.append(matrix)
         self.losses.append(loss)
         self.timestamps.append(timestamp)
+        num_times_seen_before = sum([1 if hash == h else 0 for h in self.hashes])
+        self.hashes.append(hash)
 
         print('------------------------- TRACKING ---------------------------')
         #print('Matrix generation ' + str(self.gen_num) + ':')
-        print('Matrix Hash: ' + str(utils.hash_tensor(matrix)))
-        print(matrix.data.cpu().numpy().astype(int))
+        print('Matrix Hash: ' + hash + ', num_times_seen_before: ' + str(num_times_seen_before))
+        #print(matrix.data.cpu().numpy().astype(int))
         print('ACC: ' + str(acc))
         print('TPR/FPR: ' + str(tpr) + ', ' + str(fpr))
         print('Loss: ' + str(loss))

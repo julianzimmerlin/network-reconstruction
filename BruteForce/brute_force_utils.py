@@ -39,14 +39,3 @@ def get_local_extrema(matrices, mean_scores, get_minima):
             max_scores.append(matrices[i])
             max_indices.append(i)
     return max_scores, max_indices
-
-def get_all_neighbors(matrix):
-    neighbors = list()
-    for i in range(matrix.size()[0]):
-       for j in range(i+1, matrix.size()[1]):
-           neighbor = matrix.detach().clone()
-           neighbor[i,j] = 1 - neighbor[i,j]
-           neighbor[j,i] = 1 - neighbor[j,i]
-           neighbor.requires_grad_(True)
-           neighbors.append(neighbor)
-    return neighbors

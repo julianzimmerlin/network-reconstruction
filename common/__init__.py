@@ -1,10 +1,10 @@
 import utils
-import sys
+import pickle
 
-print(sys.maxsize)
+init_matrix_address = r'D:\Uni\BA\ColabOutputs\hillclimbing_debug\matrices1.pickle'
 
-mat = utils.id2matrix(1000000818, 10)
-mat2 = utils.id2matrix(1000000818, 10)
+with open(init_matrix_address, 'rb') as f:
+    matrices = pickle.load(f, encoding='latin1')
+init_matrix = matrices[-1]
 
-print(utils.hash_tensor(mat))
-print(utils.hash_tensor(mat2))
+print(utils.hash_tensor(init_matrix))

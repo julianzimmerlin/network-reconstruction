@@ -8,8 +8,8 @@ import logger as lo
 import sys, os
 
 series_address = '../data/SIS_FIXED/timeseries_ba10_1k_0.2.pickle'
-matrices_address = r'D:\Uni\BA\Development\BruteForce\is_minimum_data\SIS_ba10_fail\matrices_2.pickle'
-gt_address = ''
+matrices_address = r'D:\Uni\BA\ColabOutputs\hillclimbing_debug\matrices.pickle'
+gt_address = '../data/SIS_FIXED/edges_ba10.pickle'
 SEED = 2
 NUM_DYN_EPOCHS = 200
 DETECT_EARLY_CONVERGENCE = True
@@ -61,7 +61,10 @@ def calc_guided_mutation_probs(matrix, sym=True, softmax_factor=1., allow_mut_on
             print('Caution, directed guided mutation currently always allows mutation of diagonal')
         probs = softmax(gradient_partially_flipped.view(NUM_NODES ** 2) / softmax_factor).view(NUM_NODES, NUM_NODES)
     return probs
-#--------------------------------
+
+# --------------------------------
+
+matrices = [matrices[-1]]
 np.set_printoptions(floatmode='fixed', suppress=True, precision=5, linewidth=300)
 print('matrices length: ' + str(len(matrices)))
 unique_matrices = list()
@@ -73,13 +76,13 @@ with open(logger.get_path() + '/unique_matrices.pickle', 'wb') as f:
     pickle.dump(unique_matrices, f)
 
 for umat_num, umat in enumerate(unique_matrices):
-    neighbors = bfu.get_all_neighbors(umat)
+    neighbors = ut.get_all_neighbors(umat)
     all_matrices = [umat] + neighbors
     losses = torch.zeros(len(all_matrices), NUM_RUNS)
     for i, mat in enumerate(all_matrices):
         for run in range(NUM_RUNS):
             print('matrix ' + str(i) + ', run ' + str(run) + ': ', end='')
-            _,loss = evaluator.evaluate_individual(mat, get_gradient=True)
+            _,loss,_,_ = evaluator.evaluate_individual(mat, get_gradient=True)
             losses[i,run] = loss
 
     means = losses.mean(dim=1)

@@ -1,4 +1,5 @@
 import torch
+import hashlib
 
 # calculates fpr and tpr of a matrix compared to the ground truth adjacency matrix
 def calculate_tpr_fpr(ground_truth, mat, skip_diag=True):
@@ -34,8 +35,11 @@ def hash_tensor(matrix):
     string = ''
     triu_indices = torch.triu_indices(row=matrix.size()[0], col=matrix.size()[0], offset=1)
     for entry in matrix[triu_indices[0], triu_indices[1]]:
-        string += str(entry.item())
-    return hash(string)
+        string += str(entry.to(torch.int).item())
+
+    m = hashlib.shake_128()
+    m.update(bytes(string, 'utf-8'))
+    return m.hexdigest(8)
 
 # converts a matrix id (integer between 0 and 2^(num_nodes*(num_nodes-1) // 2) to the corresponding matrix of size num_nodes
 # def id2matrix(id, num_nodes):
@@ -86,3 +90,47 @@ def has_converged(lo_list):
         return True
     else:
         return False
+
+def get_all_neighbors(matrix):
+    neighbors = list()
+    for i in range(matrix.size()[0]):
+       for j in range(i+1, matrix.size()[1]):
+           neighbor = matrix.detach().clone()
+           neighbor[i,j] = 1 - neighbor[i,j]
+           neighbor[j,i] = 1 - neighbor[j,i]
+           neighbor.requires_grad_(True)
+           neighbors.append(neighbor)
+    return neighbors
+
+
+def calc_mutation_order_gradient(matrix):
+    symmetrize_matrix_(matrix.grad, take_mean=True)
+    minus_grad = -1 * matrix.grad
+    flipped_matrix = 1 - matrix.detach()
+    gradient_partially_flipped = flipped_matrix * minus_grad + matrix.detach() * matrix.grad
+    tril_selection_mat = torch.ones_like(gradient_partially_flipped).tril(diagonal=0) == 1
+    gradient_partially_flipped[tril_selection_mat] = -torch.ones(matrix.size()[0] * (matrix.size()[0] + 1) // 2)
+    top_entries, top_indices = gradient_partially_flipped.view(-1).topk(matrix.size()[0] * (matrix.size()[0]-1) // 2)
+    top_indices_rows = top_indices // matrix.size()[1]
+    top_indices_cols = top_indices % matrix.size()[0]
+    top_ind_stacked = torch.stack((top_indices_rows, top_indices_cols), dim=-1)
+    return top_ind_stacked
+
+def calc_mutation_order_evalepoch(matrix, dyn_learner, evaluator):
+    indices = list()
+    losses = list()
+    for i in range(matrix.size()[0]):
+        for j in range(matrix.size()[1]):
+            if j <= i:
+                continue
+            neighbor = matrix.detach().clone()
+            neighbor[i,j] = 1 - neighbor[i,j]
+            neighbor[j,i] = 1 - neighbor[j,i]
+            _, loss = evaluator.evaluate_individual_no_training(neighbor, dyn_learner, False)
+            indices.append(torch.tensor([i,j]))
+            losses.append(torch.tensor(loss))
+    indices_tensor = torch.stack(indices)
+    losses_tensor = torch.stack(losses)
+    best_losses, best_indices = losses_tensor.sort()
+    indices_tensor = indices_tensor[best_indices]
+    return indices_tensor

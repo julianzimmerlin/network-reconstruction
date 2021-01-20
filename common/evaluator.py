@@ -30,29 +30,20 @@ class Evaluator:
         print('NUM_BATCHES: ' + str(self.NUM_BATCHES))
         print('USE_MAX: ' + str(USE_MAX))
 
-    def has_converged(self, losses):
-        if len(losses) < 10:
-            return False
-        diffs = abs(losses[1:] - losses[:-1])
-        if (diffs[-9:] < 4e-5).all():
-            return True
-        else:
-            return False
-
-    def evaluate_individual(self, matrix_in,  NUM_DYN_EPOCHS, dyn_learner=None, optimizer=None, get_gradient=True):
-        self.NUM_DYN_EPOCHS = NUM_DYN_EPOCHS
+    def evaluate_individual(self, matrix_in,  NUM_DYN_EPOCHS=0, dyn_learner=None, optimizer=None, get_gradient=True):
+        if NUM_DYN_EPOCHS <= 0:
+            NUM_DYN_EPOCHS = self.NUM_DYN_EPOCHS
         if dyn_learner == None:
             dyn_learner = models.GraphNetwork(self.data_loader.dataset.size()[-1], self.HIDDEN_SIZE, not self.IS_CONTINUOUS)
-
+        if optimizer == None:
+            optimizer = optim.Adam(dyn_learner.parameters(), lr=0.001 if not self.IS_CONTINUOUS else 0.0001)
         if USE_GPU_DYN:
             dyn_learner = dyn_learner.cuda()
             matrix = matrix_in.cuda()
-        if optimizer == None:
-            optimizer = optim.Adam(dyn_learner.parameters(), lr=0.001 if not self.IS_CONTINUOUS else 0.0001)
 
         ep = 0
         mean_losses = list()
-        while (ep<self.NUM_DYN_EPOCHS and (not ut.has_converged(mean_losses) if self.DETECT_EARLY_CONVERGENCE else True)):
+        while (ep<NUM_DYN_EPOCHS and (not ut.has_converged(mean_losses) if self.DETECT_EARLY_CONVERGENCE else True)):
             losses = []
             for batch_idx, data in enumerate(self.data_loader):
                 # data_train: BATCH_SIZE x NUM_NODES x NUM_STEPS x INPUT_SIZE double
@@ -67,24 +58,10 @@ class Evaluator:
             ep += 1
 
         # one more pass over the training data to calculate loss and possibly gradient on structure
-        losses=list()
-        for batch_idx, data in enumerate(self.data_loader):
-            # data_train: BATCH_SIZE x NUM_NODES x NUM_STEPS x INPUT_SIZE double
-            if USE_GPU_DYN:
-                data = data.cuda()
-            loss = tu.train_dynamics_learner_batch(optimizer, dyn_learner,
-                                                   matrix if get_gradient else matrix.detach(),
-                                                   data, DEVICE_DYN, self.IS_CONTINUOUS, optimize=False)
-            losses.append(loss)
-        mean_loss = torch.stack(losses).mean().cpu()
+        score, final_loss = self.evaluate_individual_no_training(matrix_in, dyn_learner, get_gradient=get_gradient)
 
-        if get_gradient:
-            # normalize gradient -  this is necessary for guided mutation temperature to be independent of data set size
-            matrix_in.grad = 1 / self.NUM_BATCHES * matrix_in.grad
-
-        score = torch.exp(-mean_loss).item()  # TODO might not be ideal for continuous dynamics
-        print('Mean loss in last epoch: ' + str(mean_loss.item()) + ', Score: ' + str(score) + ', epochs needed: ' + str(ep))
-        return score, mean_loss.item(),dyn_learner, optimizer
+        print('Mean loss in evaluation epoch: ' + str(final_loss) + ', Score: ' + str(score) + ', epochs needed: ' + str(ep))
+        return score, final_loss, dyn_learner, optimizer
     
     def evaluate_individual_no_training(self, matrix_in, dyn_learner, get_gradient=True):
         if USE_GPU_DYN:
@@ -107,9 +84,7 @@ class Evaluator:
             matrix_in.grad = 1 / self.NUM_BATCHES * matrix_in.grad
 
         score = torch.exp(-mean_loss).item()  # TODO might not be ideal for continuous dynamics
-        print('Mean loss in last epoch: ' + str(mean_loss.item()) + ', Score: ' + str(score) \
-              + ', epochs needed: 0 (no training)')
-        return score, mean_loss.item(), dyn_learner
+        return score, mean_loss.item()
     
     # n: number of evaluations
     # use_max: if false: return mean over all evaluations, if True: returns max score and min loss across 
@@ -137,12 +112,12 @@ class Evaluator:
         return len(self.data_loader)
 
     # evaluates the fitness of all individuals in a population
-    # population: POP_SIZE x n x n tensor of adjacency matrices
-    # returns: POP_SIZE tensor of non-negative fitness values
-    def evaluate_population(self, population):
+    def evaluate_population(self, population, num_epochs, dynamics_learners, optimizers, get_gradient):
         scores = torch.zeros(len(population))
         losses = torch.zeros(len(population))
+        dyn_learners_out = [None for _ in range(len(population))]
+        optimizers_out = [None for _ in range(len(population))]
         for i in range(len(population)):
-            print('evaluating individudal ' + str(i) + '. ', end='')
-            scores[i], losses[i] = self.evaluate_individual(population[i])
-        return scores, losses
+            print('evaluating individudal ' + str(i) + ' - ' + ut.hash_tensor(population[i]) + '. ', end='')
+            scores[i], losses[i], dyn_learners_out[i], optimizers_out[i] = self.evaluate_individual(population[i], NUM_DYN_EPOCHS=num_epochs, dyn_learner=dynamics_learners[i], optimizer=optimizers[i], get_gradient=get_gradient)
+        return scores, losses, dyn_learners_out, optimizers_out
