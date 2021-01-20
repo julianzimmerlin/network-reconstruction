@@ -21,8 +21,16 @@ def mutate_matrix_guided(matrix, dyn_learner, evaluator):
     result.requires_grad_(True)
     return result, index
 
-def double_mutation(matrix, dyn_learner, evaluator):
-    intermediate, inter_index = mutate_matrix_guided(matrix, dyn_learner, evaluator)
+def double_mutation(matrix, dyn_learner, evaluator, first_mut=None):
+    if first_mut == None:
+        intermediate, inter_index = mutate_matrix_guided(matrix, dyn_learner, evaluator)
+    else: # not debugged yet
+        inter_index = torch.tensor(first_mut)
+        intermediate = matrix.detach().clone()
+        intermediate[list(inter_index)] = 1 - intermediate[list(inter_index)]
+        intermediate[list(inter_index.flip(dims=(0,)))] = 1 - intermediate[list(inter_index.flip(dims=(0,)))]
+        intermediate.requires_grad_(True)
+
     indices_order = ut.calc_mutation_order_evalepoch(intermediate, dyn_learner, evaluator)
     index = indices_order[0,:].squeeze()
 
