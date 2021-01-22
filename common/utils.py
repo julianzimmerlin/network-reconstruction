@@ -71,12 +71,12 @@ def symmetrize_matrix_(mat, take_mean=False):
                 mat[j,i] = mat[i,j]
 
 # uniformly samples a undirected nxn adjacency matrix
-def sample_undirected_matrix_uniform(n):
+def sample_undirected_matrix_uniform(n, requires_grad=True):
     rand = torch.full((n,n),0.5).bernoulli()
     for i in range(n):
         rand[i,i] = 0
     symmetrize_matrix_(rand)
-    rand.requires_grad_(True)
+    rand.requires_grad_(requires_grad)
     return rand
 
 # this function indicates whether an optimization algorithm has converged
@@ -126,9 +126,9 @@ def calc_mutation_order_evalepoch(matrix, dyn_learner, evaluator):
             neighbor = matrix.detach().clone()
             neighbor[i,j] = 1 - neighbor[i,j]
             neighbor[j,i] = 1 - neighbor[j,i]
-            _, loss = evaluator.evaluate_individual_no_training(neighbor, dyn_learner, False)
+            loss = evaluator.evaluate_individual_no_training(neighbor, dyn_learner)
             indices.append(torch.tensor([i,j]))
-            losses.append(torch.tensor(loss))
+            losses.append(loss.mean())
     indices_tensor = torch.stack(indices)
     losses_tensor = torch.stack(losses)
     best_losses, best_indices = losses_tensor.sort()

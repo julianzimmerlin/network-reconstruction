@@ -1,7 +1,8 @@
 import torch
 loss_fn = torch.nn.NLLLoss()
+loss_fn_nodewise = torch.nn.NLLLoss(reduction='none')
 
-def train_dynamics_learner_batch(optimizer, dynamics_learner, matrix, data, device, is_continuous,  optimize=True):
+def train_dynamics_learner_batch(optimizer, dynamics_learner, matrix, data, device, is_continuous,  optimize=True, nodewise_loss=False, backprop=True):
     if optimize:
         optimizer.zero_grad()
     adjs = matrix.repeat(data.size()[0], 1, 1)
@@ -16,15 +17,23 @@ def train_dynamics_learner_batch(optimizer, dynamics_learner, matrix, data, devi
         output = dynamics_learner(output, adjs)
         outputs[:, :, t, :] = output
     if is_continuous:
-        loss = torch.mean(torch.abs(outputs - target))  # L1 LOSS
+        if nodewise_loss:
+            loss = torch.mean(torch.abs(outputs - target), dim=0)
+        else:
+            loss = torch.mean(torch.abs(outputs - target))  # L1 LOSS
     else:
         output = output.permute(0, 2, 1)
         target = target[:, :, 0, 1].long()
-        loss = loss_fn(output, target)
-    loss.backward()
+        if nodewise_loss:
+            loss_unreduced = loss_fn_nodewise(output, target)
+            loss = torch.mean(loss_unreduced, dim=0)
+        else:
+            loss = loss_fn(output, target)
+    if backprop:
+        loss.mean().backward()  # not doing backpropagation saves a significant amount of time
     if optimize:
         optimizer.step()
-    return loss
+    return loss.detach()
 
 def train_network_generator_batch(optimizer, dynamics_learner, network_generator, data, device, is_continuous):
     optimizer.zero_grad()

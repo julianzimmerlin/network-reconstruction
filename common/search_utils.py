@@ -22,7 +22,7 @@ def mutate_matrix_guided(matrix, dyn_learner, evaluator):
     return result, index
 
 def double_mutation(matrix, dyn_learner, evaluator, first_mut=None):
-    if first_mut == None:
+    if first_mut is None:
         intermediate, inter_index = mutate_matrix_guided(matrix, dyn_learner, evaluator)
     else: # not debugged yet
         inter_index = torch.tensor(first_mut)
@@ -68,3 +68,20 @@ def calc_guided_mutation_probs(matrix, softmax_factor=1.):
     probs = torch.zeros_like(gradient_partially_flipped)
     probs[triu_selection_mat] = probs_vec
     return probs
+
+def compare_matrices_relevant_mutations(mat1, mat2, losses1, losses2):
+    indices = (mat1 != mat2).nonzero()
+    result = 0.
+    for node_ind in indices.flatten():
+        result += losses1[node_ind].item() - losses2[node_ind].item()
+    return result
+
+def sort_matrix_set_relevant_mutations(matrices, losses):
+    scores = torch.zeros(len(matrices))
+    for i, mat1 in enumerate(matrices):
+        for j, mat2 in enumerate(matrices[i+1:]):
+            comp = compare_matrices_relevant_mutations(matrices[i], matrices[j], losses[i], losses[j])
+            scores[i] += comp
+            scores[j] -= comp
+    _,indices = torch.sort(scores) # lowest score is best
+    return [matrices[i] for i in indices], indices

@@ -12,7 +12,7 @@ DEVICE_DYN = 'cuda' if USE_GPU_DYN else 'cpu'
 # this class is used to evaluate the quality of individiual/populations of adjacency matrices for dynamics prediction
 # holds data loaders as attributes so that they have to be loaded only once
 class Evaluator:
-    def __init__(self, series_address, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, USE_OLD_DISCRETE_FORMAT, USE_MAX=False):
+    def __init__(self, series_address, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, USE_OLD_DISCRETE_FORMAT, get_gradient, nodewise_loss, USE_MAX=False):
         self.NUM_DYN_EPOCHS = NUM_DYN_EPOCHS # if this is -1, it triggers automated convergence detection instead of a fixed number of training epochs
         self.BATCH_SIZE = BATCH_SIZE
         self.HIDDEN_SIZE = HIDDEN_SIZE
@@ -22,6 +22,8 @@ class Evaluator:
         self.data_loader, self.IS_CONTINUOUS, self.NUM_NODES = ld.load_data(series_address, USE_OLD_DISCRETE_FORMAT, BATCH_SIZE)
         self.NUM_BATCHES = len(self.data_loader)
         self.NUM_SAMPLES = self.data_loader.dataset.size()[0]
+        self.GET_GRADIENT = get_gradient
+        self.NODEWISE_LOSS = nodewise_loss
         print('NUM_SAMPLES: ' + str(self.NUM_SAMPLES))
         print('BATCH_SIZE: ' + str(BATCH_SIZE))
         print('HIDDEN_SIZE: ' + str(HIDDEN_SIZE))
@@ -30,7 +32,7 @@ class Evaluator:
         print('NUM_BATCHES: ' + str(self.NUM_BATCHES))
         print('USE_MAX: ' + str(USE_MAX))
 
-    def evaluate_individual(self, matrix_in,  NUM_DYN_EPOCHS=0, dyn_learner=None, optimizer=None, get_gradient=True):
+    def evaluate_individual(self, matrix_in,  NUM_DYN_EPOCHS=0, dyn_learner=None, optimizer=None):
         if NUM_DYN_EPOCHS <= 0:
             NUM_DYN_EPOCHS = self.NUM_DYN_EPOCHS
         if dyn_learner == None:
@@ -58,12 +60,12 @@ class Evaluator:
             ep += 1
 
         # one more pass over the training data to calculate loss and possibly gradient on structure
-        score, final_loss = self.evaluate_individual_no_training(matrix_in, dyn_learner, get_gradient=get_gradient)
+        final_loss = self.evaluate_individual_no_training(matrix_in, dyn_learner)
 
-        print('Mean loss in evaluation epoch: ' + str(final_loss) + ', Score: ' + str(score) + ', epochs needed: ' + str(ep))
-        return score, final_loss, dyn_learner, optimizer
+        print('Mean loss in evaluation epoch: ' + str(final_loss.tolist()) + ', epochs needed: ' + str(ep))
+        return final_loss, dyn_learner, optimizer
     
-    def evaluate_individual_no_training(self, matrix_in, dyn_learner, get_gradient=True):
+    def evaluate_individual_no_training(self, matrix_in, dyn_learner):
         if USE_GPU_DYN:
             dyn_learner = dyn_learner.cuda()
             matrix = matrix_in.cuda()
@@ -73,34 +75,35 @@ class Evaluator:
             # data_train: BATCH_SIZE x NUM_NODES x NUM_STEPS x INPUT_SIZE double
             if USE_GPU_DYN:
                 data = data.cuda()
+            # TODO detach dyn_learner because we dont need to calc gradients for it (will only have an effect for get_gradient=True bcause otherwise we dont backprop at all)
             loss = tu.train_dynamics_learner_batch(None, dyn_learner,
-                                                   matrix if get_gradient else matrix.detach(),
-                                                   data, DEVICE_DYN, self.IS_CONTINUOUS, optimize=False)
+                                                   matrix if self.NODEWISE_LOSS else matrix.detach(),
+                                                   data, DEVICE_DYN, self.IS_CONTINUOUS, optimize=False, nodewise_loss=self.NODEWISE_LOSS, backprop=self.GET_GRADIENT)
             losses.append(loss)
-        mean_loss = torch.stack(losses).mean().cpu()
+        mean_loss = torch.stack(losses).mean(dim=0).cpu()
 
-        if get_gradient:
-            # normalize gradient -  this is necessary for guided mutation temperature to be independent of data set size
-            matrix_in.grad = 1 / self.NUM_BATCHES * matrix_in.grad
+        #if get_gradient:
+        #    # normalize gradient -  this is necessary for guided mutation temperature to be independent of data set size
+        #    matrix_in.grad = 1 / self.NUM_BATCHES * matrix_in.grad
 
-        score = torch.exp(-mean_loss).item()  # TODO might not be ideal for continuous dynamics
-        return score, mean_loss.item()
-    
+        return mean_loss # formerly .item()
+
+    # DEPRECATED--- need to remove SCORE
     # n: number of evaluations
     # use_max: if false: return mean over all evaluations, if True: returns max score and min loss across 
-    def eval_individual_n_times(self, mat, n, get_gradient=True):
-        scores = list()
-        losses = list()
-        for i in range(n):
-            # mat.grad.zero_()  # not sure if this is good
-            score, loss = self.evaluate_individual(mat, get_gradient=get_gradient)
-            #print('loss in single run: ' + str(loss))
-            scores.append(score)
-            losses.append(loss)
-        if self.USE_MAX:
-            return max(scores), min(losses)
-        else:
-            return sum(scores) / len(scores), sum(losses) / len(losses)
+    # def eval_individual_n_times(self, mat, n, get_gradient=True):
+    #    scores = list()
+    #    losses = list()
+    #   for i in range(n):
+    #       # mat.grad.zero_()  # not sure if this is good
+    #       score, loss = self.evaluate_individual(mat, get_gradient=get_gradient)
+    #       #print('loss in single run: ' + str(loss))
+    #       scores.append(score)
+    #       losses.append(loss)
+    #   if self.USE_MAX:
+    #       return max(scores), min(losses)
+    #   else:
+    #       return sum(scores) / len(scores), sum(losses) / len(losses)
 
     def get_num_nodes(self):
         return self.NUM_NODES
@@ -112,12 +115,11 @@ class Evaluator:
         return len(self.data_loader)
 
     # evaluates the fitness of all individuals in a population
-    def evaluate_population(self, population, num_epochs, dynamics_learners, optimizers, get_gradient):
-        scores = torch.zeros(len(population))
-        losses = torch.zeros(len(population))
+    def evaluate_population(self, population, num_epochs, dynamics_learners, optimizers):
+        losses = torch.zeros(len(population)) if not self.NODEWISE_LOSS else torch.zeros(len(population), self.NUM_NODES)
         dyn_learners_out = [None for _ in range(len(population))]
         optimizers_out = [None for _ in range(len(population))]
         for i in range(len(population)):
             print('evaluating individudal ' + str(i) + ' - ' + ut.hash_tensor(population[i]) + '. ', end='')
-            scores[i], losses[i], dyn_learners_out[i], optimizers_out[i] = self.evaluate_individual(population[i], NUM_DYN_EPOCHS=num_epochs, dyn_learner=dynamics_learners[i], optimizer=optimizers[i], get_gradient=get_gradient)
-        return scores, losses, dyn_learners_out, optimizers_out
+            losses[i], dyn_learners_out[i], optimizers_out[i] = self.evaluate_individual(population[i], num_epochs, dynamics_learners[i], optimizers[i])
+        return losses, dyn_learners_out, optimizers_out

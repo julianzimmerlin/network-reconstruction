@@ -13,7 +13,7 @@ class Tracker:
         self.tprs = list()
         self.fprs = list()
         self.accuracies = list()
-        self.scores = list()
+        #self.scores = list()
         self.matrices = list()
         self.losses = list()
         self.timestamps = list()
@@ -34,7 +34,7 @@ class Tracker:
         self.accuracies.append(acc)
         self.tprs.append(tpr)
         self.fprs.append(fpr)
-        self.scores.append(score)
+        #self.scores.append(score)
         self.matrices.append(matrix)
         self.losses.append(loss)
         self.timestamps.append(timestamp)
@@ -47,14 +47,14 @@ class Tracker:
         #print(matrix.data.cpu().numpy().astype(int))
         print('ACC: ' + str(acc))
         print('TPR/FPR: ' + str(tpr) + ', ' + str(fpr))
-        print('Loss: ' + str(loss))
-        print('Score: '+ str(score))
+        print('Loss: ' + str(loss.tolist()))
+        #print('Score: '+ str(score))
         print('Timestamp: ' + str(timestamp))
         print('---------------------------------------------------------------')
         self.logger.flush()
 
-        with open(self.logger.get_path() + '/scores.pickle', 'wb') as f:
-            pickle.dump(self.scores, f)
+        #with open(self.logger.get_path() + '/scores.pickle', 'wb') as f:
+        #    pickle.dump(self.scores, f)
         with open(self.logger.get_path() + '/matrices.pickle', 'wb') as f:
             pickle.dump(self.matrices, f)
         with open(self.logger.get_path() + '/tprs.pickle', 'wb') as f:

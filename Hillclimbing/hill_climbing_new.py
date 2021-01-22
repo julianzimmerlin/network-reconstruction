@@ -8,6 +8,7 @@ import evaluator as ev
 import utils as ut
 import tracker as tr
 import copy
+import search_utils as su
 
 SEED = 5
 SERIES_ADDRESS = '../data/SIS_FIXED/timeseries_ba10_1k_0.2.pickle'
@@ -69,33 +70,23 @@ for gen in range(100):
 
     indices = ut.calc_mutation_order_evalepoch(cand, dyn_learner, evaluator)
     indices = indices[:NUM_NEW_CANDIDATES]
-    new_cands = list()
-    new_cands_are_improvements = list()
-    new_values = list()
-    for index in indices:
-        i = index[0]
-        j = index[1]
-        new_cand = cand.detach().clone()
-        new_cand[i,j] = 1 - new_cand[i,j]
-        new_cand[j,i] = 1 - new_cand[j,i]
-        new_cand.requires_grad_(True)
-        new_cands.append(new_cand)
-        new_values.append(int(new_cand[i,j].item()))
-        new_cands_are_improvements.append((gt_matrix[i,j] == new_cand[i,j]).to(torch.int).item())
-    print('Which new_cands are improvements?: ' + str(new_cands_are_improvements))
-    print('The new values?: ' + str(new_values))
+
     found_better = False
     for num_try in range(NUM_TRIES):
-        if num_try != 0:
+        if num_try == 0:
+            score,loss,_,_ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, copy.deepcopy(dyn_learner), copy.deepcopy(optimizer), False)
+        else:
             print('Reevaluating current cand. ', end='')
-            score, loss, _, _ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None, False)
-        for index, new_cand in enumerate(new_cands):
-            if num_try != 0:
-                new_score, new_loss, new_dyn_learner, new_optimizer = evaluator.evaluate_individual(new_cand,
-                                           NUM_DYN_EPOCHS, None, None, False)
+            score, loss, dyn_learner, optimizer = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None, False)
+        for index in indices:
+            new_cand = su.double_mutation(cand, dyn_learner, evaluator, first_mut=index)
+            if num_try == 0:
+                new_score, new_loss, new_dyn_learner, new_optimizer = evaluator.evaluate_individual(new_cand, NUM_DYN_EPOCHS,
+                                                                                                    copy.deepcopy(dyn_learner),
+                                                                                                    copy.deepcopy(optimizer),False)
             else:
-                new_score, new_loss, new_dyn_learner, new_optimizer = evaluator.evaluate_individual(new_cand,
-                                           NUM_DYN_EPOCHS, copy.deepcopy(dyn_learner), copy.deepcopy(optimizer), False)
+                new_score, new_loss, new_dyn_learner, new_optimizer = evaluator.evaluate_individual(new_cand,NUM_DYN_EPOCHS,
+                                                                                                    None, None, False)
             if new_score > score:
                 cand = new_cand
                 loss = new_loss
