@@ -77,7 +77,7 @@ class Evaluator:
                 data = data.cuda()
             # TODO detach dyn_learner because we dont need to calc gradients for it (will only have an effect for get_gradient=True bcause otherwise we dont backprop at all)
             loss = tu.train_dynamics_learner_batch(None, dyn_learner,
-                                                   matrix if self.NODEWISE_LOSS else matrix.detach(),
+                                                   matrix if self.GET_GRADIENT else matrix.detach(), # formerly "if self.NODEWISE_LOSS" but that was a mistake I think?
                                                    data, DEVICE_DYN, self.IS_CONTINUOUS, optimize=False, nodewise_loss=self.NODEWISE_LOSS, backprop=self.GET_GRADIENT)
             losses.append(loss)
         mean_loss = torch.stack(losses).mean(dim=0).cpu()

@@ -33,6 +33,8 @@ def double_mutation(matrix, dyn_learner, evaluator, first_mut=None):
 
     indices_order = ut.calc_mutation_order_evalepoch(intermediate, dyn_learner, evaluator)
     index = indices_order[0,:].squeeze()
+    #if (inter_index == index).all().item():
+    #    index = indices_order[1, :].squeeze()
 
     result = intermediate.detach().clone()
     result[list(index)] = 1 - result[list(index)]
@@ -69,10 +71,17 @@ def calc_guided_mutation_probs(matrix, softmax_factor=1.):
     probs[triu_selection_mat] = probs_vec
     return probs
 
+# compares two matrices after nodewise loss evaluation. A negative value means that mat1 is better.
 def compare_matrices_relevant_mutations(mat1, mat2, losses1, losses2):
-    indices = (mat1 != mat2).nonzero()
+    indices = (mat1 != mat2).to(torch.int).nonzero()
     result = 0.
     for node_ind in indices.flatten():
+        result += losses1[node_ind].item() - losses2[node_ind].item()
+    return result
+
+def compare_matrices_specific_mutation(mat1, mat2, losses1, losses2, mut):
+    result = 0.
+    for node_ind in mut.flatten():
         result += losses1[node_ind].item() - losses2[node_ind].item()
     return result
 
