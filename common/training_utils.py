@@ -18,7 +18,7 @@ def train_dynamics_learner_batch(optimizer, dynamics_learner, matrix, data, devi
         outputs[:, :, t, :] = output
     if is_continuous:
         if nodewise_loss:
-            loss = torch.mean(torch.abs(outputs - target), dim=0)
+            loss = torch.abs(outputs - target).mean(dim=0).mean(dim=1)
         else:
             loss = torch.mean(torch.abs(outputs - target))  # L1 LOSS
     else:
@@ -71,7 +71,7 @@ def train_dynamics(dynamics_learner, network_generator, optimizer_dyn, data_load
                                              data, device, is_continuous)
             batch_losses.append(loss)
             if is_first and step==0 and batch_idx==0:
-                tracker.track(network_generator.get_matrix_hard().to(torch.float32), loss=loss.data.item())
+                tracker.track(network_generator.get_matrix_hard().to(torch.float32), loss=torch.tensor(loss.data.item()))
         step_loss = torch.stack(batch_losses).mean()
         step_losses.append(step_loss)
         print('Mean Loss in Dyn Epoch ' + str(step) + ': ' + str(step_loss.item()))

@@ -8,12 +8,12 @@ import utils as ut
 import search_utils as su
 
 SEED = 123421
-SERIES_ADDRESS = '../data/SIS_FIXED/timeseries_bull_1k_0.2_0.2.pickle'
-ADJ_ADDRESS = '../data/SIS_FIXED/edges_bull.pickle'
-BATCH_SIZE = 5000
+SERIES_ADDRESS = '../data/cml/timeseries_bull_1k.pickle'
+ADJ_ADDRESS = '../data/cml/edges_bull.pickle'
+BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_INIT = 200
-NUM_DYN_EPOCHS = 100
+NUM_DYN_EPOCHS_INIT = 10
+NUM_DYN_EPOCHS = 5
 DETECT_EARLY_CONVERGENCE = True
 RESET_DYN_LEARNER_EVERY_NTH_GEN = 5
 POP_SIZE = 1
@@ -21,7 +21,7 @@ NEWPOP_SIZE = 2
 NUM_GEN = 500
 USE_NODEWISE_EVALUATION = True
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
-USE_OLD_DISCRETE_FORMAT = True
+USE_OLD_DISCRETE_FORMAT = False
 CONTINUATION = False
 CONT_ADDRESS = r'D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418'
 
@@ -132,8 +132,8 @@ for j in range(NUM_GEN):
     # evaluate old and new population and merge
     [ind.grad.zero_() if ind.grad is not None else None for ind in population + newpop]
     if j % RESET_DYN_LEARNER_EVERY_NTH_GEN == 0: # reset dyn_learners every n-th generation
-        dynamics_learners = [None for _ in dynamics_learners]
-        optimizers = [None for _ in optimizers]
+        dynamics_learners = [None]*len(dynamics_learners)
+        optimizers = [None]*len(optimizers)
     newlosses, newdynamics_learners, newoptimizers = evaluator.evaluate_population(newpop, NUM_DYN_EPOCHS_INIT if j % RESET_DYN_LEARNER_EVERY_NTH_GEN == 0 else NUM_DYN_EPOCHS,
                                                                             [dynamics_learners[id] for id in idx], [optimizers[id] for id in idx])
     losses, dynamics_learners, optimizers = evaluator.evaluate_population(population, NUM_DYN_EPOCHS_INIT if j % RESET_DYN_LEARNER_EVERY_NTH_GEN == 0 else NUM_DYN_EPOCHS,

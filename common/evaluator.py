@@ -56,7 +56,7 @@ class Evaluator:
                 losses.append(loss)
             mean_loss = torch.stack(losses).mean().cpu()
             mean_losses.append(mean_loss)
-            #print('Loss in Epoch ' + str(ep) + ': ' + str(mean_loss.cpu().item()))
+            print('Loss in Epoch ' + str(ep) + ': ' + str(mean_loss.cpu().item()))
             ep += 1
 
         # one more pass over the training data to calculate loss and possibly gradient on structure
@@ -114,12 +114,18 @@ class Evaluator:
     def get_num_batches(self):
         return len(self.data_loader)
 
+    def get_input_size(self):
+        return self.data_loader.dataset.size()[-1]
+
+    def is_continuous(self):
+        return self.IS_CONTINUOUS
+
     # evaluates the fitness of all individuals in a population
     def evaluate_population(self, population, num_epochs, dynamics_learners, optimizers):
-        losses = torch.zeros(len(population)) if not self.NODEWISE_LOSS else torch.zeros(len(population), self.NUM_NODES)
-        dyn_learners_out = [None for _ in range(len(population))]
-        optimizers_out = [None for _ in range(len(population))]
+        losses = [None]*len(population)
+        dyn_learners_out = [None]*len(population)
+        optimizers_out = [None]*len(population)
         for i in range(len(population)):
             print('evaluating individudal ' + str(i) + ' - ' + ut.hash_tensor(population[i]) + '. ', end='')
             losses[i], dyn_learners_out[i], optimizers_out[i] = self.evaluate_individual(population[i], num_epochs, dynamics_learners[i], optimizers[i])
-        return losses, dyn_learners_out, optimizers_out
+        return torch.stack(losses), dyn_learners_out, optimizers_out

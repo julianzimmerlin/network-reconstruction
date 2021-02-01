@@ -41,24 +41,6 @@ def hash_tensor(matrix):
     m.update(bytes(string, 'utf-8'))
     return m.hexdigest(8)
 
-# converts a matrix id (integer between 0 and 2^(num_nodes*(num_nodes-1) // 2) to the corresponding matrix of size num_nodes
-# def id2matrix(id, num_nodes):
-#     num_entries = num_nodes*(num_nodes-1) // 2
-#     bin_id = list(('{0:0' + str(num_entries) + 'b}').format(id)) # convert to binary
-#     bin_id_tensor = torch.tensor([int(num) for num in bin_id], dtype=torch.float32)
-#     mat = torch.zeros(num_nodes, num_nodes)
-#     triu_indices = torch.triu_indices(row=num_nodes, col=num_nodes, offset=1)
-#     mat[triu_indices[0], triu_indices[1]] = bin_id_tensor
-#     symmetrize_matrix_(mat, take_mean=False)
-#     return mat
-# 
-# def matrix2id(matrix):
-#     triu_indices = torch.triu_indices(row=matrix.size()[0], col=matrix.size()[0], offset=1)
-#     triu_vec = matrix[triu_indices[0], triu_indices[1]]
-#     bits = matrix.size()[0] * (matrix.size()[0]-1) // 2
-#     mask = 2 ** torch.arange(bits-1, -1, -1).to(triu_vec.device, triu_vec.dtype)
-#     return torch.sum(mask * triu_vec, -1).to(torch.long).item()
-
 # makes a matrix symmetric by copying all values from the upper half to the lower half or taking the mean values
 def symmetrize_matrix_(mat, take_mean=False):
     n = mat.size()[0]
@@ -81,6 +63,7 @@ def sample_undirected_matrix_uniform(n, requires_grad=True):
 
 # this function indicates whether an optimization algorithm has converged
 # by looking at the differences in losses at consecutive steps
+# threshold: 4e-5 works for sis
 def has_converged(lo_list):
     if len(lo_list) < 10:
         return False
@@ -134,3 +117,46 @@ def calc_mutation_order_evalepoch(matrix, dyn_learner, evaluator):
     best_losses, best_indices = losses_tensor.sort()
     indices_tensor = indices_tensor[best_indices]
     return indices_tensor
+
+def calc_edge_mutation_probs_gradient(matrix):
+    symmetrize_matrix_(matrix.grad, take_mean=True)
+    minus_grad = -1 * matrix.grad
+    flipped_matrix = 1 - matrix.detach()
+    gradient_partially_flipped = flipped_matrix * minus_grad + matrix.detach() * matrix.grad
+    mask = torch.eye(gradient_partially_flipped.size()[0], gradient_partially_flipped.size()[1]).byte()
+    gradient_partially_flipped.masked_fill_(mask, 0)
+    scaled = gradient_partially_flipped / gradient_partially_flipped.max()
+    scaled[scaled<0] = 0
+    return scaled
+
+def calc_edge_mutation_probs_evalepoch(matrix, dyn_learner, evaluator):
+    matrix_loss = evaluator.evaluate_individual_no_training(matrix, dyn_learner)
+    lossdifferences = torch.zeros_like(matrix)
+    for i in range(matrix.size()[0]):
+        for j in range(i+1, matrix.size()[1]):
+            neighbor = matrix.detach().clone()
+            neighbor[i, j] = 1 - neighbor[i, j]
+            neighbor[j, i] = 1 - neighbor[j, i]
+            neighbor_loss = evaluator.evaluate_individual_no_training(neighbor, dyn_learner)
+            lossdifferences[i,j] = matrix_loss-neighbor_loss
+    scaled = lossdifferences / lossdifferences.max()
+    scaled[scaled < 0] = 0
+    return scaled
+
+def calc_edge_mutation_probs_evalepoch_nodewise(matrix, dyn_learner, evaluator):
+    matrix_loss = evaluator.evaluate_individual_no_training(matrix, dyn_learner)
+    lossdifferences = torch.zeros_like(matrix)
+    for i in range(matrix.size()[0]):
+        for j in range(i+1, matrix.size()[1]):
+            neighbor = matrix.detach().clone()
+            neighbor[i, j] = 1 - neighbor[i, j]
+            neighbor[j, i] = 1 - neighbor[j, i]
+            neighbor_loss = evaluator.evaluate_individual_no_training(neighbor, dyn_learner)
+            lossdifferences[i,j] = matrix_loss-neighbor_loss
+    symmetrize_matrix_(lossdifferences, take_mean=False)
+    probs = torch.zeros_like(matrix)
+    for i in range(matrix.size()[0]):
+        probs[i] = lossdifferences[i] / lossdifferences[i].max()
+    symmetrize_matrix_(probs, take_mean=True)
+    probs[probs<0] = 0
+    return probs

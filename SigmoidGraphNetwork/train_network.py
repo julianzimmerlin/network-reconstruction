@@ -12,16 +12,16 @@ import sys
 import pickle
 
 USE_GPU = True
-series_address = 'D:/Uni/BA/Development/data/SIS_FIXED/timeseries_ba10_1k_0.2.pickle'
-adj_address = 'D:/Uni/BA/Development/data/SIS_FIXED/edges_ba10.pickle'
-SEED = 4
-BATCH_SIZE = 1000
+series_address = 'D:/Uni/BA/Development/data/cml/timeseries_ba20_1k.pickle'
+adj_address = 'D:/Uni/BA/Development/data/cml/edges_ba20.pickle'
+SEED = 6
+BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_PER_CYCLE = 20
-NUM_NET_EPOCHS_PER_CYCLE = 20
+NUM_DYN_EPOCHS_PER_CYCLE = 10
+NUM_NET_EPOCHS_PER_CYCLE = 10
 NUM_CYCLES = 60
-USE_OLD_DISCRETE_FORMAT = True
-USE_GUMBEL = True
+USE_OLD_DISCRETE_FORMAT = False
+USE_GUMBEL = False
 TEMP_DROP_FACTOR = .95
 EXPERIMENTS = 1
 
@@ -31,7 +31,7 @@ device = 'cuda' if USE_GPU else 'cpu'
 
 orig_terminal = sys.stdout
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/EXP_SIS_FIXED_ba10' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/EXP_cml_ba20_1k' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(series_address)
@@ -76,4 +76,4 @@ for _ in range(EXPERIMENTS):
         if USE_GUMBEL:
             network_gen.drop_temperature()
         print('Tracking cycle ' + str(cycle))
-        tracker.track(network_gen.get_matrix_hard(), mean_loss)
+        tracker.track(network_gen.get_matrix_hard(), torch.tensor(mean_loss))
