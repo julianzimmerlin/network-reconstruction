@@ -1,19 +1,28 @@
 import pickle
 from torch.utils.data import DataLoader
 import torch
+import numpy as np
 
 
 # returns a single data loader (no split into training, val and test data)
-def load_data(series_address, use_old_discrete_format, batch_size):
-    print('use_old_discrete_format: ' + str(use_old_discrete_format))
+def load_data(series_address, format, batch_size):
+    #print('use_old_discrete_format: ' + str(use_old_discrete_format))
     with open(series_address,'rb') as f:
         data = pickle.load(f,encoding='latin1')
     # currently there are different input formats for discrete and continuous data, so we need 2 loading functions
-    if use_old_discrete_format:
+    if format=='old':
         return load_data_old_format(data, batch_size)
-    else:
+    elif format=='standard':
         return load_data_standard_format(data, batch_size)
+    elif format=='timeseries':
+        return load_data_timeseries(data, batch_size)
 
+# data input dimensions: (SAMPLES, NUM_NODES) numpy array
+# output dimensions: (BATCH_SIZE, NUM_NODES, NUM_STEPS=2, INPUT_SIZE=1)
+def load_data_timeseries(data, batch_size):
+    print('num samples: ' + str(data.shape[0]))
+    expanded = expand_sequence(data)
+    return load_data_old_format(expanded, batch_size)
 
 # data input dimensions: (SAMPLES, NUM_NODES, NUM_STEPS, INPUT_SIZE) torch tensor
 # output dimensions: (BATCH_SIZE, NUM_NODES, NUM_STEPS, INPUT_SIZE)
@@ -37,3 +46,7 @@ def load_data_old_format(data,  batch_size):
     #data_onehot = data_onehot[:50]
     data_loader = DataLoader(data_onehot, batch_size=batch_size, shuffle=True)  # ,pin_memory=True)
     return data_loader, False, data.shape[1]
+
+
+def expand_sequence(seq):
+    return np.array([seq[0], *[val for val in seq[1:-1] for _ in (0, 1)], seq[-1]])

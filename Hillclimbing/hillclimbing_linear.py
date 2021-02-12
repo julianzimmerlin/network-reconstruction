@@ -10,16 +10,17 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 5
-SERIES_ADDRESS = '../data/cml/timeseries_ba10_1k.pickle'
-ADJ_ADDRESS = '../data/cml/edges_ba10.pickle'
-BATCH_SIZE = 500
+SEED = 0
+SERIES_ADDRESS = '../data/netrd/SIS/timeseries_ba10_500.pickle'
+ADJ_ADDRESS = '../data/netrd/SIS/edges_ba10.pickle'
+BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 100
-DETECT_EARLY_CONVERGENCE = True
-USE_OLD_DISCRETE_FORMAT = False
+NUM_DYN_EPOCHS = 300
+DETECT_EARLY_CONVERGENCE = False
+FORMAT = 'timeseries'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 CONTINUATION = False
+#USE_NODEWISE_LOSS = always true
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
 logger = lo.Logger('hill_climbing_logs/linear')
@@ -32,11 +33,12 @@ print('SEED: ' + str(SEED))
 print('NUM_DYN_EPOCHS: ' + str(NUM_DYN_EPOCHS))
 print('DETECT_EARLY_CONVERGENCE: ' + str(DETECT_EARLY_CONVERGENCE))
 print('USE_EVALEPOCH_FOR_GUIDED_MUTATION: ' + str(USE_EVALEPOCH_FOR_GUIDED_MUTATION))
+#print('USE_NODEWISE_LOSS: ' + str(USE_NODEWISE_LOSS))
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 
 # initialize evaluator with given timeseries data
-evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, USE_OLD_DISCRETE_FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, True)
+evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, True)
 NUM_NODES = evaluator.get_num_nodes()
 # load ground truth matrix
 with open(ADJ_ADDRESS, 'rb') as f:
@@ -57,12 +59,13 @@ if CONTINUATION:
 else:
     cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
 #DEBUG::::
-cand = gt_matrix.detach().clone().requires_grad_(True)
+#cand = gt_matrix.detach().clone().requires_grad_(True)
 max_changes = NUM_NODES
 for gen in range(10):
     dyn_learner = None
     optimizer = None
     loss, dyn_learner, optimizer = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, dyn_learner, optimizer)
+    print('\nGeneration ' + str(gen))
     tracker.track(cand, loss)
 
     indices = ut.calc_mutation_order_evalepoch(cand, dyn_learner, evaluator) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.calc_mutation_order_gradient(cand)
@@ -90,8 +93,8 @@ for gen in range(10):
     print('count_changes: ' + str(count_changes))
     if count_changes == 0:
         if max_changes > 1:
-            max_changes = 1
+            max_changes = max_changes // 2
         else:
-            break
+            max_changes = NUM_NODES
 tracker.track(cand, loss)
 print('Time needed: ' + str(time.process_time() - start_time) + ' sec')

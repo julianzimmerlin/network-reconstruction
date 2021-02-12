@@ -12,14 +12,14 @@ DEVICE_DYN = 'cuda' if USE_GPU_DYN else 'cpu'
 # this class is used to evaluate the quality of individiual/populations of adjacency matrices for dynamics prediction
 # holds data loaders as attributes so that they have to be loaded only once
 class Evaluator:
-    def __init__(self, series_address, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, USE_OLD_DISCRETE_FORMAT, get_gradient, nodewise_loss, USE_MAX=False):
+    def __init__(self, series_address, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, get_gradient, nodewise_loss, USE_MAX=False):
         self.NUM_DYN_EPOCHS = NUM_DYN_EPOCHS # if this is -1, it triggers automated convergence detection instead of a fixed number of training epochs
         self.BATCH_SIZE = BATCH_SIZE
         self.HIDDEN_SIZE = HIDDEN_SIZE
         self.USE_MAX = USE_MAX
         self.DETECT_EARLY_CONVERGENCE = DETECT_EARLY_CONVERGENCE
         self.series_address = series_address
-        self.data_loader, self.IS_CONTINUOUS, self.NUM_NODES = ld.load_data(series_address, USE_OLD_DISCRETE_FORMAT, BATCH_SIZE)
+        self.data_loader, self.IS_CONTINUOUS, self.NUM_NODES = ld.load_data(series_address, FORMAT, BATCH_SIZE)
         self.NUM_BATCHES = len(self.data_loader)
         self.NUM_SAMPLES = self.data_loader.dataset.size()[0]
         self.GET_GRADIENT = get_gradient

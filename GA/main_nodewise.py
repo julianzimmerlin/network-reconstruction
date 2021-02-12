@@ -7,21 +7,21 @@ import tracker as tr
 import utils as ut
 import search_utils as su
 
-SEED = 123421
-SERIES_ADDRESS = '../data/cml/timeseries_bull_1k.pickle'
-ADJ_ADDRESS = '../data/cml/edges_bull.pickle'
+SEED = 0
+SERIES_ADDRESS = '../data/netrd/SIS/timeseries_ba10_500.pickle'
+ADJ_ADDRESS = '../data/netrd/SIS/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_INIT = 10
-NUM_DYN_EPOCHS = 5
-DETECT_EARLY_CONVERGENCE = True
+NUM_DYN_EPOCHS_INIT = 300
+NUM_DYN_EPOCHS = 30
+DETECT_EARLY_CONVERGENCE = False
 RESET_DYN_LEARNER_EVERY_NTH_GEN = 5
 POP_SIZE = 1
 NEWPOP_SIZE = 2
 NUM_GEN = 500
-USE_NODEWISE_EVALUATION = True
+USE_NODEWISE_EVALUATION = False
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
-USE_OLD_DISCRETE_FORMAT = False
+FORMAT = 'timeseries'
 CONTINUATION = False
 CONT_ADDRESS = r'D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418'
 
@@ -29,7 +29,7 @@ logger = lo.Logger('GA_logs')
 sys.stdout = logger
 torch.manual_seed(SEED)
 np.random.seed(SEED)
-evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, USE_OLD_DISCRETE_FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_EVALUATION)
+evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_EVALUATION)
 NUM_NODES = evaluator.get_num_nodes()
 MUT_PROB = 1 / (NUM_NODES * (NUM_NODES+1) / 2)  # expected value is 1 mutation in the matrix
 

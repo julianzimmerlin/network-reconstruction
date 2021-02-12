@@ -12,16 +12,16 @@ import sys
 import pickle
 
 USE_GPU = True
-series_address = 'D:/Uni/BA/Development/data/cml/timeseries_ba20_1k.pickle'
-adj_address = 'D:/Uni/BA/Development/data/cml/edges_ba20.pickle'
-SEED = 6
+SERIES_ADDRESS = '../data/netrd/Kuramoto/timeseries_ba20_2000.pickle'
+ADJ_ADDRESS = '../data/netrd/Kuramoto/edges_ba20.pickle'
+SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS_PER_CYCLE = 10
 NUM_NET_EPOCHS_PER_CYCLE = 10
 NUM_CYCLES = 60
-USE_OLD_DISCRETE_FORMAT = False
-USE_GUMBEL = False
+FORMAT = 'timeseries'
+USE_GUMBEL = True
 TEMP_DROP_FACTOR = .95
 EXPERIMENTS = 1
 
@@ -31,11 +31,11 @@ device = 'cuda' if USE_GPU else 'cpu'
 
 orig_terminal = sys.stdout
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/EXP_cml_ba20_1k' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/voternew/ba10_1000' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
-    print(series_address)
-    print(adj_address)
+    print(SERIES_ADDRESS)
+    print(ADJ_ADDRESS)
     print('SEED: ' + str(SEED))
     print('BATCH_SIZE: ' + str(BATCH_SIZE))
     print('HIDDEN_SIZE: ' + str(HIDDEN_SIZE))
@@ -46,14 +46,14 @@ for _ in range(EXPERIMENTS):
     print('EXPERIMENTS: ' + str(EXPERIMENTS))
 
     # load ground truth matrix
-    with open(adj_address, 'rb') as f:
+    with open(ADJ_ADDRESS, 'rb') as f:
         edges = pickle.load(f, encoding='latin1')  # (num_nodes x num_nodes) 1 or 0
         edges = torch.from_numpy(edges)
         gt_matrix = edges.to(torch.float32).to('cpu')
         np.savetxt(logger.path + '/gt_matrix.txt', gt_matrix.numpy().astype(int), fmt='%i')
 
     tracker = tr.Tracker(gt_matrix, logger)
-    data_loader, is_continuous, num_nodes = ld.load_data(series_address, USE_OLD_DISCRETE_FORMAT, BATCH_SIZE)
+    data_loader, is_continuous, num_nodes = ld.load_data(SERIES_ADDRESS, FORMAT, BATCH_SIZE)
 
     # initialize network
     dyn_learner = mo.GraphNetwork(data_loader.dataset.size()[-1], HIDDEN_SIZE, not is_continuous).to(device)
