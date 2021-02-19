@@ -11,7 +11,8 @@ class GraphNetwork(nn.Module):
         self.edge2edge = torch.nn.Linear(hidden_size, hidden_size)
         self.node2node = torch.nn.Linear(hidden_size, hidden_size)
         self.node2node2 = torch.nn.Linear(hidden_size, hidden_size)
-        #self.output1 = torch.nn.Linear(input_size+hidden_size, hidden_size)
+        #self.output1 = torch.nn.Linear(hidden_size+input_size, hidden_size)
+        #self.output2 = torch.nn.Linear(hidden_size, input_size)
         self.output = torch.nn.Linear(input_size+hidden_size, input_size)
         self.logsoftmax = nn.LogSoftmax(dim=2)
         self.is_classifier = is_classifier
@@ -30,10 +31,11 @@ class GraphNetwork(nn.Module):
         out1 = F.relu(self.node2node(out))
         out2 = F.relu(self.node2node2(out1))
         out3 = torch.cat((x, out2), dim=-1)
-        #out4 = self.output1(out3)
+        #out4 = F.relu(self.output1(out3))
+        #out5 = F.relu(self.output2(out4))
         out5 = self.output(out3)
-        #out6 = out5+x
-        return out5 if not self.is_classifier else self.logsoftmax(out5)
+        out6 = out5+x
+        return out6 if not self.is_classifier else self.logsoftmax(out5)
 
 
 class SigmoidMatrix(nn.Module):

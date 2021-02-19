@@ -12,15 +12,15 @@ import sys
 import pickle
 
 USE_GPU = True
-SERIES_ADDRESS = '../data/netrd/Kuramoto/timeseries_ba20_2000.pickle'
-ADJ_ADDRESS = '../data/netrd/Kuramoto/edges_ba20.pickle'
+SERIES_ADDRESS = r'D:\Uni\BA\Development\data\final\cml\timeseries_bull_5k_4_onetake.pickle'
+ADJ_ADDRESS = r'D:\Uni\BA\Development\data\final\netrd\Kuramoto\edges_bull.pickle'
 SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_PER_CYCLE = 10
-NUM_NET_EPOCHS_PER_CYCLE = 10
+NUM_DYN_EPOCHS_PER_CYCLE = 15
+NUM_NET_EPOCHS_PER_CYCLE = 5
 NUM_CYCLES = 60
-FORMAT = 'timeseries'
+FORMAT = 'standard'
 USE_GUMBEL = True
 TEMP_DROP_FACTOR = .95
 EXPERIMENTS = 1

@@ -18,7 +18,7 @@ def train_dynamics_learner_batch(optimizer, dynamics_learner, matrix, data, devi
         outputs[:, :, t, :] = output
     if is_continuous:
         if nodewise_loss:
-            loss = torch.abs(outputs - target).mean(dim=0).mean(dim=1)
+            loss = torch.abs(outputs - target).mean(dim=0).mean(dim=1) # wait, why am i taking the mean over both dimensions?
         else:
             loss = torch.mean(torch.abs(outputs - target))  # L1 LOSS
     else:

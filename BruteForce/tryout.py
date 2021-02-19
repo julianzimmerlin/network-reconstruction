@@ -8,12 +8,12 @@ import numpy as np
 logger = lo.Logger('tryout_logs')
 sys.stdout = logger
 
-SERIES_ADDRESS = '../data/Voter/new/timeseries_ba20_100.pickle'
-ADJ_ADDRESS = '../data/Voter/new/edges_ba20.pickle'
-SEED = 3
-NUM_DYN_EPOCHS = 3000
-FORMAT='old'
-BATCH_SIZE = 5000
+SERIES_ADDRESS = r'D:\Uni\BA\Development\data\final\cml\timeseries_bull_5k_4_onetake.pickle'
+ADJ_ADDRESS = r'D:\Uni\BA\Development\data\final\netrd\Kuramoto\edges_bull.pickle'
+SEED = 4
+NUM_DYN_EPOCHS = 100
+FORMAT='standard'
+BATCH_SIZE = 100
 DETECT_EARLY_CONVERGENCE = False
 
 HIDDEN_SIZE = 128
@@ -46,8 +46,17 @@ num_nodes = evaluator.get_num_nodes()
 #    matrices = pickle.load(f)
 #mat1 = matrices[-1]
 mat0 = gt_matrix.detach().clone()
-all_matrices = [mat0]
-all_matrices.append(ut.sample_undirected_matrix_uniform(num_nodes))
+mat1 = torch.zeros(num_nodes, num_nodes)
+mat2 = torch.ones(num_nodes, num_nodes)
+mat3 = ut.sample_undirected_matrix_uniform(num_nodes)
+mat4 = mat0.detach().clone()
+mat4[3,4] = 1
+mat4[4,3] = 1
+#mat5 = mat0.detach().clone()
+#ind = np.diag_indices(mat5.shape[0])
+#mat5[ind[0], ind[1]] = torch.ones(mat5.shape[0])
+
+all_matrices = [mat0, mat4, mat1, mat2]
 for m in all_matrices:
     m.requires_grad_(True)
     print(m.detach().cpu().numpy().astype(int))

@@ -28,6 +28,8 @@ def load_data_timeseries(data, batch_size):
 # output dimensions: (BATCH_SIZE, NUM_NODES, NUM_STEPS, INPUT_SIZE)
 def load_data_standard_format(data, batch_size):
     #data = data[0:3000]
+    if not isinstance(data, torch.Tensor):
+        data = torch.from_numpy(data).to(torch.float32)
     print('num samples: ' + str(data.size()[0]))
     data_loader = DataLoader(data, batch_size=batch_size, shuffle=True)  # ,pin_memory=True)
     for el in data[0:100].view(data[0:100].numel()):

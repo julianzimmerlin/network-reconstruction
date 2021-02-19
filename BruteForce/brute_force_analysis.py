@@ -4,12 +4,12 @@ import torch
 import numpy as np
 import brute_force_utils as bfu
 
-logger = lo.Logger('analysis_outputs')
+logger = lo.Logger('analysis_outputs/final/CML_5k_4_1take_40')
 sys.stdout = logger
 
 #data_address = './brute_force_outputs/SIS_bull_5k_0.5_0.5'
-data_address = r'D:\Uni\BA\ColabOutputs\SIS_FIXED_bull'
-adj_address = '../data/cml/edges_bull.pickle'
+data_address = r'D:\Uni\BA\ColabOutputs\final\bruteforce\CML_5k_4_1take_40\0'
+adj_address = '../data/final/netrd/SIS/edges_bull.pickle'
 GET_MINIMA = True
 print(data_address)
 print(adj_address)

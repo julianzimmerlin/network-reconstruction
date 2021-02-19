@@ -5,29 +5,29 @@ import torch
 import numpy as np
 import brute_force_utils as bfu
 
-logger = lo.Logger('brute_force_outputs')
+logger = lo.Logger('brute_force_outputs/')
 sys.stdout = logger
 
-series_address = '../data/cml/timeseries_bull_5k.pickle'
-adj_address = '../data/cml/edges_bull.pickle'
-SEED = 56
-NUM_DYN_EPOCHS = 30
-BATCH_SIZE = 100
+series_address = r'D:\Uni\BA\Development\data\final\netrd\SIS\timeseries_bull_1k_0.2_dontdie.pickle'
+adj_address = r'D:\Uni\BA\Development\data\final\netrd\SIS\edges_bull.pickle'
+SEED = 0
+NUM_DYN_EPOCHS = 300
+BATCH_SIZE = 1000
 HIDDEN_SIZE = 128
 NUM_RUNS = 1
-USE_OLD_DISCRETE_FORMAT = False
-USE_SHORTCUT = True
-SHORTCUT_CAP = 45
+FORMAT='timeseries'
+#USE_SHORTCUT = True
+#SHORTCUT_CAP = 45
 print(series_address)
 print(adj_address)
 print('SEED: {}'.format(SEED))
 print('NUM_RUNS: {}'.format(NUM_RUNS))
 print('BATCH_SIZE: ' + str(BATCH_SIZE))
 print('NUM_DYN_EPOCHS: ' + str(NUM_DYN_EPOCHS))
-print('USE_OLD_DISCRETE_FORMAT: ' + str(USE_OLD_DISCRETE_FORMAT))
+print('FORMAT: ' + FORMAT)
 print('HIDDEN_SIZE: ' + str(HIDDEN_SIZE))
-print('USE_SHORTCUT: ' + str(USE_SHORTCUT))
-print('SHORTCUT_CAP: ' + str(SHORTCUT_CAP))
+#print('USE_SHORTCUT: ' + str(USE_SHORTCUT))
+#print('SHORTCUT_CAP: ' + str(SHORTCUT_CAP))
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 
@@ -37,7 +37,7 @@ with open(adj_address, 'rb') as f:
     np.savetxt(logger.get_path() + '/ground_truth_matrix.txt', gt_matrix.numpy(), fmt='%i')
 print(gt_matrix)
 
-evaluator = ev.Evaluator(series_address, NUM_DYN_EPOCHS, BATCH_SIZE, HIDDEN_SIZE, USE_OLD_DISCRETE_FORMAT, USE_MAX=False)
+evaluator = ev.Evaluator(series_address, NUM_DYN_EPOCHS, False, BATCH_SIZE, HIDDEN_SIZE, FORMAT, False, False, USE_MAX=False)
 num_nodes = evaluator.get_num_nodes()
 
 # returns a 1024 x 5 x 5 tensor with all possible adjacency matrices
@@ -73,8 +73,8 @@ def subsample_matrices(ref_matrix, mat_list, cap):
 
 # ----------------------------------------------------------------
 all_matrices = enumerate_matrices()
-if USE_SHORTCUT:
-    all_matrices = subsample_matrices(gt_matrix, all_matrices, SHORTCUT_CAP)
+#if USE_SHORTCUT:
+#    all_matrices = subsample_matrices(gt_matrix, all_matrices, SHORTCUT_CAP)
 
 matrices_address = logger.get_path() + '/matrices.pickle'
 with open(matrices_address, 'wb') as f:
@@ -86,10 +86,10 @@ for i in range(all_matrices.size()[0]):
     for run in range(NUM_RUNS):
         print('evaluating: matrix ' + str(i) + ', run ' + str(run) + '. ', end='')
         #start_time= time.process_time()
-        _, loss = evaluator.evaluate_individual(all_matrices[i])
+        loss,_,_ = evaluator.evaluate_individual(all_matrices[i])
         #print('Time: ' + str(time.process_time() - start_time))
         sc[run] = loss
-        print(loss)
+        #print(loss)
     losses_ls.append(sc)
 
     losses = torch.stack(losses_ls)
