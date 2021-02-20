@@ -3,7 +3,7 @@
 ARG BASE_IMAGE=nvcr.io/nvidia/pytorch:20.12-py3
 FROM $BASE_IMAGE
 ARG BASE_IMAGE
-LABEL repository="network_reconstruction"
+LABEL repository="network-reconstruction"
 
 # Set path to CUDA
 ENV CUDA_HOME=/usr/local/cuda
@@ -50,10 +50,10 @@ RUN useradd -l -d /home/$USER_NAME -u $USER_UID -g $USER_GROUP $USER_NAME
 RUN chown -R ${USER_UID}:${USER_GID} /home/$USER_NAME/
 
 # Set workdir when starting container
-WORKDIR /network_reconstruction
+WORKDIR /network-reconstruction
 
 # Add workdir to PYTHONPATH
-ENV PYTHONPATH="$PYTHONPATH:/network_reconstruction"
-ENV PYTHONPATH="$PYTHONPATH:/network_reconstruction/common"
+ENV PYTHONPATH="$PYTHONPATH:/network-reconstruction"
+ENV PYTHONPATH="$PYTHONPATH:/network-reconstruction/common"
 
 CMD ["/bin/bash"]
