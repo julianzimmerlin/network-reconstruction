@@ -5,17 +5,17 @@ import torch
 import numpy as np
 import brute_force_utils as bfu
 
-logger = lo.Logger('brute_force_outputs/')
+logger = lo.Logger('brute_force_outputs/final_GPUcluster/CML_5k_4_1take_10')
 sys.stdout = logger
 
-series_address = r'D:\Uni\BA\Development\data\final\netrd\SIS\timeseries_bull_1k_0.2_dontdie.pickle'
-adj_address = r'D:\Uni\BA\Development\data\final\netrd\SIS\edges_bull.pickle'
+series_address = r'..\data\final\cml\timeseries_bull_5k_4_onetake.pickle'
+adj_address = r'..\data\final\cml\edges_bull.pickle'
 SEED = 0
-NUM_DYN_EPOCHS = 300
-BATCH_SIZE = 1000
+NUM_DYN_EPOCHS = 10
+BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_RUNS = 1
-FORMAT='timeseries'
+FORMAT='standard'
 #USE_SHORTCUT = True
 #SHORTCUT_CAP = 45
 print(series_address)
