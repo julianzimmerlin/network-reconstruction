@@ -8,8 +8,8 @@ import brute_force_utils as bfu
 logger = lo.Logger('brute_force_outputs/final_GPUcluster/CML_5k_4_1take_10')
 sys.stdout = logger
 
-series_address = r'..\data\final\cml\timeseries_bull_5k_4_onetake.pickle'
-adj_address = r'..\data\final\cml\edges_bull.pickle'
+series_address = r'..\data\final\cml\timeseries_bull_5k_4_onetake.pickle'.replace('\\', '/')
+adj_address = r'..\data\final\cml\edges_bull.pickle'.replace('\\', '/')
 SEED = 0
 NUM_DYN_EPOCHS = 10
 BATCH_SIZE = 100
