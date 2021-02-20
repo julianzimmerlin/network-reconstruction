@@ -20,8 +20,8 @@ ENV CUDA_HOME=/usr/local/cuda
 #    rm -rf /var/lib/apt/lists
 
 # Update pip
-#RUN SHA=ToUcHMe which python3
-#RUN SHA=ToUcHMe python3 -m pip install --upgrade pip
+RUN SHA=ToUcHMe which python3
+RUN SHA=ToUcHMe python3 -m pip install --upgrade pip
 
 # See http://bugs.python.org/issue19846
 ENV LANG C.UTF-8
