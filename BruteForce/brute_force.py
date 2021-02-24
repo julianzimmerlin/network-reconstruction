@@ -5,14 +5,14 @@ import torch
 import numpy as np
 import brute_force_utils as bfu
 
-logger = lo.Logger('brute_force_outputs/final_GPUcluster/SIS_50_50_2000_TESTSET')
+logger = lo.Logger('brute_force_outputs/final_GPUcluster/SIS_200_100_1000_TESTSET')
 sys.stdout = logger
 
-series_address = r'..\data\final\netrd\SIS\timeseries_bull_50_0.2_dontdie.pickle'.replace('\\', '/')
+series_address = r'..\data\final\netrd\SIS\timeseries_bull_200_0.2_dontdie.pickle'.replace('\\', '/')
 adj_address = r'..\data\final\netrd\SIS\edges_bull.pickle'.replace('\\', '/')
 SEED = 0
-NUM_DYN_EPOCHS = 2000
-BATCH_SIZE = 50
+NUM_DYN_EPOCHS = 1000
+BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_RUNS = 1
 FORMAT='timeseries'
