@@ -8,14 +8,15 @@ import brute_force_utils as bfu
 logger = lo.Logger('brute_force_outputs/final_GPUcluster/CML_5k_4_1take_10')
 sys.stdout = logger
 
-series_address = r'..\data\final\cml\timeseries_bull_5k_4_onetake.pickle'.replace('\\', '/')
-adj_address = r'..\data\final\cml\edges_bull.pickle'.replace('\\', '/')
+series_address = r'..\data\final\netrd\SIS\timeseries_bull_50_0.2_dontdie.pickle'.replace('\\', '/')
+adj_address = r'..\data\final\netrd\SIS\edges_bull.pickle'.replace('\\', '/')
 SEED = 0
-NUM_DYN_EPOCHS = 10
-BATCH_SIZE = 100
+NUM_DYN_EPOCHS = 2000
+BATCH_SIZE = 50
 HIDDEN_SIZE = 128
 NUM_RUNS = 1
 FORMAT='standard'
+USE_TESTSET=True
 #USE_SHORTCUT = True
 #SHORTCUT_CAP = 45
 print(series_address)
@@ -26,6 +27,7 @@ print('BATCH_SIZE: ' + str(BATCH_SIZE))
 print('NUM_DYN_EPOCHS: ' + str(NUM_DYN_EPOCHS))
 print('FORMAT: ' + FORMAT)
 print('HIDDEN_SIZE: ' + str(HIDDEN_SIZE))
+print('USE_TESTSET: ' + str(USE_TESTSET))
 #print('USE_SHORTCUT: ' + str(USE_SHORTCUT))
 #print('SHORTCUT_CAP: ' + str(SHORTCUT_CAP))
 torch.manual_seed(SEED)
@@ -37,7 +39,7 @@ with open(adj_address, 'rb') as f:
     np.savetxt(logger.get_path() + '/ground_truth_matrix.txt', gt_matrix.numpy(), fmt='%i')
 print(gt_matrix)
 
-evaluator = ev.Evaluator(series_address, NUM_DYN_EPOCHS, False, BATCH_SIZE, HIDDEN_SIZE, FORMAT, False, False, USE_MAX=False)
+evaluator = ev.Evaluator(series_address, NUM_DYN_EPOCHS, False, BATCH_SIZE, HIDDEN_SIZE, FORMAT, False, False, USE_TESTSET=USE_TESTSET, USE_MAX=False)
 num_nodes = evaluator.get_num_nodes()
 
 # returns a 1024 x 5 x 5 tensor with all possible adjacency matrices

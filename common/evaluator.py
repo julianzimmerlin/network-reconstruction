@@ -12,31 +12,35 @@ DEVICE_DYN = 'cuda' if USE_GPU_DYN else 'cpu'
 # this class is used to evaluate the quality of individiual/populations of adjacency matrices for dynamics prediction
 # holds data loaders as attributes so that they have to be loaded only once
 class Evaluator:
-    def __init__(self, series_address, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, get_gradient, nodewise_loss, USE_MAX=False):
+    def __init__(self, series_address, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, get_gradient, nodewise_loss, USE_TESTSET=False, USE_MAX=False):
         self.NUM_DYN_EPOCHS = NUM_DYN_EPOCHS # if this is -1, it triggers automated convergence detection instead of a fixed number of training epochs
         self.BATCH_SIZE = BATCH_SIZE
         self.HIDDEN_SIZE = HIDDEN_SIZE
         self.USE_MAX = USE_MAX
         self.DETECT_EARLY_CONVERGENCE = DETECT_EARLY_CONVERGENCE
         self.series_address = series_address
-        self.data_loader, self.IS_CONTINUOUS, self.NUM_NODES = ld.load_data(series_address, FORMAT, BATCH_SIZE)
-        self.NUM_BATCHES = len(self.data_loader)
-        self.NUM_SAMPLES = self.data_loader.dataset.size()[0]
+        self.train_data_loader, self.test_data_loader, self.IS_CONTINUOUS, self.NUM_NODES = ld.load_data(series_address, FORMAT, BATCH_SIZE, USE_TESTSET)
+        self.NUM_TRAIN_BATCHES = len(self.train_data_loader)
+        self.NUM_TRAIN_SAMPLES = self.train_data_loader.dataset.size()[0]
+        self.NUM_TEST_BATCHES = len(self.test_data_loader)
+        self.NUM_TEST_SAMPLES = self.test_data_loader.dataset.size()[0]
         self.GET_GRADIENT = get_gradient
         self.NODEWISE_LOSS = nodewise_loss
-        print('NUM_SAMPLES: ' + str(self.NUM_SAMPLES))
+        print('NUM_TRAIN_SAMPLES: ' + str(self.NUM_TRAIN_SAMPLES))
+        print('NUM_TRAIN_BATCHES: ' + str(self.NUM_TRAIN_BATCHES))
+        print('NUM_TEST_SAMPLES: ' + str(self.NUM_TEST_SAMPLES))
+        print('NUM_TEST_BATCHES: ' + str(self.NUM_TEST_BATCHES))
         print('BATCH_SIZE: ' + str(BATCH_SIZE))
         print('HIDDEN_SIZE: ' + str(HIDDEN_SIZE))
         print('NUM_DYN_EPOCHS: ' + str(NUM_DYN_EPOCHS))
         print('IS_CONTINUOUS: ' + str(self.IS_CONTINUOUS))
-        print('NUM_BATCHES: ' + str(self.NUM_BATCHES))
         print('USE_MAX: ' + str(USE_MAX))
 
     def evaluate_individual(self, matrix_in,  NUM_DYN_EPOCHS=0, dyn_learner=None, optimizer=None):
         if NUM_DYN_EPOCHS <= 0:
             NUM_DYN_EPOCHS = self.NUM_DYN_EPOCHS
         if dyn_learner == None:
-            dyn_learner = models.GraphNetwork(self.data_loader.dataset.size()[-1], self.HIDDEN_SIZE, not self.IS_CONTINUOUS)
+            dyn_learner = models.GraphNetwork(self.train_data_loader.dataset.size()[-1], self.HIDDEN_SIZE, not self.IS_CONTINUOUS)
         if optimizer == None:
             optimizer = optim.Adam(dyn_learner.parameters(), lr=0.001 if not self.IS_CONTINUOUS else 0.0001)
         if USE_GPU_DYN:
@@ -47,7 +51,7 @@ class Evaluator:
         mean_losses = list()
         while (ep<NUM_DYN_EPOCHS and (not ut.has_converged(mean_losses) if self.DETECT_EARLY_CONVERGENCE else True)):
             losses = []
-            for batch_idx, data in enumerate(self.data_loader):
+            for batch_idx, data in enumerate(self.train_data_loader):
                 # data_train: BATCH_SIZE x NUM_NODES x NUM_STEPS x INPUT_SIZE double
                 if USE_GPU_DYN:
                     data = data.cuda()
@@ -56,7 +60,7 @@ class Evaluator:
                 losses.append(loss)
             mean_loss = torch.stack(losses).mean().cpu()
             mean_losses.append(mean_loss)
-            #print('Loss in Epoch ' + str(ep) + ': ' + str(mean_loss.cpu().item()))
+            print('Loss in Epoch ' + str(ep) + ': ' + str(mean_loss.cpu().item()))
             ep += 1
 
         # one more pass over the training data to calculate loss and possibly gradient on structure
@@ -71,7 +75,7 @@ class Evaluator:
             matrix = matrix_in.cuda()
             
         losses = list()
-        for batch_idx, data in enumerate(self.data_loader):
+        for batch_idx, data in enumerate(self.test_data_loader):
             # data_train: BATCH_SIZE x NUM_NODES x NUM_STEPS x INPUT_SIZE double
             if USE_GPU_DYN:
                 data = data.cuda()
