@@ -3,7 +3,7 @@ from torch.utils.data import DataLoader
 import torch
 import numpy as np
 
-
+TESTSET_SPLIT_POINT = 0.8
 # returns a single data loader (no split into training, val and test data)
 def load_data(series_address, format, batch_size, use_testset):
     #print('use_old_discrete_format: ' + str(use_old_discrete_format))
@@ -35,7 +35,7 @@ def load_data_standard_format(data, batch_size, use_testset):
         train_data_loader = DataLoader(data, batch_size=batch_size, shuffle=True)  # ,pin_memory=True)
         test_data_loader = train_data_loader
     else:
-        split_point = int(data.size()[0] * 0.9)
+        split_point = int(data.size()[0] * TESTSET_SPLIT_POINT)
         train_data_loader = DataLoader(data[:split_point], batch_size=batch_size, shuffle=True)
         test_data_loader = DataLoader(data[split_point:], batch_size=batch_size, shuffle=True)
     for el in data[0:100].view(data[0:100].numel()):
@@ -56,7 +56,7 @@ def load_data_old_format(data,  batch_size, use_testset):
         data_loader = DataLoader(data_onehot, batch_size=batch_size, shuffle=True)  # ,pin_memory=True)
         return data_loader, data_loader, False, data.shape[1]
     else:
-        split_point = int(data_onehot.size()[0] * 0.9)
+        split_point = int(data_onehot.size()[0] * TESTSET_SPLIT_POINT)
         train_data_loader = DataLoader(data_onehot[:split_point], batch_size=batch_size, shuffle=True)
         test_data_loader = DataLoader(data_onehot[split_point:], batch_size=batch_size, shuffle=True)
         return train_data_loader, test_data_loader, False, data.shape[1]

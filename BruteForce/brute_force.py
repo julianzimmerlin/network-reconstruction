@@ -5,7 +5,7 @@ import torch
 import numpy as np
 import brute_force_utils as bfu
 
-logger = lo.Logger('brute_force_outputs/final_GPUcluster/CML_5k_4_1take_10')
+logger = lo.Logger('brute_force_outputs/final_GPUcluster/SIS_50_50_2000_TESTSET')
 sys.stdout = logger
 
 series_address = r'..\data\final\netrd\SIS\timeseries_bull_50_0.2_dontdie.pickle'.replace('\\', '/')
@@ -15,7 +15,7 @@ NUM_DYN_EPOCHS = 2000
 BATCH_SIZE = 50
 HIDDEN_SIZE = 128
 NUM_RUNS = 1
-FORMAT='standard'
+FORMAT='timeseries'
 USE_TESTSET=True
 #USE_SHORTCUT = True
 #SHORTCUT_CAP = 45
