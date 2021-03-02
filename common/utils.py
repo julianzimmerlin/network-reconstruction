@@ -103,9 +103,7 @@ def calc_mutation_order_evalepoch(matrix, dyn_learner, evaluator):
     indices = list()
     losses = list()
     for i in range(matrix.size()[0]):
-        for j in range(matrix.size()[1]):
-            if j <= i:
-                continue
+        for j in range(i+1, matrix.size()[1]):
             neighbor = matrix.detach().clone()
             neighbor[i,j] = 1 - neighbor[i,j]
             neighbor[j,i] = 1 - neighbor[j,i]
@@ -160,3 +158,115 @@ def calc_edge_mutation_probs_evalepoch_nodewise(matrix, dyn_learner, evaluator):
     symmetrize_matrix_(probs, take_mean=True)
     probs[probs<0] = 0
     return probs
+
+# -------------------------- now the function as presented in the thesis
+
+def calc_S_grad(matrix):
+    raw_gradient = matrix.grad.detach().clone()
+    minus_grad = -1 * raw_gradient
+    flipped_matrix = 1 - matrix.detach()
+    S_asym = flipped_matrix * minus_grad + matrix.detach() * raw_gradient
+    S_grad = S_asym + S_asym.transpose(0,1)
+    S_grad[torch.eye(S_grad.size()[0]).byte()] = 0
+    if torch.all(S_grad<=0):
+        print('S_GRAD IS ALL NEGATIVE!')
+    return S_grad
+
+def calc_S_eval(matrix, dyn_learner, evaluator,  matrix_loss=None):
+    if matrix_loss is None:
+        matrix_loss = evaluator.evaluate_individual_no_training(matrix, dyn_learner)
+    indices = list()
+    losses = list()
+    S = torch.zeros_like(matrix)
+    for i in range(matrix.size()[0]):
+        for j in range(i + 1, matrix.size()[1]):
+            neighbor = matrix.detach().clone()
+            neighbor[i, j] = 1 - neighbor[i, j]
+            neighbor[j, i] = 1 - neighbor[j, i]
+            loss = evaluator.evaluate_individual_no_training(neighbor, dyn_learner)
+            S[i,j] = matrix_loss - loss.mean()
+            S[j,i] = matrix_loss - loss.mean()
+    if torch.all(S<=0):
+        print('S IS ALL NEGATIVE!')
+    return S
+
+def single_step_probabilities_random(matrix):
+    S_uni = 1 - torch.eye(matrix.size()[0])
+    sum = torch.sum(S_uni) / 2
+    return S_uni / sum
+
+def dynamic_step_probabilities_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
+    S_eval = calc_S_eval(matrix, dyn_learner, evaluator,  matrix_loss=None)
+    return dynamic_step_probabilities(S_eval)
+
+def dynamic_step_probabilities_grad(matrix):
+    S_grad = calc_S_grad(matrix)
+    return dynamic_step_probabilities(S_grad)
+
+def dynamic_step_probabilities(S):
+    if S.max()<=0:
+        return torch.zeros_like(S)
+    probs = S / S.max()
+    probs[probs < 0] = 0
+    return probs
+
+def single_step_probabilities_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
+    S_eval = calc_S_eval(matrix, dyn_learner, evaluator, matrix_loss=None)
+    return single_step_probabilities(S_eval)
+
+def single_step_probabilities_grad(matrix):
+    S_grad = calc_S_grad(matrix)
+    return single_step_probabilities(S_grad)
+
+def single_step_probabilities(S):
+    S[S<0] = 0
+    sum = torch.sum(S) / 2
+    if sum <=0:
+        return single_step_probabilities_random(S)
+    probs = S / sum
+    return probs
+
+def exec_dynamic_step_grad(matrix):
+    probs = dynamic_step_probabilities_grad(matrix)
+    return exec_dynamic_step(matrix, probs)
+
+def exec_dynamic_step_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
+    probs = dynamic_step_probabilities_eval(matrix, dyn_learner, evaluator,  matrix_loss=None)
+    return exec_dynamic_step(matrix, probs)
+
+def exec_dynamic_step(matrix, probs):
+    new_cand = matrix.detach().clone()
+    # flip each edge with the the respective probability in probs
+    indices = list()
+    for i in range(probs.size()[0]):
+        for j in range(i + 1, probs.size()[1]):
+            if torch.rand(1, 1).item() < probs[i, j]:
+                new_cand[i, j] = 1 - new_cand[i, j]
+                new_cand[j, i] = 1 - new_cand[j, i]
+                indices.append(torch.tensor([i,j]))
+
+    #print('Candidate: ' + ut.hash_tensor(new_cand) + '. Changes:' + str(num_changes))
+    return new_cand, indices
+
+def exec_single_step_grad(matrix):
+    probs = single_step_probabilities_grad(matrix)
+    return exec_single_step(matrix, probs)
+
+def exec_single_step_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
+    probs = single_step_probabilities_eval(matrix, dyn_learner, evaluator,  matrix_loss=None)
+    return exec_single_step(matrix, probs)
+
+def exec_single_step(matrix, probs):
+    probs_triu = torch.triu(probs, diagonal=1)
+    probs_vec = probs_triu.view(-1)  # vectorize
+    sample = probs_vec.multinomial(num_samples=1)
+    index = torch.cat([sample // matrix.size()[0], sample % matrix.size()[0]])
+
+    result = matrix.detach().clone()
+    result[list(index)] = 1 - result[list(index)]
+    result[list(index.flip(dims=(0,)))] = 1 - result[list(index.flip(dims=(0,)))]
+    return result, [index]
+
+def exec_single_step_random(matrix):
+    probs = single_step_probabilities_random(matrix)
+    return exec_single_step(matrix, probs)
