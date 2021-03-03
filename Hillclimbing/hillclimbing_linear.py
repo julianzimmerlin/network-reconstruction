@@ -21,12 +21,12 @@ FORMAT = 'timeseries'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
-USE_DYNAMIC_STEPS = False
-NUM_GEN = 100
+USE_DYNAMIC_STEPS = True
+NUM_GEN = 50
 DETERMINISTIC_EVAL = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba20_random')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba20_random_dynamic_50')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -93,7 +93,7 @@ for gen in range(NUM_GEN):
     #    new_cand, indices = ut.exec_dynamic_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(cand)
     #else:
     #    new_cand, indices = ut.exec_single_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_single_step_grad(cand)
-    new_cand, indices = ut.exec_single_step_random(cand)
+    new_cand, indices = ut.exec_dynamic_step_random(cand)
 
     print(indices)
 

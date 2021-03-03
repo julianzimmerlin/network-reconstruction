@@ -197,6 +197,11 @@ def dynamic_step_probabilities_grad(matrix):
     S_grad = calc_S_grad(matrix)
     return dynamic_step_probabilities(S_grad)
 
+def dynamic_step_probabilities_random(matrix):
+    N = matrix.size()[0]
+    S_uni = 1 - torch.eye(matrix.size()[0])
+    return 1/(N-1) * S_uni
+
 def dynamic_step_probabilities(S):
     if S.max()<=0:
         return torch.zeros_like(S)
@@ -232,6 +237,10 @@ def exec_dynamic_step_grad(matrix):
 
 def exec_dynamic_step_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
     probs = dynamic_step_probabilities_eval(matrix, dyn_learner, evaluator,  matrix_loss=None)
+    return exec_dynamic_step(matrix, probs)
+
+def exec_dynamic_step_random(matrix):
+    probs = dynamic_step_probabilities_random(matrix)
     return exec_dynamic_step(matrix, probs)
 
 def exec_dynamic_step(matrix, probs):
