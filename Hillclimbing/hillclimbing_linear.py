@@ -18,16 +18,16 @@ HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'timeseries'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
-USE_DYNAMIC_STEPS = False
+USE_DYNAMIC_STEPS = True
 NUM_GEN = 50
 DETERMINISTIC_EVAL = True
-RANDOM = True
+RANDOM = False
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba10_random_50')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba10_grad_dynamic_50')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
