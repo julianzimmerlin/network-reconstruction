@@ -11,22 +11,22 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = '../data/final/Voter/timeseries_ba20_5k.pickle'
-ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'old'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
+FORMAT = 'timeseries'
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
-MAX_CHANGES = 1
 USE_DYNAMIC_STEPS = False
-NUM_GEN = 200
+NUM_GEN = 100
+DETERMINISTIC_EVAL = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/Voter_ba20_grad_200')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba10_eval')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -37,14 +37,14 @@ print('NUM_DYN_EPOCHS: ' + str(NUM_DYN_EPOCHS))
 print('DETECT_EARLY_CONVERGENCE: ' + str(DETECT_EARLY_CONVERGENCE))
 print('USE_EVALEPOCH_FOR_GUIDED_MUTATION: ' + str(USE_EVALEPOCH_FOR_GUIDED_MUTATION))
 print('USE_NODEWISE_LOSS: ' + str(USE_NODEWISE_LOSS))
-print('MAX_CHANGES: ' + str(MAX_CHANGES))
 print('USE_DYNAMIC_STEPS: ' + str(USE_DYNAMIC_STEPS))
 print('NUM_GEN: ' + str(NUM_GEN))
+print('DETERMINISTIC_EVAL: ' + str(DETERMINISTIC_EVAL))
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 
 # initialize evaluator with given timeseries data
-evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_LOSS)
+evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_LOSS, DETERMINISTIC=DETERMINISTIC_EVAL)
 NUM_NODES = evaluator.get_num_nodes()
 # load ground truth matrix
 with open(ADJ_ADDRESS, 'rb') as f:
@@ -65,11 +65,13 @@ if CONTINUATION:
 else:
     cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
 
-#loss,dyn_learner,_ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
+if DETERMINISTIC_EVAL:
+    loss,dyn_learner,_ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
 
 for gen in range(NUM_GEN):
     print('\nGeneration ' + str(gen))
-    loss, dyn_learner, _ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
+    if not DETERMINISTIC_EVAL:
+        loss, dyn_learner, _ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
     tracker.track(cand, loss)
 
     #indices = ut.calc_mutation_order_evalepoch(cand, dyn_learner, evaluator) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.calc_mutation_order_gradient(cand)

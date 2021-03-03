@@ -222,7 +222,8 @@ def single_step_probabilities(S):
     S[S<0] = 0
     sum = torch.sum(S) / 2
     if sum <=0:
-        return single_step_probabilities_random(S)
+        # return single_step_probabilities_random(S)
+        return None
     probs = S / sum
     return probs
 
@@ -257,6 +258,8 @@ def exec_single_step_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
     return exec_single_step(matrix, probs)
 
 def exec_single_step(matrix, probs):
+    if probs is None: # Fallback behaviour: return same matrix again
+        return matrix.detach().clone(), []
     probs_triu = torch.triu(probs, diagonal=1)
     probs_vec = probs_triu.view(-1)  # vectorize
     sample = probs_vec.multinomial(num_samples=1)
