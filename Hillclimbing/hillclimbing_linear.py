@@ -22,10 +22,10 @@ USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
 MAX_CHANGES = 1
-USE_DYNAMIC_STEPS = False
+USE_DYNAMIC_STEPS = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/SIS_eval_dynamic')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/SIS_grad_dynamic')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
