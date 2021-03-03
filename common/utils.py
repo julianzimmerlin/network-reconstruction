@@ -189,12 +189,6 @@ def calc_S_eval(matrix, dyn_learner, evaluator,  matrix_loss=None):
     if torch.all(S<=0):
         print('S IS ALL NEGATIVE!')
     return S
-
-def single_step_probabilities_random(matrix):
-    S_uni = 1 - torch.eye(matrix.size()[0])
-    sum = torch.sum(S_uni) / 2
-    return S_uni / sum
-
 def dynamic_step_probabilities_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
     S_eval = calc_S_eval(matrix, dyn_learner, evaluator,  matrix_loss=None)
     return dynamic_step_probabilities(S_eval)
@@ -209,6 +203,11 @@ def dynamic_step_probabilities(S):
     probs = S / S.max()
     probs[probs < 0] = 0
     return probs
+
+def single_step_probabilities_random(matrix):
+    S_uni = 1 - torch.eye(matrix.size()[0])
+    sum = torch.sum(S_uni) / 2
+    return S_uni / sum
 
 def single_step_probabilities_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
     S_eval = calc_S_eval(matrix, dyn_learner, evaluator, matrix_loss=None)
@@ -257,6 +256,10 @@ def exec_single_step_eval(matrix, dyn_learner, evaluator, matrix_loss=None):
     probs = single_step_probabilities_eval(matrix, dyn_learner, evaluator,  matrix_loss=None)
     return exec_single_step(matrix, probs)
 
+def exec_single_step_random(matrix):
+    probs = single_step_probabilities_random(matrix)
+    return exec_single_step(matrix, probs)
+
 def exec_single_step(matrix, probs):
     if probs is None: # Fallback behaviour: return same matrix again
         return matrix.detach().clone(), []
@@ -269,7 +272,3 @@ def exec_single_step(matrix, probs):
     result[list(index)] = 1 - result[list(index)]
     result[list(index.flip(dims=(0,)))] = 1 - result[list(index.flip(dims=(0,)))]
     return result, [index]
-
-def exec_single_step_random(matrix):
-    probs = single_step_probabilities_random(matrix)
-    return exec_single_step(matrix, probs)

@@ -11,14 +11,14 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
-ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
+SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'timeseries'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = False
@@ -26,7 +26,7 @@ NUM_GEN = 100
 DETERMINISTIC_EVAL = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba10_random')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba20_random')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
