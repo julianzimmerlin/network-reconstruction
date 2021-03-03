@@ -24,10 +24,11 @@ USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = True
 NUM_GEN = 100
 DETERMINISTIC_EVAL = True
-RANDOM = True
+RANDOM = False
+FREE_WALK = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba20_random_dynamic')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/free_walk/SIS_ba20_eval')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -41,6 +42,7 @@ print('USE_NODEWISE_LOSS: ' + str(USE_NODEWISE_LOSS))
 print('USE_DYNAMIC_STEPS: ' + str(USE_DYNAMIC_STEPS))
 print('NUM_GEN: ' + str(NUM_GEN))
 print('DETERMINISTIC_EVAL: ' + str(DETERMINISTIC_EVAL))
+print('FREE WALK: ' + str(FREE_WALK))
 if RANDOM:
     print('ATTENTIONNNNNNNNNNNNNNNNNNNN RANDOM MUTATIONS')
 torch.manual_seed(SEED)
@@ -67,6 +69,10 @@ if CONTINUATION:
         cand = matrices[-1]
 else:
     cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
+#DEBUG::::::::::::
+#cand = gt_matrix.clone().detach()
+#if not USE_EVALEPOCH_FOR_GUIDED_MUTATION:
+#    cand.requires_grad_(True)
 
 if DETERMINISTIC_EVAL:
     loss,dyn_learner,_ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
@@ -125,7 +131,7 @@ for gen in range(NUM_GEN):
     else:
         #print('new_loss: ' + str(new_loss.item()))
         #print('loss: ' + str(loss.item()))
-        if new_loss < loss:
+        if FREE_WALK or new_loss < loss:
             print('Accepting!')
             cand = new_cand
             dyn_learner = new_dyn_learner
