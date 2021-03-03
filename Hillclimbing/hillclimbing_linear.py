@@ -11,8 +11,8 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
-ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
@@ -21,12 +21,13 @@ FORMAT = 'timeseries'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
-USE_DYNAMIC_STEPS = True
+USE_DYNAMIC_STEPS = False
 NUM_GEN = 50
 DETERMINISTIC_EVAL = True
+RANDOM = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba20_random_dynamic_50')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba10_random_50')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -40,7 +41,8 @@ print('USE_NODEWISE_LOSS: ' + str(USE_NODEWISE_LOSS))
 print('USE_DYNAMIC_STEPS: ' + str(USE_DYNAMIC_STEPS))
 print('NUM_GEN: ' + str(NUM_GEN))
 print('DETERMINISTIC_EVAL: ' + str(DETERMINISTIC_EVAL))
-print('ATTENTIONNNNNNNNNNNNNNNNNNNN RANDOM MUTATIONS')
+if RANDOM:
+    print('ATTENTIONNNNNNNNNNNNNNNNNNNN RANDOM MUTATIONS')
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 
@@ -89,13 +91,18 @@ for gen in range(NUM_GEN):
     #loss, dyn_learner, optimizer = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
 
 
-    #if USE_DYNAMIC_STEPS:
-    #    new_cand, indices = ut.exec_dynamic_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(cand)
-    #else:
-    #    new_cand, indices = ut.exec_single_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_single_step_grad(cand)
-    new_cand, indices = ut.exec_dynamic_step_random(cand)
+    if RANDOM:
+        new_cand, indices = ut.exec_dynamic_step_random(cand) if USE_DYNAMIC_STEPS else ut.exec_single_step_random(cand)
+    else:
+        if USE_DYNAMIC_STEPS:
+            new_cand, indices = ut.exec_dynamic_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(cand)
+        else:
+            new_cand, indices = ut.exec_single_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_single_step_grad(cand)
 
     print(indices)
+    if len(indices)==0:
+        print('skipping.')
+        continue
 
     new_cand.requires_grad_(True)
     new_loss, new_dyn_learner, _ = evaluator.evaluate_individual(new_cand,NUM_DYN_EPOCHS, None, None)

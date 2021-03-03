@@ -39,7 +39,9 @@ class Evaluator:
 
     def evaluate_individual(self, matrix_in,  NUM_DYN_EPOCHS=0, dyn_learner=None, optimizer=None):
         if self.DETERMINISTIC:
+            rng_state = torch.get_rng_state()
             torch.manual_seed(0)
+
         if NUM_DYN_EPOCHS <= 0:
             NUM_DYN_EPOCHS = self.NUM_DYN_EPOCHS
         if dyn_learner == None:
@@ -70,6 +72,9 @@ class Evaluator:
         final_loss = self.evaluate_individual_no_training(matrix_in, dyn_learner)
 
         print('Mean loss in evaluation epoch: ' + str(final_loss.tolist()) + ', epochs needed: ' + str(ep))
+
+        if self.DETERMINISTIC:
+            torch.set_rng_state(rng_state)
         return final_loss, dyn_learner, optimizer
     
     def evaluate_individual_no_training(self, matrix_in, dyn_learner):
