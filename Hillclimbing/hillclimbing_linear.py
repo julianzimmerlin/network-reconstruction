@@ -18,14 +18,14 @@ HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'old'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
 MAX_CHANGES = 1
-USE_DYNAMIC_STEPS = True
+USE_DYNAMIC_STEPS = False
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/Voter_ba20_grad_dynamic')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/Voter_ba20_eval')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
