@@ -12,7 +12,7 @@ DEVICE_DYN = 'cuda' if USE_GPU_DYN else 'cpu'
 # this class is used to evaluate the quality of individiual/populations of adjacency matrices for dynamics prediction
 # holds data loaders as attributes so that they have to be loaded only once
 class Evaluator:
-    def __init__(self, series_address, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, get_gradient, nodewise_loss, USE_TESTSET=False, USE_MAX=False):
+    def __init__(self, series_address, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, get_gradient, nodewise_loss, USE_TESTSET=False, USE_MAX=False, DETERMINISTIC=False):
         self.NUM_DYN_EPOCHS = NUM_DYN_EPOCHS # if this is -1, it triggers automated convergence detection instead of a fixed number of training epochs
         self.BATCH_SIZE = BATCH_SIZE
         self.HIDDEN_SIZE = HIDDEN_SIZE
@@ -26,6 +26,7 @@ class Evaluator:
         self.NUM_TEST_SAMPLES = self.test_data_loader.dataset.size()[0]
         self.GET_GRADIENT = get_gradient
         self.NODEWISE_LOSS = nodewise_loss
+        self.DETERMINISTIC = DETERMINISTIC
         print('NUM_TRAIN_SAMPLES: ' + str(self.NUM_TRAIN_SAMPLES))
         print('NUM_TRAIN_BATCHES: ' + str(self.NUM_TRAIN_BATCHES))
         print('NUM_TEST_SAMPLES: ' + str(self.NUM_TEST_SAMPLES))
@@ -37,6 +38,8 @@ class Evaluator:
         print('USE_MAX: ' + str(USE_MAX))
 
     def evaluate_individual(self, matrix_in,  NUM_DYN_EPOCHS=0, dyn_learner=None, optimizer=None):
+        if self.DETERMINISTIC:
+            torch.manual_seed(0)
         if NUM_DYN_EPOCHS <= 0:
             NUM_DYN_EPOCHS = self.NUM_DYN_EPOCHS
         if dyn_learner == None:
