@@ -18,7 +18,7 @@ HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'timeseries'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = False
@@ -26,7 +26,7 @@ NUM_GEN = 100
 DETERMINISTIC_EVAL = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba10_eval')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/SIS_ba10_random')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -40,6 +40,7 @@ print('USE_NODEWISE_LOSS: ' + str(USE_NODEWISE_LOSS))
 print('USE_DYNAMIC_STEPS: ' + str(USE_DYNAMIC_STEPS))
 print('NUM_GEN: ' + str(NUM_GEN))
 print('DETERMINISTIC_EVAL: ' + str(DETERMINISTIC_EVAL))
+print('ATTENTIONNNNNNNNNNNNNNNNNNNN RANDOM MUTATIONS')
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 
@@ -88,11 +89,11 @@ for gen in range(NUM_GEN):
     #loss, dyn_learner, optimizer = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
 
 
-    if USE_DYNAMIC_STEPS:
-        new_cand, indices = ut.exec_dynamic_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(cand)
-    else:
-        new_cand, indices = ut.exec_single_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_single_step_grad(cand)
-    #new_cand, indices = ut.exec_single_step_random(cand)
+    #if USE_DYNAMIC_STEPS:
+    #    new_cand, indices = ut.exec_dynamic_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(cand)
+    #else:
+    #    new_cand, indices = ut.exec_single_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_single_step_grad(cand)
+    new_cand, indices = ut.exec_single_step_random(cand)
 
     print(indices)
 
