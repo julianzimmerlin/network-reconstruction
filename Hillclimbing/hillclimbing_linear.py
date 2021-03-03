@@ -18,14 +18,15 @@ HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'old'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
 MAX_CHANGES = 1
 USE_DYNAMIC_STEPS = False
+NUM_GEN = 200
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/Voter_ba20_eval')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/Voter_ba20_grad_200')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -38,6 +39,7 @@ print('USE_EVALEPOCH_FOR_GUIDED_MUTATION: ' + str(USE_EVALEPOCH_FOR_GUIDED_MUTAT
 print('USE_NODEWISE_LOSS: ' + str(USE_NODEWISE_LOSS))
 print('MAX_CHANGES: ' + str(MAX_CHANGES))
 print('USE_DYNAMIC_STEPS: ' + str(USE_DYNAMIC_STEPS))
+print('NUM_GEN: ' + str(NUM_GEN))
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 
@@ -65,7 +67,7 @@ else:
 
 #loss,dyn_learner,_ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
 
-for gen in range(100):
+for gen in range(NUM_GEN):
     print('\nGeneration ' + str(gen))
     loss, dyn_learner, _ = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, None, None)
     tracker.track(cand, loss)
@@ -88,7 +90,7 @@ for gen in range(100):
         new_cand, indices = ut.exec_dynamic_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(cand)
     else:
         new_cand, indices = ut.exec_single_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_single_step_grad(cand)
-    # new_cand, indices = ut.exec_single_step_random(cand)
+    #new_cand, indices = ut.exec_single_step_random(cand)
 
     print(indices)
 
