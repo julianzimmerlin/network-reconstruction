@@ -10,8 +10,8 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 117
-SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
+SEED = 0
+SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_1k_3.5_restart.pickle'
 ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
@@ -21,14 +21,14 @@ FORMAT = 'standard'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
-USE_DYNAMIC_STEPS = True
-NUM_GEN = 50
+USE_DYNAMIC_STEPS = False
+NUM_GEN = 100
 DETERMINISTIC_EVAL = True
-RANDOM = False
+RANDOM = True
 FREE_WALK = False
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba20_1k_4_dynamic')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba20_1k_3.5_random')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
