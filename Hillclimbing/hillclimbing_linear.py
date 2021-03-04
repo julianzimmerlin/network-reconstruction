@@ -25,7 +25,7 @@ USE_DYNAMIC_STEPS = True
 NUM_GEN = 100
 DETERMINISTIC_EVAL = True
 RANDOM = False
-FREE_WALK = False
+FREE_WALK = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
 logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/free_walk/cml_ba20_40_eval')
