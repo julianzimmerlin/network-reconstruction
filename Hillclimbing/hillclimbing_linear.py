@@ -11,24 +11,24 @@ import copy
 import search_utils as su
 
 SEED = 117
-SERIES_ADDRESS = '../data/cml/timeseries_ba20_1k.pickle'
+SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
 ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 250
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'standard'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = True
-NUM_GEN = 100
+NUM_GEN = 50
 DETERMINISTIC_EVAL = True
 RANDOM = False
-FREE_WALK = True
+FREE_WALK = False
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/free_walk/cml_old_data_grad')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba20_1k_4_dynamic')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
