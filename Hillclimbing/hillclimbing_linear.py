@@ -21,14 +21,14 @@ FORMAT = 'standard'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
-USE_DYNAMIC_STEPS = True
+USE_DYNAMIC_STEPS = False
 NUM_GEN = 50
-DETERMINISTIC_EVAL = False
-RANDOM = False
+DETERMINISTIC_EVAL = True
+RANDOM = True
 FREE_WALK = False
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/cml/ba10_1k_restart_3.5_dynamic_eval_nondet')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/cml/ba10_1k_restart_3.5_random')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
