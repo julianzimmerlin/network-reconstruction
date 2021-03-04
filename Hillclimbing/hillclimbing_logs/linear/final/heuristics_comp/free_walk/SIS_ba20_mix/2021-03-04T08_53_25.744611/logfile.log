@@ -1,0 +1,36 @@
+../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: True
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/free_walk/SIS_ba20_eval/2021-03-03T18_48_45.094379
+SEED: 0
+NUM_DYN_EPOCHS: 40
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 100
+DETERMINISTIC_EVAL: True
+FREE WALK: True
+num samples: 5000
+NUM_TRAIN_SAMPLES: 4999
+NUM_TRAIN_BATCHES: 50
+NUM_TEST_SAMPLES: 4999
+NUM_TEST_BATCHES: 50
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 40
+IS_CONTINUOUS: False
+USE_MAX: False
+Mean loss in evaluation epoch: 0.315290629863739, epochs needed: 40
+
+Generation 0
+------------------------- TRACKING ---------------------------
+Matrix Hash: aa16e110a5dcb44b, num_times_seen_before: 0
+ACC: 0.7578947368421053
+TPR/FPR: 1.0, 0.2987012987012987
+Loss: 0.315290629863739
+Timestamp: 0
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+Falling back to gradient.
