@@ -19,16 +19,16 @@ NUM_DYN_EPOCHS = 250
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'standard'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
-CONTINUATION = False
+CONTINUATION = True
 USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = False
 NUM_GEN = 50
 DETERMINISTIC_EVAL = True
 RANDOM = True
 FREE_WALK = False
-CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
+CONT_ADDRESS = './hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/cml/ba10_1k_restart_3.5_random')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
