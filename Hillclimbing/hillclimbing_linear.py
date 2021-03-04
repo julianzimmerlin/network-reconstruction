@@ -11,13 +11,13 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
+SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_5k_4_onetake.pickle'
 ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'timeseries'
+FORMAT = 'standard'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
@@ -25,10 +25,10 @@ USE_DYNAMIC_STEPS = True
 NUM_GEN = 100
 DETERMINISTIC_EVAL = True
 RANDOM = False
-FREE_WALK = True
+FREE_WALK = False
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/free_walk/SIS_ba20_mix')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/free_walk/cml_ba20_40_eval')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -107,8 +107,9 @@ for gen in range(NUM_GEN):
 
     print(indices)
     if len(indices)==0:
-        print('Falling back to gradient.')
-        new_cand, indices = ut.exec_dynamic_step_grad(cand)
+        print('skipping.')
+        continue
+        #new_cand, indices = ut.exec_dynamic_step_grad(cand)
 
     new_cand.requires_grad_(True)
     new_loss, new_dyn_learner, _ = evaluator.evaluate_individual(new_cand,NUM_DYN_EPOCHS, None, None)
