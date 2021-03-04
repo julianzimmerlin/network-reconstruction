@@ -1,0 +1,945 @@
+../data/cml/timeseries_ba20_1k.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hill_climbing_logs/voter_ba20_100_CONT_8ep
+SEED: 117
+NUM_DYN_EPOCHS: 250
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 100
+DETERMINISTIC_EVAL: True
+FREE WALK: True
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 250
+IS_CONTINUOUS: True
+USE_MAX: False
+Mean loss in evaluation epoch: 0.046986084431409836, epochs needed: 250
+
+Generation 0
+------------------------- TRACKING ---------------------------
+Matrix Hash: 775541a2ab9fd6ed, num_times_seen_before: 0
+ACC: 0.5578947368421052
+TPR/FPR: 0.6111111111111112, 0.45454545454545453
+Loss: 0.046986084431409836
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([0, 2]), tensor([ 0, 10]), tensor([ 0, 13]), tensor([ 1, 10]), tensor([ 1, 14]), tensor([ 3, 11]), tensor([ 6, 18]), tensor([ 6, 19]), tensor([ 7, 11]), tensor([ 9, 14]), tensor([10, 11]), tensor([10, 14]), tensor([10, 16]), tensor([11, 17]), tensor([14, 18]), tensor([15, 17])]
+Mean loss in evaluation epoch: 0.04323314130306244, epochs needed: 250
+Accepting!
+
+Generation 1
+------------------------- TRACKING ---------------------------
+Matrix Hash: f2552e527bce6572, num_times_seen_before: 0
+ACC: 0.6210526315789473
+TPR/FPR: 0.7777777777777778, 0.4155844155844156
+Loss: 0.04323314130306244
+Timestamp: 84.38136847799998
+---------------------------------------------------------------
+[tensor([0, 5]), tensor([ 0, 11]), tensor([1, 6]), tensor([ 1, 16]), tensor([ 2, 16]), tensor([3, 4]), tensor([3, 5]), tensor([ 3, 10]), tensor([ 5, 10]), tensor([ 8, 16]), tensor([ 9, 11]), tensor([ 9, 19]), tensor([11, 13])]
+Mean loss in evaluation epoch: 0.03857197239995003, epochs needed: 250
+Accepting!
+
+Generation 2
+------------------------- TRACKING ---------------------------
+Matrix Hash: 748e9ddb5917b76a, num_times_seen_before: 0
+ACC: 0.6894736842105262
+TPR/FPR: 0.9166666666666666, 0.36363636363636365
+Loss: 0.03857197239995003
+Timestamp: 168.535226592
+---------------------------------------------------------------
+[tensor([ 1, 18]), tensor([5, 8]), tensor([6, 7]), tensor([ 6, 11]), tensor([ 7, 16]), tensor([ 9, 12]), tensor([ 9, 13]), tensor([10, 12]), tensor([15, 18])]
+Mean loss in evaluation epoch: 0.038749780505895615, epochs needed: 250
+Accepting!
+
+Generation 3
+------------------------- TRACKING ---------------------------
+Matrix Hash: e844b994f398cf36, num_times_seen_before: 0
+ACC: 0.736842105263158
+TPR/FPR: 0.9722222222222222, 0.3181818181818182
+Loss: 0.038749780505895615
+Timestamp: 252.81791056699998
+---------------------------------------------------------------
+[tensor([0, 8]), tensor([ 0, 17]), tensor([2, 7]), tensor([4, 9]), tensor([ 5, 18]), tensor([6, 8]), tensor([ 6, 10]), tensor([ 7, 10]), tensor([ 7, 18]), tensor([ 8, 10]), tensor([13, 15]), tensor([15, 16]), tensor([16, 18]), tensor([17, 18])]
+Mean loss in evaluation epoch: 0.03344109281897545, epochs needed: 250
+Accepting!
+
+Generation 4
+------------------------- TRACKING ---------------------------
+Matrix Hash: 58f84ac09b074e5a, num_times_seen_before: 0
+ACC: 0.8105263157894737
+TPR/FPR: 1.0, 0.23376623376623376
+Loss: 0.03344109281897545
+Timestamp: 338.633211201
+---------------------------------------------------------------
+[tensor([ 2, 10]), tensor([ 2, 14]), tensor([ 4, 19]), tensor([7, 9]), tensor([ 7, 19]), tensor([ 8, 15]), tensor([ 9, 17])]
+Mean loss in evaluation epoch: 0.030864372849464417, epochs needed: 250
+Accepting!
+
+Generation 5
+------------------------- TRACKING ---------------------------
+Matrix Hash: 1f6dcd0b6f0c5b3a, num_times_seen_before: 0
+ACC: 0.8473684210526315
+TPR/FPR: 1.0, 0.18831168831168832
+Loss: 0.030864372849464417
+Timestamp: 423.51651034400004
+---------------------------------------------------------------
+[tensor([1, 4]), tensor([1, 5]), tensor([ 1, 11]), tensor([3, 6]), tensor([ 4, 13]), tensor([5, 7]), tensor([ 7, 11]), tensor([10, 18]), tensor([12, 16]), tensor([13, 14])]
+Mean loss in evaluation epoch: 0.027465520426630974, epochs needed: 250
+Accepting!
+
+Generation 6
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2dda5555c86de007, num_times_seen_before: 0
+ACC: 0.9
+TPR/FPR: 1.0, 0.12337662337662338
+Loss: 0.027465520426630974
+Timestamp: 507.643083078
+---------------------------------------------------------------
+[tensor([ 0, 18]), tensor([ 2, 13]), tensor([4, 5]), tensor([5, 9]), tensor([10, 17]), tensor([12, 17]), tensor([15, 19])]
+Mean loss in evaluation epoch: 0.023029295727610588, epochs needed: 250
+Accepting!
+
+Generation 7
+------------------------- TRACKING ---------------------------
+Matrix Hash: 7045943cb44645ff, num_times_seen_before: 0
+ACC: 0.9368421052631579
+TPR/FPR: 1.0, 0.07792207792207792
+Loss: 0.023029295727610588
+Timestamp: 592.25213448
+---------------------------------------------------------------
+[tensor([ 0, 15]), tensor([ 0, 16]), tensor([ 3, 14]), tensor([ 7, 12]), tensor([11, 15])]
+Mean loss in evaluation epoch: 0.017792707309126854, epochs needed: 250
+Accepting!
+
+Generation 8
+------------------------- TRACKING ---------------------------
+Matrix Hash: 28f58bf7ed4dac2b, num_times_seen_before: 0
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.017792707309126854
+Timestamp: 677.3063947649999
+---------------------------------------------------------------
+[tensor([0, 7])]
+Mean loss in evaluation epoch: 0.017384061589837074, epochs needed: 250
+Accepting!
+
+Generation 9
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 0
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 762.1262770989999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 10
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 1
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 782.084916929
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 11
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 2
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 801.61104831
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 12
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 3
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 821.11298003
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 13
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 4
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 840.7823849509999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 14
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 5
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 860.7496992729999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 15
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 6
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 880.256935344
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 16
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 7
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 899.763570136
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 17
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 8
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 919.2691189349999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 18
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 9
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 939.423394905
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 19
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 10
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 958.8496695580001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 20
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 11
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 978.193856337
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 21
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 12
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 997.5394377480001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 22
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 13
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1016.9625879679999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 23
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 14
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1036.47393885
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 24
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 15
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1055.835513938
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 25
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 16
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1075.18210195
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 26
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 17
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1094.5295927060001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 27
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 18
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1113.8766179220002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 28
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 19
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1133.224233074
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 29
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 20
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1152.572035693
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 30
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 21
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1171.918943066
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 31
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 22
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1191.265516266
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 32
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 23
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1210.607134904
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 33
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 24
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1229.9510246930001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 34
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 25
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1249.293169048
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 35
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 26
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1268.639033348
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 36
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 27
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1287.9800868910002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 37
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 28
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1307.325292466
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 38
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 29
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1326.668780516
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 39
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 30
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1346.011021282
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 40
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 31
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1365.353525126
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 41
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 32
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1384.695848472
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 42
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 33
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1404.035833335
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 43
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 34
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1423.378266512
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 44
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 35
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1442.720380142
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 45
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 36
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1462.064019165
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 46
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 37
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1481.4051373270001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 47
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 38
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1500.744786688
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 48
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 39
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1520.0850453300002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 49
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 40
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1539.425477755
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 50
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 41
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1558.769309836
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 51
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 42
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1578.108308409
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 52
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 43
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1597.449826877
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 53
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 44
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1616.793768389
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 54
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 45
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1636.13631633
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 55
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 46
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1655.4776928390002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 56
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 47
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1674.8203430590002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 57
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 48
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1694.1588987720002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 58
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 49
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1713.498842162
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 59
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 50
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1732.845414677
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 60
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 51
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1752.1866111220002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 61
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 52
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1771.525304682
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 62
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 53
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1790.8678296530002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 63
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 54
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1810.2088687990001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 64
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 55
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1829.550166487
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 65
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 56
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1848.8928289760001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 66
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 57
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1868.232801483
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 67
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 58
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1887.574156223
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 68
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 59
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1906.926585658
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 69
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 60
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1926.269120789
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 70
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 61
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1945.60788316
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 71
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 62
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1964.9427200720002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 72
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 63
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 1984.2839569640003
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 73
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 64
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 2003.624777071
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 74
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 65
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 2022.9656187420003
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 75
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 66
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 2042.3400650629999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 76
+------------------------- TRACKING ---------------------------
+Matrix Hash: 60a0ee77451b1617, num_times_seen_before: 67
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.017384061589837074
+Timestamp: 2061.697610891
+---------------------------------------------------------------

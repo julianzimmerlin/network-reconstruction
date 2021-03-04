@@ -18,7 +18,7 @@ HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 250
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'standard'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 CONTINUATION = False
 USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = True
@@ -28,7 +28,7 @@ RANDOM = False
 FREE_WALK = True
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/free_walk/cml_old_data_eval')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/free_walk/cml_old_data_grad')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
