@@ -23,12 +23,12 @@ CONTINUATION = False
 USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = True
 NUM_GEN = 50
-DETERMINISTIC_EVAL = True
+DETERMINISTIC_EVAL = False
 RANDOM = False
 FREE_WALK = False
 CONT_ADDRESS = './hill_climbing_logs/voter_ba20_100_CONT_8ep'
 
-logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_dynamic_eval')
+logger = lo.Logger('hillclimbing_logs/linear/final/heuristics_comp/cml/ba10_1k_restart_3.5_dynamic_eval_nondet')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
