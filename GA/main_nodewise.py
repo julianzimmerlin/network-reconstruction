@@ -8,24 +8,25 @@ import utils as ut
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = '../data/netrd/SIS/timeseries_ba10_500.pickle'
-ADJ_ADDRESS = '../data/netrd/SIS/edges_ba10.pickle'
+SERIES_ADDRESS = r'D:\Uni\BA\Development\data\final\netrd/SIS/timeseries_ba20_5k_0.1.pickle'
+ADJ_ADDRESS = r'D:\Uni\BA\Development\data\final\edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS_INIT = 300
 NUM_DYN_EPOCHS = 30
 DETECT_EARLY_CONVERGENCE = False
-RESET_DYN_LEARNER_EVERY_NTH_GEN = 5
-POP_SIZE = 1
-NEWPOP_SIZE = 2
-NUM_GEN = 500
+RESET_DYN_LEARNER_EVERY_NTH_GEN = 1
+POP_SIZE = 8
+NEWPOP_SIZE = 16
+NUM_GEN = 20
 USE_NODEWISE_EVALUATION = False
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_DYNAMIC_MUTATIONS = True
 FORMAT = 'timeseries'
 CONTINUATION = False
 CONT_ADDRESS = r'D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418'
 
-logger = lo.Logger('GA_logs')
+logger = lo.Logger('GA_logs/final/SIS_ba20_dynamic')
 sys.stdout = logger
 torch.manual_seed(SEED)
 np.random.seed(SEED)
@@ -127,7 +128,12 @@ for j in range(NUM_GEN):
     newpop = list()
     for i in range(NEWPOP_SIZE):
         # mutate
-        newpop.append(su.double_mutation(population[idx[i]], dynamics_learners[idx[i]], evaluator))
+        if USE_DYNAMIC_MUTATIONS:
+            next_indiv = ut.exec_dynamic_step_eval(population[idx[i]], dynamics_learners[idx[i]], evaluator, losses[idx[i]])\
+                if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(population[idx[i]])
+            newpop.append(next_indiv)
+        else:
+            newpop.append(su.double_mutation(population[idx[i]], dynamics_learners[idx[i]], evaluator))
 
     # evaluate old and new population and merge
     [ind.grad.zero_() if ind.grad is not None else None for ind in population + newpop]
