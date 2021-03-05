@@ -22,6 +22,7 @@ NUM_GEN = 20
 USE_NODEWISE_EVALUATION = False
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 USE_DYNAMIC_MUTATIONS = True
+USE_DETERMINISTIC_EVAL = True
 FORMAT = 'timeseries'
 CONTINUATION = False
 CONT_ADDRESS = r'D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418'
@@ -30,7 +31,7 @@ logger = lo.Logger('GA_logs/final/SIS_ba20_dynamic')
 sys.stdout = logger
 torch.manual_seed(SEED)
 np.random.seed(SEED)
-evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_EVALUATION)
+evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_EVALUATION, DETERMINISTIC=USE_DETERMINISTIC_EVAL)
 NUM_NODES = evaluator.get_num_nodes()
 
 print(SERIES_ADDRESS)
@@ -47,6 +48,7 @@ print('NEWPOP_SIZE: ' + str(NEWPOP_SIZE))
 print('NUM_GEN: ' + str(NUM_GEN))
 print('USE_NODEWISE_EVALUATION: ' + str(USE_NODEWISE_EVALUATION))
 print('USE_EVALEPOCH_FOR_GUIDED_MUTATION: ' + str(USE_EVALEPOCH_FOR_GUIDED_MUTATION))
+print('USE_DETERMINISTIC_EVAL: ' + str(USE_DETERMINISTIC_EVAL))
 
 # load ground truth matrix
 with open(ADJ_ADDRESS, 'rb') as f:
@@ -129,7 +131,7 @@ for j in range(NUM_GEN):
         if USE_DYNAMIC_MUTATIONS:
             next_indiv,changed_indices = ut.exec_dynamic_step_eval(population[idx[i]], dynamics_learners[idx[i]], evaluator, losses[idx[i]])\
                 if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(population[idx[i]])
-            newpop.append(next_indiv)
+            newpop.append(next_indiv.requires_grad_(True))
         else:
             newpop.append(su.double_mutation(population[idx[i]], dynamics_learners[idx[i]], evaluator))
 
@@ -140,7 +142,8 @@ for j in range(NUM_GEN):
         optimizers = [None]*len(optimizers)
     newlosses, newdynamics_learners, newoptimizers = evaluator.evaluate_population(newpop, NUM_DYN_EPOCHS_INIT if j % RESET_DYN_LEARNER_EVERY_NTH_GEN == 0 else NUM_DYN_EPOCHS,
                                                                             [dynamics_learners[id] for id in idx], [optimizers[id] for id in idx])
-    losses, dynamics_learners, optimizers = evaluator.evaluate_population(population, NUM_DYN_EPOCHS_INIT if j % RESET_DYN_LEARNER_EVERY_NTH_GEN == 0 else NUM_DYN_EPOCHS,
+    if not USE_DETERMINISTIC_EVAL:
+        losses, dynamics_learners, optimizers = evaluator.evaluate_population(population, NUM_DYN_EPOCHS_INIT if j % RESET_DYN_LEARNER_EVERY_NTH_GEN == 0 else NUM_DYN_EPOCHS,
                                                                             dynamics_learners, optimizers)
     # update population
     fullpop = population + newpop
