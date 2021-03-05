@@ -8,19 +8,19 @@ import utils as ut
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'D:\Uni\BA\Development\data\final\netrd/SIS/timeseries_ba20_5k_0.1.pickle'
-ADJ_ADDRESS = r'D:\Uni\BA\Development\data\final\edges_ba20.pickle'
+SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_INIT = 300
-NUM_DYN_EPOCHS = 30
+NUM_DYN_EPOCHS_INIT = 20
+NUM_DYN_EPOCHS = 20
 DETECT_EARLY_CONVERGENCE = False
 RESET_DYN_LEARNER_EVERY_NTH_GEN = 1
 POP_SIZE = 8
 NEWPOP_SIZE = 16
 NUM_GEN = 20
 USE_NODEWISE_EVALUATION = False
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 USE_DYNAMIC_MUTATIONS = True
 FORMAT = 'timeseries'
 CONTINUATION = False
