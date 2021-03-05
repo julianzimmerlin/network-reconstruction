@@ -10,9 +10,9 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 0
-SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
-ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
+SEED = 117
+SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 20
@@ -94,7 +94,7 @@ for gen in range(NUM_GEN+20):
     tracker.track(cand, loss)
 
     mutation_probs = ut.calc_edge_mutation_probs_gradient(cand) if not USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.calc_edge_mutation_probs_evalepoch_nodewise(cand, dyn_learner, evaluator)
-    print(mutation_probs.detach().cpu().numpy())
+    #print(mutation_probs.detach().cpu().numpy())
     new_cand = cand.detach().clone()
     # flip each edge with the the respective probability in mutation_probs
     num_changes = 0
