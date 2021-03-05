@@ -32,7 +32,6 @@ torch.manual_seed(SEED)
 np.random.seed(SEED)
 evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_EVALUATION)
 NUM_NODES = evaluator.get_num_nodes()
-MUT_PROB = 1 / (NUM_NODES * (NUM_NODES+1) / 2)  # expected value is 1 mutation in the matrix
 
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -48,7 +47,6 @@ print('NEWPOP_SIZE: ' + str(NEWPOP_SIZE))
 print('NUM_GEN: ' + str(NUM_GEN))
 print('USE_NODEWISE_EVALUATION: ' + str(USE_NODEWISE_EVALUATION))
 print('USE_EVALEPOCH_FOR_GUIDED_MUTATION: ' + str(USE_EVALEPOCH_FOR_GUIDED_MUTATION))
-print('MUT_PROB: ' + str(MUT_PROB))
 
 # load ground truth matrix
 with open(ADJ_ADDRESS, 'rb') as f:
@@ -129,7 +127,7 @@ for j in range(NUM_GEN):
     for i in range(NEWPOP_SIZE):
         # mutate
         if USE_DYNAMIC_MUTATIONS:
-            next_indiv = ut.exec_dynamic_step_eval(population[idx[i]], dynamics_learners[idx[i]], evaluator, losses[idx[i]])\
+            next_indiv,changed_indices = ut.exec_dynamic_step_eval(population[idx[i]], dynamics_learners[idx[i]], evaluator, losses[idx[i]])\
                 if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(population[idx[i]])
             newpop.append(next_indiv)
         else:
