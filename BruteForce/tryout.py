@@ -8,18 +8,17 @@ import numpy as np
 logger = lo.Logger('tryout_logs')
 sys.stdout = logger
 
-SERIES_ADDRESS = r'D:\Uni\BA\Development\data\final\cml\timeseries_bull_5k_4_onetake.pickle'
-ADJ_ADDRESS = r'D:\Uni\BA\Development\data\final\netrd\Kuramoto\edges_bull.pickle'
+SERIES_ADDRESS = r'D:\Uni\BA\Development\data\final\netrd/SIS/timeseries_ba20_5k_0.1.pickle'
+ADJ_ADDRESS = r'D:\Uni\BA\Development\data\final\edges_ba20.pickle'
 SEED = 4
-NUM_DYN_EPOCHS = 100
-FORMAT='standard'
+NUM_DYN_EPOCHS = 40
+FORMAT='timeseries'
 BATCH_SIZE = 100
 DETECT_EARLY_CONVERGENCE = False
-
 HIDDEN_SIZE = 128
 NUM_RUNS = 1
 
-USE_OLD_DISCRETE_FORMAT = True
+
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
 print('SEED: {}'.format(SEED))
@@ -37,7 +36,7 @@ with open(ADJ_ADDRESS, 'rb') as f:
     np.savetxt(logger.get_path() + '/ground_truth_matrix.txt', gt_matrix.numpy(), fmt='%i')
 print(gt_matrix)
 
-evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, False, False, USE_MAX=False)
+evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, False, False)
 num_nodes = evaluator.get_num_nodes()
 
 # ----------------------------------------------------------------
@@ -56,7 +55,9 @@ mat4[4,3] = 1
 #ind = np.diag_indices(mat5.shape[0])
 #mat5[ind[0], ind[1]] = torch.ones(mat5.shape[0])
 
-all_matrices = [mat0, mat4, mat1, mat2]
+all_matrices = [mat0,mat3, mat2]
+
+
 for m in all_matrices:
     m.requires_grad_(True)
     print(m.detach().cpu().numpy().astype(int))

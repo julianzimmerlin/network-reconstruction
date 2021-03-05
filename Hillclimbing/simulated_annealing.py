@@ -10,20 +10,20 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 5
-SERIES_ADDRESS = '../data/netrd/SIS/timeseries_ba10_500.pickle'
-ADJ_ADDRESS = '../data/netrd/SIS/edges_ba10.pickle'
+SEED = 0
+SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 300
-NUM_GEN = 40
+NUM_DYN_EPOCHS = 20
+NUM_GEN = 50
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'timeseries'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 CONTINUATION = False
 CONT_ADDRESS = '/content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852'
 
-logger = lo.Logger('hill_climbing_logs/annealing')
+logger = lo.Logger('hillclimbing_logs/annealing/SIS_ba20')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -39,7 +39,7 @@ np.random.seed(SEED)
 np.set_printoptions(floatmode='fixed', suppress=True, precision=5, linewidth=300)
 
 # initialize evaluator with given timeseries data
-evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, False)
+evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, False, DETERMINISTIC=False)
 NUM_NODES = evaluator.get_num_nodes()
 # load ground truth matrix
 with open(ADJ_ADDRESS, 'rb') as f:
@@ -86,7 +86,7 @@ if CONTINUATION:
 else:
     cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
 
-for gen in range(NUM_GEN+10):
+for gen in range(NUM_GEN+20):
     dyn_learner = None
     optimizer = None
     loss, dyn_learner, optimizer = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, dyn_learner, optimizer)

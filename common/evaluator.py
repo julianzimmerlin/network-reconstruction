@@ -65,7 +65,7 @@ class Evaluator:
                 losses.append(loss)
             mean_loss = torch.stack(losses).mean().cpu()
             mean_losses.append(mean_loss)
-            #print('Loss in Epoch ' + str(ep) + ': ' + str(mean_loss.cpu().item()))
+            print('Loss in Epoch ' + str(ep) + ': ' + str(mean_loss.cpu().item()))
             ep += 1
 
         # one more pass over the training data to calculate loss and possibly gradient on structure
