@@ -21,7 +21,7 @@ NEWPOP_SIZE = 16
 NUM_GEN = 45
 USE_NODEWISE_EVALUATION = False
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
-USE_DYNAMIC_MUTATIONS = True
+USE_DYNAMIC_MUTATIONS = False
 USE_DETERMINISTIC_EVAL = False
 FORMAT = 'old'
 EXPERIMENTS = 5
@@ -53,7 +53,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GA_logs/final/Voter_ba10_100')
+    logger = lo.Logger('GA_logs/final/Voter_ba10_100_eval_doublemut')
     sys.stdout = logger
 
     evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_EVALUATION, DETERMINISTIC=USE_DETERMINISTIC_EVAL)
