@@ -30,6 +30,9 @@ EXPERIMENTS = 5
 CONTINUATION = False
 CONT_ADDRESS = './hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816'
 
+torch.manual_seed(SEED)
+np.random.seed(SEED)
+
 orig_terminal = sys.stdout
 exp_final_accs = list()
 exp_final_tprs = list()
@@ -53,8 +56,6 @@ for _ in range(EXPERIMENTS):
     print('EXPERIMENTS: ' + str(EXPERIMENTS))
     if RANDOM:
         print('ATTENTIONNNNNNNNNNNNNNNNNNNN RANDOM MUTATIONS')
-    torch.manual_seed(SEED)
-    np.random.seed(SEED)
 
     # initialize evaluator with given timeseries data
     evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_LOSS, DETERMINISTIC=DETERMINISTIC_EVAL)
