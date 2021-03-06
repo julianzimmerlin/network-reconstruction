@@ -7,13 +7,13 @@ import tracker as tr
 import utils as ut
 import search_utils as su
 
-SEED = 0
+SEED =0
 SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
 ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_INIT = 20
-NUM_DYN_EPOCHS = 20
+NUM_DYN_EPOCHS_INIT = 60
+NUM_DYN_EPOCHS = 60
 DETECT_EARLY_CONVERGENCE = False
 RESET_DYN_LEARNER_EVERY_NTH_GEN = 1
 POP_SIZE = 8
@@ -22,7 +22,7 @@ NUM_GEN = 20
 USE_NODEWISE_EVALUATION = False
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 USE_DYNAMIC_MUTATIONS = True
-USE_DETERMINISTIC_EVAL = True
+USE_DETERMINISTIC_EVAL = False
 FORMAT = 'timeseries'
 CONTINUATION = False
 CONT_ADDRESS = r'D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418'
