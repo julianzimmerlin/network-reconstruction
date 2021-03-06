@@ -10,12 +10,12 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 0
+SEED = 1
 SERIES_ADDRESS = '../data/final/Voter/timeseries_ba10_100.pickle'
 ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 40
+NUM_DYN_EPOCHS = 80
 NUM_GEN = 20
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'old'
