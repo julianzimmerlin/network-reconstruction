@@ -23,7 +23,7 @@ NUM_CYCLES = 100
 FORMAT = 'old'
 USE_GUMBEL = True
 TEMP_DROP_FACTOR = .95
-EXPERIMENTS = 2
+EXPERIMENTS = 5
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)
