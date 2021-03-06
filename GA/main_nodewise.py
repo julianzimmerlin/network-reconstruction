@@ -8,8 +8,8 @@ import utils as ut
 import search_utils as su
 
 SEED =0
-SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba10_1k_0.15.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS_INIT = 60

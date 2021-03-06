@@ -11,11 +11,11 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = '../data/final/Voter/timeseries_ba20_100.pickle'
-ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba10_1k_0.15.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 80
+NUM_DYN_EPOCHS = 300
 NUM_GEN = 60
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'old'
