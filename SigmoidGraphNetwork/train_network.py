@@ -12,15 +12,15 @@ import sys
 import pickle
 
 USE_GPU = True
-SERIES_ADDRESS = r'D:\Uni\BA\Development\data\final\cml\timeseries_bull_5k_4_onetake.pickle'
-ADJ_ADDRESS = r'D:\Uni\BA\Development\data\final\netrd\Kuramoto\edges_bull.pickle'
+SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS_PER_CYCLE = 15
 NUM_NET_EPOCHS_PER_CYCLE = 5
 NUM_CYCLES = 60
-FORMAT = 'standard'
+FORMAT = 'timeseries'
 USE_GUMBEL = True
 TEMP_DROP_FACTOR = .95
 EXPERIMENTS = 1
@@ -31,7 +31,7 @@ device = 'cuda' if USE_GPU else 'cpu'
 
 orig_terminal = sys.stdout
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/voternew/ba10_1000' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/trash' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(SERIES_ADDRESS)
@@ -53,7 +53,7 @@ for _ in range(EXPERIMENTS):
         np.savetxt(logger.path + '/gt_matrix.txt', gt_matrix.numpy().astype(int), fmt='%i')
 
     tracker = tr.Tracker(gt_matrix, logger)
-    data_loader, is_continuous, num_nodes = ld.load_data(SERIES_ADDRESS, FORMAT, BATCH_SIZE)
+    data_loader,_, is_continuous, num_nodes = ld.load_data(SERIES_ADDRESS, FORMAT, BATCH_SIZE, False)
 
     # initialize network
     dyn_learner = mo.GraphNetwork(data_loader.dataset.size()[-1], HIDDEN_SIZE, not is_continuous).to(device)

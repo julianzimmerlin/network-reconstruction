@@ -10,20 +10,20 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 117
-SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
+SEED = 0
+SERIES_ADDRESS = '../data/final/Voter/timeseries_ba10_100.pickle'
 ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 20
-NUM_GEN = 50
+NUM_DYN_EPOCHS = 40
+NUM_GEN = 20
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'timeseries'
+FORMAT = 'old'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 CONTINUATION = False
 CONT_ADDRESS = '/content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852'
 
-logger = lo.Logger('hillclimbing_logs/annealing/SIS_ba20')
+logger = lo.Logger('hillclimbing_logs/annealing/Voter_ba10_100')
 sys.stdout = logger
 print(SERIES_ADDRESS)
 print(ADJ_ADDRESS)
@@ -93,18 +93,19 @@ for gen in range(NUM_GEN+20):
     print('\n\n Tracking generation ' + str(gen))
     tracker.track(cand, loss)
 
-    mutation_probs = ut.calc_edge_mutation_probs_gradient(cand) if not USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.calc_edge_mutation_probs_evalepoch_nodewise(cand, dyn_learner, evaluator)
+    #mutation_probs = ut.calc_edge_mutation_probs_gradient(cand) if not USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.calc_edge_mutation_probs_evalepoch_nodewise(cand, dyn_learner, evaluator)
     #print(mutation_probs.detach().cpu().numpy())
-    new_cand = cand.detach().clone()
+    #new_cand = cand.detach().clone()
     # flip each edge with the the respective probability in mutation_probs
-    num_changes = 0
-    for i in range(mutation_probs.size()[0]):
-        for j in range(i+1, mutation_probs.size()[1]):
-            if np.random.random(1)[0] < mutation_probs[i,j]:
-                num_changes += 1
-                new_cand[i,j] = 1-new_cand[i,j]
-                new_cand[j,i] = 1 - new_cand[j,i]
-    print('Candidate: ' + ut.hash_tensor(new_cand) + '. Changes:' + str(num_changes))
+    #num_changes = 0
+    #for i in range(mutation_probs.size()[0]):
+    #    for j in range(i+1, mutation_probs.size()[1]):
+    #        if np.random.random(1)[0] < mutation_probs[i,j]:
+    #            num_changes += 1
+    #            new_cand[i,j] = 1-new_cand[i,j]
+    #            new_cand[j,i] = 1 - new_cand[j,i]
+    new_cand,changed_indices = ut.exec_dynamic_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_dynamic_step_grad(cand)
+    print('Candidate: ' + ut.hash_tensor(new_cand) + '. Changes:' + str(len(changed_indices)))
 
     new_loss, new_dyn_learner, new_optimizer = evaluator.evaluate_individual(new_cand,NUM_DYN_EPOCHS, None, None)
 
