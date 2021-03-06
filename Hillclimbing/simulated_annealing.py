@@ -16,11 +16,11 @@ ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 300
-NUM_GEN = 20
+NUM_GEN = 30
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'old'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
-EXPERIMENTS = 1
+EXPERIMENTS = 5
 CONTINUATION = False
 CONT_ADDRESS = '/content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852'
 
@@ -61,7 +61,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/final/ba20_100_eval', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/annealing/final/ba20_100_eval', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
@@ -92,7 +92,7 @@ for _ in range(EXPERIMENTS):
     else:
         cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
 
-    for gen in range(NUM_GEN+20):
+    for gen in range(int(1.5*NUM_GEN)):
         dyn_learner = None
         optimizer = None
         loss, dyn_learner, optimizer = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, dyn_learner, optimizer)
