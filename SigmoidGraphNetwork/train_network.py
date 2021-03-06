@@ -12,26 +12,29 @@ import sys
 import pickle
 
 USE_GPU = True
-SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = '../data/final/Voter/timeseries_ba20_100.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_PER_CYCLE = 15
-NUM_NET_EPOCHS_PER_CYCLE = 5
-NUM_CYCLES = 60
-FORMAT = 'timeseries'
+NUM_DYN_EPOCHS_PER_CYCLE = 10
+NUM_NET_EPOCHS_PER_CYCLE = 10
+NUM_CYCLES = 100
+FORMAT = 'old'
 USE_GUMBEL = True
 TEMP_DROP_FACTOR = .95
-EXPERIMENTS = 1
+EXPERIMENTS = 2
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 device = 'cuda' if USE_GPU else 'cpu'
 
 orig_terminal = sys.stdout
+exp_final_accs = list()
+exp_final_tprs = list()
+exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/trash' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/trash/exp_mean_test' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(SERIES_ADDRESS)
@@ -77,3 +80,18 @@ for _ in range(EXPERIMENTS):
             network_gen.drop_temperature()
         print('Tracking cycle ' + str(cycle))
         tracker.track(network_gen.get_matrix_hard(), torch.tensor(mean_loss))
+
+    exp_final_accs.append(tracker.get_last_acc())
+    exp_final_fprs.append(tracker.get_last_fpr())
+    exp_final_tprs.append(tracker.get_last_tpr())
+
+print('----------------- Final results across all experiments ---------------')
+print('accs: ' + str(exp_final_accs))
+print('tprs: ' + str(exp_final_tprs))
+print('fprs: ' + str(exp_final_fprs))
+mean_acc = torch.tensor(exp_final_accs).mean().item()
+mean_tpr = torch.tensor(exp_final_tprs).mean().item()
+mean_fpr = torch.tensor(exp_final_fprs).mean().item()
+print('mean acc: ' + str(mean_acc))
+print('mean tpr: ' + str(mean_tpr))
+print('mean fpr: ' + str(mean_fpr))

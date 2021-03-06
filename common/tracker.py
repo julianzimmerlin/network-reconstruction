@@ -69,3 +69,12 @@ class Tracker:
             pickle.dump(self.timestamps, f)
 
         self.gen_num = self.gen_num + 1
+    
+    def get_last_tpr(self):
+        return self.tprs[-1]
+    
+    def get_last_fpr(self):
+        return self.fprs[-1]
+    
+    def get_last_acc(self):
+        return self.accuracies[-1]
