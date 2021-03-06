@@ -19,7 +19,7 @@ NUM_DYN_EPOCHS = 300
 NUM_GEN = 30
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'old'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 EXPERIMENTS = 5
 CONTINUATION = False
 CONT_ADDRESS = '/content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852'
@@ -61,7 +61,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/annealing/final/ba20_100_eval', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/annealing/final/ba20_100_grad', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
