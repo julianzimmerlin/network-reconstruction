@@ -18,7 +18,7 @@ SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS_PER_CYCLE = 10
-NUM_NET_EPOCHS_PER_CYCLE = 10
+NUM_NET_EPOCHS_PER_CYCLE = 20
 NUM_CYCLES = 100
 FORMAT = 'old'
 USE_GUMBEL = True
@@ -34,7 +34,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/trash/exp_mean_test' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/final/Voter_ba20_100' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(SERIES_ADDRESS)
