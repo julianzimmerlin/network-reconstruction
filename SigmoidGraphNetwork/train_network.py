@@ -1,4 +1,4 @@
-from importlib._bootstrap import _installed_safely
+#from importlib._bootstrap import _installed_safely
 
 import load_data as ld
 import torch
@@ -17,13 +17,13 @@ ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
 SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_PER_CYCLE = 10
-NUM_NET_EPOCHS_PER_CYCLE = 20
-NUM_CYCLES = 100
+NUM_DYN_EPOCHS_PER_CYCLE = 20
+NUM_NET_EPOCHS_PER_CYCLE = 10
+NUM_CYCLES = 200
 FORMAT = 'timeseries'
 USE_GUMBEL = True
-TEMP_DROP_FACTOR = .95
-EXPERIMENTS = 1
+TEMP_DROP_FACTOR = .99
+EXPERIMENTS = 5
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)
@@ -34,7 +34,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/final/SIS_ba10_100' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/final/SIS_ba10_100_other_hyperparams' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(SERIES_ADDRESS)
