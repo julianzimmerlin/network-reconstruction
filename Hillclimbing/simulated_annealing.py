@@ -11,16 +11,16 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/Voter/timeseries_ba20_100.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba10_1k_0.15.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 300
+NUM_DYN_EPOCHS = 40
 NUM_GEN = 30
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'old'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
-EXPERIMENTS = 5
+FORMAT = 'timeseries'
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+EXPERIMENTS = 1
 CONTINUATION = False
 CONT_ADDRESS = '/content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852'
 
@@ -61,7 +61,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/annealing/final/ba20_100_grad', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/trash', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
