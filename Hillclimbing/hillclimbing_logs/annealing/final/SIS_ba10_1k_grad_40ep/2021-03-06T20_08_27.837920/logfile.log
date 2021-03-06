@@ -1,0 +1,690 @@
+../data/final/netrd/SIS/timeseries_ba10_1k_0.15.pickle
+../data/final/edges_ba10.pickle
+SEED: 0
+NUM_DYN_EPOCHS: 40
+DETECT_EARLY_CONVERGENCE: False
+CONTINUATION: False
+CONT_ADDRESS: /content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: False
+NUM_GEN: 30
+num samples: 1000
+NUM_TRAIN_SAMPLES: 999
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 999
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 40
+IS_CONTINUOUS: False
+USE_MAX: False
+Mean loss in evaluation epoch: 0.38545677065849304, epochs needed: 40
+
+
+ Tracking generation 0
+------------------------- TRACKING ---------------------------
+Matrix Hash: c7162df0e3021362, num_times_seen_before: 0
+ACC: 0.5333333333333333
+TPR/FPR: 0.5625, 0.4827586206896552
+Loss: 0.38545677065849304
+Timestamp: 0
+---------------------------------------------------------------
+Candidate: a9a56f9a2f6352ce. Changes:9
+Mean loss in evaluation epoch: 0.37465500831604004, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3753168284893036, epochs needed: 40
+
+
+ Tracking generation 1
+------------------------- TRACKING ---------------------------
+Matrix Hash: a9a56f9a2f6352ce, num_times_seen_before: 0
+ACC: 0.4666666666666667
+TPR/FPR: 0.3125, 0.4482758620689655
+Loss: 0.3753168284893036
+Timestamp: 7.346094530000073
+---------------------------------------------------------------
+Candidate: 079bacbdb2328502. Changes:13
+Mean loss in evaluation epoch: 0.38306692242622375, epochs needed: 40
+will accept with prob tensor(0.4359)
+rejecting.
+Mean loss in evaluation epoch: 0.3749605119228363, epochs needed: 40
+
+
+ Tracking generation 2
+------------------------- TRACKING ---------------------------
+Matrix Hash: a9a56f9a2f6352ce, num_times_seen_before: 1
+ACC: 0.4666666666666667
+TPR/FPR: 0.3125, 0.4482758620689655
+Loss: 0.3749605119228363
+Timestamp: 13.65546835400005
+---------------------------------------------------------------
+Candidate: a7e17396cbd1701e. Changes:9
+Mean loss in evaluation epoch: 0.3796752691268921, epochs needed: 40
+will accept with prob tensor(0.5922)
+accepting!
+Mean loss in evaluation epoch: 0.3801974654197693, epochs needed: 40
+
+
+ Tracking generation 3
+------------------------- TRACKING ---------------------------
+Matrix Hash: a7e17396cbd1701e, num_times_seen_before: 0
+ACC: 0.5333333333333333
+TPR/FPR: 0.3125, 0.3448275862068966
+Loss: 0.3801974654197693
+Timestamp: 20.81878427499987
+---------------------------------------------------------------
+Candidate: ba1a2da0102b2668. Changes:12
+Mean loss in evaluation epoch: 0.37873658537864685, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.37907543778419495, epochs needed: 40
+
+
+ Tracking generation 4
+------------------------- TRACKING ---------------------------
+Matrix Hash: ba1a2da0102b2668, num_times_seen_before: 0
+ACC: 0.48888888888888893
+TPR/FPR: 0.4375, 0.4827586206896552
+Loss: 0.37907543778419495
+Timestamp: 28.817913368000063
+---------------------------------------------------------------
+Candidate: 0cdeaa6618097998. Changes:6
+Mean loss in evaluation epoch: 0.37582966685295105, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3792681396007538, epochs needed: 40
+
+
+ Tracking generation 5
+------------------------- TRACKING ---------------------------
+Matrix Hash: 0cdeaa6618097998, num_times_seen_before: 0
+ACC: 0.48888888888888893
+TPR/FPR: 0.375, 0.4482758620689655
+Loss: 0.3792681396007538
+Timestamp: 37.82715566799993
+---------------------------------------------------------------
+Candidate: 21f6a069bf3c7003. Changes:12
+Mean loss in evaluation epoch: 0.37805062532424927, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3786056339740753, epochs needed: 40
+
+
+ Tracking generation 6
+------------------------- TRACKING ---------------------------
+Matrix Hash: 21f6a069bf3c7003, num_times_seen_before: 0
+ACC: 0.48888888888888893
+TPR/FPR: 0.3125, 0.41379310344827586
+Loss: 0.3786056339740753
+Timestamp: 46.738284442999884
+---------------------------------------------------------------
+Candidate: ace571186c2d0372. Changes:10
+Mean loss in evaluation epoch: 0.3817041218280792, epochs needed: 40
+will accept with prob tensor(0.6675)
+rejecting.
+Mean loss in evaluation epoch: 0.377242773771286, epochs needed: 40
+
+
+ Tracking generation 7
+------------------------- TRACKING ---------------------------
+Matrix Hash: 21f6a069bf3c7003, num_times_seen_before: 1
+ACC: 0.48888888888888893
+TPR/FPR: 0.3125, 0.41379310344827586
+Loss: 0.377242773771286
+Timestamp: 54.51800006799999
+---------------------------------------------------------------
+Candidate: a93550deec32472c. Changes:8
+Mean loss in evaluation epoch: 0.3740333914756775, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3738451600074768, epochs needed: 40
+
+
+ Tracking generation 8
+------------------------- TRACKING ---------------------------
+Matrix Hash: a93550deec32472c, num_times_seen_before: 0
+ACC: 0.4444444444444444
+TPR/FPR: 0.4375, 0.5517241379310345
+Loss: 0.3738451600074768
+Timestamp: 63.14203014200007
+---------------------------------------------------------------
+Candidate: d8d86e8828c93ef9. Changes:9
+Mean loss in evaluation epoch: 0.3810896873474121, epochs needed: 40
+will accept with prob tensor(0.3553)
+rejecting.
+Mean loss in evaluation epoch: 0.3741180896759033, epochs needed: 40
+
+
+ Tracking generation 9
+------------------------- TRACKING ---------------------------
+Matrix Hash: a93550deec32472c, num_times_seen_before: 1
+ACC: 0.4444444444444444
+TPR/FPR: 0.4375, 0.5517241379310345
+Loss: 0.3741180896759033
+Timestamp: 72.23483248000002
+---------------------------------------------------------------
+Candidate: 4202dbec2eed13fe. Changes:13
+Mean loss in evaluation epoch: 0.37787917256355286, epochs needed: 40
+will accept with prob tensor(0.5688)
+accepting!
+Mean loss in evaluation epoch: 0.37699389457702637, epochs needed: 40
+
+
+ Tracking generation 10
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4202dbec2eed13fe, num_times_seen_before: 0
+ACC: 0.4666666666666667
+TPR/FPR: 0.3125, 0.4482758620689655
+Loss: 0.37699389457702637
+Timestamp: 81.164439722
+---------------------------------------------------------------
+Candidate: a54104d84ce06a1e. Changes:13
+Mean loss in evaluation epoch: 0.3767518997192383, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3768657147884369, epochs needed: 40
+
+
+ Tracking generation 11
+------------------------- TRACKING ---------------------------
+Matrix Hash: a54104d84ce06a1e, num_times_seen_before: 0
+ACC: 0.4444444444444444
+TPR/FPR: 0.625, 0.6551724137931034
+Loss: 0.3768657147884369
+Timestamp: 90.13476363099994
+---------------------------------------------------------------
+Candidate: 30a9a30b5354336e. Changes:8
+Mean loss in evaluation epoch: 0.37478458881378174, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.37722405791282654, epochs needed: 40
+
+
+ Tracking generation 12
+------------------------- TRACKING ---------------------------
+Matrix Hash: 30a9a30b5354336e, num_times_seen_before: 0
+ACC: 0.48888888888888893
+TPR/FPR: 0.5, 0.5172413793103449
+Loss: 0.37722405791282654
+Timestamp: 99.15442779599994
+---------------------------------------------------------------
+Candidate: 25b2a89cf4a4d014. Changes:12
+Mean loss in evaluation epoch: 0.3860793113708496, epochs needed: 40
+will accept with prob tensor(0.2096)
+accepting!
+Mean loss in evaluation epoch: 0.3814599812030792, epochs needed: 40
+
+
+ Tracking generation 13
+------------------------- TRACKING ---------------------------
+Matrix Hash: 25b2a89cf4a4d014, num_times_seen_before: 0
+ACC: 0.4444444444444444
+TPR/FPR: 0.8125, 0.7586206896551724
+Loss: 0.3814599812030792
+Timestamp: 108.19382390500004
+---------------------------------------------------------------
+Candidate: 2df7fa512b848f7b. Changes:9
+Mean loss in evaluation epoch: 0.37545710802078247, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3755052983760834, epochs needed: 40
+
+
+ Tracking generation 14
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2df7fa512b848f7b, num_times_seen_before: 0
+ACC: 0.4222222222222223
+TPR/FPR: 0.5, 0.6206896551724138
+Loss: 0.3755052983760834
+Timestamp: 117.28460055200003
+---------------------------------------------------------------
+Candidate: 4873c9f0479a9cda. Changes:10
+Mean loss in evaluation epoch: 0.3768249452114105, epochs needed: 40
+will accept with prob tensor(0.7680)
+accepting!
+Mean loss in evaluation epoch: 0.3763774037361145, epochs needed: 40
+
+
+ Tracking generation 15
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4873c9f0479a9cda, num_times_seen_before: 0
+ACC: 0.4222222222222223
+TPR/FPR: 0.4375, 0.5862068965517241
+Loss: 0.3763774037361145
+Timestamp: 125.79115973399985
+---------------------------------------------------------------
+Candidate: a9eeba1dd1b99092. Changes:9
+Mean loss in evaluation epoch: 0.38201993703842163, epochs needed: 40
+will accept with prob tensor(0.2985)
+accepting!
+Mean loss in evaluation epoch: 0.37815195322036743, epochs needed: 40
+
+
+ Tracking generation 16
+------------------------- TRACKING ---------------------------
+Matrix Hash: a9eeba1dd1b99092, num_times_seen_before: 0
+ACC: 0.4444444444444444
+TPR/FPR: 0.4375, 0.5517241379310345
+Loss: 0.37815195322036743
+Timestamp: 134.89331280800002
+---------------------------------------------------------------
+Candidate: 6cf4909cdbadc504. Changes:9
+Mean loss in evaluation epoch: 0.37936878204345703, epochs needed: 40
+will accept with prob tensor(0.7552)
+rejecting.
+Mean loss in evaluation epoch: 0.3770899772644043, epochs needed: 40
+
+
+ Tracking generation 17
+------------------------- TRACKING ---------------------------
+Matrix Hash: a9eeba1dd1b99092, num_times_seen_before: 1
+ACC: 0.4444444444444444
+TPR/FPR: 0.4375, 0.5517241379310345
+Loss: 0.3770899772644043
+Timestamp: 143.84640790899994
+---------------------------------------------------------------
+Candidate: 317fab3e9053c754. Changes:11
+Mean loss in evaluation epoch: 0.3804325759410858, epochs needed: 40
+will accept with prob tensor(0.4336)
+rejecting.
+Mean loss in evaluation epoch: 0.38033074140548706, epochs needed: 40
+
+
+ Tracking generation 18
+------------------------- TRACKING ---------------------------
+Matrix Hash: a9eeba1dd1b99092, num_times_seen_before: 2
+ACC: 0.4444444444444444
+TPR/FPR: 0.4375, 0.5517241379310345
+Loss: 0.38033074140548706
+Timestamp: 151.81764685300004
+---------------------------------------------------------------
+Candidate: b827aa03d2038b4a. Changes:13
+Mean loss in evaluation epoch: 0.38207611441612244, epochs needed: 40
+will accept with prob tensor(0.6213)
+accepting!
+Mean loss in evaluation epoch: 0.38189372420310974, epochs needed: 40
+
+
+ Tracking generation 19
+------------------------- TRACKING ---------------------------
+Matrix Hash: b827aa03d2038b4a, num_times_seen_before: 0
+ACC: 0.4666666666666667
+TPR/FPR: 0.25, 0.41379310344827586
+Loss: 0.38189372420310974
+Timestamp: 159.40336326199986
+---------------------------------------------------------------
+Candidate: ca688c397b150d8d. Changes:10
+Mean loss in evaluation epoch: 0.3820846378803253, epochs needed: 40
+will accept with prob tensor(0.9443)
+rejecting.
+Mean loss in evaluation epoch: 0.38230592012405396, epochs needed: 40
+
+
+ Tracking generation 20
+------------------------- TRACKING ---------------------------
+Matrix Hash: b827aa03d2038b4a, num_times_seen_before: 1
+ACC: 0.4666666666666667
+TPR/FPR: 0.25, 0.41379310344827586
+Loss: 0.38230592012405396
+Timestamp: 164.8351199849999
+---------------------------------------------------------------
+Candidate: ca551956da779424. Changes:11
+Mean loss in evaluation epoch: 0.38052278757095337, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3800070583820343, epochs needed: 40
+
+
+ Tracking generation 21
+------------------------- TRACKING ---------------------------
+Matrix Hash: ca551956da779424, num_times_seen_before: 0
+ACC: 0.4444444444444444
+TPR/FPR: 0.5625, 0.6206896551724138
+Loss: 0.3800070583820343
+Timestamp: 172.20675418399992
+---------------------------------------------------------------
+Candidate: 4a8908ae6568787e. Changes:10
+Mean loss in evaluation epoch: 0.375858873128891, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3750666081905365, epochs needed: 40
+
+
+ Tracking generation 22
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a8908ae6568787e, num_times_seen_before: 0
+ACC: 0.4
+TPR/FPR: 0.3125, 0.5517241379310345
+Loss: 0.3750666081905365
+Timestamp: 179.4815657009999
+---------------------------------------------------------------
+Candidate: 551faec5cffec025. Changes:10
+Mean loss in evaluation epoch: 0.37815767526626587, epochs needed: 40
+will accept with prob tensor(0.2659)
+rejecting.
+Mean loss in evaluation epoch: 0.37516728043556213, epochs needed: 40
+
+
+ Tracking generation 23
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a8908ae6568787e, num_times_seen_before: 1
+ACC: 0.4
+TPR/FPR: 0.3125, 0.5517241379310345
+Loss: 0.37516728043556213
+Timestamp: 186.84561237599996
+---------------------------------------------------------------
+Candidate: e2300d0859936164. Changes:8
+Mean loss in evaluation epoch: 0.37458860874176025, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3745101988315582, epochs needed: 40
+
+
+ Tracking generation 24
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 0
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.3745101988315582
+Timestamp: 194.04634903400006
+---------------------------------------------------------------
+Candidate: e8c551a5640cf280. Changes:12
+Mean loss in evaluation epoch: 0.3783505856990814, epochs needed: 40
+will accept with prob tensor(0.0998)
+rejecting.
+Mean loss in evaluation epoch: 0.37589725852012634, epochs needed: 40
+
+
+ Tracking generation 25
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 1
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.37589725852012634
+Timestamp: 201.65236495199997
+---------------------------------------------------------------
+Candidate: c3fd985f39a07b14. Changes:7
+Mean loss in evaluation epoch: 0.3770817220211029, epochs needed: 40
+will accept with prob tensor(0.4113)
+rejecting.
+Mean loss in evaluation epoch: 0.3744930624961853, epochs needed: 40
+
+
+ Tracking generation 26
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 2
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.3744930624961853
+Timestamp: 205.4718885929999
+---------------------------------------------------------------
+Candidate: fe1d449ec1b0615f. Changes:8
+Mean loss in evaluation epoch: 0.3786081373691559, epochs needed: 40
+will accept with prob tensor(0.0163)
+rejecting.
+Mean loss in evaluation epoch: 0.3754606544971466, epochs needed: 40
+
+
+ Tracking generation 27
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 3
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.3754606544971466
+Timestamp: 209.27067668299992
+---------------------------------------------------------------
+Candidate: fd4a279147c29c3e. Changes:10
+Mean loss in evaluation epoch: 0.3791709840297699, epochs needed: 40
+will accept with prob tensor(0.0038)
+rejecting.
+Mean loss in evaluation epoch: 0.3759923577308655, epochs needed: 40
+
+
+ Tracking generation 28
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 4
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.3759923577308655
+Timestamp: 213.11304422099988
+---------------------------------------------------------------
+Candidate: f2c04e3f6c6989ce. Changes:13
+Mean loss in evaluation epoch: 0.3783738315105438, epochs needed: 40
+will accept with prob tensor(0.0008)
+rejecting.
+Mean loss in evaluation epoch: 0.37527236342430115, epochs needed: 40
+
+
+ Tracking generation 29
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 5
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.37527236342430115
+Timestamp: 216.9783161129999
+---------------------------------------------------------------
+Candidate: 63d97289c63ea677. Changes:12
+Mean loss in evaluation epoch: 0.3822792172431946, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.37496355175971985, epochs needed: 40
+
+
+ Tracking generation 30
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 6
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.37496355175971985
+Timestamp: 220.86919685099997
+---------------------------------------------------------------
+Candidate: 949e7d49c3be50e2. Changes:8
+Mean loss in evaluation epoch: 0.3775230050086975, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.3745686709880829, epochs needed: 40
+
+
+ Tracking generation 31
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 7
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.3745686709880829
+Timestamp: 224.584205311
+---------------------------------------------------------------
+Candidate: fa942f1980659b43. Changes:7
+Mean loss in evaluation epoch: 0.37729379534721375, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.374926894903183, epochs needed: 40
+
+
+ Tracking generation 32
+------------------------- TRACKING ---------------------------
+Matrix Hash: e2300d0859936164, num_times_seen_before: 8
+ACC: 0.3111111111111111
+TPR/FPR: 0.375, 0.7241379310344828
+Loss: 0.374926894903183
+Timestamp: 228.47459714899992
+---------------------------------------------------------------
+Candidate: 4a0bf8c31711edee. Changes:4
+Mean loss in evaluation epoch: 0.37482187151908875, epochs needed: 40
+smaller, so accepting
+Mean loss in evaluation epoch: 0.3754689395427704, epochs needed: 40
+
+
+ Tracking generation 33
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 0
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.3754689395427704
+Timestamp: 232.63118697200002
+---------------------------------------------------------------
+Candidate: 13a987695b48ea14. Changes:5
+Mean loss in evaluation epoch: 0.3775021731853485, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.3733132481575012, epochs needed: 40
+
+
+ Tracking generation 34
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 1
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.3733132481575012
+Timestamp: 236.5479587079999
+---------------------------------------------------------------
+Candidate: 78078afcd7cd60ca. Changes:11
+Mean loss in evaluation epoch: 0.379183292388916, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.37364211678504944, epochs needed: 40
+
+
+ Tracking generation 35
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 2
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.37364211678504944
+Timestamp: 240.64640988899987
+---------------------------------------------------------------
+Candidate: ded6988384f13ee7. Changes:11
+Mean loss in evaluation epoch: 0.3748408257961273, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.374218612909317, epochs needed: 40
+
+
+ Tracking generation 36
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 3
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.374218612909317
+Timestamp: 245.10213027600003
+---------------------------------------------------------------
+Candidate: d5234d202b4b4ff5. Changes:11
+Mean loss in evaluation epoch: 0.37908729910850525, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.37414446473121643, epochs needed: 40
+
+
+ Tracking generation 37
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 4
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.37414446473121643
+Timestamp: 249.05522906199985
+---------------------------------------------------------------
+Candidate: dc4194e81b5b67df. Changes:12
+Mean loss in evaluation epoch: 0.3867447078227997, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.37593790888786316, epochs needed: 40
+
+
+ Tracking generation 38
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 5
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.37593790888786316
+Timestamp: 253.43949682799985
+---------------------------------------------------------------
+Candidate: f70554240d5992cd. Changes:10
+Mean loss in evaluation epoch: 0.38210946321487427, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.37453600764274597, epochs needed: 40
+
+
+ Tracking generation 39
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 6
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.37453600764274597
+Timestamp: 257.28349324600003
+---------------------------------------------------------------
+Candidate: fd806cb8f8c8d307. Changes:6
+Mean loss in evaluation epoch: 0.37698641419410706, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.3732888698577881, epochs needed: 40
+
+
+ Tracking generation 40
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 7
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.3732888698577881
+Timestamp: 261.17697188700004
+---------------------------------------------------------------
+Candidate: f84a466c27852ea9. Changes:11
+Mean loss in evaluation epoch: 0.37916311621665955, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.3737764060497284, epochs needed: 40
+
+
+ Tracking generation 41
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 8
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.3737764060497284
+Timestamp: 265.017482318
+---------------------------------------------------------------
+Candidate: 69f7a697f81edb78. Changes:8
+Mean loss in evaluation epoch: 0.3738322854042053, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.3736226260662079, epochs needed: 40
+
+
+ Tracking generation 42
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 9
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.3736226260662079
+Timestamp: 268.88163706399996
+---------------------------------------------------------------
+Candidate: 8014d36148ad404d. Changes:8
+Mean loss in evaluation epoch: 0.37652477622032166, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.37558361887931824, epochs needed: 40
+
+
+ Tracking generation 43
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 10
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.37558361887931824
+Timestamp: 272.7276156359999
+---------------------------------------------------------------
+Candidate: 1da2cf6ecac0de0f. Changes:9
+Mean loss in evaluation epoch: 0.3842521607875824, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+Mean loss in evaluation epoch: 0.3740774393081665, epochs needed: 40
+
+
+ Tracking generation 44
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 11
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.3740774393081665
+Timestamp: 276.646175548
+---------------------------------------------------------------
+Candidate: 0b93894e96a8ae4c. Changes:9
+Mean loss in evaluation epoch: 0.37796351313591003, epochs needed: 40
+will accept with prob tensor(0.)
+rejecting.
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a0bf8c31711edee, num_times_seen_before: 12
+ACC: 0.2666666666666667
+TPR/FPR: 0.375, 0.7931034482758621
+Loss: 0.3740774393081665
+Timestamp: 278.593448137
+---------------------------------------------------------------
+Time needed: 282.49106303300005 sec
