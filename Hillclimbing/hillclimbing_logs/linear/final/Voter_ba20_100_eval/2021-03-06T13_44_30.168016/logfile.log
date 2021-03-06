@@ -1,0 +1,3087 @@
+../data/final/Voter/timeseries_ba20_100.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816
+SEED: 0
+NUM_DYN_EPOCHS: 300
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 45
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+NUM_TRAIN_SAMPLES: 100
+NUM_TRAIN_BATCHES: 1
+NUM_TEST_SAMPLES: 100
+NUM_TEST_BATCHES: 1
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 300
+IS_CONTINUOUS: False
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: 0.572110652923584, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: bcfde9534d3bfd59, num_times_seen_before: 0
+ACC: 0.4789473684210527
+TPR/FPR: 0.5833333333333334, 0.5454545454545454
+Loss: 0.572110652923584
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([0, 5]), tensor([ 0, 19]), tensor([ 2, 15]), tensor([ 3, 15]), tensor([4, 9]), tensor([ 4, 10]), tensor([ 5, 14]), tensor([ 6, 14]), tensor([ 6, 17]), tensor([ 9, 19]), tensor([10, 14]), tensor([12, 14]), tensor([12, 15]), tensor([16, 18]), tensor([18, 19])]
+Mean loss in evaluation epoch: 0.5437240600585938, epochs needed: 300
+Accepting!
+
+Generation 1
+Mean loss in evaluation epoch: 0.5442718863487244, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 5e40c2842664956f, num_times_seen_before: 0
+ACC: 0.5368421052631579
+TPR/FPR: 0.7222222222222222, 0.5064935064935064
+Loss: 0.5442718863487244
+Timestamp: 4.101863779000002
+---------------------------------------------------------------
+[tensor([ 0, 10]), tensor([ 0, 12]), tensor([1, 7]), tensor([ 2, 18]), tensor([3, 7]), tensor([ 3, 12]), tensor([ 5, 10]), tensor([ 7, 12]), tensor([ 7, 16]), tensor([ 7, 18]), tensor([ 8, 11]), tensor([ 8, 18]), tensor([10, 15]), tensor([10, 19]), tensor([12, 16]), tensor([15, 17])]
+Mean loss in evaluation epoch: 0.5148636102676392, epochs needed: 300
+Accepting!
+
+Generation 2
+Mean loss in evaluation epoch: 0.5141561627388, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: f6ec4624fe9542fd, num_times_seen_before: 0
+ACC: 0.6105263157894737
+TPR/FPR: 0.8611111111111112, 0.44805194805194803
+Loss: 0.5141561627388
+Timestamp: 7.943890076000002
+---------------------------------------------------------------
+[tensor([0, 9]), tensor([ 1, 18]), tensor([2, 5]), tensor([2, 8]), tensor([ 2, 17]), tensor([ 3, 18]), tensor([4, 8]), tensor([5, 7]), tensor([ 5, 15]), tensor([ 7, 17]), tensor([ 9, 15]), tensor([12, 18])]
+Mean loss in evaluation epoch: 0.49583062529563904, epochs needed: 300
+Accepting!
+
+Generation 3
+Mean loss in evaluation epoch: 0.49578505754470825, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 5472ef347f5484da, num_times_seen_before: 0
+ACC: 0.6631578947368422
+TPR/FPR: 0.9444444444444444, 0.4025974025974026
+Loss: 0.49578505754470825
+Timestamp: 12.146362458000002
+---------------------------------------------------------------
+[tensor([ 0, 11]), tensor([ 0, 18]), tensor([2, 4]), tensor([2, 9]), tensor([3, 4]), tensor([4, 7]), tensor([ 4, 14]), tensor([ 4, 15]), tensor([ 4, 18]), tensor([5, 8]), tensor([ 6, 13]), tensor([7, 9]), tensor([ 7, 10]), tensor([ 7, 11]), tensor([ 9, 18]), tensor([10, 16]), tensor([11, 15]), tensor([11, 18]), tensor([12, 19]), tensor([13, 17]), tensor([14, 19]), tensor([17, 18])]
+Mean loss in evaluation epoch: 0.45422428846359253, epochs needed: 300
+Accepting!
+
+Generation 4
+Mean loss in evaluation epoch: 0.4544636607170105, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 6760b997ecf9f16e, num_times_seen_before: 0
+ACC: 0.7789473684210526
+TPR/FPR: 0.9722222222222222, 0.2662337662337662
+Loss: 0.4544636607170105
+Timestamp: 15.973158001000002
+---------------------------------------------------------------
+[tensor([1, 4]), tensor([ 1, 10]), tensor([ 1, 12]), tensor([ 2, 19]), tensor([ 3, 19]), tensor([ 7, 19]), tensor([ 8, 17]), tensor([10, 17]), tensor([14, 17]), tensor([15, 16])]
+Mean loss in evaluation epoch: 0.4338894784450531, epochs needed: 300
+Accepting!
+
+Generation 5
+Mean loss in evaluation epoch: 0.427726686000824, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 20948bfcb55d4a38, num_times_seen_before: 0
+ACC: 0.8315789473684211
+TPR/FPR: 0.9722222222222222, 0.2012987012987013
+Loss: 0.427726686000824
+Timestamp: 20.042599760999998
+---------------------------------------------------------------
+[tensor([1, 9]), tensor([ 1, 16]), tensor([10, 13]), tensor([15, 17])]
+Mean loss in evaluation epoch: 0.41770225763320923, epochs needed: 300
+Accepting!
+
+Generation 6
+Mean loss in evaluation epoch: 0.4271198809146881, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2c40303b4e41ae38, num_times_seen_before: 0
+ACC: 0.8526315789473684
+TPR/FPR: 0.9722222222222222, 0.17532467532467533
+Loss: 0.4271198809146881
+Timestamp: 23.828440303999997
+---------------------------------------------------------------
+[tensor([7, 8]), tensor([ 9, 16]), tensor([13, 15])]
+Mean loss in evaluation epoch: 0.41376709938049316, epochs needed: 300
+Accepting!
+
+Generation 7
+Mean loss in evaluation epoch: 0.41013169288635254, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 84cc1820baabc69c, num_times_seen_before: 0
+ACC: 0.868421052631579
+TPR/FPR: 0.9722222222222222, 0.15584415584415584
+Loss: 0.41013169288635254
+Timestamp: 27.976747586000002
+---------------------------------------------------------------
+[tensor([3, 9]), tensor([ 5, 12]), tensor([ 7, 15])]
+Mean loss in evaluation epoch: 0.40294983983039856, epochs needed: 300
+Accepting!
+
+Generation 8
+Mean loss in evaluation epoch: 0.40593498945236206, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: dc54b3a4dcb5e29b, num_times_seen_before: 0
+ACC: 0.8842105263157894
+TPR/FPR: 1.0, 0.14285714285714285
+Loss: 0.40593498945236206
+Timestamp: 31.803866116000002
+---------------------------------------------------------------
+[tensor([ 5, 16]), tensor([ 6, 15]), tensor([ 9, 12]), tensor([13, 18])]
+Mean loss in evaluation epoch: 0.39593425393104553, epochs needed: 300
+Accepting!
+
+Generation 9
+Mean loss in evaluation epoch: 0.3962346911430359, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 96e4d67e47d16c96, num_times_seen_before: 0
+ACC: 0.9052631578947369
+TPR/FPR: 1.0, 0.11688311688311688
+Loss: 0.3962346911430359
+Timestamp: 35.955106991
+---------------------------------------------------------------
+[tensor([ 5, 14]), tensor([6, 8]), tensor([16, 18])]
+Mean loss in evaluation epoch: 0.3911534249782562, epochs needed: 300
+Accepting!
+
+Generation 10
+Mean loss in evaluation epoch: 0.3916057348251343, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: cd1ca14c5c5db2cb, num_times_seen_before: 0
+ACC: 0.9210526315789473
+TPR/FPR: 1.0, 0.09740259740259741
+Loss: 0.3916057348251343
+Timestamp: 40.093457422
+---------------------------------------------------------------
+[tensor([0, 6]), tensor([ 1, 14]), tensor([ 1, 15]), tensor([ 1, 18]), tensor([6, 9])]
+Mean loss in evaluation epoch: 0.3847271502017975, epochs needed: 300
+Accepting!
+
+Generation 11
+Mean loss in evaluation epoch: 0.38541877269744873, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: f6e17d8a752730ee, num_times_seen_before: 0
+ACC: 0.9473684210526316
+TPR/FPR: 1.0, 0.06493506493506493
+Loss: 0.38541877269744873
+Timestamp: 43.872389616
+---------------------------------------------------------------
+[tensor([1, 8]), tensor([ 1, 13])]
+Mean loss in evaluation epoch: 0.37034109234809875, epochs needed: 300
+Accepting!
+
+Generation 12
+Mean loss in evaluation epoch: 0.3696659207344055, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2288c4c713d98f52, num_times_seen_before: 0
+ACC: 0.9578947368421052
+TPR/FPR: 1.0, 0.05194805194805195
+Loss: 0.3696659207344055
+Timestamp: 47.519240253
+---------------------------------------------------------------
+[tensor([ 4, 19]), tensor([ 8, 14]), tensor([13, 14]), tensor([14, 15])]
+Mean loss in evaluation epoch: 0.35782483220100403, epochs needed: 300
+Accepting!
+
+Generation 13
+Mean loss in evaluation epoch: 0.3563249707221985, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 65aa22b2464ee645, num_times_seen_before: 0
+ACC: 0.9789473684210527
+TPR/FPR: 1.0, 0.025974025974025976
+Loss: 0.3563249707221985
+Timestamp: 51.281580676999994
+---------------------------------------------------------------
+[tensor([ 0, 14])]
+Mean loss in evaluation epoch: 0.3551216721534729, epochs needed: 300
+Accepting!
+
+Generation 14
+Mean loss in evaluation epoch: 0.35703063011169434, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 03c6b7badfd03f87, num_times_seen_before: 0
+ACC: 0.9842105263157894
+TPR/FPR: 1.0, 0.01948051948051948
+Loss: 0.35703063011169434
+Timestamp: 55.311810272
+---------------------------------------------------------------
+[tensor([ 6, 10]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.3520796298980713, epochs needed: 300
+Accepting!
+
+Generation 15
+Mean loss in evaluation epoch: 0.35122984647750854, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 0
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35122984647750854
+Timestamp: 59.359710898
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 16
+Mean loss in evaluation epoch: 0.3553338944911957, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 1
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3553338944911957
+Timestamp: 61.477516709
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 17
+Mean loss in evaluation epoch: 0.3520875573158264, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 2
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3520875573158264
+Timestamp: 63.594224870999994
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 18
+Mean loss in evaluation epoch: 0.3509368300437927, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 3
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3509368300437927
+Timestamp: 65.6656
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 19
+Mean loss in evaluation epoch: 0.3505324423313141, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 4
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3505324423313141
+Timestamp: 67.714488964
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 20
+Mean loss in evaluation epoch: 0.3544974625110626, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 5
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3544974625110626
+Timestamp: 69.808702183
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 21
+Mean loss in evaluation epoch: 0.3506743311882019, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 6
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3506743311882019
+Timestamp: 71.933402273
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 22
+Mean loss in evaluation epoch: 0.353557288646698, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 7
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.353557288646698
+Timestamp: 73.981210876
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 23
+Mean loss in evaluation epoch: 0.35116538405418396, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 8
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35116538405418396
+Timestamp: 76.097322778
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 24
+Mean loss in evaluation epoch: 0.35292044281959534, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 9
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35292044281959534
+Timestamp: 78.12105671
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 25
+Mean loss in evaluation epoch: 0.3532440662384033, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 10
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3532440662384033
+Timestamp: 80.126906637
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 26
+Mean loss in evaluation epoch: 0.3532332479953766, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 11
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3532332479953766
+Timestamp: 82.094455235
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 27
+Mean loss in evaluation epoch: 0.35346847772598267, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 12
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35346847772598267
+Timestamp: 84.064724741
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 28
+Mean loss in evaluation epoch: 0.35168227553367615, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 13
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35168227553367615
+Timestamp: 86.00988608
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 29
+Mean loss in evaluation epoch: 0.3518739938735962, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 14
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3518739938735962
+Timestamp: 88.031747036
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 30
+Mean loss in evaluation epoch: 0.3505042791366577, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 15
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3505042791366577
+Timestamp: 90.048920923
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 31
+Mean loss in evaluation epoch: 0.35184040665626526, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 16
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35184040665626526
+Timestamp: 92.16394239
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 32
+Mean loss in evaluation epoch: 0.35259178280830383, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 17
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35259178280830383
+Timestamp: 94.174554564
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 33
+Mean loss in evaluation epoch: 0.3504258692264557, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 18
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3504258692264557
+Timestamp: 96.30838353200001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 34
+Mean loss in evaluation epoch: 0.3511396646499634, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 19
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3511396646499634
+Timestamp: 98.47953253200001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 35
+Mean loss in evaluation epoch: 0.350445955991745, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 20
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.350445955991745
+Timestamp: 100.544758224
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 36
+Mean loss in evaluation epoch: 0.35040560364723206, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 21
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35040560364723206
+Timestamp: 102.633693471
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 37
+Mean loss in evaluation epoch: 0.3506210744380951, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 22
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3506210744380951
+Timestamp: 104.8992638
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 38
+Mean loss in evaluation epoch: 0.3509010374546051, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 23
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3509010374546051
+Timestamp: 106.813225171
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 39
+Mean loss in evaluation epoch: 0.3541140854358673, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 24
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3541140854358673
+Timestamp: 108.708151787
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 40
+Mean loss in evaluation epoch: 0.35402002930641174, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 25
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35402002930641174
+Timestamp: 110.604869265
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 41
+Mean loss in evaluation epoch: 0.351253479719162, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 26
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.351253479719162
+Timestamp: 112.506842378
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 42
+Mean loss in evaluation epoch: 0.35286927223205566, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 27
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35286927223205566
+Timestamp: 114.402702573
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 43
+Mean loss in evaluation epoch: 0.35493969917297363, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 28
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35493969917297363
+Timestamp: 116.31913395500001
+---------------------------------------------------------------
+[tensor([4, 5])]
+Mean loss in evaluation epoch: 0.35229697823524475, epochs needed: 300
+Accepting!
+
+Generation 44
+Mean loss in evaluation epoch: 0.35264116525650024, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 0
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35264116525650024
+Timestamp: 119.61191788
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 1
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35264116525650024
+Timestamp: 120.093590619
+---------------------------------------------------------------
+Time needed: 128.320518872 sec
+../data/final/Voter/timeseries_ba20_100.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816
+SEED: 0
+NUM_DYN_EPOCHS: 300
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 45
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+NUM_TRAIN_SAMPLES: 100
+NUM_TRAIN_BATCHES: 1
+NUM_TEST_SAMPLES: 100
+NUM_TEST_BATCHES: 1
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 300
+IS_CONTINUOUS: False
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: 0.601443886756897, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 0229c276facf0ee4, num_times_seen_before: 0
+ACC: 0.4052631578947369
+TPR/FPR: 0.3055555555555556, 0.5714285714285714
+Loss: 0.601443886756897
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([0, 8]), tensor([0, 9]), tensor([ 0, 13]), tensor([ 0, 16]), tensor([ 0, 17]), tensor([1, 2]), tensor([2, 9]), tensor([ 2, 12]), tensor([3, 4]), tensor([ 3, 11]), tensor([ 3, 12]), tensor([ 3, 15]), tensor([ 3, 17]), tensor([5, 6]), tensor([6, 8]), tensor([ 6, 14]), tensor([ 7, 16]), tensor([10, 14]), tensor([10, 16]), tensor([13, 14]), tensor([18, 19])]
+Mean loss in evaluation epoch: 0.5513670444488525, epochs needed: 300
+Accepting!
+
+Generation 1
+Mean loss in evaluation epoch: 0.5514957904815674, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 7f97efae295bdbca, num_times_seen_before: 0
+ACC: 0.49473684210526314
+TPR/FPR: 0.6666666666666666, 0.5454545454545454
+Loss: 0.5514957904815674
+Timestamp: 3.3175896399999942
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([ 3, 18]), tensor([4, 6]), tensor([ 4, 11]), tensor([ 8, 11]), tensor([ 8, 16]), tensor([ 9, 11]), tensor([ 9, 13]), tensor([ 9, 14]), tensor([11, 16]), tensor([13, 16]), tensor([14, 18]), tensor([15, 19]), tensor([16, 17])]
+Mean loss in evaluation epoch: 0.5292280316352844, epochs needed: 300
+Accepting!
+
+Generation 2
+Mean loss in evaluation epoch: 0.5284807085990906, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4d44ff81a2b4fc5a, num_times_seen_before: 0
+ACC: 0.5578947368421052
+TPR/FPR: 0.7777777777777778, 0.4935064935064935
+Loss: 0.5284807085990906
+Timestamp: 6.633632766999995
+---------------------------------------------------------------
+[tensor([0, 5]), tensor([0, 7]), tensor([ 0, 15]), tensor([ 0, 18]), tensor([ 1, 18]), tensor([2, 3]), tensor([ 2, 11]), tensor([3, 9]), tensor([ 4, 12]), tensor([ 4, 13]), tensor([ 5, 15]), tensor([ 5, 18]), tensor([ 9, 19]), tensor([12, 17]), tensor([14, 19])]
+Mean loss in evaluation epoch: 0.5077312588691711, epochs needed: 300
+Accepting!
+
+Generation 3
+Mean loss in evaluation epoch: 0.507430374622345, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 0dedd9a8f6e5d96e, num_times_seen_before: 0
+ACC: 0.6052631578947368
+TPR/FPR: 0.8611111111111112, 0.45454545454545453
+Loss: 0.507430374622345
+Timestamp: 9.954632656000001
+---------------------------------------------------------------
+[tensor([2, 6]), tensor([ 2, 13]), tensor([3, 5]), tensor([ 4, 10]), tensor([ 6, 16]), tensor([ 7, 11]), tensor([ 8, 14]), tensor([10, 17]), tensor([13, 15]), tensor([13, 17]), tensor([15, 16])]
+Mean loss in evaluation epoch: 0.494916170835495, epochs needed: 300
+Accepting!
+
+Generation 4
+Mean loss in evaluation epoch: 0.4983605742454529, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: e224c5508d07ab73, num_times_seen_before: 0
+ACC: 0.6526315789473685
+TPR/FPR: 0.9166666666666666, 0.4090909090909091
+Loss: 0.4983605742454529
+Timestamp: 13.275417011000002
+---------------------------------------------------------------
+[tensor([2, 5]), tensor([ 2, 17]), tensor([ 2, 18]), tensor([ 2, 19]), tensor([3, 7]), tensor([4, 7]), tensor([ 4, 15]), tensor([ 4, 18]), tensor([ 5, 10]), tensor([ 5, 17]), tensor([ 9, 18]), tensor([10, 12]), tensor([11, 12])]
+Mean loss in evaluation epoch: 0.47809353470802307, epochs needed: 300
+Accepting!
+
+Generation 5
+Mean loss in evaluation epoch: 0.4779338538646698, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 819fafad3c0bcb76, num_times_seen_before: 0
+ACC: 0.7210526315789474
+TPR/FPR: 0.9444444444444444, 0.33116883116883117
+Loss: 0.4779338538646698
+Timestamp: 16.959072633000005
+---------------------------------------------------------------
+[tensor([ 1, 12]), tensor([ 3, 13]), tensor([ 4, 14]), tensor([5, 8]), tensor([ 5, 11]), tensor([ 6, 11]), tensor([ 7, 10]), tensor([ 7, 17]), tensor([ 9, 10]), tensor([10, 17]), tensor([10, 18]), tensor([11, 19])]
+Mean loss in evaluation epoch: 0.4605582356452942, epochs needed: 300
+Accepting!
+
+Generation 6
+Mean loss in evaluation epoch: 0.45425164699554443, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 49a4bc20f6917fce, num_times_seen_before: 0
+ACC: 0.7736842105263158
+TPR/FPR: 0.9444444444444444, 0.2662337662337662
+Loss: 0.45425164699554443
+Timestamp: 20.752106710999982
+---------------------------------------------------------------
+[tensor([1, 5]), tensor([ 1, 17]), tensor([ 1, 19]), tensor([4, 8]), tensor([7, 9]), tensor([ 7, 14]), tensor([ 7, 15]), tensor([10, 19]), tensor([11, 13]), tensor([11, 18]), tensor([15, 17])]
+Mean loss in evaluation epoch: 0.4299159646034241, epochs needed: 300
+Accepting!
+
+Generation 7
+Mean loss in evaluation epoch: 0.43443983793258667, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 96222fdd5f66cbd5, num_times_seen_before: 0
+ACC: 0.8315789473684211
+TPR/FPR: 0.9722222222222222, 0.2012987012987013
+Loss: 0.43443983793258667
+Timestamp: 24.48073044199998
+---------------------------------------------------------------
+[tensor([ 1, 15]), tensor([ 3, 14]), tensor([ 9, 16]), tensor([13, 19])]
+Mean loss in evaluation epoch: 0.4249282777309418, epochs needed: 300
+Accepting!
+
+Generation 8
+Mean loss in evaluation epoch: 0.421097069978714, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: c0ca8be4b79d9594, num_times_seen_before: 0
+ACC: 0.8526315789473684
+TPR/FPR: 0.9722222222222222, 0.17532467532467533
+Loss: 0.421097069978714
+Timestamp: 28.19544686499998
+---------------------------------------------------------------
+[tensor([ 1, 11]), tensor([ 2, 11]), tensor([ 4, 13]), tensor([ 6, 15]), tensor([ 8, 17])]
+Mean loss in evaluation epoch: 0.40755507349967957, epochs needed: 300
+Accepting!
+
+Generation 9
+Mean loss in evaluation epoch: 0.4086460471153259, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: ec8a881b0f1e8df6, num_times_seen_before: 0
+ACC: 0.8789473684210526
+TPR/FPR: 0.9722222222222222, 0.14285714285714285
+Loss: 0.4086460471153259
+Timestamp: 31.69394600199999
+---------------------------------------------------------------
+[tensor([1, 8]), tensor([11, 16]), tensor([13, 14]), tensor([13, 18]), tensor([14, 15])]
+Mean loss in evaluation epoch: 0.39744189381599426, epochs needed: 300
+Accepting!
+
+Generation 10
+Mean loss in evaluation epoch: 0.39534246921539307, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 55fc1d2b092eea4c, num_times_seen_before: 0
+ACC: 0.9052631578947369
+TPR/FPR: 0.9722222222222222, 0.11038961038961038
+Loss: 0.39534246921539307
+Timestamp: 35.16011725499999
+---------------------------------------------------------------
+[tensor([ 1, 13]), tensor([ 4, 16]), tensor([ 5, 14])]
+Mean loss in evaluation epoch: 0.3894497752189636, epochs needed: 300
+Accepting!
+
+Generation 11
+Mean loss in evaluation epoch: 0.38967806100845337, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: a66a987a1c3b77c8, num_times_seen_before: 0
+ACC: 0.9210526315789473
+TPR/FPR: 0.9722222222222222, 0.09090909090909091
+Loss: 0.38967806100845337
+Timestamp: 38.459408440000004
+---------------------------------------------------------------
+[tensor([ 5, 16])]
+Mean loss in evaluation epoch: 0.38778018951416016, epochs needed: 300
+Accepting!
+
+Generation 12
+Mean loss in evaluation epoch: 0.38683223724365234, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 556b506d2aef9674, num_times_seen_before: 0
+ACC: 0.9263157894736842
+TPR/FPR: 0.9722222222222222, 0.08441558441558442
+Loss: 0.38683223724365234
+Timestamp: 41.83475206699998
+---------------------------------------------------------------
+[tensor([1, 9]), tensor([ 1, 10]), tensor([ 1, 18]), tensor([16, 18])]
+Mean loss in evaluation epoch: 0.37884244322776794, epochs needed: 300
+Accepting!
+
+Generation 13
+Mean loss in evaluation epoch: 0.3764531910419464, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 1ba8c418701c7875, num_times_seen_before: 0
+ACC: 0.9473684210526316
+TPR/FPR: 0.9722222222222222, 0.05844155844155844
+Loss: 0.3764531910419464
+Timestamp: 44.909420866000005
+---------------------------------------------------------------
+[tensor([1, 4])]
+Mean loss in evaluation epoch: 0.36466512084007263, epochs needed: 300
+Accepting!
+
+Generation 14
+Mean loss in evaluation epoch: 0.36600297689437866, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 1025b8bb5a9c131c, num_times_seen_before: 0
+ACC: 0.9526315789473684
+TPR/FPR: 0.9722222222222222, 0.05194805194805195
+Loss: 0.36600297689437866
+Timestamp: 48.288409801
+---------------------------------------------------------------
+[tensor([0, 4])]
+Mean loss in evaluation epoch: 0.36083748936653137, epochs needed: 300
+Accepting!
+
+Generation 15
+Mean loss in evaluation epoch: 0.3641345202922821, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 167eca94924e98b1, num_times_seen_before: 0
+ACC: 0.9578947368421052
+TPR/FPR: 1.0, 0.05194805194805195
+Loss: 0.3641345202922821
+Timestamp: 51.793146250999996
+---------------------------------------------------------------
+[tensor([0, 6]), tensor([ 5, 12]), tensor([ 9, 10])]
+Mean loss in evaluation epoch: 0.35767966508865356, epochs needed: 300
+Accepting!
+
+Generation 16
+Mean loss in evaluation epoch: 0.35846471786499023, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4c2b4c46ec3463c0, num_times_seen_before: 0
+ACC: 0.9736842105263158
+TPR/FPR: 1.0, 0.032467532467532464
+Loss: 0.35846471786499023
+Timestamp: 55.252853012
+---------------------------------------------------------------
+[tensor([ 4, 19]), tensor([6, 9]), tensor([ 9, 12])]
+Mean loss in evaluation epoch: 0.35500800609588623, epochs needed: 300
+Accepting!
+
+Generation 17
+Mean loss in evaluation epoch: 0.3547241985797882, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: c41f05fd07a945dc, num_times_seen_before: 0
+ACC: 0.9894736842105263
+TPR/FPR: 1.0, 0.012987012987012988
+Loss: 0.3547241985797882
+Timestamp: 58.894940418999994
+---------------------------------------------------------------
+[tensor([4, 5]), tensor([6, 8])]
+Mean loss in evaluation epoch: 0.35201308131217957, epochs needed: 300
+Accepting!
+
+Generation 18
+Mean loss in evaluation epoch: 0.3534504473209381, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 0
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3534504473209381
+Timestamp: 62.28309312599998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 19
+Mean loss in evaluation epoch: 0.35069721937179565, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 1
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35069721937179565
+Timestamp: 64.334663646
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 20
+Mean loss in evaluation epoch: 0.3507888913154602, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 2
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3507888913154602
+Timestamp: 66.24277532299999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 21
+Mean loss in evaluation epoch: 0.35259300470352173, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 3
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35259300470352173
+Timestamp: 68.14241855099999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 22
+Mean loss in evaluation epoch: 0.35387763381004333, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 4
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35387763381004333
+Timestamp: 70.05116176599998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 23
+Mean loss in evaluation epoch: 0.35741496086120605, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 5
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35741496086120605
+Timestamp: 71.96708347699999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 24
+Mean loss in evaluation epoch: 0.35268840193748474, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 6
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35268840193748474
+Timestamp: 73.871744108
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 25
+Mean loss in evaluation epoch: 0.35193097591400146, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 7
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35193097591400146
+Timestamp: 75.78280680499998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 26
+Mean loss in evaluation epoch: 0.3542237877845764, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 8
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3542237877845764
+Timestamp: 77.72790259299998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 27
+Mean loss in evaluation epoch: 0.35439908504486084, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 9
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35439908504486084
+Timestamp: 80.115359767
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 28
+Mean loss in evaluation epoch: 0.35154953598976135, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 10
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35154953598976135
+Timestamp: 82.32099436299998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 29
+Mean loss in evaluation epoch: 0.3529037833213806, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 11
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3529037833213806
+Timestamp: 84.47027657799998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 30
+Mean loss in evaluation epoch: 0.355490505695343, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 12
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.355490505695343
+Timestamp: 86.56502290999998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 31
+Mean loss in evaluation epoch: 0.3560667634010315, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 13
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3560667634010315
+Timestamp: 88.71500694399998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 32
+Mean loss in evaluation epoch: 0.3541087508201599, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 14
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3541087508201599
+Timestamp: 90.87747914899998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 33
+Mean loss in evaluation epoch: 0.3569440245628357, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 15
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3569440245628357
+Timestamp: 92.98171204099998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 34
+Mean loss in evaluation epoch: 0.3544297516345978, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 16
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3544297516345978
+Timestamp: 95.130915098
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 35
+Mean loss in evaluation epoch: 0.35186442732810974, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 17
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35186442732810974
+Timestamp: 97.24161413499999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 36
+Mean loss in evaluation epoch: 0.3551798164844513, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 18
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3551798164844513
+Timestamp: 99.40586958899999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 37
+Mean loss in evaluation epoch: 0.35369351506233215, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 19
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35369351506233215
+Timestamp: 101.54394184199998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 38
+Mean loss in evaluation epoch: 0.3539658784866333, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 20
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3539658784866333
+Timestamp: 103.60517276599998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 39
+Mean loss in evaluation epoch: 0.35382866859436035, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 21
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35382866859436035
+Timestamp: 105.69418328999998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 40
+Mean loss in evaluation epoch: 0.3579055368900299, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 22
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3579055368900299
+Timestamp: 107.78951935499998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 41
+Mean loss in evaluation epoch: 0.353889137506485, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 23
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.353889137506485
+Timestamp: 109.898801091
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 42
+Mean loss in evaluation epoch: 0.35260987281799316, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 24
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35260987281799316
+Timestamp: 112.01764003299999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 43
+Mean loss in evaluation epoch: 0.3552386164665222, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 25
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3552386164665222
+Timestamp: 114.17121486399998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 44
+Mean loss in evaluation epoch: 0.3537675738334656, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 26
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3537675738334656
+Timestamp: 116.30213092299999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 27
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3537675738334656
+Timestamp: 116.85400804099999
+---------------------------------------------------------------
+Time needed: 118.32124409800002 sec
+../data/final/Voter/timeseries_ba20_100.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816
+SEED: 0
+NUM_DYN_EPOCHS: 300
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 45
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+NUM_TRAIN_SAMPLES: 100
+NUM_TRAIN_BATCHES: 1
+NUM_TEST_SAMPLES: 100
+NUM_TEST_BATCHES: 1
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 300
+IS_CONTINUOUS: False
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: 0.596738874912262, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4acae82eee799abb, num_times_seen_before: 0
+ACC: 0.5263157894736843
+TPR/FPR: 0.4722222222222222, 0.461038961038961
+Loss: 0.596738874912262
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([0, 9]), tensor([1, 2]), tensor([2, 7]), tensor([3, 4]), tensor([3, 7]), tensor([ 3, 13]), tensor([ 3, 17]), tensor([ 4, 14]), tensor([ 6, 14]), tensor([ 7, 16]), tensor([ 7, 18]), tensor([ 8, 11]), tensor([ 9, 13]), tensor([10, 17]), tensor([11, 12]), tensor([11, 14]), tensor([16, 17])]
+Mean loss in evaluation epoch: 0.5562266111373901, epochs needed: 300
+Accepting!
+
+Generation 1
+Mean loss in evaluation epoch: 0.5568447709083557, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4a568429ecc3c48c, num_times_seen_before: 0
+ACC: 0.5947368421052632
+TPR/FPR: 0.6666666666666666, 0.42207792207792205
+Loss: 0.5568447709083557
+Timestamp: 3.712288015000013
+---------------------------------------------------------------
+[tensor([0, 5]), tensor([ 0, 14]), tensor([1, 9]), tensor([ 3, 15]), tensor([ 3, 16]), tensor([ 4, 18]), tensor([ 5, 16]), tensor([ 9, 12]), tensor([ 9, 14]), tensor([11, 16]), tensor([11, 19]), tensor([12, 13]), tensor([12, 14]), tensor([12, 16]), tensor([16, 18]), tensor([16, 19])]
+Mean loss in evaluation epoch: 0.5243520140647888, epochs needed: 300
+Accepting!
+
+Generation 2
+Mean loss in evaluation epoch: 0.5258851051330566, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: fc1e5abf90c98e2e, num_times_seen_before: 0
+ACC: 0.6052631578947368
+TPR/FPR: 0.7777777777777778, 0.43506493506493504
+Loss: 0.5258851051330566
+Timestamp: 7.326910725000005
+---------------------------------------------------------------
+[tensor([ 0, 12]), tensor([1, 6]), tensor([ 4, 11]), tensor([ 4, 19]), tensor([5, 6]), tensor([6, 7]), tensor([ 6, 12]), tensor([ 6, 19]), tensor([ 8, 13]), tensor([ 9, 16]), tensor([11, 13]), tensor([11, 17]), tensor([13, 14])]
+Mean loss in evaluation epoch: 0.49779757857322693, epochs needed: 300
+Accepting!
+
+Generation 3
+Mean loss in evaluation epoch: 0.4963572919368744, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 18b11b8f32db7bdf, num_times_seen_before: 0
+ACC: 0.6526315789473685
+TPR/FPR: 0.8888888888888888, 0.4025974025974026
+Loss: 0.4963572919368744
+Timestamp: 10.877006502000029
+---------------------------------------------------------------
+[tensor([ 0, 11]), tensor([ 0, 16]), tensor([1, 5]), tensor([ 1, 12]), tensor([ 1, 15]), tensor([ 1, 17]), tensor([ 2, 15]), tensor([ 5, 11]), tensor([ 6, 15]), tensor([7, 9]), tensor([ 7, 17]), tensor([ 9, 11]), tensor([15, 16])]
+Mean loss in evaluation epoch: 0.4802199900150299, epochs needed: 300
+Accepting!
+
+Generation 4
+Mean loss in evaluation epoch: 0.4783017337322235, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: a58896ba78068a45, num_times_seen_before: 0
+ACC: 0.6894736842105262
+TPR/FPR: 0.8888888888888888, 0.35714285714285715
+Loss: 0.4783017337322235
+Timestamp: 14.206095200999982
+---------------------------------------------------------------
+[tensor([2, 8]), tensor([4, 8]), tensor([ 5, 19]), tensor([ 9, 17]), tensor([ 9, 18]), tensor([12, 15]), tensor([14, 18])]
+Mean loss in evaluation epoch: 0.46391135454177856, epochs needed: 300
+Accepting!
+
+Generation 5
+Mean loss in evaluation epoch: 0.4650402367115021, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 86b176345d17e18e, num_times_seen_before: 0
+ACC: 0.7263157894736842
+TPR/FPR: 0.9166666666666666, 0.3181818181818182
+Loss: 0.4650402367115021
+Timestamp: 17.536872759000005
+---------------------------------------------------------------
+[tensor([1, 3]), tensor([ 1, 15]), tensor([ 1, 17]), tensor([2, 9]), tensor([ 2, 11]), tensor([ 2, 17]), tensor([ 3, 18]), tensor([5, 8]), tensor([ 6, 17])]
+Mean loss in evaluation epoch: 0.4505394697189331, epochs needed: 300
+Accepting!
+
+Generation 6
+Mean loss in evaluation epoch: 0.44915714859962463, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: eef7439bca4da0a9, num_times_seen_before: 0
+ACC: 0.7736842105263158
+TPR/FPR: 0.9444444444444444, 0.2662337662337662
+Loss: 0.44915714859962463
+Timestamp: 21.10840530600001
+---------------------------------------------------------------
+[tensor([1, 7]), tensor([ 1, 19]), tensor([6, 9]), tensor([ 6, 10]), tensor([13, 17]), tensor([13, 18])]
+Mean loss in evaluation epoch: 0.43938037753105164, epochs needed: 300
+Accepting!
+
+Generation 7
+Mean loss in evaluation epoch: 0.4413517117500305, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 9dc69f06d00bcd3f, num_times_seen_before: 0
+ACC: 0.7842105263157895
+TPR/FPR: 0.9444444444444444, 0.2532467532467532
+Loss: 0.4413517117500305
+Timestamp: 24.444057733000022
+---------------------------------------------------------------
+[tensor([ 5, 12]), tensor([ 8, 17]), tensor([10, 13]), tensor([10, 17]), tensor([14, 17])]
+Mean loss in evaluation epoch: 0.4340810179710388, epochs needed: 300
+Accepting!
+
+Generation 8
+Mean loss in evaluation epoch: 0.43383175134658813, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 9a39f1c3a3fad4e4, num_times_seen_before: 0
+ACC: 0.8105263157894737
+TPR/FPR: 0.9444444444444444, 0.22077922077922077
+Loss: 0.43383175134658813
+Timestamp: 28.13649085899999
+---------------------------------------------------------------
+[tensor([7, 8]), tensor([ 7, 19]), tensor([15, 17])]
+Mean loss in evaluation epoch: 0.42896175384521484, epochs needed: 300
+Accepting!
+
+Generation 9
+Mean loss in evaluation epoch: 0.42743197083473206, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 04154565c76a9cfd, num_times_seen_before: 0
+ACC: 0.8263157894736842
+TPR/FPR: 0.9444444444444444, 0.2012987012987013
+Loss: 0.42743197083473206
+Timestamp: 31.493440075000024
+---------------------------------------------------------------
+[tensor([1, 4]), tensor([1, 8]), tensor([1, 9]), tensor([ 7, 15]), tensor([ 8, 10]), tensor([13, 18]), tensor([16, 19])]
+Mean loss in evaluation epoch: 0.41354188323020935, epochs needed: 300
+Accepting!
+
+Generation 10
+Mean loss in evaluation epoch: 0.4132252633571625, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4eb577b3e9705dc3, num_times_seen_before: 0
+ACC: 0.8631578947368421
+TPR/FPR: 0.9444444444444444, 0.15584415584415584
+Loss: 0.4132252633571625
+Timestamp: 34.82320063399999
+---------------------------------------------------------------
+[tensor([ 4, 13]), tensor([ 9, 12]), tensor([10, 19]), tensor([11, 16])]
+Mean loss in evaluation epoch: 0.40328705310821533, epochs needed: 300
+Accepting!
+
+Generation 11
+Mean loss in evaluation epoch: 0.4015227258205414, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 48d654e7515bf492, num_times_seen_before: 0
+ACC: 0.8842105263157894
+TPR/FPR: 0.9444444444444444, 0.12987012987012986
+Loss: 0.4015227258205414
+Timestamp: 38.190753347
+---------------------------------------------------------------
+[tensor([0, 3]), tensor([ 5, 14]), tensor([ 8, 14])]
+Mean loss in evaluation epoch: 0.39756590127944946, epochs needed: 300
+Accepting!
+
+Generation 12
+Mean loss in evaluation epoch: 0.3986213207244873, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: e77263b0479dd620, num_times_seen_before: 0
+ACC: 0.9
+TPR/FPR: 0.9722222222222222, 0.11688311688311688
+Loss: 0.3986213207244873
+Timestamp: 42.008803192000016
+---------------------------------------------------------------
+[tensor([0, 6]), tensor([ 1, 18]), tensor([ 4, 14])]
+Mean loss in evaluation epoch: 0.39465034008026123, epochs needed: 300
+Accepting!
+
+Generation 13
+Mean loss in evaluation epoch: 0.398399293422699, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: e76386db6d142805, num_times_seen_before: 0
+ACC: 0.9157894736842105
+TPR/FPR: 0.9722222222222222, 0.09740259740259741
+Loss: 0.398399293422699
+Timestamp: 45.803560205
+---------------------------------------------------------------
+[tensor([ 1, 10]), tensor([ 1, 13])]
+Mean loss in evaluation epoch: 0.382767915725708, epochs needed: 300
+Accepting!
+
+Generation 14
+Mean loss in evaluation epoch: 0.3813689351081848, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2c594f884dcaacd4, num_times_seen_before: 0
+ACC: 0.9263157894736842
+TPR/FPR: 0.9722222222222222, 0.08441558441558442
+Loss: 0.3813689351081848
+Timestamp: 49.496573571
+---------------------------------------------------------------
+[tensor([ 3, 10])]
+Mean loss in evaluation epoch: 0.3787154257297516, epochs needed: 300
+Accepting!
+
+Generation 15
+Mean loss in evaluation epoch: 0.3759697675704956, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d13c5a29da79ce01, num_times_seen_before: 0
+ACC: 0.9315789473684211
+TPR/FPR: 1.0, 0.08441558441558442
+Loss: 0.3759697675704956
+Timestamp: 53.17848024900002
+---------------------------------------------------------------
+[tensor([ 3, 14]), tensor([13, 14])]
+Mean loss in evaluation epoch: 0.3729865252971649, epochs needed: 300
+Accepting!
+
+Generation 16
+Mean loss in evaluation epoch: 0.3694551885128021, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 7353e3632263383e, num_times_seen_before: 0
+ACC: 0.9421052631578948
+TPR/FPR: 1.0, 0.07142857142857142
+Loss: 0.3694551885128021
+Timestamp: 56.814146918999995
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 17
+Mean loss in evaluation epoch: 0.3704349994659424, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 7353e3632263383e, num_times_seen_before: 1
+ACC: 0.9421052631578948
+TPR/FPR: 1.0, 0.07142857142857142
+Loss: 0.3704349994659424
+Timestamp: 58.951732392999986
+---------------------------------------------------------------
+[tensor([ 4, 19])]
+Mean loss in evaluation epoch: 0.37408432364463806, epochs needed: 300
+Rejecting!
+
+Generation 18
+Mean loss in evaluation epoch: 0.3724042475223541, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 7353e3632263383e, num_times_seen_before: 2
+ACC: 0.9421052631578948
+TPR/FPR: 1.0, 0.07142857142857142
+Loss: 0.3724042475223541
+Timestamp: 62.572458744000016
+---------------------------------------------------------------
+[tensor([ 4, 19]), tensor([14, 15])]
+Mean loss in evaluation epoch: 0.3697047829627991, epochs needed: 300
+Accepting!
+
+Generation 19
+Mean loss in evaluation epoch: 0.3697580099105835, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: db22f3890d3e27a3, num_times_seen_before: 0
+ACC: 0.9526315789473684
+TPR/FPR: 1.0, 0.05844155844155844
+Loss: 0.3697580099105835
+Timestamp: 66.21481466199998
+---------------------------------------------------------------
+[tensor([ 0, 14])]
+Mean loss in evaluation epoch: 0.3667391538619995, epochs needed: 300
+Accepting!
+
+Generation 20
+Mean loss in evaluation epoch: 0.36888644099235535, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: a85fd13d332f849f, num_times_seen_before: 0
+ACC: 0.9578947368421052
+TPR/FPR: 1.0, 0.05194805194805195
+Loss: 0.36888644099235535
+Timestamp: 69.96352341400001
+---------------------------------------------------------------
+[tensor([ 5, 16])]
+Mean loss in evaluation epoch: 0.3694612979888916, epochs needed: 300
+Rejecting!
+
+Generation 21
+Mean loss in evaluation epoch: 0.37040162086486816, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: a85fd13d332f849f, num_times_seen_before: 1
+ACC: 0.9578947368421052
+TPR/FPR: 1.0, 0.05194805194805195
+Loss: 0.37040162086486816
+Timestamp: 73.63873394799998
+---------------------------------------------------------------
+[tensor([ 5, 16])]
+Mean loss in evaluation epoch: 0.36435046792030334, epochs needed: 300
+Accepting!
+
+Generation 22
+Mean loss in evaluation epoch: 0.3680429756641388, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 0b024886c6d7dd21, num_times_seen_before: 0
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.3680429756641388
+Timestamp: 77.25912219600002
+---------------------------------------------------------------
+[tensor([16, 18])]
+Mean loss in evaluation epoch: 0.36688655614852905, epochs needed: 300
+Accepting!
+
+Generation 23
+Mean loss in evaluation epoch: 0.3683660328388214, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 996225e6e3d22692, num_times_seen_before: 0
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.3683660328388214
+Timestamp: 80.980773123
+---------------------------------------------------------------
+[tensor([ 4, 16])]
+Mean loss in evaluation epoch: 0.3608757555484772, epochs needed: 300
+Accepting!
+
+Generation 24
+Mean loss in evaluation epoch: 0.36319097876548767, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: bea800538f4539a5, num_times_seen_before: 0
+ACC: 0.9736842105263158
+TPR/FPR: 1.0, 0.032467532467532464
+Loss: 0.36319097876548767
+Timestamp: 84.74066130300002
+---------------------------------------------------------------
+[tensor([ 6, 15])]
+Mean loss in evaluation epoch: 0.3579544723033905, epochs needed: 300
+Accepting!
+
+Generation 25
+Mean loss in evaluation epoch: 0.3556317687034607, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 712d405ef23a1452, num_times_seen_before: 0
+ACC: 0.9789473684210527
+TPR/FPR: 1.0, 0.025974025974025976
+Loss: 0.3556317687034607
+Timestamp: 88.47795179000002
+---------------------------------------------------------------
+[tensor([ 6, 10]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.3526941239833832, epochs needed: 300
+Accepting!
+
+Generation 26
+Mean loss in evaluation epoch: 0.3582321107387543, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: c41f05fd07a945dc, num_times_seen_before: 0
+ACC: 0.9894736842105263
+TPR/FPR: 1.0, 0.012987012987012988
+Loss: 0.3582321107387543
+Timestamp: 92.16813510000003
+---------------------------------------------------------------
+[tensor([6, 8])]
+Mean loss in evaluation epoch: 0.354488343000412, epochs needed: 300
+Accepting!
+
+Generation 27
+Mean loss in evaluation epoch: 0.3515894114971161, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 0
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3515894114971161
+Timestamp: 95.86306880900003
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 28
+Mean loss in evaluation epoch: 0.35631802678108215, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 1
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.35631802678108215
+Timestamp: 97.99515635
+---------------------------------------------------------------
+[tensor([4, 5])]
+Mean loss in evaluation epoch: 0.3521614670753479, epochs needed: 300
+Accepting!
+
+Generation 29
+Mean loss in evaluation epoch: 0.353452205657959, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 0
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.353452205657959
+Timestamp: 101.734552329
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 30
+Mean loss in evaluation epoch: 0.3520432412624359, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 1
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3520432412624359
+Timestamp: 103.91294174799998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 31
+Mean loss in evaluation epoch: 0.35258325934410095, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 2
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35258325934410095
+Timestamp: 106.092028019
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 32
+Mean loss in evaluation epoch: 0.35226306319236755, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 3
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35226306319236755
+Timestamp: 108.256587341
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 33
+Mean loss in evaluation epoch: 0.353888601064682, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 4
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.353888601064682
+Timestamp: 110.37570227700002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 34
+Mean loss in evaluation epoch: 0.3515133559703827, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 5
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3515133559703827
+Timestamp: 112.50914777399998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 35
+Mean loss in evaluation epoch: 0.35130640864372253, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 6
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35130640864372253
+Timestamp: 114.57752419400003
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 36
+Mean loss in evaluation epoch: 0.3536170423030853, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 7
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3536170423030853
+Timestamp: 116.620283686
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 37
+Mean loss in evaluation epoch: 0.3533729016780853, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 8
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3533729016780853
+Timestamp: 118.74222573100002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 38
+Mean loss in evaluation epoch: 0.35382044315338135, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 9
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35382044315338135
+Timestamp: 120.91232419800002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 39
+Mean loss in evaluation epoch: 0.35074910521507263, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 10
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35074910521507263
+Timestamp: 123.05247137999999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 40
+Mean loss in evaluation epoch: 0.3531894087791443, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 11
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3531894087791443
+Timestamp: 125.23486492900003
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 41
+Mean loss in evaluation epoch: 0.35203418135643005, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 12
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35203418135643005
+Timestamp: 127.26784049399998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 42
+Mean loss in evaluation epoch: 0.35489171743392944, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 13
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35489171743392944
+Timestamp: 129.29312517900001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 43
+Mean loss in evaluation epoch: 0.3533896505832672, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 14
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3533896505832672
+Timestamp: 131.31061657700002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 44
+Mean loss in evaluation epoch: 0.3512049615383148, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 15
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3512049615383148
+Timestamp: 133.41416366200002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 16
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3512049615383148
+Timestamp: 133.974889968
+---------------------------------------------------------------
+Time needed: 135.593385132 sec
+../data/final/Voter/timeseries_ba20_100.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816
+SEED: 0
+NUM_DYN_EPOCHS: 300
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 45
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+NUM_TRAIN_SAMPLES: 100
+NUM_TRAIN_BATCHES: 1
+NUM_TEST_SAMPLES: 100
+NUM_TEST_BATCHES: 1
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 300
+IS_CONTINUOUS: False
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: 0.5639480948448181, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4596b514e6f4ad5b, num_times_seen_before: 0
+ACC: 0.5578947368421052
+TPR/FPR: 0.6944444444444444, 0.474025974025974
+Loss: 0.5639480948448181
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([ 0, 14]), tensor([1, 2]), tensor([ 1, 14]), tensor([ 2, 14]), tensor([4, 5]), tensor([ 8, 18]), tensor([11, 12]), tensor([12, 18]), tensor([12, 19])]
+Mean loss in evaluation epoch: 0.546006977558136, epochs needed: 300
+Accepting!
+
+Generation 1
+Mean loss in evaluation epoch: 0.5465477108955383, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 9e223439298d0010, num_times_seen_before: 0
+ACC: 0.5736842105263158
+TPR/FPR: 0.75, 0.4675324675324675
+Loss: 0.5465477108955383
+Timestamp: 3.778787679000004
+---------------------------------------------------------------
+[tensor([1, 7]), tensor([ 2, 12]), tensor([ 2, 13]), tensor([ 2, 18]), tensor([3, 5]), tensor([ 3, 17]), tensor([ 4, 17]), tensor([5, 6]), tensor([ 5, 11]), tensor([ 6, 10]), tensor([ 6, 14]), tensor([ 6, 15]), tensor([8, 9]), tensor([ 8, 11]), tensor([11, 18]), tensor([11, 19]), tensor([12, 14]), tensor([12, 16]), tensor([13, 16]), tensor([14, 15]), tensor([14, 19]), tensor([15, 16]), tensor([15, 19])]
+Mean loss in evaluation epoch: 0.5120332837104797, epochs needed: 300
+Accepting!
+
+Generation 2
+Mean loss in evaluation epoch: 0.5053926110267639, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 63138addc9a0d5a4, num_times_seen_before: 0
+ACC: 0.6526315789473685
+TPR/FPR: 0.8611111111111112, 0.3961038961038961
+Loss: 0.5053926110267639
+Timestamp: 7.450885035999988
+---------------------------------------------------------------
+[tensor([0, 3]), tensor([ 0, 12]), tensor([2, 5]), tensor([ 6, 17]), tensor([ 9, 13]), tensor([11, 17]), tensor([13, 14])]
+Mean loss in evaluation epoch: 0.49139830470085144, epochs needed: 300
+Accepting!
+
+Generation 3
+Mean loss in evaluation epoch: 0.4934217631816864, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 8616a8ff2465d563, num_times_seen_before: 0
+ACC: 0.6789473684210526
+TPR/FPR: 0.9166666666666666, 0.37662337662337664
+Loss: 0.4934217631816864
+Timestamp: 11.00307651899999
+---------------------------------------------------------------
+[tensor([ 0, 18]), tensor([1, 5]), tensor([ 1, 11]), tensor([2, 3]), tensor([ 3, 19]), tensor([ 4, 10]), tensor([5, 9]), tensor([ 5, 13]), tensor([ 6, 16]), tensor([ 6, 19]), tensor([ 7, 15]), tensor([ 7, 18]), tensor([ 8, 17]), tensor([10, 12]), tensor([10, 14]), tensor([11, 18]), tensor([13, 18])]
+Mean loss in evaluation epoch: 0.45568299293518066, epochs needed: 300
+Accepting!
+
+Generation 4
+Mean loss in evaluation epoch: 0.4624733626842499, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: a79d738ff34de767, num_times_seen_before: 0
+ACC: 0.7578947368421053
+TPR/FPR: 0.9722222222222222, 0.2922077922077922
+Loss: 0.4624733626842499
+Timestamp: 14.414801297999986
+---------------------------------------------------------------
+[tensor([0, 7]), tensor([ 1, 12]), tensor([ 1, 16]), tensor([ 4, 19]), tensor([ 6, 18]), tensor([ 7, 14]), tensor([ 9, 19]), tensor([13, 17])]
+Mean loss in evaluation epoch: 0.4388505518436432, epochs needed: 300
+Accepting!
+
+Generation 5
+Mean loss in evaluation epoch: 0.44016680121421814, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: f4d81f29175cab7a, num_times_seen_before: 0
+ACC: 0.7894736842105263
+TPR/FPR: 0.9722222222222222, 0.2532467532467532
+Loss: 0.44016680121421814
+Timestamp: 17.682940747999965
+---------------------------------------------------------------
+[tensor([0, 4]), tensor([ 1, 19]), tensor([ 2, 10]), tensor([ 5, 10]), tensor([ 6, 15]), tensor([13, 18]), tensor([16, 19]), tensor([17, 18])]
+Mean loss in evaluation epoch: 0.42655274271965027, epochs needed: 300
+Accepting!
+
+Generation 6
+Mean loss in evaluation epoch: 0.42611899971961975, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 21a27b237a184e8e, num_times_seen_before: 0
+ACC: 0.8315789473684211
+TPR/FPR: 1.0, 0.2077922077922078
+Loss: 0.42611899971961975
+Timestamp: 20.767031341999996
+---------------------------------------------------------------
+[tensor([ 0, 10]), tensor([ 0, 15]), tensor([1, 4]), tensor([ 1, 15]), tensor([2, 9]), tensor([10, 17]), tensor([14, 17]), tensor([14, 18])]
+Mean loss in evaluation epoch: 0.410775750875473, epochs needed: 300
+Accepting!
+
+Generation 7
+Mean loss in evaluation epoch: 0.4119531512260437, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 42dd4fc13eadafd8, num_times_seen_before: 0
+ACC: 0.8736842105263158
+TPR/FPR: 1.0, 0.15584415584415584
+Loss: 0.4119531512260437
+Timestamp: 23.796411130999957
+---------------------------------------------------------------
+[tensor([ 1, 10]), tensor([ 1, 14]), tensor([ 1, 17]), tensor([ 9, 12]), tensor([13, 14])]
+Mean loss in evaluation epoch: 0.39463672041893005, epochs needed: 300
+Accepting!
+
+Generation 8
+Mean loss in evaluation epoch: 0.3948102295398712, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d845e24afd22817f, num_times_seen_before: 0
+ACC: 0.9
+TPR/FPR: 1.0, 0.12337662337662338
+Loss: 0.3948102295398712
+Timestamp: 27.09154041399995
+---------------------------------------------------------------
+[tensor([1, 8]), tensor([ 9, 16])]
+Mean loss in evaluation epoch: 0.3852320611476898, epochs needed: 300
+Accepting!
+
+Generation 9
+Mean loss in evaluation epoch: 0.3855479061603546, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: c84226aaf5455285, num_times_seen_before: 0
+ACC: 0.9105263157894736
+TPR/FPR: 1.0, 0.11038961038961038
+Loss: 0.3855479061603546
+Timestamp: 30.38217696999999
+---------------------------------------------------------------
+[tensor([ 0, 16]), tensor([ 2, 16]), tensor([14, 15]), tensor([14, 16])]
+Mean loss in evaluation epoch: 0.37784290313720703, epochs needed: 300
+Accepting!
+
+Generation 10
+Mean loss in evaluation epoch: 0.37634795904159546, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2126389e0eb932d0, num_times_seen_before: 0
+ACC: 0.9315789473684211
+TPR/FPR: 1.0, 0.08441558441558442
+Loss: 0.37634795904159546
+Timestamp: 34.049444749999964
+---------------------------------------------------------------
+[tensor([ 0, 14]), tensor([ 5, 14]), tensor([ 8, 14])]
+Mean loss in evaluation epoch: 0.36688151955604553, epochs needed: 300
+Accepting!
+
+Generation 11
+Mean loss in evaluation epoch: 0.3679466247558594, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: b743f56efab08994, num_times_seen_before: 0
+ACC: 0.9473684210526316
+TPR/FPR: 1.0, 0.06493506493506493
+Loss: 0.3679466247558594
+Timestamp: 37.40433347199996
+---------------------------------------------------------------
+[tensor([ 5, 16]), tensor([6, 8])]
+Mean loss in evaluation epoch: 0.36334696412086487, epochs needed: 300
+Accepting!
+
+Generation 12
+Mean loss in evaluation epoch: 0.3653465211391449, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d18058e366fc759f, num_times_seen_before: 0
+ACC: 0.9578947368421052
+TPR/FPR: 1.0, 0.05194805194805195
+Loss: 0.3653465211391449
+Timestamp: 40.77999738599999
+---------------------------------------------------------------
+[tensor([16, 18])]
+Mean loss in evaluation epoch: 0.36548277735710144, epochs needed: 300
+Rejecting!
+
+Generation 13
+Mean loss in evaluation epoch: 0.3658093512058258, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d18058e366fc759f, num_times_seen_before: 1
+ACC: 0.9578947368421052
+TPR/FPR: 1.0, 0.05194805194805195
+Loss: 0.3658093512058258
+Timestamp: 44.14119913999997
+---------------------------------------------------------------
+[tensor([ 4, 19]), tensor([16, 18])]
+Mean loss in evaluation epoch: 0.37111520767211914, epochs needed: 300
+Rejecting!
+
+Generation 14
+Mean loss in evaluation epoch: 0.36375856399536133, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d18058e366fc759f, num_times_seen_before: 2
+ACC: 0.9578947368421052
+TPR/FPR: 1.0, 0.05194805194805195
+Loss: 0.36375856399536133
+Timestamp: 47.51526305799996
+---------------------------------------------------------------
+[tensor([ 4, 16])]
+Mean loss in evaluation epoch: 0.3608602285385132, epochs needed: 300
+Accepting!
+
+Generation 15
+Mean loss in evaluation epoch: 0.3606877028942108, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: f5b7d8b134f80afd, num_times_seen_before: 0
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.3606877028942108
+Timestamp: 50.88998525799997
+---------------------------------------------------------------
+[tensor([16, 18])]
+Mean loss in evaluation epoch: 0.3573564887046814, epochs needed: 300
+Accepting!
+
+Generation 16
+Mean loss in evaluation epoch: 0.3595290780067444, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2efd1d70f484022c, num_times_seen_before: 0
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.3595290780067444
+Timestamp: 54.261114918999965
+---------------------------------------------------------------
+[tensor([2, 6]), tensor([ 4, 19]), tensor([6, 9])]
+Mean loss in evaluation epoch: 0.36261236667633057, epochs needed: 300
+Rejecting!
+
+Generation 17
+Mean loss in evaluation epoch: 0.3593160808086395, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2efd1d70f484022c, num_times_seen_before: 1
+ACC: 0.968421052631579
+TPR/FPR: 1.0, 0.03896103896103896
+Loss: 0.3593160808086395
+Timestamp: 57.610623989999965
+---------------------------------------------------------------
+[tensor([ 4, 19])]
+Mean loss in evaluation epoch: 0.35558322072029114, epochs needed: 300
+Accepting!
+
+Generation 18
+Mean loss in evaluation epoch: 0.3571668267250061, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 48a53fde9d8dc820, num_times_seen_before: 0
+ACC: 0.9736842105263158
+TPR/FPR: 1.0, 0.032467532467532464
+Loss: 0.3571668267250061
+Timestamp: 61.16981769
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 19
+Mean loss in evaluation epoch: 0.35790979862213135, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 48a53fde9d8dc820, num_times_seen_before: 1
+ACC: 0.9736842105263158
+TPR/FPR: 1.0, 0.032467532467532464
+Loss: 0.35790979862213135
+Timestamp: 63.091438179999955
+---------------------------------------------------------------
+[tensor([2, 6])]
+Mean loss in evaluation epoch: 0.35580846667289734, epochs needed: 300
+Accepting!
+
+Generation 20
+Mean loss in evaluation epoch: 0.3567270338535309, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: b32810512e9ed626, num_times_seen_before: 0
+ACC: 0.9789473684210527
+TPR/FPR: 1.0, 0.025974025974025976
+Loss: 0.3567270338535309
+Timestamp: 66.42711153199997
+---------------------------------------------------------------
+[tensor([6, 9])]
+Mean loss in evaluation epoch: 0.3563441038131714, epochs needed: 300
+Accepting!
+
+Generation 21
+Mean loss in evaluation epoch: 0.3540697395801544, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 1be24fa7d66ab449, num_times_seen_before: 0
+ACC: 0.9842105263157894
+TPR/FPR: 1.0, 0.01948051948051948
+Loss: 0.3540697395801544
+Timestamp: 69.75626382899998
+---------------------------------------------------------------
+[tensor([ 6, 10]), tensor([ 9, 10])]
+Mean loss in evaluation epoch: 0.3524157404899597, epochs needed: 300
+Accepting!
+
+Generation 22
+Mean loss in evaluation epoch: 0.3552776575088501, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 0
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3552776575088501
+Timestamp: 73.11699552199997
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 23
+Mean loss in evaluation epoch: 0.3596702516078949, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: d41b011e2cc87ae0, num_times_seen_before: 1
+ACC: 0.9947368421052631
+TPR/FPR: 1.0, 0.006493506493506494
+Loss: 0.3596702516078949
+Timestamp: 75.04188730099997
+---------------------------------------------------------------
+[tensor([4, 5])]
+Mean loss in evaluation epoch: 0.3533538579940796, epochs needed: 300
+Accepting!
+
+Generation 24
+Mean loss in evaluation epoch: 0.35669970512390137, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 0
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35669970512390137
+Timestamp: 78.490384844
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 25
+Mean loss in evaluation epoch: 0.36275380849838257, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 1
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.36275380849838257
+Timestamp: 80.80307903599999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 26
+Mean loss in evaluation epoch: 0.35608503222465515, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 2
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35608503222465515
+Timestamp: 82.717160751
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 27
+Mean loss in evaluation epoch: 0.35347768664360046, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 3
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35347768664360046
+Timestamp: 84.62782242899999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 28
+Mean loss in evaluation epoch: 0.35151639580726624, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 4
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35151639580726624
+Timestamp: 86.550447787
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 29
+Mean loss in evaluation epoch: 0.3532441258430481, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 5
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3532441258430481
+Timestamp: 88.49205646299998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 30
+Mean loss in evaluation epoch: 0.35233059525489807, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 6
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35233059525489807
+Timestamp: 90.41419635
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 31
+Mean loss in evaluation epoch: 0.35192206501960754, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 7
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35192206501960754
+Timestamp: 92.327354883
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 32
+Mean loss in evaluation epoch: 0.3545069694519043, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 8
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3545069694519043
+Timestamp: 94.25432652499995
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 33
+Mean loss in evaluation epoch: 0.3555135726928711, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 9
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3555135726928711
+Timestamp: 96.16071734599996
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 34
+Mean loss in evaluation epoch: 0.35456517338752747, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 10
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35456517338752747
+Timestamp: 98.064623961
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 35
+Mean loss in evaluation epoch: 0.3527921140193939, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 11
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3527921140193939
+Timestamp: 99.98219699599997
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 36
+Mean loss in evaluation epoch: 0.3537316918373108, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 12
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3537316918373108
+Timestamp: 101.88957301299996
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 37
+Mean loss in evaluation epoch: 0.3554416000843048, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 13
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3554416000843048
+Timestamp: 103.79672441999998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 38
+Mean loss in evaluation epoch: 0.3534278869628906, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 14
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3534278869628906
+Timestamp: 105.738488126
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 39
+Mean loss in evaluation epoch: 0.3594984710216522, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 15
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3594984710216522
+Timestamp: 107.82462096199998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 40
+Mean loss in evaluation epoch: 0.3556978106498718, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 16
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3556978106498718
+Timestamp: 109.74232779699997
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 41
+Mean loss in evaluation epoch: 0.35337772965431213, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 17
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35337772965431213
+Timestamp: 111.66260249799996
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 42
+Mean loss in evaluation epoch: 0.3565213978290558, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 18
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3565213978290558
+Timestamp: 113.89256774399996
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 43
+Mean loss in evaluation epoch: 0.3528625965118408, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 19
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.3528625965118408
+Timestamp: 115.80860171499995
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 44
+Mean loss in evaluation epoch: 0.35457712411880493, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 20
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35457712411880493
+Timestamp: 117.72916299999997
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+------------------------- TRACKING ---------------------------
+Matrix Hash: 27a06185e85d7864, num_times_seen_before: 21
+ACC: 1.0
+TPR/FPR: 1.0, 0.0
+Loss: 0.35457712411880493
+Timestamp: 118.22168864499997
+---------------------------------------------------------------
+Time needed: 119.87563120100003 sec
+../data/final/Voter/timeseries_ba20_100.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816
+SEED: 0
+NUM_DYN_EPOCHS: 300
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 45
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+NUM_TRAIN_SAMPLES: 100
+NUM_TRAIN_BATCHES: 1
+NUM_TEST_SAMPLES: 100
+NUM_TEST_BATCHES: 1
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 300
+IS_CONTINUOUS: False
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: 0.5826748013496399, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 377f656bbc026759, num_times_seen_before: 0
+ACC: 0.5421052631578948
+TPR/FPR: 0.5277777777777778, 0.45454545454545453
+Loss: 0.5826748013496399
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([0, 5]), tensor([0, 6]), tensor([0, 8]), tensor([0, 9]), tensor([ 0, 12]), tensor([ 1, 15]), tensor([ 3, 15]), tensor([ 7, 12]), tensor([ 7, 17]), tensor([10, 11]), tensor([11, 13]), tensor([11, 17]), tensor([12, 17]), tensor([13, 14]), tensor([13, 17]), tensor([13, 18])]
+Mean loss in evaluation epoch: 0.5456569194793701, epochs needed: 300
+Accepting!
+
+Generation 1
+Mean loss in evaluation epoch: 0.5460450053215027, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 8b834135831d1d09, num_times_seen_before: 0
+ACC: 0.5736842105263158
+TPR/FPR: 0.6944444444444444, 0.45454545454545453
+Loss: 0.5460450053215027
+Timestamp: 3.5491664209999954
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([ 0, 17]), tensor([ 0, 19]), tensor([ 1, 17]), tensor([3, 4]), tensor([3, 5]), tensor([ 3, 12]), tensor([ 3, 16]), tensor([4, 5]), tensor([4, 6]), tensor([ 4, 12]), tensor([5, 6]), tensor([ 5, 11]), tensor([12, 13]), tensor([12, 15]), tensor([12, 18]), tensor([13, 16]), tensor([18, 19])]
+Mean loss in evaluation epoch: 0.5104135274887085, epochs needed: 300
+Accepting!
+
+Generation 2
+Mean loss in evaluation epoch: 0.5110783576965332, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 677f4cd63912924a, num_times_seen_before: 0
+ACC: 0.6473684210526316
+TPR/FPR: 0.8888888888888888, 0.4090909090909091
+Loss: 0.5110783576965332
+Timestamp: 7.2796209929999804
+---------------------------------------------------------------
+[tensor([0, 3]), tensor([ 0, 16]), tensor([ 0, 18]), tensor([ 1, 18]), tensor([ 2, 15]), tensor([ 2, 16]), tensor([ 2, 17]), tensor([ 3, 13]), tensor([ 3, 14]), tensor([6, 7]), tensor([ 6, 16]), tensor([ 6, 19]), tensor([ 7, 14]), tensor([ 8, 11]), tensor([ 8, 13]), tensor([ 8, 14]), tensor([ 9, 13]), tensor([14, 17])]
+Mean loss in evaluation epoch: 0.4883993864059448, epochs needed: 300
+Accepting!
+
+Generation 3
+Mean loss in evaluation epoch: 0.4847772419452667, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 0f35e9aaf8b30ba1, num_times_seen_before: 0
+ACC: 0.7
+TPR/FPR: 0.9444444444444444, 0.35714285714285715
+Loss: 0.4847772419452667
+Timestamp: 10.781572115000017
+---------------------------------------------------------------
+[tensor([0, 7]), tensor([ 1, 11]), tensor([3, 9]), tensor([5, 8]), tensor([5, 9]), tensor([ 5, 10]), tensor([ 6, 11]), tensor([ 9, 17]), tensor([ 9, 19]), tensor([17, 18])]
+Mean loss in evaluation epoch: 0.46160486340522766, epochs needed: 300
+Accepting!
+
+Generation 4
+Mean loss in evaluation epoch: 0.45663443207740784, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: b68a9a5e8b69fdd4, num_times_seen_before: 0
+ACC: 0.7526315789473684
+TPR/FPR: 0.9722222222222222, 0.2987012987012987
+Loss: 0.45663443207740784
+Timestamp: 14.080782398999986
+---------------------------------------------------------------
+[tensor([0, 6]), tensor([ 9, 18]), tensor([10, 12]), tensor([10, 19]), tensor([13, 17]), tensor([15, 17]), tensor([16, 19])]
+Mean loss in evaluation epoch: 0.44823095202445984, epochs needed: 300
+Accepting!
+
+Generation 5
+Mean loss in evaluation epoch: 0.44109639525413513, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 9457466660d1a734, num_times_seen_before: 0
+ACC: 0.7894736842105263
+TPR/FPR: 0.9722222222222222, 0.2532467532467532
+Loss: 0.44109639525413513
+Timestamp: 17.396956830000022
+---------------------------------------------------------------
+[tensor([ 1, 12]), tensor([ 1, 17]), tensor([ 2, 10]), tensor([ 2, 16]), tensor([ 2, 19]), tensor([ 4, 13]), tensor([ 7, 15]), tensor([ 8, 15]), tensor([10, 13])]
+Mean loss in evaluation epoch: 0.4320272207260132, epochs needed: 300
+Accepting!
+
+Generation 6
+Mean loss in evaluation epoch: 0.4258294105529785, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 80bb041074267df8, num_times_seen_before: 0
+ACC: 0.8368421052631578
+TPR/FPR: 0.9722222222222222, 0.19480519480519481
+Loss: 0.4258294105529785
+Timestamp: 20.99763950299996
+---------------------------------------------------------------
+[tensor([ 0, 15]), tensor([1, 4]), tensor([ 1, 19]), tensor([2, 9]), tensor([ 4, 16]), tensor([7, 8]), tensor([ 7, 10]), tensor([13, 18])]
+Mean loss in evaluation epoch: 0.4075365662574768, epochs needed: 300
+Accepting!
+
+Generation 7
+Mean loss in evaluation epoch: 0.40831252932548523, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 28d8fcb138502835, num_times_seen_before: 0
+ACC: 0.8789473684210526
+TPR/FPR: 0.9722222222222222, 0.14285714285714285
+Loss: 0.40831252932548523
+Timestamp: 24.316344529000048
+---------------------------------------------------------------
+[tensor([1, 7]), tensor([ 1, 15])]
+Mean loss in evaluation epoch: 0.39941561222076416, epochs needed: 300
+Accepting!
+
+Generation 8
+Mean loss in evaluation epoch: 0.4000450372695923, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: c4213b7085baa8c8, num_times_seen_before: 0
+ACC: 0.8894736842105263
+TPR/FPR: 0.9722222222222222, 0.12987012987012986
+Loss: 0.4000450372695923
+Timestamp: 27.658009976000017
+---------------------------------------------------------------
+[tensor([ 1, 18]), tensor([6, 8]), tensor([6, 9]), tensor([14, 15]), tensor([16, 18])]
+Mean loss in evaluation epoch: 0.3959061801433563, epochs needed: 300
+Accepting!
+
+Generation 9
+Mean loss in evaluation epoch: 0.3959968090057373, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 483abb19896df969, num_times_seen_before: 0
+ACC: 0.9157894736842105
+TPR/FPR: 0.9722222222222222, 0.09740259740259741
+Loss: 0.3959968090057373
+Timestamp: 31.031697237999992
+---------------------------------------------------------------
+[tensor([ 4, 19])]
+Mean loss in evaluation epoch: 0.39159253239631653, epochs needed: 300
+Accepting!
+
+Generation 10
+Mean loss in evaluation epoch: 0.390048086643219, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 82b944d1fc813054, num_times_seen_before: 0
+ACC: 0.9210526315789473
+TPR/FPR: 0.9722222222222222, 0.09090909090909091
+Loss: 0.390048086643219
+Timestamp: 34.37788093300003
+---------------------------------------------------------------
+[tensor([ 1, 13]), tensor([13, 14])]
+Mean loss in evaluation epoch: 0.39162197709083557, epochs needed: 300
+Rejecting!
+
+Generation 11
+Mean loss in evaluation epoch: 0.3906831443309784, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 82b944d1fc813054, num_times_seen_before: 1
+ACC: 0.9210526315789473
+TPR/FPR: 0.9722222222222222, 0.09090909090909091
+Loss: 0.3906831443309784
+Timestamp: 37.72859812599995
+---------------------------------------------------------------
+[tensor([ 0, 14])]
+Mean loss in evaluation epoch: 0.38969987630844116, epochs needed: 300
+Accepting!
+
+Generation 12
+Mean loss in evaluation epoch: 0.3889297842979431, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: fa13dc68916ddb1a, num_times_seen_before: 0
+ACC: 0.9263157894736842
+TPR/FPR: 0.9722222222222222, 0.08441558441558442
+Loss: 0.3889297842979431
+Timestamp: 41.070032244000004
+---------------------------------------------------------------
+[tensor([ 1, 13])]
+Mean loss in evaluation epoch: 0.39206790924072266, epochs needed: 300
+Rejecting!
+
+Generation 13
+Mean loss in evaluation epoch: 0.39108842611312866, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: fa13dc68916ddb1a, num_times_seen_before: 1
+ACC: 0.9263157894736842
+TPR/FPR: 0.9722222222222222, 0.08441558441558442
+Loss: 0.39108842611312866
+Timestamp: 44.41312163800001
+---------------------------------------------------------------
+[tensor([ 1, 13]), tensor([ 3, 14]), tensor([13, 14])]
+Mean loss in evaluation epoch: 0.38382795453071594, epochs needed: 300
+Accepting!
+
+Generation 14
+Mean loss in evaluation epoch: 0.38451793789863586, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: f156acead1936f00, num_times_seen_before: 0
+ACC: 0.9421052631578948
+TPR/FPR: 0.9722222222222222, 0.06493506493506493
+Loss: 0.38451793789863586
+Timestamp: 47.763492714999984
+---------------------------------------------------------------
+[tensor([ 1, 14]), tensor([ 8, 14])]
+Mean loss in evaluation epoch: 0.3770841956138611, epochs needed: 300
+Accepting!
+
+Generation 15
+Mean loss in evaluation epoch: 0.37807899713516235, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 788ab0bce58bc017, num_times_seen_before: 0
+ACC: 0.9526315789473684
+TPR/FPR: 0.9722222222222222, 0.05194805194805195
+Loss: 0.37807899713516235
+Timestamp: 51.294283146
+---------------------------------------------------------------
+[tensor([1, 9]), tensor([ 1, 10])]
+Mean loss in evaluation epoch: 0.3613041639328003, epochs needed: 300
+Accepting!
+
+Generation 16
+Mean loss in evaluation epoch: 0.3603430986404419, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 49c7c3126bd8f6b9, num_times_seen_before: 0
+ACC: 0.9631578947368421
+TPR/FPR: 0.9722222222222222, 0.03896103896103896
+Loss: 0.3603430986404419
+Timestamp: 54.632612021
+---------------------------------------------------------------
+[tensor([ 6, 10])]
+Mean loss in evaluation epoch: 0.3589118421077728, epochs needed: 300
+Accepting!
+
+Generation 17
+Mean loss in evaluation epoch: 0.358228474855423, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 5cbc5a5173e6b7e2, num_times_seen_before: 0
+ACC: 0.968421052631579
+TPR/FPR: 0.9722222222222222, 0.032467532467532464
+Loss: 0.358228474855423
+Timestamp: 57.96299116399996
+---------------------------------------------------------------
+[tensor([ 9, 12])]
+Mean loss in evaluation epoch: 0.3630908131599426, epochs needed: 300
+Rejecting!
+
+Generation 18
+Mean loss in evaluation epoch: 0.36014077067375183, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 5cbc5a5173e6b7e2, num_times_seen_before: 1
+ACC: 0.968421052631579
+TPR/FPR: 0.9722222222222222, 0.032467532467532464
+Loss: 0.36014077067375183
+Timestamp: 61.51947119500005
+---------------------------------------------------------------
+[tensor([ 9, 12])]
+Mean loss in evaluation epoch: 0.3607587516307831, epochs needed: 300
+Rejecting!
+
+Generation 19
+Mean loss in evaluation epoch: 0.36581116914749146, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 5cbc5a5173e6b7e2, num_times_seen_before: 2
+ACC: 0.968421052631579
+TPR/FPR: 0.9722222222222222, 0.032467532467532464
+Loss: 0.36581116914749146
+Timestamp: 64.84827732600002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 20
+Mean loss in evaluation epoch: 0.3624509871006012, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: 5cbc5a5173e6b7e2, num_times_seen_before: 3
+ACC: 0.968421052631579
+TPR/FPR: 0.9722222222222222, 0.032467532467532464
+Loss: 0.3624509871006012
+Timestamp: 66.94052882100004
+---------------------------------------------------------------
+[tensor([ 9, 12])]
+Mean loss in evaluation epoch: 0.357329398393631, epochs needed: 300
+Accepting!
+
+Generation 21
+Mean loss in evaluation epoch: 0.366726815700531, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: a53081ffc89fdddd, num_times_seen_before: 0
+ACC: 0.9736842105263158
+TPR/FPR: 0.9722222222222222, 0.025974025974025976
+Loss: 0.366726815700531
+Timestamp: 70.25062701299998
+---------------------------------------------------------------
+[tensor([ 5, 12])]
+Mean loss in evaluation epoch: 0.3546847701072693, epochs needed: 300
+Accepting!
+
+Generation 22
+Mean loss in evaluation epoch: 0.35594800114631653, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 0
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.35594800114631653
+Timestamp: 73.567744941
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 23
+Mean loss in evaluation epoch: 0.358220636844635, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 1
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.358220636844635
+Timestamp: 75.51269908799998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 24
+Mean loss in evaluation epoch: 0.3551322817802429, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 2
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3551322817802429
+Timestamp: 77.44604827900002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 25
+Mean loss in evaluation epoch: 0.3563072383403778, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 3
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3563072383403778
+Timestamp: 79.380467781
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 26
+Mean loss in evaluation epoch: 0.3565950095653534, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 4
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3565950095653534
+Timestamp: 81.28571585099996
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 27
+Mean loss in evaluation epoch: 0.35454973578453064, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 5
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.35454973578453064
+Timestamp: 83.20062229500002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 28
+Mean loss in evaluation epoch: 0.36731183528900146, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 6
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.36731183528900146
+Timestamp: 85.141065604
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 29
+Mean loss in evaluation epoch: 0.3557010889053345, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 7
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3557010889053345
+Timestamp: 87.04227060300002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 30
+Mean loss in evaluation epoch: 0.3566400110721588, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 8
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3566400110721588
+Timestamp: 88.95790331199998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 31
+Mean loss in evaluation epoch: 0.36033573746681213, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 9
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.36033573746681213
+Timestamp: 90.861985259
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 32
+Mean loss in evaluation epoch: 0.3557565212249756, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 10
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3557565212249756
+Timestamp: 92.76943069200001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 33
+Mean loss in evaluation epoch: 0.35515299439430237, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 11
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.35515299439430237
+Timestamp: 94.66248749900001
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 34
+Mean loss in evaluation epoch: 0.3561582565307617, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 12
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3561582565307617
+Timestamp: 96.56210903299996
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 35
+Mean loss in evaluation epoch: 0.3575685918331146, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 13
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3575685918331146
+Timestamp: 98.47011998599999
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 36
+Mean loss in evaluation epoch: 0.3566138446331024, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 14
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3566138446331024
+Timestamp: 100.37580748799996
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 37
+Mean loss in evaluation epoch: 0.3618844151496887, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 15
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3618844151496887
+Timestamp: 102.29718061799997
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 38
+Mean loss in evaluation epoch: 0.36250069737434387, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 16
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.36250069737434387
+Timestamp: 104.21817150000004
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 39
+Mean loss in evaluation epoch: 0.35617998242378235, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 17
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.35617998242378235
+Timestamp: 106.11996383899998
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 40
+Mean loss in evaluation epoch: 0.3568919897079468, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 18
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3568919897079468
+Timestamp: 108.02604492499995
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 41
+Mean loss in evaluation epoch: 0.356395959854126, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 19
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.356395959854126
+Timestamp: 109.91883536800003
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 42
+Mean loss in evaluation epoch: 0.3617922067642212, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 20
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3617922067642212
+Timestamp: 111.84975809800005
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 43
+Mean loss in evaluation epoch: 0.35367316007614136, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 21
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.35367316007614136
+Timestamp: 113.76163074800002
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+
+Generation 44
+Mean loss in evaluation epoch: 0.3551729619503021, epochs needed: 300
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 22
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3551729619503021
+Timestamp: 115.66214993000006
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+[]
+skipping.
+------------------------- TRACKING ---------------------------
+Matrix Hash: de8ac4090b8f9a94, num_times_seen_before: 23
+ACC: 0.9789473684210527
+TPR/FPR: 0.9722222222222222, 0.01948051948051948
+Loss: 0.3551729619503021
+Timestamp: 116.14544919900004
+---------------------------------------------------------------
+Time needed: 117.607443784 sec
+----------------- Final results across all experiments ---------------
+accs: [1.0, 1.0, 1.0, 1.0, 0.9789473684210527]
+tprs: [1.0, 1.0, 1.0, 1.0, 0.9722222222222222]
+fprs: [0.0, 0.0, 0.0, 0.0, 0.01948051948051948]
+mean acc: 0.9957895278930664
+mean tpr: 0.9944444894790649
+mean fpr: 0.0038961037062108517
