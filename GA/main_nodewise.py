@@ -8,26 +8,26 @@ import utils as ut
 import search_utils as su
 
 SEED =0
-SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba20_5k_0.1.pickle'
+SERIES_ADDRESS = r'../data/final/Voter/timeseries_ba20_100.pickle'
 ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_INIT = 60
-NUM_DYN_EPOCHS = 60
+NUM_DYN_EPOCHS_INIT = 300
+NUM_DYN_EPOCHS = 300
 DETECT_EARLY_CONVERGENCE = False
 RESET_DYN_LEARNER_EVERY_NTH_GEN = 1
 POP_SIZE = 8
 NEWPOP_SIZE = 16
 NUM_GEN = 20
-USE_NODEWISE_EVALUATION = False
+USE_NODEWISE_EVALUATION = True
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
-USE_DYNAMIC_MUTATIONS = True
-USE_DETERMINISTIC_EVAL = False
-FORMAT = 'timeseries'
+USE_DYNAMIC_MUTATIONS = False
+USE_DETERMINISTIC_EVAL = True
+FORMAT = 'old'
 CONTINUATION = False
 CONT_ADDRESS = r'D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418'
 
-logger = lo.Logger('GA_logs/final/SIS_ba20_dynamic')
+logger = lo.Logger('GA_logs/trash')
 sys.stdout = logger
 torch.manual_seed(SEED)
 np.random.seed(SEED)
