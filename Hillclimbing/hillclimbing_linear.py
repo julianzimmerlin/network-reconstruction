@@ -11,21 +11,21 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba10_1k_0.15.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
+SERIES_ADDRESS = r'../data/final/Voter/timeseries_ba20_1k.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 200
+NUM_DYN_EPOCHS = 30
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'timeseries'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+FORMAT = 'old'
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 USE_NODEWISE_LOSS = False
-USE_DYNAMIC_STEPS = False
-NUM_GEN = 200
+USE_DYNAMIC_STEPS = True
+NUM_GEN = 45
 DETERMINISTIC_EVAL = False
-RANDOM = True
+RANDOM = False
 FREE_WALK = False
-EXPERIMENTS = 1
+EXPERIMENTS = 5
 
 CONTINUATION = False
 CONT_ADDRESS = './hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816'
@@ -38,7 +38,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/linear/final/SIS_ba10_1k_random_singlestep', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/linear/final/Voter_ba20_1k_grad_ep30', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
