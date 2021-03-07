@@ -11,14 +11,14 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/Voter/timeseries_ba20_1k.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 30
+NUM_DYN_EPOCHS = 40
 NUM_GEN = 45
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'old'
+FORMAT = 'timeseries'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 EXPERIMENTS = 5
 CONTINUATION = False
@@ -61,7 +61,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/annealing/final/Voter_ba20_1k_grad', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/annealing/final/SIS_ba10_5k_grad', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
@@ -72,6 +72,7 @@ for _ in range(EXPERIMENTS):
     print('CONT_ADDRESS: ' + str(CONT_ADDRESS))
     print('USE_EVALEPOCH_FOR_GUIDED_MUTATION: ' + str(USE_EVALEPOCH_FOR_GUIDED_MUTATION))
     print('NUM_GEN: ' + str(NUM_GEN))
+    print('FORMAT: ' + FORMAT)
 
     # initialize evaluator with given timeseries data
     evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, False, DETERMINISTIC=False)
