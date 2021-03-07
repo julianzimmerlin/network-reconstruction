@@ -74,6 +74,7 @@ for _ in range(EXPERIMENTS):
     print('USE_NODEWISE_EVALUATION: ' + str(USE_NODEWISE_EVALUATION))
     print('USE_EVALEPOCH_FOR_GUIDED_MUTATION: ' + str(USE_EVALEPOCH_FOR_GUIDED_MUTATION))
     print('USE_DETERMINISTIC_EVAL: ' + str(USE_DETERMINISTIC_EVAL))
+    print('FORMAT: ' + FORMAT)
 
     # load ground truth matrix
     with open(ADJ_ADDRESS, 'rb') as f:
