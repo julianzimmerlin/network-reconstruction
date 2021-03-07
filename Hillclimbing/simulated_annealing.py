@@ -16,7 +16,7 @@ ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 40
-NUM_GEN = 30
+NUM_GEN = 60
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'timeseries'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
@@ -92,7 +92,7 @@ for _ in range(EXPERIMENTS):
     else:
         cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
 
-    for gen in range(int(1.5*NUM_GEN)):
+    for gen in range(NUM_GEN):
         dyn_learner = None
         optimizer = None
         loss, dyn_learner, optimizer = evaluator.evaluate_individual(cand, NUM_DYN_EPOCHS, dyn_learner, optimizer)
