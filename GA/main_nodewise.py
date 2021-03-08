@@ -46,6 +46,14 @@ def calc_print_save_statistics(population, all_populations, losses, trakka):
         pickle.dump(all_populations, f)
     trakka.track(population[argmin_loss], losses[argmin_loss])
 
+def has_converged(population):
+    ref = population[0]
+    for ind in population[1:]:
+        if not torch.all(ref==ind):
+            return False
+    return True
+
+
 # ----------------------------------------------------------- EARLY TERMINATION, CONTINUOUS TRAINING
 
 orig_terminal = sys.stdout
@@ -53,7 +61,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GA_logs/final/cml_ba20_5k_4_onetake_eval_tryout', original_terminal=orig_terminal)
+    logger = lo.Logger('GA_logs/trash', original_terminal=orig_terminal)
     sys.stdout = logger
 
     evaluator = ev.Evaluator(SERIES_ADDRESS, NUM_DYN_EPOCHS, DETECT_EARLY_CONVERGENCE, BATCH_SIZE, HIDDEN_SIZE, FORMAT, not USE_EVALEPOCH_FOR_GUIDED_MUTATION, USE_NODEWISE_EVALUATION, DETERMINISTIC=USE_DETERMINISTIC_EVAL)
@@ -118,6 +126,9 @@ for _ in range(EXPERIMENTS):
                 pickle.dump(dynamics_learners, f)
             with open(logger.get_path() + '/optimizers.pickle', 'wb') as f:
                 pickle.dump(optimizers, f)
+
+        if has_converged(population):
+            continue
 
         with open(logger.get_path() + '/lineage.txt', "a") as f:
             if j > 0:
