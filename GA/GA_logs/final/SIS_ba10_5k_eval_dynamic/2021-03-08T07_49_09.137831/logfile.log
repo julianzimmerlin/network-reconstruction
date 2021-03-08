@@ -1,0 +1,49 @@
+num samples: 5000
+NUM_TRAIN_SAMPLES: 4999
+NUM_TRAIN_BATCHES: 50
+NUM_TEST_SAMPLES: 4999
+NUM_TEST_BATCHES: 50
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 40
+IS_CONTINUOUS: False
+USE_MAX: False
+../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle
+../data/final/edges_ba10.pickle
+CONTINUATION: False
+CONT_ADDRESS: D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418
+SEED: 0
+NUM_DYN_EPOCHS: 40
+NUM_DYN_EPOCHS_INIT: 40
+DETECT_EARLY_CONVERGENCE: False
+RESET_DYN_LEARNER_EVERY_NTH_GEN: 1
+POP_SIZE: 10
+NEWPOP_SIZE: 40
+NUM_GEN: 45
+USE_NODEWISE_EVALUATION: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_DETERMINISTIC_EVAL: False
+--------------------- Start training ------------------------
+evaluating individudal 0 - 68ac8dcb83f2fc85. Mean loss in evaluation epoch: 0.3831987679004669, epochs needed: 40
+evaluating individudal 1 - 7de13c15529d5a23. Mean loss in evaluation epoch: 0.39057788252830505, epochs needed: 40
+evaluating individudal 2 - 11963ee1b65ef1eb. Mean loss in evaluation epoch: 0.3896428644657135, epochs needed: 40
+evaluating individudal 3 - 21cceb6f0ebbd349. Mean loss in evaluation epoch: 0.3841240704059601, epochs needed: 40
+evaluating individudal 4 - b7554b5ace3af2f6. Mean loss in evaluation epoch: 0.38776695728302, epochs needed: 40
+evaluating individudal 5 - 3d11f2dace581939. Mean loss in evaluation epoch: 0.38542672991752625, epochs needed: 40
+evaluating individudal 6 - f21aeee967d2407d. Mean loss in evaluation epoch: 0.38702091574668884, epochs needed: 40
+evaluating individudal 7 - 00c42d454c014edd. Mean loss in evaluation epoch: 0.38857343792915344, epochs needed: 40
+evaluating individudal 8 - 48d52317214db600. Mean loss in evaluation epoch: 0.38880211114883423, epochs needed: 40
+evaluating individudal 9 - 1306b634582b4ba8. Mean loss in evaluation epoch: 0.3844817578792572, epochs needed: 40
+Round 0 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: 68ac8dcb83f2fc85, num_times_seen_before: 0
+ACC: 0.5555555555555556
+TPR/FPR: 0.625, 0.4827586206896552
+Loss: 0.3831987679004669
+Timestamp: 0
+---------------------------------------------------------------
+evaluating individudal 0 - d6c768a2e313c868. Mean loss in evaluation epoch: 0.3836573362350464, epochs needed: 40
+evaluating individudal 1 - 81cf61962890841a. Mean loss in evaluation epoch: 0.3807982802391052, epochs needed: 40
+evaluating individudal 2 - af99c123ed07c6b3. Mean loss in evaluation epoch: 0.3819929361343384, epochs needed: 40
+evaluating individudal 3 - 761ca3971cad1d23. Mean loss in evaluation epoch: 0.38178205490112305, epochs needed: 40
+evaluating individudal 4 - d8a052ccf8bcad06. 
