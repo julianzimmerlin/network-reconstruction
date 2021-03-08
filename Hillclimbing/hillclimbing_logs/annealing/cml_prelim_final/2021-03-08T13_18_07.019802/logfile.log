@@ -1,0 +1,124 @@
+../data/final/cml/timeseries_ba10_1k_4_restart.pickle
+../data/final/edges_ba10.pickle
+SEED: 0
+NUM_DYN_EPOCHS: 200
+DETECT_EARLY_CONVERGENCE: False
+CONTINUATION: False
+CONT_ADDRESS: /content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+NUM_GEN: 45
+FORMAT: standard
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 200
+IS_CONTINUOUS: True
+USE_MAX: False
+Mean loss in evaluation epoch: 0.11841990798711777, epochs needed: 200
+
+
+ Tracking generation 0
+------------------------- TRACKING ---------------------------
+Matrix Hash: 6f1b90fc9c8835ab, num_times_seen_before: 0
+ACC: 0.4444444444444444
+TPR/FPR: 0.5, 0.5862068965517241
+Loss: 0.11841990798711777
+Timestamp: 0
+---------------------------------------------------------------
+Candidate: 7763b8320c35596d. Changes:6
+Mean loss in evaluation epoch: 0.12556199729442596, epochs needed: 200
+will accept with prob tensor(0.4817)
+rejecting.
+Mean loss in evaluation epoch: 0.11895740032196045, epochs needed: 200
+
+
+ Tracking generation 1
+------------------------- TRACKING ---------------------------
+Matrix Hash: 6f1b90fc9c8835ab, num_times_seen_before: 1
+ACC: 0.4444444444444444
+TPR/FPR: 0.5, 0.5862068965517241
+Loss: 0.11895740032196045
+Timestamp: 74.03086167200001
+---------------------------------------------------------------
+Candidate: c46df8e4f26d9ece. Changes:6
+Mean loss in evaluation epoch: 0.11700772494077682, epochs needed: 200
+smaller, so accepting
+Mean loss in evaluation epoch: 0.11572015285491943, epochs needed: 200
+
+
+ Tracking generation 2
+------------------------- TRACKING ---------------------------
+Matrix Hash: c46df8e4f26d9ece, num_times_seen_before: 0
+ACC: 0.48888888888888893
+TPR/FPR: 0.625, 0.5862068965517241
+Loss: 0.11572015285491943
+Timestamp: 146.462941856
+---------------------------------------------------------------
+Candidate: bb8e46a481a74920. Changes:4
+Mean loss in evaluation epoch: 0.11669031530618668, epochs needed: 200
+will accept with prob tensor(0.9013)
+accepting!
+Mean loss in evaluation epoch: 0.11653220653533936, epochs needed: 200
+
+
+ Tracking generation 3
+------------------------- TRACKING ---------------------------
+Matrix Hash: bb8e46a481a74920, num_times_seen_before: 0
+ACC: 0.5333333333333333
+TPR/FPR: 0.75, 0.5862068965517241
+Loss: 0.11653220653533936
+Timestamp: 218.780540858
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+Candidate: bb8e46a481a74920. Changes:0
+Mean loss in evaluation epoch: 0.11698546260595322, epochs needed: 200
+will accept with prob tensor(0.9515)
+accepting!
+Mean loss in evaluation epoch: 0.1161821112036705, epochs needed: 200
+
+
+ Tracking generation 4
+------------------------- TRACKING ---------------------------
+Matrix Hash: bb8e46a481a74920, num_times_seen_before: 1
+ACC: 0.5333333333333333
+TPR/FPR: 0.75, 0.5862068965517241
+Loss: 0.1161821112036705
+Timestamp: 286.567822268
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+Candidate: bb8e46a481a74920. Changes:0
+Mean loss in evaluation epoch: 0.12089528888463974, epochs needed: 200
+will accept with prob tensor(0.5885)
+accepting!
+Mean loss in evaluation epoch: 0.11735925823450089, epochs needed: 200
+
+
+ Tracking generation 5
+------------------------- TRACKING ---------------------------
+Matrix Hash: bb8e46a481a74920, num_times_seen_before: 2
+ACC: 0.5333333333333333
+TPR/FPR: 0.75, 0.5862068965517241
+Loss: 0.11735925823450089
+Timestamp: 355.835794406
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+Candidate: bb8e46a481a74920. Changes:0
+Mean loss in evaluation epoch: 0.11557172983884811, epochs needed: 200
+smaller, so accepting
+Mean loss in evaluation epoch: 0.11560708284378052, epochs needed: 200
+
+
+ Tracking generation 6
+------------------------- TRACKING ---------------------------
+Matrix Hash: bb8e46a481a74920, num_times_seen_before: 3
+ACC: 0.5333333333333333
+TPR/FPR: 0.75, 0.5862068965517241
+Loss: 0.11560708284378052
+Timestamp: 428.300483642
+---------------------------------------------------------------
+S IS ALL NEGATIVE!
+Candidate: bb8e46a481a74920. Changes:0

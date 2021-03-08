@@ -11,16 +11,16 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
+SERIES_ADDRESS = r'../data/final/cml/timeseries_ba10_1k_3.5_restart.pickle'
 ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 40
+NUM_DYN_EPOCHS = 200
 NUM_GEN = 45
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'timeseries'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
-EXPERIMENTS = 5
+FORMAT = 'standard'
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+EXPERIMENTS = 1
 CONTINUATION = False
 CONT_ADDRESS = '/content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852'
 
@@ -61,7 +61,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/annealing/final/SIS_ba10_5k_grad', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/annealing/cml_prelim_final', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)

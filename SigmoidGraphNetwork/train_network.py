@@ -12,18 +12,18 @@ import sys
 import pickle
 
 USE_GPU = True
-SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_1k_4_onetake.pickle'
-ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = '../data/final/cml/timeseries_ba10_1k_3.5_restart.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
 SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_PER_CYCLE = 30
-NUM_NET_EPOCHS_PER_CYCLE = 5
+NUM_DYN_EPOCHS_PER_CYCLE = 10
+NUM_NET_EPOCHS_PER_CYCLE = 20
 NUM_CYCLES = 100
 FORMAT = 'standard'
 USE_GUMBEL = True
 TEMP_DROP_FACTOR = .95
-EXPERIMENTS = 5
+EXPERIMENTS = 1
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)

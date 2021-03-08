@@ -1,0 +1,119 @@
+../data/final/cml/timeseries_ba10_1k_4_restart.pickle
+../data/final/edges_ba10.pickle
+SEED: 0
+NUM_DYN_EPOCHS: 200
+DETECT_EARLY_CONVERGENCE: False
+CONTINUATION: False
+CONT_ADDRESS: /content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: False
+NUM_GEN: 45
+FORMAT: standard
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 200
+IS_CONTINUOUS: True
+USE_MAX: False
+Mean loss in evaluation epoch: 0.11841990798711777, epochs needed: 200
+
+
+ Tracking generation 0
+------------------------- TRACKING ---------------------------
+Matrix Hash: 6f1b90fc9c8835ab, num_times_seen_before: 0
+ACC: 0.4444444444444444
+TPR/FPR: 0.5, 0.5862068965517241
+Loss: 0.11841990798711777
+Timestamp: 0
+---------------------------------------------------------------
+Candidate: 3074af22996c1a8e. Changes:12
+Mean loss in evaluation epoch: 0.11273709684610367, epochs needed: 200
+smaller, so accepting
+Mean loss in evaluation epoch: 0.11545975506305695, epochs needed: 200
+
+
+ Tracking generation 1
+------------------------- TRACKING ---------------------------
+Matrix Hash: 3074af22996c1a8e, num_times_seen_before: 0
+ACC: 0.48888888888888893
+TPR/FPR: 0.75, 0.6551724137931034
+Loss: 0.11545975506305695
+Timestamp: 70.324295331
+---------------------------------------------------------------
+Candidate: 2ac7150ce916d16f. Changes:8
+Mean loss in evaluation epoch: 0.11753430217504501, epochs needed: 200
+will accept with prob tensor(0.8048)
+accepting!
+Mean loss in evaluation epoch: 0.1145862266421318, epochs needed: 200
+
+
+ Tracking generation 2
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2ac7150ce916d16f, num_times_seen_before: 0
+ACC: 0.4444444444444444
+TPR/FPR: 0.875, 0.7931034482758621
+Loss: 0.1145862266421318
+Timestamp: 142.135158628
+---------------------------------------------------------------
+Candidate: 9a3cc7485fdbf4a1. Changes:9
+Mean loss in evaluation epoch: 0.11332354694604874, epochs needed: 200
+smaller, so accepting
+Mean loss in evaluation epoch: 0.11548793315887451, epochs needed: 200
+
+
+ Tracking generation 3
+------------------------- TRACKING ---------------------------
+Matrix Hash: 9a3cc7485fdbf4a1, num_times_seen_before: 0
+ACC: 0.4666666666666667
+TPR/FPR: 0.8125, 0.7241379310344828
+Loss: 0.11548793315887451
+Timestamp: 218.14367220500003
+---------------------------------------------------------------
+Candidate: 61df0fa8782f881a. Changes:11
+Mean loss in evaluation epoch: 0.11879394203424454, epochs needed: 200
+will accept with prob tensor(0.6957)
+accepting!
+Mean loss in evaluation epoch: 0.11838870495557785, epochs needed: 200
+
+
+ Tracking generation 4
+------------------------- TRACKING ---------------------------
+Matrix Hash: 61df0fa8782f881a, num_times_seen_before: 0
+ACC: 0.5333333333333333
+TPR/FPR: 0.9375, 0.6896551724137931
+Loss: 0.11838870495557785
+Timestamp: 283.350410488
+---------------------------------------------------------------
+Candidate: 67ffceff73f133f8. Changes:6
+Mean loss in evaluation epoch: 0.12000267952680588, epochs needed: 200
+will accept with prob tensor(0.8340)
+rejecting.
+Mean loss in evaluation epoch: 0.12019050121307373, epochs needed: 200
+
+
+ Tracking generation 5
+------------------------- TRACKING ---------------------------
+Matrix Hash: 61df0fa8782f881a, num_times_seen_before: 1
+ACC: 0.5333333333333333
+TPR/FPR: 0.9375, 0.6896551724137931
+Loss: 0.12019050121307373
+Timestamp: 349.420520786
+---------------------------------------------------------------
+Candidate: 52cb1beda6bdd5b7. Changes:6
+Mean loss in evaluation epoch: 0.11878152191638947, epochs needed: 200
+smaller, so accepting
+Mean loss in evaluation epoch: 0.12318842858076096, epochs needed: 200
+
+
+ Tracking generation 6
+------------------------- TRACKING ---------------------------
+Matrix Hash: 52cb1beda6bdd5b7, num_times_seen_before: 0
+ACC: 0.48888888888888893
+TPR/FPR: 1.0, 0.7931034482758621
+Loss: 0.12318842858076096
+Timestamp: 416.738725073
+---------------------------------------------------------------
+Candidate: 346a3102edec43e7. Changes:6
