@@ -12,15 +12,15 @@ import sys
 import pickle
 
 USE_GPU = True
-SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
-ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
+SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_1k_4_onetake.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS_PER_CYCLE = 10
-NUM_NET_EPOCHS_PER_CYCLE = 20
+NUM_DYN_EPOCHS_PER_CYCLE = 30
+NUM_NET_EPOCHS_PER_CYCLE = 5
 NUM_CYCLES = 100
-FORMAT = 'timeseries'
+FORMAT = 'standard'
 USE_GUMBEL = True
 TEMP_DROP_FACTOR = .95
 EXPERIMENTS = 5
@@ -34,7 +34,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/final/SIS_ba10_5k' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/cml_prelim_final' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(SERIES_ADDRESS)
@@ -47,6 +47,7 @@ for _ in range(EXPERIMENTS):
     print('NUM_CYCLES: ' + str(NUM_CYCLES))
     print('USE_GUMBEL: ' + str(USE_GUMBEL))
     print('EXPERIMENTS: ' + str(EXPERIMENTS))
+    print('FORMAT: ' + FORMAT)
 
     # load ground truth matrix
     with open(ADJ_ADDRESS, 'rb') as f:
