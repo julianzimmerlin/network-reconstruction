@@ -1,0 +1,53 @@
+../data/final/cml/timeseries_ba20_1k_3.5_restart.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816
+SEED: 0
+NUM_DYN_EPOCHS: 200
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 45
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+FORMAT: standard
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 200
+IS_CONTINUOUS: True
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: 0.05491319298744202, epochs needed: 200
+------------------------- TRACKING ---------------------------
+Matrix Hash: bcfde9534d3bfd59, num_times_seen_before: 0
+ACC: 0.4789473684210527
+TPR/FPR: 0.5833333333333334, 0.5454545454545454
+Loss: 0.05491319298744202
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([ 1, 11]), tensor([ 1, 12]), tensor([ 2, 13]), tensor([3, 8]), tensor([ 3, 12]), tensor([ 3, 13]), tensor([ 3, 15]), tensor([ 3, 16]), tensor([ 3, 18]), tensor([ 4, 16]), tensor([ 5, 11]), tensor([ 7, 15]), tensor([ 8, 18]), tensor([11, 13]), tensor([12, 15]), tensor([13, 16]), tensor([16, 18]), tensor([18, 19])]
+Mean loss in evaluation epoch: 0.05058377981185913, epochs needed: 200
+Accepting!
+
+Generation 1
+Mean loss in evaluation epoch: 0.053160544484853745, epochs needed: 200
+------------------------- TRACKING ---------------------------
+Matrix Hash: 83f874cc8a6e3eb2, num_times_seen_before: 0
+ACC: 0.46842105263157896
+TPR/FPR: 0.7222222222222222, 0.5909090909090909
+Loss: 0.053160544484853745
+Timestamp: 125.006134263
+---------------------------------------------------------------
+[tensor([0, 8]), tensor([1, 6]), tensor([ 1, 19]), tensor([3, 8]), tensor([8, 9]), tensor([ 8, 18]), tensor([12, 17]), tensor([13, 18]), tensor([15, 17])]
+Mean loss in evaluation epoch: 0.04862755537033081, epochs needed: 200
+Accepting!
+
+Generation 2
