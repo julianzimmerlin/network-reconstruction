@@ -12,7 +12,7 @@ import sys
 import pickle
 
 USE_GPU = True
-SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_1k_3.5_restart.pickle'
+SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
 ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 SEED = 0
 BATCH_SIZE = 100
@@ -34,7 +34,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/final/cml_ba20_1k_3.5_restart' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/final/cml_ba20_1k_4_restart' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(SERIES_ADDRESS)

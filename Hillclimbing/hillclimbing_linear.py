@@ -11,14 +11,14 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/cml/timeseries_ba20_1k_3.5_restart.pickle'
+SERIES_ADDRESS = r'../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
 ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 200
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'standard'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = True
 NUM_GEN = 45
@@ -38,7 +38,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/linear/final/cml_ba20_1k_3.5_restart_eval', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/linear/final/cml_ba20_1k_4_restart_grad', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
