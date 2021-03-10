@@ -1,0 +1,34 @@
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 50
+IS_CONTINUOUS: True
+USE_MAX: False
+../data/final/cml/timeseries_ba20_1k_4_restart.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418
+SEED: 0
+NUM_DYN_EPOCHS: 50
+NUM_DYN_EPOCHS_INIT: 200
+DETECT_EARLY_CONVERGENCE: False
+RESET_DYN_LEARNER_EVERY_NTH_GEN: 5
+POP_SIZE: 10
+NEWPOP_SIZE: 40
+NUM_GEN: 45
+USE_NODEWISE_EVALUATION: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_DETERMINISTIC_EVAL: False
+FORMAT: standard
+--------------------- Start training ------------------------
+evaluating individudal 0 - bcfde9534d3bfd59. Mean loss in evaluation epoch: 0.12041305750608444, epochs needed: 200
+evaluating individudal 1 - e653c9d83091eaf2. Mean loss in evaluation epoch: 0.11667688190937042, epochs needed: 200
+evaluating individudal 2 - 72f998262bbfe450. Mean loss in evaluation epoch: 0.1144016906619072, epochs needed: 200
+evaluating individudal 3 - 69390fc8c80db59e. Mean loss in evaluation epoch: 0.12312259525060654, epochs needed: 200
+evaluating individudal 4 - 9b2d78cf0e6453cb. Mean loss in evaluation epoch: 0.11770204454660416, epochs needed: 200
+evaluating individudal 5 - 6792c0317c2b3f18. Mean loss in evaluation epoch: 0.11525850743055344, epochs needed: 200
+evaluating individudal 6 - 1571397118f4ddec. 
