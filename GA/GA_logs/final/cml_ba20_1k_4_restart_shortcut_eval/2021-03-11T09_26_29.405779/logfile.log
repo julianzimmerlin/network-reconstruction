@@ -1,0 +1,45 @@
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 50
+IS_CONTINUOUS: True
+USE_MAX: False
+../data/final/cml/timeseries_ba20_1k_4_restart.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418
+SEED: 0
+NUM_DYN_EPOCHS: 50
+NUM_DYN_EPOCHS_INIT: 200
+DETECT_EARLY_CONVERGENCE: False
+RESET_DYN_LEARNER_EVERY_NTH_GEN: 5
+POP_SIZE: 10
+NEWPOP_SIZE: 40
+NUM_GEN: 45
+USE_NODEWISE_EVALUATION: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_DETERMINISTIC_EVAL: False
+FORMAT: standard
+--------------------- Start training ------------------------
+evaluating individudal 0 - 033ecec292e0c8e6. Mean loss in evaluation epoch: 0.11379077285528183, epochs needed: 200
+evaluating individudal 1 - 0361868c4959eb6a. Mean loss in evaluation epoch: 0.11510469764471054, epochs needed: 200
+evaluating individudal 2 - 1615500987321047. Mean loss in evaluation epoch: 0.13513033092021942, epochs needed: 200
+evaluating individudal 3 - 350aed6277eceff1. Mean loss in evaluation epoch: 0.11388418823480606, epochs needed: 200
+evaluating individudal 4 - 33217f051de1425c. Mean loss in evaluation epoch: 0.11653348058462143, epochs needed: 200
+evaluating individudal 5 - d8b1093c98d9d90d. Mean loss in evaluation epoch: 0.12900076806545258, epochs needed: 200
+evaluating individudal 6 - bece4c0ae532211d. Mean loss in evaluation epoch: 0.11695476621389389, epochs needed: 200
+evaluating individudal 7 - c0ddd24b5452ff49. Mean loss in evaluation epoch: 0.11394765228033066, epochs needed: 200
+evaluating individudal 8 - 98bdfc29d61a6027. Mean loss in evaluation epoch: 0.1142781525850296, epochs needed: 200
+evaluating individudal 9 - e88f124f3f342635. Mean loss in evaluation epoch: 0.11637071520090103, epochs needed: 200
+Round 0 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: 033ecec292e0c8e6, num_times_seen_before: 0
+ACC: 0.5263157894736843
+TPR/FPR: 0.5, 0.4675324675324675
+Loss: 0.11379077285528183
+Timestamp: 0
+---------------------------------------------------------------
