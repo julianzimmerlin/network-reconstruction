@@ -1,0 +1,819 @@
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 200
+IS_CONTINUOUS: True
+USE_MAX: False
+../data/final/cml/timeseries_ba20_1k_3.5_restart.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: D:\Uni\BA\ColabOutputs\ba20\2020-12-10T22_50_22.113418
+SEED: 0
+NUM_DYN_EPOCHS: 200
+NUM_DYN_EPOCHS_INIT: 200
+DETECT_EARLY_CONVERGENCE: False
+RESET_DYN_LEARNER_EVERY_NTH_GEN: 1
+POP_SIZE: 10
+NEWPOP_SIZE: 40
+NUM_GEN: 45
+USE_NODEWISE_EVALUATION: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: False
+USE_DETERMINISTIC_EVAL: False
+FORMAT: standard
+--------------------- Start training ------------------------
+evaluating individudal 0 - 209331bac16f0a9a. Mean loss in evaluation epoch: 0.066408172249794, epochs needed: 200
+evaluating individudal 1 - 90c94e45a609d59f. Mean loss in evaluation epoch: 0.04918636381626129, epochs needed: 200
+evaluating individudal 2 - f698d3a199629a17. Mean loss in evaluation epoch: 0.053682148456573486, epochs needed: 200
+evaluating individudal 3 - e4d17f2ff51e5c56. Mean loss in evaluation epoch: 0.048143137246370316, epochs needed: 200
+evaluating individudal 4 - 8a32e303bbe84ea6. Mean loss in evaluation epoch: 0.04816892370581627, epochs needed: 200
+evaluating individudal 5 - 95ab79c96bff5a7d. Mean loss in evaluation epoch: 0.04551117122173309, epochs needed: 200
+evaluating individudal 6 - 7d88475bf4133f0d. Mean loss in evaluation epoch: 0.051571279764175415, epochs needed: 200
+evaluating individudal 7 - 3ccd336c6079b80d. Mean loss in evaluation epoch: 0.049971725791692734, epochs needed: 200
+evaluating individudal 8 - 380fee09790c85c3. Mean loss in evaluation epoch: 0.04817819222807884, epochs needed: 200
+evaluating individudal 9 - 931324f52820fbed. Mean loss in evaluation epoch: 0.05020800977945328, epochs needed: 200
+Round 0 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: 95ab79c96bff5a7d, num_times_seen_before: 0
+ACC: 0.5842105263157895
+TPR/FPR: 0.6388888888888888, 0.42857142857142855
+Loss: 0.04551117122173309
+Timestamp: 0
+---------------------------------------------------------------
+evaluating individudal 0 - b304586781ffd0d2. Mean loss in evaluation epoch: 0.046728260815143585, epochs needed: 200
+evaluating individudal 1 - 0bbba26ca60cd6ca. Mean loss in evaluation epoch: 0.04861108586192131, epochs needed: 200
+evaluating individudal 2 - 9d95fcf4f87d60a1. Mean loss in evaluation epoch: 0.0487363301217556, epochs needed: 200
+evaluating individudal 3 - 662013d0c1f8f319. Mean loss in evaluation epoch: 0.0503520742058754, epochs needed: 200
+evaluating individudal 4 - 15c304406de973c4. Mean loss in evaluation epoch: 0.045524224638938904, epochs needed: 200
+evaluating individudal 5 - ef3a5aa1e2ececdb. Mean loss in evaluation epoch: 0.049002498388290405, epochs needed: 200
+evaluating individudal 6 - e53d064b0c04af7f. Mean loss in evaluation epoch: 0.045440249145030975, epochs needed: 200
+evaluating individudal 7 - ff1fa5a0663efa21. Mean loss in evaluation epoch: 0.047631461173295975, epochs needed: 200
+evaluating individudal 8 - 2fa2568226139ae4. Mean loss in evaluation epoch: 0.046928681433200836, epochs needed: 200
+evaluating individudal 9 - 609761b066c050ad. Mean loss in evaluation epoch: 0.0554686076939106, epochs needed: 200
+evaluating individudal 10 - d75a6f3991a83b26. Mean loss in evaluation epoch: 0.046510037034749985, epochs needed: 200
+evaluating individudal 11 - 06eab487247401f2. Mean loss in evaluation epoch: 0.05628402158617973, epochs needed: 200
+evaluating individudal 12 - 4701c2b16e9c347d. Mean loss in evaluation epoch: 0.04181814193725586, epochs needed: 200
+evaluating individudal 13 - 75b617ff74de8caa. Mean loss in evaluation epoch: 0.05069408565759659, epochs needed: 200
+evaluating individudal 14 - 081741e82d3b04d8. Mean loss in evaluation epoch: 0.0490594208240509, epochs needed: 200
+evaluating individudal 15 - 535db01a63914d0f. Mean loss in evaluation epoch: 0.04816148057579994, epochs needed: 200
+evaluating individudal 16 - 82800fea55b8ba06. Mean loss in evaluation epoch: 0.04712384194135666, epochs needed: 200
+evaluating individudal 17 - 7e125f480a0e5014. Mean loss in evaluation epoch: 0.05215809866786003, epochs needed: 200
+evaluating individudal 18 - 46dcac675db2e2e4. Mean loss in evaluation epoch: 0.0470961332321167, epochs needed: 200
+evaluating individudal 19 - 57bb12d37291c2cc. Mean loss in evaluation epoch: 0.04484158381819725, epochs needed: 200
+evaluating individudal 20 - fbd17a82a14195ab. Mean loss in evaluation epoch: 0.050947465002536774, epochs needed: 200
+evaluating individudal 21 - c059c8e10f8d58b3. Mean loss in evaluation epoch: 0.04755104333162308, epochs needed: 200
+evaluating individudal 22 - fa769bb6cd1d818b. Mean loss in evaluation epoch: 0.0511004738509655, epochs needed: 200
+evaluating individudal 23 - 4c55025d12e5d75c. Mean loss in evaluation epoch: 0.058246858417987823, epochs needed: 200
+evaluating individudal 24 - 7c0ca80a843e8b75. Mean loss in evaluation epoch: 0.04615728184580803, epochs needed: 200
+evaluating individudal 25 - 15bf5011893265f0. Mean loss in evaluation epoch: 0.05985652282834053, epochs needed: 200
+evaluating individudal 26 - 68395c3cda63cfdc. Mean loss in evaluation epoch: 0.043314751237630844, epochs needed: 200
+evaluating individudal 27 - aa88fa165efa84c0. Mean loss in evaluation epoch: 0.06656792014837265, epochs needed: 200
+evaluating individudal 28 - 81ee981e23536c79. Mean loss in evaluation epoch: 0.04511934891343117, epochs needed: 200
+evaluating individudal 29 - ad63c289dc017b78. Mean loss in evaluation epoch: 0.04920751228928566, epochs needed: 200
+evaluating individudal 30 - 1c16f5fd6fe16224. Mean loss in evaluation epoch: 0.0505756251513958, epochs needed: 200
+evaluating individudal 31 - b2470740fc4cb53f. Mean loss in evaluation epoch: 0.04698948189616203, epochs needed: 200
+evaluating individudal 32 - 901aa4b9b3710a5a. Mean loss in evaluation epoch: 0.04829962179064751, epochs needed: 200
+evaluating individudal 33 - 1dce7c6b1816966d. Mean loss in evaluation epoch: 0.0504821315407753, epochs needed: 200
+evaluating individudal 34 - 55cc5ceb8d6e2491. Mean loss in evaluation epoch: 0.049084894359111786, epochs needed: 200
+evaluating individudal 35 - 4910b40e931f2032. Mean loss in evaluation epoch: 0.05235796049237251, epochs needed: 200
+evaluating individudal 36 - 9f1b69f911354216. Mean loss in evaluation epoch: 0.050775196403265, epochs needed: 200
+evaluating individudal 37 - 87715b6bd0132cac. Mean loss in evaluation epoch: 0.05204390361905098, epochs needed: 200
+evaluating individudal 38 - c5bcea0abfd13686. Mean loss in evaluation epoch: 0.047108244150877, epochs needed: 200
+evaluating individudal 39 - 3cb61c261f205c3f. Mean loss in evaluation epoch: 0.05436315760016441, epochs needed: 200
+evaluating individudal 0 - 209331bac16f0a9a. Mean loss in evaluation epoch: 0.05069149285554886, epochs needed: 200
+evaluating individudal 1 - 90c94e45a609d59f. Mean loss in evaluation epoch: 0.05092381313443184, epochs needed: 200
+evaluating individudal 2 - f698d3a199629a17. Mean loss in evaluation epoch: 0.048596978187561035, epochs needed: 200
+evaluating individudal 3 - e4d17f2ff51e5c56. Mean loss in evaluation epoch: 0.05380741506814957, epochs needed: 200
+evaluating individudal 4 - 8a32e303bbe84ea6. Mean loss in evaluation epoch: 0.05118528753519058, epochs needed: 200
+evaluating individudal 5 - 95ab79c96bff5a7d. Mean loss in evaluation epoch: 0.04772992804646492, epochs needed: 200
+evaluating individudal 6 - 7d88475bf4133f0d. Mean loss in evaluation epoch: 0.05099716782569885, epochs needed: 200
+evaluating individudal 7 - 3ccd336c6079b80d. Mean loss in evaluation epoch: 0.05501589924097061, epochs needed: 200
+evaluating individudal 8 - 380fee09790c85c3. Mean loss in evaluation epoch: 0.05020806938409805, epochs needed: 200
+evaluating individudal 9 - 931324f52820fbed. Mean loss in evaluation epoch: 0.05300529673695564, epochs needed: 200
+Round 1 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: 4701c2b16e9c347d, num_times_seen_before: 0
+ACC: 0.6105263157894737
+TPR/FPR: 1.0, 0.4805194805194805
+Loss: 0.04181814193725586
+Timestamp: 2591.691803612979
+---------------------------------------------------------------
+evaluating individudal 0 - c6209895c012aeae. Mean loss in evaluation epoch: 0.04188844561576843, epochs needed: 200
+evaluating individudal 1 - d0a1b05bebb5d5ae. Mean loss in evaluation epoch: 0.044172726571559906, epochs needed: 200
+evaluating individudal 2 - 2cb9e2a950d22a5e. Mean loss in evaluation epoch: 0.03814470395445824, epochs needed: 200
+evaluating individudal 3 - 18f10858535e0164. Mean loss in evaluation epoch: 0.045989423990249634, epochs needed: 200
+evaluating individudal 4 - fa88dc67cb34fa35. Mean loss in evaluation epoch: 0.055479712784290314, epochs needed: 200
+evaluating individudal 5 - 95e374da051aee8b. Mean loss in evaluation epoch: 0.05163929611444473, epochs needed: 200
+evaluating individudal 6 - 98ddd2a73a356621. Mean loss in evaluation epoch: 0.0482664480805397, epochs needed: 200
+evaluating individudal 7 - 0f9c05268c184962. Mean loss in evaluation epoch: 0.04038192331790924, epochs needed: 200
+evaluating individudal 8 - 2cce130dc41cac93. Mean loss in evaluation epoch: 0.04240434989333153, epochs needed: 200
+evaluating individudal 9 - feebaf7ee45086e0. Mean loss in evaluation epoch: 0.04210846126079559, epochs needed: 200
+evaluating individudal 10 - 1ce0c8a1ad813b7a. Mean loss in evaluation epoch: 0.0420883372426033, epochs needed: 200
+evaluating individudal 11 - 5e59562c1f1ef0e5. Mean loss in evaluation epoch: 0.046657711267471313, epochs needed: 200
+evaluating individudal 12 - 8cb769d3ff4984d5. Mean loss in evaluation epoch: 0.04918975383043289, epochs needed: 200
+evaluating individudal 13 - 174fdf9e31d167e4. Mean loss in evaluation epoch: 0.0490424744784832, epochs needed: 200
+evaluating individudal 14 - df99888be7ae5b51. Mean loss in evaluation epoch: 0.039799999445676804, epochs needed: 200
+evaluating individudal 15 - 434e1edd0047f1ce. Mean loss in evaluation epoch: 0.04699314385652542, epochs needed: 200
+evaluating individudal 16 - 9c7d53b126348130. Mean loss in evaluation epoch: 0.04336452856659889, epochs needed: 200
+evaluating individudal 17 - 131ba76f4678929e. Mean loss in evaluation epoch: 0.048813346773386, epochs needed: 200
+evaluating individudal 18 - 3e39d84b7abff710. Mean loss in evaluation epoch: 0.04091612249612808, epochs needed: 200
+evaluating individudal 19 - 8fa6d7b2ed5826f5. Mean loss in evaluation epoch: 0.044023703783750534, epochs needed: 200
+evaluating individudal 20 - f561aba7e955b390. Mean loss in evaluation epoch: 0.043481480330228806, epochs needed: 200
+evaluating individudal 21 - 8eebb96271d67157. Mean loss in evaluation epoch: 0.052263762801885605, epochs needed: 200
+evaluating individudal 22 - 136bf405f0a27062. Mean loss in evaluation epoch: 0.04668053612112999, epochs needed: 200
+evaluating individudal 23 - 5ca8fafc256a3088. Mean loss in evaluation epoch: 0.03919072821736336, epochs needed: 200
+evaluating individudal 24 - eace27cefd188ca9. Mean loss in evaluation epoch: 0.04438168928027153, epochs needed: 200
+evaluating individudal 25 - a3a896a944d0eecd. Mean loss in evaluation epoch: 0.038068968802690506, epochs needed: 200
+evaluating individudal 26 - 84d61baa90e43506. Mean loss in evaluation epoch: 0.04614793136715889, epochs needed: 200
+evaluating individudal 27 - a4ee26e5a99662d7. Mean loss in evaluation epoch: 0.0473191998898983, epochs needed: 200
+evaluating individudal 28 - 45a45a94b4bd4267. Mean loss in evaluation epoch: 0.04330144450068474, epochs needed: 200
+evaluating individudal 29 - d20932563c64dd78. Mean loss in evaluation epoch: 0.0477311797440052, epochs needed: 200
+evaluating individudal 30 - 0537f0854ab3b526. Mean loss in evaluation epoch: 0.049634840339422226, epochs needed: 200
+evaluating individudal 31 - 9fe4b98674d91e18. Mean loss in evaluation epoch: 0.048620980232954025, epochs needed: 200
+evaluating individudal 32 - 2e453796daf9c128. Mean loss in evaluation epoch: 0.04628189280629158, epochs needed: 200
+evaluating individudal 33 - 1a906d6b1f50b3e6. Mean loss in evaluation epoch: 0.0437236949801445, epochs needed: 200
+evaluating individudal 34 - 8aea18f7f9a638ac. Mean loss in evaluation epoch: 0.05080505833029747, epochs needed: 200
+evaluating individudal 35 - ca64f0e247d994c1. Mean loss in evaluation epoch: 0.04892154037952423, epochs needed: 200
+evaluating individudal 36 - ac843e46d5073ff9. Mean loss in evaluation epoch: 0.04304772615432739, epochs needed: 200
+evaluating individudal 37 - ece84ae7230b7741. Mean loss in evaluation epoch: 0.048756636679172516, epochs needed: 200
+evaluating individudal 38 - 1df35d0b0482a714. Mean loss in evaluation epoch: 0.047621723264455795, epochs needed: 200
+evaluating individudal 39 - d9f2a24f6a5bcce6. Mean loss in evaluation epoch: 0.04648019000887871, epochs needed: 200
+evaluating individudal 0 - 4701c2b16e9c347d. Mean loss in evaluation epoch: 0.05137108638882637, epochs needed: 200
+evaluating individudal 1 - 68395c3cda63cfdc. Mean loss in evaluation epoch: 0.04221465066075325, epochs needed: 200
+evaluating individudal 2 - 57bb12d37291c2cc. Mean loss in evaluation epoch: 0.05147479847073555, epochs needed: 200
+evaluating individudal 3 - 81ee981e23536c79. Mean loss in evaluation epoch: 0.047741036862134933, epochs needed: 200
+evaluating individudal 4 - e53d064b0c04af7f. Mean loss in evaluation epoch: 0.04665636643767357, epochs needed: 200
+evaluating individudal 5 - 15c304406de973c4. Mean loss in evaluation epoch: 0.04695618525147438, epochs needed: 200
+evaluating individudal 6 - 7c0ca80a843e8b75. Mean loss in evaluation epoch: 0.050962816923856735, epochs needed: 200
+evaluating individudal 7 - d75a6f3991a83b26. Mean loss in evaluation epoch: 0.04739176854491234, epochs needed: 200
+evaluating individudal 8 - b304586781ffd0d2. Mean loss in evaluation epoch: 0.04696173593401909, epochs needed: 200
+evaluating individudal 9 - 2fa2568226139ae4. Mean loss in evaluation epoch: 0.05218464136123657, epochs needed: 200
+Round 2 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: a3a896a944d0eecd, num_times_seen_before: 0
+ACC: 0.7421052631578947
+TPR/FPR: 0.9444444444444444, 0.3051948051948052
+Loss: 0.038068968802690506
+Timestamp: 5183.983230102982
+---------------------------------------------------------------
+evaluating individudal 0 - 41462874ff66fb2d. Mean loss in evaluation epoch: 0.04080525040626526, epochs needed: 200
+evaluating individudal 1 - 79e513e4bba1279a. Mean loss in evaluation epoch: 0.034519392997026443, epochs needed: 200
+evaluating individudal 2 - e09a0f9bb61b157f. Mean loss in evaluation epoch: 0.036236874759197235, epochs needed: 200
+evaluating individudal 3 - 2f82b15232ecb227. Mean loss in evaluation epoch: 0.045816730707883835, epochs needed: 200
+evaluating individudal 4 - 1c67d398d856058e. Mean loss in evaluation epoch: 0.039539434015750885, epochs needed: 200
+evaluating individudal 5 - 186665f2a22bec2c. Mean loss in evaluation epoch: 0.0341477207839489, epochs needed: 200
+evaluating individudal 6 - c691b6332ffad81d. Mean loss in evaluation epoch: 0.0347319059073925, epochs needed: 200
+evaluating individudal 7 - 892d51c4db40f405. Mean loss in evaluation epoch: 0.04505869001150131, epochs needed: 200
+evaluating individudal 8 - fd8bb936551d8358. Mean loss in evaluation epoch: 0.035447847098112106, epochs needed: 200
+evaluating individudal 9 - 56d8e5be3c0ebc64. Mean loss in evaluation epoch: 0.037013377994298935, epochs needed: 200
+evaluating individudal 10 - 6ff866e3b3d15ee8. Mean loss in evaluation epoch: 0.0367911234498024, epochs needed: 200
+evaluating individudal 11 - 02b03dace36ff79e. Mean loss in evaluation epoch: 0.03665171563625336, epochs needed: 200
+evaluating individudal 12 - dc49f754fd353869. Mean loss in evaluation epoch: 0.03727055341005325, epochs needed: 200
+evaluating individudal 13 - 6a7704f0ded1ef55. Mean loss in evaluation epoch: 0.03940100595355034, epochs needed: 200
+evaluating individudal 14 - 27b5d6d70cdf7afd. Mean loss in evaluation epoch: 0.04611394926905632, epochs needed: 200
+evaluating individudal 15 - a38aa01506601ebc. Mean loss in evaluation epoch: 0.038199782371520996, epochs needed: 200
+evaluating individudal 16 - 9d4e75f87687f396. Mean loss in evaluation epoch: 0.03667398914694786, epochs needed: 200
+evaluating individudal 17 - 4ef7ed3b479da944. Mean loss in evaluation epoch: 0.0370791032910347, epochs needed: 200
+evaluating individudal 18 - 774a1b9e2e1b4377. Mean loss in evaluation epoch: 0.03688923642039299, epochs needed: 200
+evaluating individudal 19 - ccc1ccb2e0289e48. Mean loss in evaluation epoch: 0.037122245877981186, epochs needed: 200
+evaluating individudal 20 - 5042b2e5233b2117. Mean loss in evaluation epoch: 0.03741473704576492, epochs needed: 200
+evaluating individudal 21 - eaf45f9e4ec89fa6. Mean loss in evaluation epoch: 0.04097151383757591, epochs needed: 200
+evaluating individudal 22 - bdcb20b4c0bd7cc6. Mean loss in evaluation epoch: 0.039695534855127335, epochs needed: 200
+evaluating individudal 23 - a9059237b39330e1. Mean loss in evaluation epoch: 0.03773340582847595, epochs needed: 200
+evaluating individudal 24 - 80e48b9c93a13295. Mean loss in evaluation epoch: 0.03519464656710625, epochs needed: 200
+evaluating individudal 25 - c443838273c065d5. Mean loss in evaluation epoch: 0.03272237256169319, epochs needed: 200
+evaluating individudal 26 - 90af97fe34128d09. Mean loss in evaluation epoch: 0.040222011506557465, epochs needed: 200
+evaluating individudal 27 - efbee6ab3df9be6a. Mean loss in evaluation epoch: 0.038254640996456146, epochs needed: 200
+evaluating individudal 28 - df91c56cede512df. Mean loss in evaluation epoch: 0.04337846860289574, epochs needed: 200
+evaluating individudal 29 - 57524fedce2ce565. Mean loss in evaluation epoch: 0.035806894302368164, epochs needed: 200
+evaluating individudal 30 - e2800592a9912d7f. Mean loss in evaluation epoch: 0.04060251638293266, epochs needed: 200
+evaluating individudal 31 - 463b260e89d1309d. Mean loss in evaluation epoch: 0.03897790238261223, epochs needed: 200
+evaluating individudal 32 - 3c0e7f1af9f9c5d6. Mean loss in evaluation epoch: 0.037951063364744186, epochs needed: 200
+evaluating individudal 33 - 743655b2fe4bba0a. Mean loss in evaluation epoch: 0.03402125462889671, epochs needed: 200
+evaluating individudal 34 - 442e2f33c594d4c1. Mean loss in evaluation epoch: 0.04496713727712631, epochs needed: 200
+evaluating individudal 35 - cf8b23a7db3a1919. Mean loss in evaluation epoch: 0.038833241909742355, epochs needed: 200
+evaluating individudal 36 - 20bd507804f35a35. Mean loss in evaluation epoch: 0.03603295609354973, epochs needed: 200
+evaluating individudal 37 - 87c59c7d2d594ff4. Mean loss in evaluation epoch: 0.03833463415503502, epochs needed: 200
+evaluating individudal 38 - 39202d2b23dc61a2. Mean loss in evaluation epoch: 0.03681435063481331, epochs needed: 200
+evaluating individudal 39 - adbd4c94ab4d6942. Mean loss in evaluation epoch: 0.042526550590991974, epochs needed: 200
+evaluating individudal 0 - a3a896a944d0eecd. Mean loss in evaluation epoch: 0.03668397292494774, epochs needed: 200
+evaluating individudal 1 - 2cb9e2a950d22a5e. Mean loss in evaluation epoch: 0.03900345042347908, epochs needed: 200
+evaluating individudal 2 - 5ca8fafc256a3088. Mean loss in evaluation epoch: 0.03833271935582161, epochs needed: 200
+evaluating individudal 3 - df99888be7ae5b51. Mean loss in evaluation epoch: 0.04005290940403938, epochs needed: 200
+evaluating individudal 4 - 0f9c05268c184962. Mean loss in evaluation epoch: 0.04080749303102493, epochs needed: 200
+evaluating individudal 5 - 3e39d84b7abff710. Mean loss in evaluation epoch: 0.04015723615884781, epochs needed: 200
+evaluating individudal 6 - c6209895c012aeae. Mean loss in evaluation epoch: 0.04405651614069939, epochs needed: 200
+evaluating individudal 7 - 1ce0c8a1ad813b7a. Mean loss in evaluation epoch: 0.04018833860754967, epochs needed: 200
+evaluating individudal 8 - feebaf7ee45086e0. Mean loss in evaluation epoch: 0.04453901946544647, epochs needed: 200
+evaluating individudal 9 - 68395c3cda63cfdc. Mean loss in evaluation epoch: 0.04291887208819389, epochs needed: 200
+Round 3 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: c443838273c065d5, num_times_seen_before: 0
+ACC: 0.7947368421052632
+TPR/FPR: 1.0, 0.2532467532467532
+Loss: 0.03272237256169319
+Timestamp: 7775.901660438976
+---------------------------------------------------------------
+evaluating individudal 0 - fc428a588a8799d2. Mean loss in evaluation epoch: 0.03185470402240753, epochs needed: 200
+evaluating individudal 1 - ac4e781455bc3f57. Mean loss in evaluation epoch: 0.0351046584546566, epochs needed: 200
+evaluating individudal 2 - 6ecef1eb1ed72e6f. Mean loss in evaluation epoch: 0.03068549931049347, epochs needed: 200
+evaluating individudal 3 - 16ef80d961cd0380. Mean loss in evaluation epoch: 0.033696647733449936, epochs needed: 200
+evaluating individudal 4 - 74e400044781e5f7. Mean loss in evaluation epoch: 0.03525722771883011, epochs needed: 200
+evaluating individudal 5 - 7840d672d996628f. Mean loss in evaluation epoch: 0.03459925949573517, epochs needed: 200
+evaluating individudal 6 - 3bb4794a7e021d5b. Mean loss in evaluation epoch: 0.0341511107981205, epochs needed: 200
+evaluating individudal 7 - c7eb42a09dd29139. Mean loss in evaluation epoch: 0.03081788681447506, epochs needed: 200
+evaluating individudal 8 - 945a43628f6c1897. Mean loss in evaluation epoch: 0.035427071154117584, epochs needed: 200
+evaluating individudal 9 - 9d6e8e6f2a57516b. Mean loss in evaluation epoch: 0.03170427680015564, epochs needed: 200
+evaluating individudal 10 - 4ffbee84a65aeb6d. Mean loss in evaluation epoch: 0.03281950578093529, epochs needed: 200
+evaluating individudal 11 - 20855f0691af00a5. Mean loss in evaluation epoch: 0.030293656513094902, epochs needed: 200
+evaluating individudal 12 - 3aec24331569ae06. Mean loss in evaluation epoch: 0.033461540937423706, epochs needed: 200
+evaluating individudal 13 - df444b7c304175ea. Mean loss in evaluation epoch: 0.03271310403943062, epochs needed: 200
+evaluating individudal 14 - 84bbcca65761713b. Mean loss in evaluation epoch: 0.03136632964015007, epochs needed: 200
+evaluating individudal 15 - 462be0e603587f93. Mean loss in evaluation epoch: 0.03205136954784393, epochs needed: 200
+evaluating individudal 16 - 1eb72317c4dc2f37. Mean loss in evaluation epoch: 0.031166940927505493, epochs needed: 200
+evaluating individudal 17 - d3370c6dbc4e6cd1. Mean loss in evaluation epoch: 0.03458840399980545, epochs needed: 200
+evaluating individudal 18 - 3b1580b73f6d7fdf. Mean loss in evaluation epoch: 0.03304671868681908, epochs needed: 200
+evaluating individudal 19 - 34ef04015a69eb02. Mean loss in evaluation epoch: 0.027901524677872658, epochs needed: 200
+evaluating individudal 20 - 5f63a8505f5227e2. Mean loss in evaluation epoch: 0.032669685781002045, epochs needed: 200
+evaluating individudal 21 - 2ed43f8cc53cdd7f. Mean loss in evaluation epoch: 0.030995404347777367, epochs needed: 200
+evaluating individudal 22 - e522d78e878e9ee0. Mean loss in evaluation epoch: 0.03375599533319473, epochs needed: 200
+evaluating individudal 23 - 2c3d5f808b5daec8. Mean loss in evaluation epoch: 0.033731650561094284, epochs needed: 200
+evaluating individudal 24 - ae3d7986edc26d69. Mean loss in evaluation epoch: 0.03320186957716942, epochs needed: 200
+evaluating individudal 25 - 35815e856e8d2119. Mean loss in evaluation epoch: 0.03348913416266441, epochs needed: 200
+evaluating individudal 26 - 3522a6d9ec1f09f0. Mean loss in evaluation epoch: 0.03103972040116787, epochs needed: 200
+evaluating individudal 27 - 60e91727b2433578. Mean loss in evaluation epoch: 0.03385206684470177, epochs needed: 200
+evaluating individudal 28 - 9b32d884240c7870. Mean loss in evaluation epoch: 0.031398918479681015, epochs needed: 200
+evaluating individudal 29 - 6d4c96ea542d1d43. Mean loss in evaluation epoch: 0.03360571339726448, epochs needed: 200
+evaluating individudal 30 - 6964f06033dc9faf. Mean loss in evaluation epoch: 0.0345134399831295, epochs needed: 200
+evaluating individudal 31 - 67ee4e05d24aa920. Mean loss in evaluation epoch: 0.04040016233921051, epochs needed: 200
+evaluating individudal 32 - b6eb5d1c5e72fab7. Mean loss in evaluation epoch: 0.0358036532998085, epochs needed: 200
+evaluating individudal 33 - f4d1a5711dddcc96. Mean loss in evaluation epoch: 0.033716555684804916, epochs needed: 200
+evaluating individudal 34 - 4fbed45b8c7fc57b. Mean loss in evaluation epoch: 0.030941182747483253, epochs needed: 200
+evaluating individudal 35 - ae1fa29b89500688. Mean loss in evaluation epoch: 0.03800954297184944, epochs needed: 200
+evaluating individudal 36 - e2fd86a37aecfaf1. Mean loss in evaluation epoch: 0.03082437627017498, epochs needed: 200
+evaluating individudal 37 - 2e18a83e29492bbb. Mean loss in evaluation epoch: 0.035267625004053116, epochs needed: 200
+evaluating individudal 38 - c2e2e41da7b2b225. Mean loss in evaluation epoch: 0.02868208847939968, epochs needed: 200
+evaluating individudal 39 - f93b75f9e24e49e6. Mean loss in evaluation epoch: 0.02662244811654091, epochs needed: 200
+evaluating individudal 0 - c443838273c065d5. Mean loss in evaluation epoch: 0.034681305289268494, epochs needed: 200
+evaluating individudal 1 - 743655b2fe4bba0a. Mean loss in evaluation epoch: 0.0334840826690197, epochs needed: 200
+evaluating individudal 2 - 186665f2a22bec2c. Mean loss in evaluation epoch: 0.03425723314285278, epochs needed: 200
+evaluating individudal 3 - 79e513e4bba1279a. Mean loss in evaluation epoch: 0.03398291766643524, epochs needed: 200
+evaluating individudal 4 - c691b6332ffad81d. Mean loss in evaluation epoch: 0.03447121009230614, epochs needed: 200
+evaluating individudal 5 - 80e48b9c93a13295. Mean loss in evaluation epoch: 0.03539898991584778, epochs needed: 200
+evaluating individudal 6 - fd8bb936551d8358. Mean loss in evaluation epoch: 0.03556155785918236, epochs needed: 200
+evaluating individudal 7 - 57524fedce2ce565. Mean loss in evaluation epoch: 0.03206610307097435, epochs needed: 200
+evaluating individudal 8 - 20bd507804f35a35. Mean loss in evaluation epoch: 0.03677283227443695, epochs needed: 200
+evaluating individudal 9 - e09a0f9bb61b157f. Mean loss in evaluation epoch: 0.03708872199058533, epochs needed: 200
+Round 4 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: f93b75f9e24e49e6, num_times_seen_before: 0
+ACC: 0.8947368421052632
+TPR/FPR: 1.0, 0.12987012987012986
+Loss: 0.02662244811654091
+Timestamp: 10367.945273108024
+---------------------------------------------------------------
+evaluating individudal 0 - 5d4aef5a717b3485. Mean loss in evaluation epoch: 0.026842236518859863, epochs needed: 200
+evaluating individudal 1 - 8e7f9877a7e5be25. Mean loss in evaluation epoch: 0.02955145575106144, epochs needed: 200
+evaluating individudal 2 - 6da35fd5b8bbaed4. Mean loss in evaluation epoch: 0.03362357243895531, epochs needed: 200
+evaluating individudal 3 - 9a422e07c1af8ae0. Mean loss in evaluation epoch: 0.03399170562624931, epochs needed: 200
+evaluating individudal 4 - 74b62fa42ca64df6. Mean loss in evaluation epoch: 0.026281053200364113, epochs needed: 200
+evaluating individudal 5 - 1faa87bd14057a31. Mean loss in evaluation epoch: 0.03369252756237984, epochs needed: 200
+evaluating individudal 6 - 30124fed5778e6b9. Mean loss in evaluation epoch: 0.03411951661109924, epochs needed: 200
+evaluating individudal 7 - 7c6ee0e0e442dadc. Mean loss in evaluation epoch: 0.030006885528564453, epochs needed: 200
+evaluating individudal 8 - 0e5ff91357c28ebe. Mean loss in evaluation epoch: 0.030979067087173462, epochs needed: 200
+evaluating individudal 9 - 01075a03b0d590b7. Mean loss in evaluation epoch: 0.028544476255774498, epochs needed: 200
+evaluating individudal 10 - 362350028826fa30. Mean loss in evaluation epoch: 0.03144511207938194, epochs needed: 200
+evaluating individudal 11 - ee557f88d480fdba. Mean loss in evaluation epoch: 0.03029676340520382, epochs needed: 200
+evaluating individudal 12 - 527cbfb33f04de94. Mean loss in evaluation epoch: 0.024748435243964195, epochs needed: 200
+evaluating individudal 13 - e6654a759bef2bbc. Mean loss in evaluation epoch: 0.03004828654229641, epochs needed: 200
+evaluating individudal 14 - 78b7c61f57b1fec0. Mean loss in evaluation epoch: 0.03194790706038475, epochs needed: 200
+evaluating individudal 15 - 997ede23aa251ff7. Mean loss in evaluation epoch: 0.028963787481188774, epochs needed: 200
+evaluating individudal 16 - 9ca1ff93e36c6b6a. Mean loss in evaluation epoch: 0.03314654901623726, epochs needed: 200
+evaluating individudal 17 - 4f570388c8cb1920. Mean loss in evaluation epoch: 0.03290409967303276, epochs needed: 200
+evaluating individudal 18 - 7e7d917f74cb8329. Mean loss in evaluation epoch: 0.03182218223810196, epochs needed: 200
+evaluating individudal 19 - 52f9d405de6e69fc. Mean loss in evaluation epoch: 0.03130441904067993, epochs needed: 200
+evaluating individudal 20 - bc0f54bfe49ab731. Mean loss in evaluation epoch: 0.033430155366659164, epochs needed: 200
+evaluating individudal 21 - 8fdefc7d8544b226. Mean loss in evaluation epoch: 0.02762836217880249, epochs needed: 200
+evaluating individudal 22 - 5606f0d181c9ecac. Mean loss in evaluation epoch: 0.0314309261739254, epochs needed: 200
+evaluating individudal 23 - 7f28d954c1ca8216. Mean loss in evaluation epoch: 0.03134347125887871, epochs needed: 200
+evaluating individudal 24 - c94d1d85d6375a5a. Mean loss in evaluation epoch: 0.03365003690123558, epochs needed: 200
+evaluating individudal 25 - 60cd54b5f927bb8b. Mean loss in evaluation epoch: 0.029108909890055656, epochs needed: 200
+evaluating individudal 26 - 176128202c6ec589. Mean loss in evaluation epoch: 0.03450539708137512, epochs needed: 200
+evaluating individudal 27 - b8661617d99055ce. Mean loss in evaluation epoch: 0.03294685482978821, epochs needed: 200
+evaluating individudal 28 - d5a7dfd46a6b7ee2. Mean loss in evaluation epoch: 0.031704723834991455, epochs needed: 200
+evaluating individudal 29 - 8266c34fa53e5e17. Mean loss in evaluation epoch: 0.0324430875480175, epochs needed: 200
+evaluating individudal 30 - 7618d8add4eeba08. Mean loss in evaluation epoch: 0.033401962369680405, epochs needed: 200
+evaluating individudal 31 - f10f12c8ce0e43c2. Mean loss in evaluation epoch: 0.02580850198864937, epochs needed: 200
+evaluating individudal 32 - c64ddd2520a1ceb6. Mean loss in evaluation epoch: 0.029151758179068565, epochs needed: 200
+evaluating individudal 33 - 18282107ec28dc81. Mean loss in evaluation epoch: 0.030110983178019524, epochs needed: 200
+evaluating individudal 34 - aa4560483c18a9dc. Mean loss in evaluation epoch: 0.028076687827706337, epochs needed: 200
+evaluating individudal 35 - 0185d1a1e0b33c20. Mean loss in evaluation epoch: 0.028405994176864624, epochs needed: 200
+evaluating individudal 36 - 62c523440ccc84d7. Mean loss in evaluation epoch: 0.028101447969675064, epochs needed: 200
+evaluating individudal 37 - 2273d99436a35fb9. Mean loss in evaluation epoch: 0.033840883523225784, epochs needed: 200
+evaluating individudal 38 - 27d538ed7e825816. Mean loss in evaluation epoch: 0.034244440495967865, epochs needed: 200
+evaluating individudal 39 - 81d684bacf4edced. Mean loss in evaluation epoch: 0.032553963363170624, epochs needed: 200
+evaluating individudal 0 - f93b75f9e24e49e6. Mean loss in evaluation epoch: 0.027061304077506065, epochs needed: 200
+evaluating individudal 1 - 34ef04015a69eb02. Mean loss in evaluation epoch: 0.029280975461006165, epochs needed: 200
+evaluating individudal 2 - c2e2e41da7b2b225. Mean loss in evaluation epoch: 0.030000124126672745, epochs needed: 200
+evaluating individudal 3 - 20855f0691af00a5. Mean loss in evaluation epoch: 0.030487895011901855, epochs needed: 200
+evaluating individudal 4 - 6ecef1eb1ed72e6f. Mean loss in evaluation epoch: 0.03167475759983063, epochs needed: 200
+evaluating individudal 5 - c7eb42a09dd29139. Mean loss in evaluation epoch: 0.031547147780656815, epochs needed: 200
+evaluating individudal 6 - e2fd86a37aecfaf1. Mean loss in evaluation epoch: 0.03028116561472416, epochs needed: 200
+evaluating individudal 7 - 4fbed45b8c7fc57b. Mean loss in evaluation epoch: 0.032663118094205856, epochs needed: 200
+evaluating individudal 8 - 2ed43f8cc53cdd7f. Mean loss in evaluation epoch: 0.03233101963996887, epochs needed: 200
+evaluating individudal 9 - 3522a6d9ec1f09f0. Mean loss in evaluation epoch: 0.03134666010737419, epochs needed: 200
+Round 5 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: 527cbfb33f04de94, num_times_seen_before: 0
+ACC: 0.9157894736842105
+TPR/FPR: 1.0, 0.1038961038961039
+Loss: 0.024748435243964195
+Timestamp: 12959.791782938002
+---------------------------------------------------------------
+evaluating individudal 0 - 97cab64d233015d7. Mean loss in evaluation epoch: 0.03728721663355827, epochs needed: 200
+evaluating individudal 1 - f2b8446c19c33ce1. Mean loss in evaluation epoch: 0.029668694362044334, epochs needed: 200
+evaluating individudal 2 - 21d1df4fd76daaae. Mean loss in evaluation epoch: 0.02626832202076912, epochs needed: 200
+evaluating individudal 3 - cfa2524b867c3132. Mean loss in evaluation epoch: 0.037611223757267, epochs needed: 200
+evaluating individudal 4 - a47af53f0e7701a4. Mean loss in evaluation epoch: 0.027094218879938126, epochs needed: 200
+evaluating individudal 5 - 2c545c1e163c6d48. Mean loss in evaluation epoch: 0.030716588720679283, epochs needed: 200
+evaluating individudal 6 - 604fb7a14bd986e0. Mean loss in evaluation epoch: 0.026438582688570023, epochs needed: 200
+evaluating individudal 7 - fd6960e4ea993a3c. Mean loss in evaluation epoch: 0.028146762400865555, epochs needed: 200
+evaluating individudal 8 - 1d8663c4e84a39aa. Mean loss in evaluation epoch: 0.03245266526937485, epochs needed: 200
+evaluating individudal 9 - 77abd8679dbdf5d0. Mean loss in evaluation epoch: 0.0332634411752224, epochs needed: 200
+evaluating individudal 10 - 61315836d767f2c6. Mean loss in evaluation epoch: 0.03101440705358982, epochs needed: 200
+evaluating individudal 11 - c06e2aba98026823. Mean loss in evaluation epoch: 0.029827823862433434, epochs needed: 200
+evaluating individudal 12 - bf29bbf2a540c684. Mean loss in evaluation epoch: 0.02452634833753109, epochs needed: 200
+evaluating individudal 13 - c42ca1284d8c84fe. Mean loss in evaluation epoch: 0.0369863323867321, epochs needed: 200
+evaluating individudal 14 - db19051319eb272d. Mean loss in evaluation epoch: 0.028858710080385208, epochs needed: 200
+evaluating individudal 15 - 0eec2f841ab1fbf6. Mean loss in evaluation epoch: 0.029108477756381035, epochs needed: 200
+evaluating individudal 16 - 85d16d2c073bee3a. Mean loss in evaluation epoch: 0.03537071868777275, epochs needed: 200
+evaluating individudal 17 - e068ecf9f74d4b9c. Mean loss in evaluation epoch: 0.029875030741095543, epochs needed: 200
+evaluating individudal 18 - 1c6fc74af56e7ced. Mean loss in evaluation epoch: 0.02941347472369671, epochs needed: 200
+evaluating individudal 19 - 12507e760f4778ad. Mean loss in evaluation epoch: 0.03177180513739586, epochs needed: 200
+evaluating individudal 20 - cd27d184218e2158. Mean loss in evaluation epoch: 0.03396766260266304, epochs needed: 200
+evaluating individudal 21 - 17d73863b921e69d. Mean loss in evaluation epoch: 0.03094661235809326, epochs needed: 200
+evaluating individudal 22 - 5a6edb2c68c52038. Mean loss in evaluation epoch: 0.030115043744444847, epochs needed: 200
+evaluating individudal 23 - 04afbce980e3a298. Mean loss in evaluation epoch: 0.023226222023367882, epochs needed: 200
+evaluating individudal 24 - 8f4500a83ff86ace. Mean loss in evaluation epoch: 0.031511418521404266, epochs needed: 200
+evaluating individudal 25 - a2470dee3b46afe2. Mean loss in evaluation epoch: 0.029898691922426224, epochs needed: 200
+evaluating individudal 26 - 7a7ff76c4b22797a. Mean loss in evaluation epoch: 0.032385148108005524, epochs needed: 200
+evaluating individudal 27 - daceefa779642ca8. Mean loss in evaluation epoch: 0.035959161818027496, epochs needed: 200
+evaluating individudal 28 - a88c772c19978802. Mean loss in evaluation epoch: 0.030328476801514626, epochs needed: 200
+evaluating individudal 29 - a6ef9b77e06b420d. Mean loss in evaluation epoch: 0.03590931370854378, epochs needed: 200
+evaluating individudal 30 - 3eba7ea9d0f7ee38. Mean loss in evaluation epoch: 0.03373238071799278, epochs needed: 200
+evaluating individudal 31 - a65b1e2bcf5b5d51. Mean loss in evaluation epoch: 0.0295809805393219, epochs needed: 200
+evaluating individudal 32 - fd03b61de385e767. Mean loss in evaluation epoch: 0.03681912645697594, epochs needed: 200
+evaluating individudal 33 - ed32b22ef48bb254. Mean loss in evaluation epoch: 0.03365641459822655, epochs needed: 200
+evaluating individudal 34 - 90aa186948b506fc. Mean loss in evaluation epoch: 0.03324573114514351, epochs needed: 200
+evaluating individudal 35 - 858e362f588c376c. Mean loss in evaluation epoch: 0.03195003792643547, epochs needed: 200
+evaluating individudal 36 - bdf962a9fea5d9bf. Mean loss in evaluation epoch: 0.03068065643310547, epochs needed: 200
+evaluating individudal 37 - 817b9d17466db058. Mean loss in evaluation epoch: 0.03182835876941681, epochs needed: 200
+evaluating individudal 38 - 53b0d31858668e27. Mean loss in evaluation epoch: 0.03712363541126251, epochs needed: 200
+evaluating individudal 39 - 4d0560f8542d2356. Mean loss in evaluation epoch: 0.023440128192305565, epochs needed: 200
+evaluating individudal 0 - 527cbfb33f04de94. Mean loss in evaluation epoch: 0.031866904348134995, epochs needed: 200
+evaluating individudal 1 - f10f12c8ce0e43c2. Mean loss in evaluation epoch: 0.026656541973352432, epochs needed: 200
+evaluating individudal 2 - 74b62fa42ca64df6. Mean loss in evaluation epoch: 0.027139080688357353, epochs needed: 200
+evaluating individudal 3 - 5d4aef5a717b3485. Mean loss in evaluation epoch: 0.02628905512392521, epochs needed: 200
+evaluating individudal 4 - f93b75f9e24e49e6. Mean loss in evaluation epoch: 0.02671511471271515, epochs needed: 200
+evaluating individudal 5 - 8fdefc7d8544b226. Mean loss in evaluation epoch: 0.02779144048690796, epochs needed: 200
+evaluating individudal 6 - aa4560483c18a9dc. Mean loss in evaluation epoch: 0.027571439743041992, epochs needed: 200
+evaluating individudal 7 - 62c523440ccc84d7. Mean loss in evaluation epoch: 0.02832399308681488, epochs needed: 200
+evaluating individudal 8 - 0185d1a1e0b33c20. Mean loss in evaluation epoch: 0.027377784252166748, epochs needed: 200
+evaluating individudal 9 - 01075a03b0d590b7. Mean loss in evaluation epoch: 0.02782863937318325, epochs needed: 200
+Round 6 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: 04afbce980e3a298, num_times_seen_before: 0
+ACC: 0.9052631578947369
+TPR/FPR: 0.9444444444444444, 0.1038961038961039
+Loss: 0.023226222023367882
+Timestamp: 15552.75427482702
+---------------------------------------------------------------
+evaluating individudal 0 - dea75d4a0618fba9. Mean loss in evaluation epoch: 0.03385978564620018, epochs needed: 200
+evaluating individudal 1 - ad340e329d0c459f. Mean loss in evaluation epoch: 0.03171467408537865, epochs needed: 200
+evaluating individudal 2 - f35bcc890cbd252d. Mean loss in evaluation epoch: 0.02930932678282261, epochs needed: 200
+evaluating individudal 3 - ece3e1e165142f44. Mean loss in evaluation epoch: 0.02763616479933262, epochs needed: 200
+evaluating individudal 4 - 6e74be5cd7aeb9cb. Mean loss in evaluation epoch: 0.03395514935255051, epochs needed: 200
+evaluating individudal 5 - 5e5536bde6c68666. Mean loss in evaluation epoch: 0.020189378410577774, epochs needed: 200
+evaluating individudal 6 - 975ae1d09c209221. Mean loss in evaluation epoch: 0.033219754695892334, epochs needed: 200
+evaluating individudal 7 - 998ed02d6d42cc68. Mean loss in evaluation epoch: 0.02979765646159649, epochs needed: 200
+evaluating individudal 8 - b863152564533785. Mean loss in evaluation epoch: 0.03183124214410782, epochs needed: 200
+evaluating individudal 9 - e0a0497eeaadb936. Mean loss in evaluation epoch: 0.01851062849164009, epochs needed: 200
+evaluating individudal 10 - dab61fa73d853c7d. Mean loss in evaluation epoch: 0.029263868927955627, epochs needed: 200
+evaluating individudal 11 - 4998e48b6ee8c408. Mean loss in evaluation epoch: 0.03141969442367554, epochs needed: 200
+evaluating individudal 12 - ff17d53afd6f141e. Mean loss in evaluation epoch: 0.02982831932604313, epochs needed: 200
+evaluating individudal 13 - 79ebd0153f044aac. Mean loss in evaluation epoch: 0.025466669350862503, epochs needed: 200
+evaluating individudal 14 - 4ddba945b1a7a5f4. Mean loss in evaluation epoch: 0.02576768398284912, epochs needed: 200
+evaluating individudal 15 - 7b60bcd202671b3a. Mean loss in evaluation epoch: 0.031632643193006516, epochs needed: 200
+evaluating individudal 16 - af7e4df872e676bb. Mean loss in evaluation epoch: 0.03263474628329277, epochs needed: 200
+evaluating individudal 17 - b4e0f11959163706. Mean loss in evaluation epoch: 0.025624319911003113, epochs needed: 200
+evaluating individudal 18 - da8602b8c9804fcf. Mean loss in evaluation epoch: 0.03426814824342728, epochs needed: 200
+evaluating individudal 19 - e0fad394ce034376. Mean loss in evaluation epoch: 0.027868086472153664, epochs needed: 200
+evaluating individudal 20 - e54c53d7f69c49fe. Mean loss in evaluation epoch: 0.03480733186006546, epochs needed: 200
+evaluating individudal 21 - 78507f62521a981e. Mean loss in evaluation epoch: 0.025703031569719315, epochs needed: 200
+evaluating individudal 22 - 5a188f01c60a3c6e. Mean loss in evaluation epoch: 0.033576421439647675, epochs needed: 200
+evaluating individudal 23 - ea3e09fe74aaf084. Mean loss in evaluation epoch: 0.031184345483779907, epochs needed: 200
+evaluating individudal 24 - 45ba4eb7c1987c87. Mean loss in evaluation epoch: 0.026465309783816338, epochs needed: 200
+evaluating individudal 25 - 9f991d081453ac50. Mean loss in evaluation epoch: 0.036007802933454514, epochs needed: 200
+evaluating individudal 26 - 92a5f48d0ea57346. Mean loss in evaluation epoch: 0.03282852843403816, epochs needed: 200
+evaluating individudal 27 - 1d64517828721567. Mean loss in evaluation epoch: 0.030435046181082726, epochs needed: 200
+evaluating individudal 28 - 174941659cf83a07. Mean loss in evaluation epoch: 0.02514013648033142, epochs needed: 200
+evaluating individudal 29 - 0c78520599876847. Mean loss in evaluation epoch: 0.026091206818819046, epochs needed: 200
+evaluating individudal 30 - d13385d8cf5e1640. Mean loss in evaluation epoch: 0.027351362630724907, epochs needed: 200
+evaluating individudal 31 - 7f382c19bd2eeb48. Mean loss in evaluation epoch: 0.03343089669942856, epochs needed: 200
+evaluating individudal 32 - 1d62811c7a7b3fbb. Mean loss in evaluation epoch: 0.026217347010970116, epochs needed: 200
+evaluating individudal 33 - 7192ae50243f1fe5. Mean loss in evaluation epoch: 0.031201902776956558, epochs needed: 200
+evaluating individudal 34 - 07281977efe68c19. Mean loss in evaluation epoch: 0.025309888646006584, epochs needed: 200
+evaluating individudal 35 - 46ac667f3cc84aee. Mean loss in evaluation epoch: 0.031297147274017334, epochs needed: 200
+evaluating individudal 36 - be35ede6f6c84c80. Mean loss in evaluation epoch: 0.02459384687244892, epochs needed: 200
+evaluating individudal 37 - d0cbaec810c51009. Mean loss in evaluation epoch: 0.031338583678007126, epochs needed: 200
+evaluating individudal 38 - 475b9eade0403816. Mean loss in evaluation epoch: 0.03209638223052025, epochs needed: 200
+evaluating individudal 39 - 81c84042507e0711. Mean loss in evaluation epoch: 0.026515087112784386, epochs needed: 200
+evaluating individudal 0 - 04afbce980e3a298. Mean loss in evaluation epoch: 0.022881433367729187, epochs needed: 200
+evaluating individudal 1 - 4d0560f8542d2356. Mean loss in evaluation epoch: 0.02359035052359104, epochs needed: 200
+evaluating individudal 2 - bf29bbf2a540c684. Mean loss in evaluation epoch: 0.02459065616130829, epochs needed: 200
+evaluating individudal 3 - 21d1df4fd76daaae. Mean loss in evaluation epoch: 0.02686852216720581, epochs needed: 200
+evaluating individudal 4 - 5d4aef5a717b3485. Mean loss in evaluation epoch: 0.026745537295937538, epochs needed: 200
+evaluating individudal 5 - 604fb7a14bd986e0. Mean loss in evaluation epoch: 0.025406761094927788, epochs needed: 200
+evaluating individudal 6 - f10f12c8ce0e43c2. Mean loss in evaluation epoch: 0.026276905089616776, epochs needed: 200
+evaluating individudal 7 - f93b75f9e24e49e6. Mean loss in evaluation epoch: 0.026561850681900978, epochs needed: 200
+evaluating individudal 8 - a47af53f0e7701a4. Mean loss in evaluation epoch: 0.026846034452319145, epochs needed: 200
+evaluating individudal 9 - 74b62fa42ca64df6. Mean loss in evaluation epoch: 0.026559902355074883, epochs needed: 200
+Round 7 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: e0a0497eeaadb936, num_times_seen_before: 0
+ACC: 0.9526315789473684
+TPR/FPR: 1.0, 0.05844155844155844
+Loss: 0.01851062849164009
+Timestamp: 18144.593131804024
+---------------------------------------------------------------
+evaluating individudal 0 - 8eee946c48a1a21c. Mean loss in evaluation epoch: 0.033360257744789124, epochs needed: 200
+evaluating individudal 1 - 8c15dd0e5180f021. Mean loss in evaluation epoch: 0.03504864126443863, epochs needed: 200
+evaluating individudal 2 - a86e6c5cc69842c3. Mean loss in evaluation epoch: 0.032955318689346313, epochs needed: 200
+evaluating individudal 3 - 671a5b5853fdafab. Mean loss in evaluation epoch: 0.028483573347330093, epochs needed: 200
+evaluating individudal 4 - e70fa93d359efa4a. Mean loss in evaluation epoch: 0.03288649767637253, epochs needed: 200
+evaluating individudal 5 - 9787f0c1cff58100. Mean loss in evaluation epoch: 0.03542783483862877, epochs needed: 200
+evaluating individudal 6 - 2844a95170bf3fdd. Mean loss in evaluation epoch: 0.03371505066752434, epochs needed: 200
+evaluating individudal 7 - 77f56985e5e6b1ba. Mean loss in evaluation epoch: 0.030900998041033745, epochs needed: 200
+evaluating individudal 8 - c77f4dd8239349a2. Mean loss in evaluation epoch: 0.0216677188873291, epochs needed: 200
+evaluating individudal 9 - d44b98de9b1097e2. Mean loss in evaluation epoch: 0.027649492025375366, epochs needed: 200
+evaluating individudal 10 - 9d583b55e76a07cd. Mean loss in evaluation epoch: 0.02909083664417267, epochs needed: 200
+evaluating individudal 11 - 556db628bc95e153. Mean loss in evaluation epoch: 0.035730816423892975, epochs needed: 200
+evaluating individudal 12 - c4947e6b3325b71d. Mean loss in evaluation epoch: 0.027421696111559868, epochs needed: 200
+evaluating individudal 13 - f04dc10f09a826d8. Mean loss in evaluation epoch: 0.02910381555557251, epochs needed: 200
+evaluating individudal 14 - e1b6a13f00179a84. Mean loss in evaluation epoch: 0.014341892674565315, epochs needed: 200
+evaluating individudal 15 - a170fe6979629cd4. Mean loss in evaluation epoch: 0.028791770339012146, epochs needed: 200
+evaluating individudal 16 - 46f06ab3a00504a0. Mean loss in evaluation epoch: 0.03183349594473839, epochs needed: 200
+evaluating individudal 17 - 12302727eedc29be. Mean loss in evaluation epoch: 0.03515533730387688, epochs needed: 200
+evaluating individudal 18 - 7c28774267c3acf7. Mean loss in evaluation epoch: 0.023630589246749878, epochs needed: 200
+evaluating individudal 19 - 1c3796b557dd9311. Mean loss in evaluation epoch: 0.030451953411102295, epochs needed: 200
+evaluating individudal 20 - 4b3af46fae6df02d. Mean loss in evaluation epoch: 0.031231557950377464, epochs needed: 200
+evaluating individudal 21 - 47ff6b874526b4a2. Mean loss in evaluation epoch: 0.02982238493859768, epochs needed: 200
+evaluating individudal 22 - 428eb98fcb2c6952. Mean loss in evaluation epoch: 0.0345633439719677, epochs needed: 200
+evaluating individudal 23 - 6a51006412437d3a. Mean loss in evaluation epoch: 0.03186870738863945, epochs needed: 200
+evaluating individudal 24 - 8cca9eda47b0c6a8. Mean loss in evaluation epoch: 0.03313657268881798, epochs needed: 200
+evaluating individudal 25 - 1ac0e461b4bc1369. Mean loss in evaluation epoch: 0.03104936145246029, epochs needed: 200
+evaluating individudal 26 - 1dabe161c348c00e. Mean loss in evaluation epoch: 0.030321259051561356, epochs needed: 200
+evaluating individudal 27 - 7cb05354d1f4e37c. Mean loss in evaluation epoch: 0.03190748766064644, epochs needed: 200
+evaluating individudal 28 - deb4390dc017073d. Mean loss in evaluation epoch: 0.032374512404203415, epochs needed: 200
+evaluating individudal 29 - 4187eb08ce26a710. Mean loss in evaluation epoch: 0.026739811524748802, epochs needed: 200
+evaluating individudal 30 - 46fcdbf1104434cd. Mean loss in evaluation epoch: 0.03231712803244591, epochs needed: 200
+evaluating individudal 31 - 6d80f30cc164b92a. Mean loss in evaluation epoch: 0.02658838964998722, epochs needed: 200
+evaluating individudal 32 - f8f54cc0c98f9bcc. Mean loss in evaluation epoch: 0.022352030500769615, epochs needed: 200
+evaluating individudal 33 - 66aca9c2765d4da4. Mean loss in evaluation epoch: 0.030614066869020462, epochs needed: 200
+evaluating individudal 34 - 3d5ba336a2b9517b. Mean loss in evaluation epoch: 0.037324871867895126, epochs needed: 200
+evaluating individudal 35 - 0aa3648e2b7a6ac5. Mean loss in evaluation epoch: 0.029917538166046143, epochs needed: 200
+evaluating individudal 36 - 30f245be7bbde79c. Mean loss in evaluation epoch: 0.03516049683094025, epochs needed: 200
+evaluating individudal 37 - e31be7f41ddba81c. Mean loss in evaluation epoch: 0.030660927295684814, epochs needed: 200
+evaluating individudal 38 - 6b4c92273824747b. Mean loss in evaluation epoch: 0.027811741456389427, epochs needed: 200
+evaluating individudal 39 - ca14d694ae09d098. Mean loss in evaluation epoch: 0.026104075834155083, epochs needed: 200
+evaluating individudal 0 - e0a0497eeaadb936. Mean loss in evaluation epoch: 0.018231896683573723, epochs needed: 200
+evaluating individudal 1 - 5e5536bde6c68666. Mean loss in evaluation epoch: 0.01958613656461239, epochs needed: 200
+evaluating individudal 2 - 04afbce980e3a298. Mean loss in evaluation epoch: 0.023349255323410034, epochs needed: 200
+evaluating individudal 3 - 4d0560f8542d2356. Mean loss in evaluation epoch: 0.022499457001686096, epochs needed: 200
+evaluating individudal 4 - bf29bbf2a540c684. Mean loss in evaluation epoch: 0.02565460465848446, epochs needed: 200
+evaluating individudal 5 - be35ede6f6c84c80. Mean loss in evaluation epoch: 0.024905145168304443, epochs needed: 200
+evaluating individudal 6 - 174941659cf83a07. Mean loss in evaluation epoch: 0.02665996551513672, epochs needed: 200
+evaluating individudal 7 - 07281977efe68c19. Mean loss in evaluation epoch: 0.024851119145751, epochs needed: 200
+evaluating individudal 8 - 604fb7a14bd986e0. Mean loss in evaluation epoch: 0.02597551979124546, epochs needed: 200
+evaluating individudal 9 - 79ebd0153f044aac. Mean loss in evaluation epoch: 0.02685229294002056, epochs needed: 200
+Round 8 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: e1b6a13f00179a84, num_times_seen_before: 0
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.014341892674565315
+Timestamp: 20735.76739747799
+---------------------------------------------------------------
+evaluating individudal 0 - 1fe210a4736db4fe. Mean loss in evaluation epoch: 0.02844119630753994, epochs needed: 200
+evaluating individudal 1 - 70eda99c5a9a7f03. Mean loss in evaluation epoch: 0.03320920467376709, epochs needed: 200
+evaluating individudal 2 - 79f92c6dc420154c. Mean loss in evaluation epoch: 0.03388349339365959, epochs needed: 200
+evaluating individudal 3 - 587b2fe6e35c621c. Mean loss in evaluation epoch: 0.02668483927845955, epochs needed: 200
+evaluating individudal 4 - 35bc580b009f6181. Mean loss in evaluation epoch: 0.021305127069354057, epochs needed: 200
+evaluating individudal 5 - 7dbbd035128a0ba7. Mean loss in evaluation epoch: 0.023698298260569572, epochs needed: 200
+evaluating individudal 6 - 3217cd832f89926f. Mean loss in evaluation epoch: 0.03880493342876434, epochs needed: 200
+evaluating individudal 7 - a8dcd6320b1af05d. Mean loss in evaluation epoch: 0.025440890341997147, epochs needed: 200
+evaluating individudal 8 - bdeac74e3611ff94. Mean loss in evaluation epoch: 0.03359903767704964, epochs needed: 200
+evaluating individudal 9 - 79fe671d40932846. Mean loss in evaluation epoch: 0.027119863778352737, epochs needed: 200
+evaluating individudal 10 - 0156778bdcbd17ab. Mean loss in evaluation epoch: 0.03413886949419975, epochs needed: 200
+evaluating individudal 11 - be20a881201c13ff. Mean loss in evaluation epoch: 0.024463102221488953, epochs needed: 200
+evaluating individudal 12 - 85a73ec48040e017. Mean loss in evaluation epoch: 0.03301195427775383, epochs needed: 200
+evaluating individudal 13 - da014f3b1ef73e87. Mean loss in evaluation epoch: 0.026851952075958252, epochs needed: 200
+evaluating individudal 14 - 2e84d69fc813c089. Mean loss in evaluation epoch: 0.0363093800842762, epochs needed: 200
+evaluating individudal 15 - b4e22d9691ce7fee. Mean loss in evaluation epoch: 0.023782867938280106, epochs needed: 200
+evaluating individudal 16 - 870bcaa6a0e73ca2. Mean loss in evaluation epoch: 0.035080790519714355, epochs needed: 200
+evaluating individudal 17 - 38d8b2c0bf542247. Mean loss in evaluation epoch: 0.023314684629440308, epochs needed: 200
+evaluating individudal 18 - b76da2c7bf8b04e8. Mean loss in evaluation epoch: 0.0340227372944355, epochs needed: 200
+evaluating individudal 19 - 88d43e888043e209. Mean loss in evaluation epoch: 0.03155084326863289, epochs needed: 200
+evaluating individudal 20 - af8300761a56b09f. Mean loss in evaluation epoch: 0.0270248893648386, epochs needed: 200
+evaluating individudal 21 - 99d1595b369388f1. Mean loss in evaluation epoch: 0.029552921652793884, epochs needed: 200
+evaluating individudal 22 - a755f52d7b720445. Mean loss in evaluation epoch: 0.02698579803109169, epochs needed: 200
+evaluating individudal 23 - a8bf692f39b8e1ee. Mean loss in evaluation epoch: 0.03513680025935173, epochs needed: 200
+evaluating individudal 24 - f182dda819cf419d. Mean loss in evaluation epoch: 0.03703532740473747, epochs needed: 200
+evaluating individudal 25 - 6a178672d5cf852c. Mean loss in evaluation epoch: 0.020206814631819725, epochs needed: 200
+evaluating individudal 26 - 1277660a061da99c. Mean loss in evaluation epoch: 0.029261846095323563, epochs needed: 200
+evaluating individudal 27 - 97fdabf5e5b6e415. Mean loss in evaluation epoch: 0.034968938678503036, epochs needed: 200
+evaluating individudal 28 - a5f547597372048a. Mean loss in evaluation epoch: 0.03419503569602966, epochs needed: 200
+evaluating individudal 29 - 1e40e10ca50e65be. Mean loss in evaluation epoch: 0.033847909420728683, epochs needed: 200
+evaluating individudal 30 - f8a0d0f2e3c99d89. Mean loss in evaluation epoch: 0.019552119076251984, epochs needed: 200
+evaluating individudal 31 - cb064f289e74a0cf. Mean loss in evaluation epoch: 0.0280988160520792, epochs needed: 200
+evaluating individudal 32 - 7982fa3cca38ba15. Mean loss in evaluation epoch: 0.023226212710142136, epochs needed: 200
+evaluating individudal 33 - a84e70ff3ac73112. Mean loss in evaluation epoch: 0.03259698674082756, epochs needed: 200
+evaluating individudal 34 - b64b6fe14dbefd98. Mean loss in evaluation epoch: 0.021371830254793167, epochs needed: 200
+evaluating individudal 35 - 5528569bc6371f68. Mean loss in evaluation epoch: 0.03432953357696533, epochs needed: 200
+evaluating individudal 36 - 329a49b9e611403e. Mean loss in evaluation epoch: 0.03491765260696411, epochs needed: 200
+evaluating individudal 37 - 6f9c8d878a8cbef8. Mean loss in evaluation epoch: 0.032831355929374695, epochs needed: 200
+evaluating individudal 38 - 768f16d6e136c1a3. Mean loss in evaluation epoch: 0.03412226215004921, epochs needed: 200
+evaluating individudal 39 - 5b80ec3efa5ce94e. Mean loss in evaluation epoch: 0.03558586537837982, epochs needed: 200
+evaluating individudal 0 - e1b6a13f00179a84. Mean loss in evaluation epoch: 0.014736262150108814, epochs needed: 200
+evaluating individudal 1 - e0a0497eeaadb936. Mean loss in evaluation epoch: 0.01943807862699032, epochs needed: 200
+evaluating individudal 2 - 5e5536bde6c68666. Mean loss in evaluation epoch: 0.02026185393333435, epochs needed: 200
+evaluating individudal 3 - c77f4dd8239349a2. Mean loss in evaluation epoch: 0.021545223891735077, epochs needed: 200
+evaluating individudal 4 - f8f54cc0c98f9bcc. Mean loss in evaluation epoch: 0.017017651349306107, epochs needed: 200
+evaluating individudal 5 - 4d0560f8542d2356. Mean loss in evaluation epoch: 0.0228592436760664, epochs needed: 200
+evaluating individudal 6 - 04afbce980e3a298. Mean loss in evaluation epoch: 0.02368905209004879, epochs needed: 200
+evaluating individudal 7 - 7c28774267c3acf7. Mean loss in evaluation epoch: 0.02336365543305874, epochs needed: 200
+evaluating individudal 8 - 07281977efe68c19. Mean loss in evaluation epoch: 0.02521621622145176, epochs needed: 200
+evaluating individudal 9 - be35ede6f6c84c80. Mean loss in evaluation epoch: 0.025922304019331932, epochs needed: 200
+Round 9 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: e1b6a13f00179a84, num_times_seen_before: 1
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.014736262150108814
+Timestamp: 23327.765760853013
+---------------------------------------------------------------
+evaluating individudal 0 - c972f0a4176525c5. Mean loss in evaluation epoch: 0.030171919614076614, epochs needed: 200
+evaluating individudal 1 - 3bea240d7d9ad59c. Mean loss in evaluation epoch: 0.03583121299743652, epochs needed: 200
+evaluating individudal 2 - 93829d2335731cc4. Mean loss in evaluation epoch: 0.035827189683914185, epochs needed: 200
+evaluating individudal 3 - 1d6440d6b9a2f7ab. Mean loss in evaluation epoch: 0.02603158913552761, epochs needed: 200
+evaluating individudal 4 - 1347674fe0c04587. Mean loss in evaluation epoch: 0.02898779883980751, epochs needed: 200
+evaluating individudal 5 - 0b5656af6105cb45. Mean loss in evaluation epoch: 0.029765957966446877, epochs needed: 200
+evaluating individudal 6 - 4ee065368f451472. Mean loss in evaluation epoch: 0.03288501128554344, epochs needed: 200
+evaluating individudal 7 - d4a334904b99b9c1. Mean loss in evaluation epoch: 0.042143430560827255, epochs needed: 200
+evaluating individudal 8 - 296a6659e626edcd. Mean loss in evaluation epoch: 0.035595040768384933, epochs needed: 200
+evaluating individudal 9 - 2d188f1584f3279e. Mean loss in evaluation epoch: 0.031915467232465744, epochs needed: 200
+evaluating individudal 10 - b5b94e2f2c0575ee. Mean loss in evaluation epoch: 0.02569805644452572, epochs needed: 200
+evaluating individudal 11 - f68ef6c386015e98. Mean loss in evaluation epoch: 0.02918681502342224, epochs needed: 200
+evaluating individudal 12 - 019247927d7e4701. Mean loss in evaluation epoch: 0.029179561883211136, epochs needed: 200
+evaluating individudal 13 - 97df7d2d89fc6730. Mean loss in evaluation epoch: 0.028493231162428856, epochs needed: 200
+evaluating individudal 14 - bd5f2a243ee4289c. Mean loss in evaluation epoch: 0.019079893827438354, epochs needed: 200
+evaluating individudal 15 - 25ffd90844f4ffb1. Mean loss in evaluation epoch: 0.035047512501478195, epochs needed: 200
+evaluating individudal 16 - 1009c61240c5e02d. Mean loss in evaluation epoch: 0.029519492760300636, epochs needed: 200
+evaluating individudal 17 - 8a4137eccf925d6a. Mean loss in evaluation epoch: 0.03750775754451752, epochs needed: 200
+evaluating individudal 18 - 8f0c379c6681579b. Mean loss in evaluation epoch: 0.030133593827486038, epochs needed: 200
+evaluating individudal 19 - b2821aacea45b99c. Mean loss in evaluation epoch: 0.02726554311811924, epochs needed: 200
+evaluating individudal 20 - ef01e3c789c83a89. Mean loss in evaluation epoch: 0.02388693392276764, epochs needed: 200
+evaluating individudal 21 - ff187b913361909f. Mean loss in evaluation epoch: 0.03438432142138481, epochs needed: 200
+evaluating individudal 22 - a18eb8d7c2537dd7. Mean loss in evaluation epoch: 0.03613195940852165, epochs needed: 200
+evaluating individudal 23 - dbcba59276b253f6. Mean loss in evaluation epoch: 0.026592686772346497, epochs needed: 200
+evaluating individudal 24 - bf705a0bff502281. Mean loss in evaluation epoch: 0.029425615444779396, epochs needed: 200
+evaluating individudal 25 - d9081f7ccec56c9d. Mean loss in evaluation epoch: 0.02414638176560402, epochs needed: 200
+evaluating individudal 26 - 81ec6d510369938a. Mean loss in evaluation epoch: 0.03538321703672409, epochs needed: 200
+evaluating individudal 27 - 6583ce2675707f6f. Mean loss in evaluation epoch: 0.0357331819832325, epochs needed: 200
+evaluating individudal 28 - 616f665b2c253a7f. Mean loss in evaluation epoch: 0.03425970673561096, epochs needed: 200
+evaluating individudal 29 - ddd5533a755dc83e. Mean loss in evaluation epoch: 0.03585165739059448, epochs needed: 200
+evaluating individudal 30 - 242ff1fc2ea9adf1. Mean loss in evaluation epoch: 0.029814904555678368, epochs needed: 200
+evaluating individudal 31 - 063800ba41e2e417. Mean loss in evaluation epoch: 0.025303084403276443, epochs needed: 200
+evaluating individudal 32 - 739a5a7d322f5489. Mean loss in evaluation epoch: 0.025562269613146782, epochs needed: 200
+evaluating individudal 33 - 637d16f5b7225007. Mean loss in evaluation epoch: 0.03533388301730156, epochs needed: 200
+evaluating individudal 34 - 6d88645e70a56136. Mean loss in evaluation epoch: 0.03824238106608391, epochs needed: 200
+evaluating individudal 35 - 1a3cc9db0a932741. Mean loss in evaluation epoch: 0.021343311294913292, epochs needed: 200
+evaluating individudal 36 - 2557643a0715abe2. Mean loss in evaluation epoch: 0.03413138538599014, epochs needed: 200
+evaluating individudal 37 - 848e3637ce6b2a14. Mean loss in evaluation epoch: 0.025506872683763504, epochs needed: 200
+evaluating individudal 38 - c4a6aaab384be3db. Mean loss in evaluation epoch: 0.03631434589624405, epochs needed: 200
+evaluating individudal 39 - 72c1e6ef5f19df10. Mean loss in evaluation epoch: 0.03922135755419731, epochs needed: 200
+evaluating individudal 0 - e1b6a13f00179a84. Mean loss in evaluation epoch: 0.014682868495583534, epochs needed: 200
+evaluating individudal 1 - f8f54cc0c98f9bcc. Mean loss in evaluation epoch: 0.01926322653889656, epochs needed: 200
+evaluating individudal 2 - e0a0497eeaadb936. Mean loss in evaluation epoch: 0.018693244084715843, epochs needed: 200
+evaluating individudal 3 - f8a0d0f2e3c99d89. Mean loss in evaluation epoch: 0.020284265279769897, epochs needed: 200
+evaluating individudal 4 - 6a178672d5cf852c. Mean loss in evaluation epoch: 0.019036222249269485, epochs needed: 200
+evaluating individudal 5 - 5e5536bde6c68666. Mean loss in evaluation epoch: 0.020260555669665337, epochs needed: 200
+evaluating individudal 6 - 35bc580b009f6181. Mean loss in evaluation epoch: 0.021391525864601135, epochs needed: 200
+evaluating individudal 7 - b64b6fe14dbefd98. Mean loss in evaluation epoch: 0.021118557080626488, epochs needed: 200
+evaluating individudal 8 - c77f4dd8239349a2. Mean loss in evaluation epoch: 0.021033547818660736, epochs needed: 200
+evaluating individudal 9 - 4d0560f8542d2356. Mean loss in evaluation epoch: 0.022969963029026985, epochs needed: 200
+Round 10 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: e1b6a13f00179a84, num_times_seen_before: 2
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.014682868495583534
+Timestamp: 25919.764926430013
+---------------------------------------------------------------
+evaluating individudal 0 - 7c1853ef846bb7d5. Mean loss in evaluation epoch: 0.023384729400277138, epochs needed: 200
+evaluating individudal 1 - 582cdd52a0d39394. Mean loss in evaluation epoch: 0.03731156513094902, epochs needed: 200
+evaluating individudal 2 - 1561f810fdb8301d. Mean loss in evaluation epoch: 0.03573686257004738, epochs needed: 200
+evaluating individudal 3 - 19e46aea8c788661. Mean loss in evaluation epoch: 0.03491374850273132, epochs needed: 200
+evaluating individudal 4 - 1f49c081a1333f8b. Mean loss in evaluation epoch: 0.03188125416636467, epochs needed: 200
+evaluating individudal 5 - 0ef63faf70554488. Mean loss in evaluation epoch: 0.03696085885167122, epochs needed: 200
+evaluating individudal 6 - e8e04e32e8507aa1. Mean loss in evaluation epoch: 0.024141592904925346, epochs needed: 200
+evaluating individudal 7 - 72ca34d5c48fd389. Mean loss in evaluation epoch: 0.035190023481845856, epochs needed: 200
+evaluating individudal 8 - 61cc6a85e57a8631. Mean loss in evaluation epoch: 0.03371259197592735, epochs needed: 200
+evaluating individudal 9 - 3aa02d9453794994. Mean loss in evaluation epoch: 0.02604750171303749, epochs needed: 200
+evaluating individudal 10 - f8ebc25912d14a3c. Mean loss in evaluation epoch: 0.026103273034095764, epochs needed: 200
+evaluating individudal 11 - 4b3da81d4186247f. Mean loss in evaluation epoch: 0.029541391879320145, epochs needed: 200
+evaluating individudal 12 - f4a1c375f2a99d1c. Mean loss in evaluation epoch: 0.03753096982836723, epochs needed: 200
+evaluating individudal 13 - 1c709338fd1bb91b. Mean loss in evaluation epoch: 0.025962932035326958, epochs needed: 200
+evaluating individudal 14 - 57b503471b5ccc95. Mean loss in evaluation epoch: 0.023339949548244476, epochs needed: 200
+evaluating individudal 15 - 02c2326c483b90a7. Mean loss in evaluation epoch: 0.031390756368637085, epochs needed: 200
+evaluating individudal 16 - 5c199944f6e82859. Mean loss in evaluation epoch: 0.03492097184062004, epochs needed: 200
+evaluating individudal 17 - 5da8658465dd09a1. Mean loss in evaluation epoch: 0.03362865373492241, epochs needed: 200
+evaluating individudal 18 - be785ee26ad38833. Mean loss in evaluation epoch: 0.027994606643915176, epochs needed: 200
+evaluating individudal 19 - 71f3d34af7cc8a96. Mean loss in evaluation epoch: 0.03796538710594177, epochs needed: 200
+evaluating individudal 20 - 439b455a19582d94. Mean loss in evaluation epoch: 0.02956620790064335, epochs needed: 200
+evaluating individudal 21 - 4d780ccaa61744bc. Mean loss in evaluation epoch: 0.026673240587115288, epochs needed: 200
+evaluating individudal 22 - cefc0945686beaa6. Mean loss in evaluation epoch: 0.037491172552108765, epochs needed: 200
+evaluating individudal 23 - ed53f01f0ff99f87. Mean loss in evaluation epoch: 0.032715119421482086, epochs needed: 200
+evaluating individudal 24 - 9210ed563f5078bf. Mean loss in evaluation epoch: 0.038920093327760696, epochs needed: 200
+evaluating individudal 25 - d4dfc5350c8262d3. Mean loss in evaluation epoch: 0.031136780977249146, epochs needed: 200
+evaluating individudal 26 - 69f9e9c1867a9883. Mean loss in evaluation epoch: 0.025225093588232994, epochs needed: 200
+evaluating individudal 27 - 5061285c38785aab. Mean loss in evaluation epoch: 0.03625217452645302, epochs needed: 200
+evaluating individudal 28 - 029f45e529541f15. Mean loss in evaluation epoch: 0.027463776990771294, epochs needed: 200
+evaluating individudal 29 - d9354a13197ad7e6. Mean loss in evaluation epoch: 0.03917798399925232, epochs needed: 200
+evaluating individudal 30 - 92c2d09991811bd8. Mean loss in evaluation epoch: 0.0345996618270874, epochs needed: 200
+evaluating individudal 31 - be69591545c2c288. Mean loss in evaluation epoch: 0.03397355228662491, epochs needed: 200
+evaluating individudal 32 - ab1f40d7e91cbf0a. Mean loss in evaluation epoch: 0.03187336027622223, epochs needed: 200
+evaluating individudal 33 - a54334ffcaf72126. Mean loss in evaluation epoch: 0.025884727016091347, epochs needed: 200
+evaluating individudal 34 - 156d83ae1adb6756. Mean loss in evaluation epoch: 0.040245428681373596, epochs needed: 200
+evaluating individudal 35 - 2a1dd2c7367cbf9f. Mean loss in evaluation epoch: 0.03856468200683594, epochs needed: 200
+evaluating individudal 36 - 79db4dfae9751c7c. Mean loss in evaluation epoch: 0.05152015760540962, epochs needed: 200
+evaluating individudal 37 - ab93d34e4dffe118. Mean loss in evaluation epoch: 0.02983299270272255, epochs needed: 200
+evaluating individudal 38 - 27385074bd017750. Mean loss in evaluation epoch: 0.032906051725149155, epochs needed: 200
+evaluating individudal 39 - b1b79e73594d6997. Mean loss in evaluation epoch: 0.03681950643658638, epochs needed: 200
+evaluating individudal 0 - e1b6a13f00179a84. Mean loss in evaluation epoch: 0.01426692958921194, epochs needed: 200
+evaluating individudal 1 - e0a0497eeaadb936. Mean loss in evaluation epoch: 0.018818190321326256, epochs needed: 200
+evaluating individudal 2 - 6a178672d5cf852c. Mean loss in evaluation epoch: 0.02002042345702648, epochs needed: 200
+evaluating individudal 3 - bd5f2a243ee4289c. Mean loss in evaluation epoch: 0.021056367084383965, epochs needed: 200
+evaluating individudal 4 - f8f54cc0c98f9bcc. Mean loss in evaluation epoch: 0.01815350353717804, epochs needed: 200
+evaluating individudal 5 - 5e5536bde6c68666. Mean loss in evaluation epoch: 0.019774027168750763, epochs needed: 200
+evaluating individudal 6 - f8a0d0f2e3c99d89. Mean loss in evaluation epoch: 0.021321749314665794, epochs needed: 200
+evaluating individudal 7 - c77f4dd8239349a2. Mean loss in evaluation epoch: 0.021766776219010353, epochs needed: 200
+evaluating individudal 8 - b64b6fe14dbefd98. Mean loss in evaluation epoch: 0.021857598796486855, epochs needed: 200
+evaluating individudal 9 - 1a3cc9db0a932741. Mean loss in evaluation epoch: 0.022167658433318138, epochs needed: 200
+Round 11 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: e1b6a13f00179a84, num_times_seen_before: 3
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.01426692958921194
+Timestamp: 28513.808728490025
+---------------------------------------------------------------
+evaluating individudal 0 - f7236b17e43248b6. Mean loss in evaluation epoch: 0.034013647586107254, epochs needed: 200
+evaluating individudal 1 - 6827902ffcbbbe7c. Mean loss in evaluation epoch: 0.03535037487745285, epochs needed: 200
+evaluating individudal 2 - 940331018584a35a. Mean loss in evaluation epoch: 0.018180374056100845, epochs needed: 200
+evaluating individudal 3 - 8e86b1b95807b6e6. Mean loss in evaluation epoch: 0.030734647065401077, epochs needed: 200
+evaluating individudal 4 - b87dafca8ba18db3. Mean loss in evaluation epoch: 0.021774491295218468, epochs needed: 200
+evaluating individudal 5 - d9c9678466dc4874. Mean loss in evaluation epoch: 0.030316298827528954, epochs needed: 200
+evaluating individudal 6 - c14833e011d5bfb4. Mean loss in evaluation epoch: 0.030366290360689163, epochs needed: 200
+evaluating individudal 7 - 5da9b42d3805b8d3. Mean loss in evaluation epoch: 0.0327499695122242, epochs needed: 200
+evaluating individudal 8 - d6cd79dda3bc7c6f. Mean loss in evaluation epoch: 0.015257934108376503, epochs needed: 200
+evaluating individudal 9 - 23009f90d0965f41. Mean loss in evaluation epoch: 0.03427496552467346, epochs needed: 200
+evaluating individudal 10 - 94823bb8e438a41f. Mean loss in evaluation epoch: 0.03206723928451538, epochs needed: 200
+evaluating individudal 11 - 0c77b01cf0a12e94. Mean loss in evaluation epoch: 0.03466121852397919, epochs needed: 200
+evaluating individudal 12 - 365e363116b44049. Mean loss in evaluation epoch: 0.03429272398352623, epochs needed: 200
+evaluating individudal 13 - 4482a15f3427c8f0. Mean loss in evaluation epoch: 0.030444247648119926, epochs needed: 200
+evaluating individudal 14 - 0558e38b55494f97. Mean loss in evaluation epoch: 0.032996296882629395, epochs needed: 200
+evaluating individudal 15 - 40c33cc34c002c6a. Mean loss in evaluation epoch: 0.03557810187339783, epochs needed: 200
+evaluating individudal 16 - d9bdfb75ce8995de. Mean loss in evaluation epoch: 0.026871338486671448, epochs needed: 200
+evaluating individudal 17 - 6f3d5c004d1499af. Mean loss in evaluation epoch: 0.021673699840903282, epochs needed: 200
+evaluating individudal 18 - 3b54bb6be753e479. Mean loss in evaluation epoch: 0.03406056761741638, epochs needed: 200
+evaluating individudal 19 - da33fdaa63688e3b. Mean loss in evaluation epoch: 0.027537686750292778, epochs needed: 200
+evaluating individudal 20 - 81c0cc1d67ff22b8. Mean loss in evaluation epoch: 0.03456958755850792, epochs needed: 200
+evaluating individudal 21 - 6979baded3d2fe05. Mean loss in evaluation epoch: 0.036091528832912445, epochs needed: 200
+evaluating individudal 22 - d01a78b2878c7d7b. Mean loss in evaluation epoch: 0.024909084662795067, epochs needed: 200
+evaluating individudal 23 - b30af355b59bfd84. Mean loss in evaluation epoch: 0.022778894752264023, epochs needed: 200
+evaluating individudal 24 - b84d283341fb930d. Mean loss in evaluation epoch: 0.027783691883087158, epochs needed: 200
+evaluating individudal 25 - 2ac65e660fd56b12. Mean loss in evaluation epoch: 0.03590891510248184, epochs needed: 200
+evaluating individudal 26 - 1ec4339332984275. Mean loss in evaluation epoch: 0.023334873840212822, epochs needed: 200
+evaluating individudal 27 - 81bd91382a22a69f. Mean loss in evaluation epoch: 0.028296614065766335, epochs needed: 200
+evaluating individudal 28 - cca4c03dc90bd9d8. Mean loss in evaluation epoch: 0.029386593028903008, epochs needed: 200
+evaluating individudal 29 - dafb0c2c9e546d99. Mean loss in evaluation epoch: 0.02932121232151985, epochs needed: 200
+evaluating individudal 30 - 2067dbd9b9204373. Mean loss in evaluation epoch: 0.019152263179421425, epochs needed: 200
+evaluating individudal 31 - ceed020180c20826. Mean loss in evaluation epoch: 0.02172461338341236, epochs needed: 200
+evaluating individudal 32 - eac2448c6fd5b59c. Mean loss in evaluation epoch: 0.021167149767279625, epochs needed: 200
+evaluating individudal 33 - a0fc94dce6dfaa8c. Mean loss in evaluation epoch: 0.02721952460706234, epochs needed: 200
+evaluating individudal 34 - c4e16503e49cc5e3. Mean loss in evaluation epoch: 0.0284359659999609, epochs needed: 200
+evaluating individudal 35 - e3a9ac7d1c4de219. Mean loss in evaluation epoch: 0.03326348215341568, epochs needed: 200
+evaluating individudal 36 - 0a1aa781bba6b4c6. Mean loss in evaluation epoch: 0.024859819561243057, epochs needed: 200
+evaluating individudal 37 - 7adb28c1502d4a5c. Mean loss in evaluation epoch: 0.02166997827589512, epochs needed: 200
+evaluating individudal 38 - e9e733b77ebffdc8. Mean loss in evaluation epoch: 0.02882452681660652, epochs needed: 200
+evaluating individudal 39 - 190a9180025379b8. Mean loss in evaluation epoch: 0.029970793053507805, epochs needed: 200
+evaluating individudal 0 - e1b6a13f00179a84. Mean loss in evaluation epoch: 0.014647074043750763, epochs needed: 200
+evaluating individudal 1 - f8f54cc0c98f9bcc. Mean loss in evaluation epoch: 0.01883932389318943, epochs needed: 200
+evaluating individudal 2 - e0a0497eeaadb936. Mean loss in evaluation epoch: 0.01848146878182888, epochs needed: 200
+evaluating individudal 3 - 5e5536bde6c68666. Mean loss in evaluation epoch: 0.021178588271141052, epochs needed: 200
+evaluating individudal 4 - 6a178672d5cf852c. Mean loss in evaluation epoch: 0.0205538310110569, epochs needed: 200
+evaluating individudal 5 - bd5f2a243ee4289c. Mean loss in evaluation epoch: 0.01925571635365486, epochs needed: 200
+evaluating individudal 6 - f8a0d0f2e3c99d89. Mean loss in evaluation epoch: 0.019932065159082413, epochs needed: 200
+evaluating individudal 7 - c77f4dd8239349a2. Mean loss in evaluation epoch: 0.021256504580378532, epochs needed: 200
+evaluating individudal 8 - b64b6fe14dbefd98. Mean loss in evaluation epoch: 0.020838145166635513, epochs needed: 200
+evaluating individudal 9 - 1a3cc9db0a932741. Mean loss in evaluation epoch: 0.02130286768078804, epochs needed: 200
+Round 12 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: e1b6a13f00179a84, num_times_seen_before: 4
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.014647074043750763
+Timestamp: 31132.525464567996
+---------------------------------------------------------------
+evaluating individudal 0 - 389e1229a77686c6. Mean loss in evaluation epoch: 0.0276412945240736, epochs needed: 200
+evaluating individudal 1 - d4ebb1ec2457ee4c. Mean loss in evaluation epoch: 0.03441810607910156, epochs needed: 200
+evaluating individudal 2 - 3262cf6d485fed63. Mean loss in evaluation epoch: 0.035335224121809006, epochs needed: 200
+evaluating individudal 3 - abe6f492e5bdb485. Mean loss in evaluation epoch: 0.037732332944869995, epochs needed: 200
+evaluating individudal 4 - f72146a636981e74. Mean loss in evaluation epoch: 0.03279874846339226, epochs needed: 200
+evaluating individudal 5 - cfc5dc67f5a9e6a7. Mean loss in evaluation epoch: 0.03360101208090782, epochs needed: 200
+evaluating individudal 6 - d493afa97f403134. Mean loss in evaluation epoch: 0.03439014405012131, epochs needed: 200
+evaluating individudal 7 - ee081774a869aeb9. Mean loss in evaluation epoch: 0.037020858377218246, epochs needed: 200
+evaluating individudal 8 - fafaa173e43ad9ff. Mean loss in evaluation epoch: 0.030797792598605156, epochs needed: 200
+evaluating individudal 9 - fbca5e3b028a5642. Mean loss in evaluation epoch: 0.026161223649978638, epochs needed: 200
+evaluating individudal 10 - b7e984276777a23a. Mean loss in evaluation epoch: 0.031205499544739723, epochs needed: 200
+evaluating individudal 11 - 8f95b214ef37f938. Mean loss in evaluation epoch: 0.028957277536392212, epochs needed: 200
+evaluating individudal 12 - a9d2a9db75a13b9c. Mean loss in evaluation epoch: 0.0374862365424633, epochs needed: 200
+evaluating individudal 13 - 4e61d3414f3e4153. Mean loss in evaluation epoch: 0.034645624458789825, epochs needed: 200
+evaluating individudal 14 - 558f7307322e5a67. Mean loss in evaluation epoch: 0.026379037648439407, epochs needed: 200
+evaluating individudal 15 - 3733b19bdad4a3e9. Mean loss in evaluation epoch: 0.03392679616808891, epochs needed: 200
+evaluating individudal 16 - d65592049719fddf. Mean loss in evaluation epoch: 0.029407089576125145, epochs needed: 200
+evaluating individudal 17 - 06238c5e89c9ba9e. Mean loss in evaluation epoch: 0.02349516563117504, epochs needed: 200
+evaluating individudal 18 - 7d37f08ee8a993ab. Mean loss in evaluation epoch: 0.030813118442893028, epochs needed: 200
+evaluating individudal 19 - bec974b9949b7ff1. Mean loss in evaluation epoch: 0.035112056881189346, epochs needed: 200
+evaluating individudal 20 - 629207f287afa066. Mean loss in evaluation epoch: 0.028449898585677147, epochs needed: 200
+evaluating individudal 21 - 93ba9074f065b41a. Mean loss in evaluation epoch: 0.03633374720811844, epochs needed: 200
+evaluating individudal 22 - 90d2c3bd02e2f080. Mean loss in evaluation epoch: 0.033285897225141525, epochs needed: 200
+evaluating individudal 23 - d3b7b2a05dae5f5e. Mean loss in evaluation epoch: 0.03520239144563675, epochs needed: 200
+evaluating individudal 24 - facd42799c59b1b5. Mean loss in evaluation epoch: 0.028893817216157913, epochs needed: 200
+evaluating individudal 25 - 365a066c733c73a7. Mean loss in evaluation epoch: 0.03313722833991051, epochs needed: 200
+evaluating individudal 26 - 895990f9b7652dc4. Mean loss in evaluation epoch: 0.03453681617975235, epochs needed: 200
+evaluating individudal 27 - 30166743a738dedb. Mean loss in evaluation epoch: 0.030720675364136696, epochs needed: 200
+evaluating individudal 28 - 55c5cdf2f7931ad3. Mean loss in evaluation epoch: 0.03312443196773529, epochs needed: 200
+evaluating individudal 29 - 76aeefd103e9fab8. Mean loss in evaluation epoch: 0.02772318199276924, epochs needed: 200
+evaluating individudal 30 - 0afd2e834865e8e4. Mean loss in evaluation epoch: 0.037537842988967896, epochs needed: 200
+evaluating individudal 31 - 0c1b2a8b2975451c. Mean loss in evaluation epoch: 0.03669210150837898, epochs needed: 200
+evaluating individudal 32 - bc52839b32339e7a. Mean loss in evaluation epoch: 0.029343727976083755, epochs needed: 200
+evaluating individudal 33 - bc5046c56c3e8310. Mean loss in evaluation epoch: 0.028481069952249527, epochs needed: 200
+evaluating individudal 34 - 43a218872795bde9. Mean loss in evaluation epoch: 0.03495243191719055, epochs needed: 200
+evaluating individudal 35 - 754dc83be7227dc6. Mean loss in evaluation epoch: 0.0380672924220562, epochs needed: 200
+evaluating individudal 36 - 25562c61fff3c2c2. Mean loss in evaluation epoch: 0.03309974819421768, epochs needed: 200
+evaluating individudal 37 - 65294d904bca6b3f. Mean loss in evaluation epoch: 0.024644777178764343, epochs needed: 200
+evaluating individudal 38 - 8ee1ef4b988efa45. Mean loss in evaluation epoch: 0.03595651313662529, epochs needed: 200
+evaluating individudal 39 - 563dab5bd22f298b. Mean loss in evaluation epoch: 0.03689641132950783, epochs needed: 200
+evaluating individudal 0 - e1b6a13f00179a84. Mean loss in evaluation epoch: 0.01500850822776556, epochs needed: 200
+evaluating individudal 1 - d6cd79dda3bc7c6f. Mean loss in evaluation epoch: 0.015263444744050503, epochs needed: 200
+evaluating individudal 2 - 940331018584a35a. Mean loss in evaluation epoch: 0.021127188578248024, epochs needed: 200
+evaluating individudal 3 - e0a0497eeaadb936. Mean loss in evaluation epoch: 0.019421342760324478, epochs needed: 200
+evaluating individudal 4 - f8f54cc0c98f9bcc. Mean loss in evaluation epoch: 0.01666422002017498, epochs needed: 200
+evaluating individudal 5 - 2067dbd9b9204373. Mean loss in evaluation epoch: 0.019722407683730125, epochs needed: 200
+evaluating individudal 6 - bd5f2a243ee4289c. Mean loss in evaluation epoch: 0.01999412290751934, epochs needed: 200
+evaluating individudal 7 - f8a0d0f2e3c99d89. Mean loss in evaluation epoch: 0.019786767661571503, epochs needed: 200
+evaluating individudal 8 - 6a178672d5cf852c. Mean loss in evaluation epoch: 0.018669409677386284, epochs needed: 200
+evaluating individudal 9 - b64b6fe14dbefd98. Mean loss in evaluation epoch: 0.021150488406419754, epochs needed: 200
+Round 13 done. -----------------------------------------
+------------------------- TRACKING ---------------------------
+Matrix Hash: e1b6a13f00179a84, num_times_seen_before: 5
+ACC: 0.9631578947368421
+TPR/FPR: 1.0, 0.045454545454545456
+Loss: 0.01500850822776556
+Timestamp: 33732.65908286802
+---------------------------------------------------------------
+evaluating individudal 0 - 7f1bfd4887fc1e79. Mean loss in evaluation epoch: 0.030205655843019485, epochs needed: 200
+evaluating individudal 1 - d0f90f5bdd360ca5. Mean loss in evaluation epoch: 0.029693469405174255, epochs needed: 200
+evaluating individudal 2 - c1eb9a61fa0de73a. Mean loss in evaluation epoch: 0.034411706030368805, epochs needed: 200
+evaluating individudal 3 - 6a40f3dd95a43ca1. Mean loss in evaluation epoch: 0.030262058600783348, epochs needed: 200
+evaluating individudal 4 - ac57c02181d3dddc. Mean loss in evaluation epoch: 0.03037160076200962, epochs needed: 200
+evaluating individudal 5 - a90141e2be2a9c57. Mean loss in evaluation epoch: 0.03972569853067398, epochs needed: 200
+evaluating individudal 6 - 748753250689d0a2. Mean loss in evaluation epoch: 0.03868015483021736, epochs needed: 200
+evaluating individudal 7 - 47bf64ec501fc92c. Mean loss in evaluation epoch: 0.032149408012628555, epochs needed: 200
+evaluating individudal 8 - 1b37f0ade42a1dd4. Mean loss in evaluation epoch: 0.027204934507608414, epochs needed: 200
+evaluating individudal 9 - 5699d4ed836e0b28. Mean loss in evaluation epoch: 0.031850665807724, epochs needed: 200
+evaluating individudal 10 - 1037db8d9082d89d. Mean loss in evaluation epoch: 0.03631247952580452, epochs needed: 200
+evaluating individudal 11 - bd56eb56481a9986. Mean loss in evaluation epoch: 0.03756815195083618, epochs needed: 200
+evaluating individudal 12 - 118f894dd650247e. Mean loss in evaluation epoch: 0.034394510090351105, epochs needed: 200
+evaluating individudal 13 - 7be1a49ac33797eb. Mean loss in evaluation epoch: 0.03663492202758789, epochs needed: 200
+evaluating individudal 14 - 80329df4c55edfee. Mean loss in evaluation epoch: 0.018723497167229652, epochs needed: 200
+evaluating individudal 15 - 6ca6b60f5b86a9fc. Mean loss in evaluation epoch: 0.024492427706718445, epochs needed: 200
+evaluating individudal 16 - 3394d518844b86bf. Mean loss in evaluation epoch: 0.04155411198735237, epochs needed: 200
+evaluating individudal 17 - 51276a9d5db39ce5. Mean loss in evaluation epoch: 0.034123744815588, epochs needed: 200
+evaluating individudal 18 - 3cc1f54958f7c9b4. Mean loss in evaluation epoch: 0.03278708457946777, epochs needed: 200
+evaluating individudal 19 - 75f88d64149c3dc9. 
