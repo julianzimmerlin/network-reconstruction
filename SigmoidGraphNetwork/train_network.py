@@ -12,7 +12,7 @@ import sys
 import pickle
 
 USE_GPU = True
-SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_5k_3.5_restart.pickle'
+SERIES_ADDRESS = '../data/final/cml/timeseries_ba20_1k_3.5_restart.pickle'
 ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
 SEED = 0
 BATCH_SIZE = 100
@@ -23,7 +23,7 @@ NUM_CYCLES = 100
 FORMAT = 'standard'
 USE_GUMBEL = True
 TEMP_DROP_FACTOR = .98
-EXPERIMENTS = 5
+EXPERIMENTS = 1
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)
@@ -34,7 +34,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/final/cml_ba20_5k_3.5_restart' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/trash' if USE_GUMBEL else 'SGN_logs/EXP_SIS_FIXED_ba10', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(SERIES_ADDRESS)
@@ -68,6 +68,8 @@ for _ in range(EXPERIMENTS):
 
     for cycle in range(NUM_CYCLES):
         np.set_printoptions(precision=4, floatmode='fixed', linewidth=1000, suppress=True)
+        network_gen.print_logits()
+        print(network_gen.get_matrix())
         #print('Raw Matrix: ')
         #print(network_gen.get_matrix(raw=True).detach().cpu().numpy())
         #print('Matrix: ')
@@ -79,6 +81,8 @@ for _ in range(EXPERIMENTS):
         mean_loss = tu.train_network(dyn_learner, network_gen, optimizer_net, data_loader, NUM_NET_EPOCHS_PER_CYCLE, device, is_continuous)
         if USE_GUMBEL:
             network_gen.drop_temperature()
+            network_gen.print_logits()
+            print(network_gen.get_matrix())
         print('Tracking cycle ' + str(cycle))
         tracker.track(network_gen.get_matrix_hard(), torch.tensor(mean_loss))
 

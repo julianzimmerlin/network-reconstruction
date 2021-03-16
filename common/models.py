@@ -74,3 +74,6 @@ class GumbelGenerator(nn.Module):
 
     def get_matrix_hard(self):
         return (torch.min(self.matrix.data, 2)[1]).float()
+
+    def print_logits(self):
+        print(self.matrix.detach().cpu().numpy())
