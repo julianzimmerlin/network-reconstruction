@@ -39,20 +39,25 @@ class GraphNetwork(nn.Module):
 
 
 class SigmoidMatrix(nn.Module):
-    def __init__(self, num_nodes):
+    def __init__(self, num_nodes, temp=10, temp_drop_frac=0.95):
         super(SigmoidMatrix, self).__init__()
         #self.matrix = Parameter(torch.full(size=(num_nodes, num_nodes), fill_value=0.5))
         self.matrix = Parameter(0.1*torch.randn(size=(num_nodes, num_nodes)))  # pre-sigmoid edge values
-        
+        self.temperature = temp
+        self.temp_drop_frac = temp_drop_frac
+
     def get_matrix(self, raw=False):
-        return self.matrix if raw else torch.sigmoid(3*self.matrix)
+        return self.matrix if raw else torch.sigmoid(self.matrix / self.temperature)
 
     def get_matrix_hard(self):
         return (self.matrix > 0).float()
 
+    def drop_temperature(self):
+        self.temperature = self.temperature * self.temp_drop_frac 
+
 # credit to Zhang et al
 class GumbelGenerator(nn.Module):
-    def __init__(self, num_nodes, temp=10, temp_drop_frac=0.9):
+    def __init__(self, num_nodes, temp=10, temp_drop_frac=0.95):
         super(GumbelGenerator, self).__init__()
         self.matrix = Parameter(torch.rand(num_nodes, num_nodes, 2)) # unnormalized log probabilities for "egde" and "no edge"
         self.temperature = temp
@@ -75,5 +80,5 @@ class GumbelGenerator(nn.Module):
     def get_matrix_hard(self):
         return (torch.min(self.matrix.data, 2)[1]).float()
 
-    def print_logits(self):
-        print(self.matrix.detach().cpu().numpy())
+    def get_logits(self):
+        return self.matrix.detach()

@@ -1,0 +1,690 @@
+../data/final/cml/timeseries_ba10_1k_3.5_restart.pickle
+../data/final/edges_ba10.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816
+SEED: 1
+NUM_DYN_EPOCHS: 250
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: False
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 50
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+FORMAT: standard
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 250
+IS_CONTINUOUS: True
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: 0.04794367775321007, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 2d37ebc488c9cce3, num_times_seen_before: 0
+ACC: 0.3111111111111111
+TPR/FPR: 0.25, 0.6551724137931034
+Loss: 0.04794367775321007
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([0, 3]), tensor([0, 6]), tensor([0, 8]), tensor([1, 8]), tensor([2, 3]), tensor([2, 5]), tensor([3, 4]), tensor([3, 6]), tensor([3, 7]), tensor([3, 9]), tensor([5, 6])]
+Mean loss in evaluation epoch: 0.04508542641997337, epochs needed: 250
+Accepting!
+
+Generation 1
+Mean loss in evaluation epoch: 0.04423500970005989, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: f6a7593011c4de76, num_times_seen_before: 0
+ACC: 0.37777777777777777
+TPR/FPR: 0.6875, 0.7931034482758621
+Loss: 0.04423500970005989
+Timestamp: 299.43444486599765
+---------------------------------------------------------------
+[tensor([0, 4]), tensor([1, 2]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([2, 5]), tensor([3, 8]), tensor([4, 6]), tensor([4, 8]), tensor([5, 6]), tensor([5, 8])]
+Mean loss in evaluation epoch: 0.037902023643255234, epochs needed: 250
+Accepting!
+
+Generation 2
+Mean loss in evaluation epoch: 0.037812717258930206, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: e60ff02add83a5cb, num_times_seen_before: 0
+ACC: 0.5333333333333333
+TPR/FPR: 0.875, 0.6551724137931034
+Loss: 0.037812717258930206
+Timestamp: 599.3373434340028
+---------------------------------------------------------------
+[tensor([1, 3]), tensor([1, 8]), tensor([1, 9]), tensor([2, 6]), tensor([2, 8]), tensor([2, 9]), tensor([4, 7]), tensor([5, 6]), tensor([5, 9]), tensor([6, 7]), tensor([6, 8])]
+Mean loss in evaluation epoch: 0.030945463106036186, epochs needed: 250
+Accepting!
+
+Generation 3
+Mean loss in evaluation epoch: 0.031022388488054276, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 26f08fe12dd077fc, num_times_seen_before: 0
+ACC: 0.6888888888888889
+TPR/FPR: 1.0, 0.4827586206896552
+Loss: 0.031022388488054276
+Timestamp: 894.5376934259984
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 6]), tensor([1, 3]), tensor([1, 4]), tensor([2, 4]), tensor([3, 8]), tensor([4, 5]), tensor([4, 7]), tensor([4, 9]), tensor([7, 8]), tensor([7, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.02361411228775978, epochs needed: 250
+Accepting!
+
+Generation 4
+Mean loss in evaluation epoch: 0.024684954434633255, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 8032541ad05c43b1, num_times_seen_before: 0
+ACC: 0.8666666666666667
+TPR/FPR: 1.0, 0.20689655172413793
+Loss: 0.024684954434633255
+Timestamp: 1177.1783253090034
+---------------------------------------------------------------
+[tensor([1, 3]), tensor([5, 7]), tensor([5, 8])]
+Mean loss in evaluation epoch: 0.021227069199085236, epochs needed: 250
+Accepting!
+
+Generation 5
+Mean loss in evaluation epoch: 0.020060531795024872, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: f42a76f44ea04cbc, num_times_seen_before: 0
+ACC: 0.8888888888888888
+TPR/FPR: 1.0, 0.1724137931034483
+Loss: 0.020060531795024872
+Timestamp: 1458.6612381660016
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 5]), tensor([2, 9]), tensor([3, 4]), tensor([4, 7]), tensor([5, 7]), tensor([5, 8]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.02339371107518673, epochs needed: 250
+Rejecting!
+
+Generation 6
+Mean loss in evaluation epoch: 0.020421674475073814, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: f42a76f44ea04cbc, num_times_seen_before: 1
+ACC: 0.8888888888888888
+TPR/FPR: 1.0, 0.1724137931034483
+Loss: 0.020421674475073814
+Timestamp: 1746.9261710810024
+---------------------------------------------------------------
+[tensor([0, 7]), tensor([1, 5]), tensor([2, 5]), tensor([2, 7]), tensor([2, 9]), tensor([3, 6]), tensor([5, 8]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.01795276440680027, epochs needed: 250
+Accepting!
+
+Generation 7
+Mean loss in evaluation epoch: 0.01897524856030941, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 0
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.01897524856030941
+Timestamp: 2017.124884611003
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 5]), tensor([1, 8]), tensor([2, 5]), tensor([2, 7]), tensor([2, 9]), tensor([3, 6]), tensor([3, 8]), tensor([6, 8]), tensor([6, 9]), tensor([7, 8]), tensor([7, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.030893294140696526, epochs needed: 250
+Rejecting!
+
+Generation 8
+Mean loss in evaluation epoch: 0.018859194591641426, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 1
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.018859194591641426
+Timestamp: 2303.4490787460018
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 6]), tensor([1, 3]), tensor([1, 5]), tensor([3, 8]), tensor([5, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.02736339531838894, epochs needed: 250
+Rejecting!
+
+Generation 9
+Mean loss in evaluation epoch: 0.01876148395240307, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 2
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.01876148395240307
+Timestamp: 2576.820702582998
+---------------------------------------------------------------
+[tensor([0, 8]), tensor([1, 5]), tensor([1, 9]), tensor([2, 7]), tensor([4, 9]), tensor([6, 9]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.029359309002757072, epochs needed: 250
+Rejecting!
+
+Generation 10
+Mean loss in evaluation epoch: 0.017610734328627586, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 3
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.017610734328627586
+Timestamp: 2824.5137295189998
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 5]), tensor([3, 6]), tensor([5, 7]), tensor([6, 9])]
+Mean loss in evaluation epoch: 0.023998692631721497, epochs needed: 250
+Rejecting!
+
+Generation 11
+Mean loss in evaluation epoch: 0.019719529896974564, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 4
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.019719529896974564
+Timestamp: 3068.201834129999
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 5]), tensor([2, 5]), tensor([2, 7]), tensor([5, 7]), tensor([6, 9]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.02105279639363289, epochs needed: 250
+Rejecting!
+
+Generation 12
+Mean loss in evaluation epoch: 0.01789434812963009, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 5
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.01789434812963009
+Timestamp: 3314.627942731
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 5]), tensor([2, 5]), tensor([4, 7]), tensor([4, 9])]
+Mean loss in evaluation epoch: 0.01949467696249485, epochs needed: 250
+Rejecting!
+
+Generation 13
+Mean loss in evaluation epoch: 0.01937446929514408, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 6
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.01937446929514408
+Timestamp: 3569.3443373990012
+---------------------------------------------------------------
+[tensor([0, 8]), tensor([1, 5]), tensor([1, 8]), tensor([2, 7]), tensor([4, 7])]
+Mean loss in evaluation epoch: 0.02447935752570629, epochs needed: 250
+Rejecting!
+
+Generation 14
+Mean loss in evaluation epoch: 0.018284469842910767, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 7
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.018284469842910767
+Timestamp: 3822.960469067999
+---------------------------------------------------------------
+[tensor([1, 3]), tensor([1, 5]), tensor([2, 7]), tensor([3, 6]), tensor([3, 8]), tensor([5, 7]), tensor([6, 9])]
+Mean loss in evaluation epoch: 0.02344496361911297, epochs needed: 250
+Rejecting!
+
+Generation 15
+Mean loss in evaluation epoch: 0.017748642712831497, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 8
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.017748642712831497
+Timestamp: 4082.812987598998
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 6]), tensor([1, 5]), tensor([1, 9]), tensor([2, 7]), tensor([3, 8]), tensor([4, 7]), tensor([4, 9]), tensor([5, 7]), tensor([6, 8]), tensor([6, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.02978663519024849, epochs needed: 250
+Rejecting!
+
+Generation 16
+Mean loss in evaluation epoch: 0.0181232038885355, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 9
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.0181232038885355
+Timestamp: 4336.307200711002
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 4]), tensor([1, 5]), tensor([2, 5]), tensor([2, 7]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.01834762468934059, epochs needed: 250
+Rejecting!
+
+Generation 17
+Mean loss in evaluation epoch: 0.0192068200558424, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 195c7662ef1f7272, num_times_seen_before: 10
+ACC: 0.9333333333333333
+TPR/FPR: 1.0, 0.10344827586206896
+Loss: 0.0192068200558424
+Timestamp: 4577.589661097001
+---------------------------------------------------------------
+[tensor([1, 5]), tensor([2, 5]), tensor([2, 7]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.017738191410899162, epochs needed: 250
+Accepting!
+
+Generation 18
+Mean loss in evaluation epoch: 0.016764430329203606, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 0
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.016764430329203606
+Timestamp: 4807.768299495001
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 9]), tensor([2, 4]), tensor([2, 9]), tensor([4, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.0339219830930233, epochs needed: 250
+Rejecting!
+
+Generation 19
+Mean loss in evaluation epoch: 0.018196268007159233, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 1
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.018196268007159233
+Timestamp: 5047.112927348004
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 6]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 5]), tensor([4, 9])]
+Mean loss in evaluation epoch: 0.031221289187669754, epochs needed: 250
+Rejecting!
+
+Generation 20
+Mean loss in evaluation epoch: 0.01683657430112362, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 2
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01683657430112362
+Timestamp: 5295.487252257
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 8]), tensor([1, 9]), tensor([2, 7]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.032885897904634476, epochs needed: 250
+Rejecting!
+
+Generation 21
+Mean loss in evaluation epoch: 0.017470791935920715, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 3
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017470791935920715
+Timestamp: 5562.9995757
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 9]), tensor([2, 9]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.03382083401083946, epochs needed: 250
+Rejecting!
+
+Generation 22
+Mean loss in evaluation epoch: 0.017534401267766953, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 4
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017534401267766953
+Timestamp: 5828.385472193004
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([3, 4]), tensor([3, 8]), tensor([4, 5]), tensor([4, 7])]
+Mean loss in evaluation epoch: 0.029542407020926476, epochs needed: 250
+Rejecting!
+
+Generation 23
+Mean loss in evaluation epoch: 0.01709514856338501, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 5
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01709514856338501
+Timestamp: 6085.108000066
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([4, 7]), tensor([4, 9]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.032178379595279694, epochs needed: 250
+Rejecting!
+
+Generation 24
+Mean loss in evaluation epoch: 0.0175351370126009, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 6
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.0175351370126009
+Timestamp: 6349.060606772997
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 6]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([4, 7]), tensor([5, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.03361634910106659, epochs needed: 250
+Rejecting!
+
+Generation 25
+Mean loss in evaluation epoch: 0.019679462537169456, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 7
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.019679462537169456
+Timestamp: 6609.407152328
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([2, 9]), tensor([3, 4]), tensor([4, 7]), tensor([4, 9]), tensor([5, 9]), tensor([6, 8])]
+Mean loss in evaluation epoch: 0.031759679317474365, epochs needed: 250
+Rejecting!
+
+Generation 26
+Mean loss in evaluation epoch: 0.016805162653326988, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 8
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.016805162653326988
+Timestamp: 6868.105972924997
+---------------------------------------------------------------
+[tensor([1, 3]), tensor([1, 5]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.027254248037934303, epochs needed: 250
+Rejecting!
+
+Generation 27
+Mean loss in evaluation epoch: 0.017153343185782433, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 9
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017153343185782433
+Timestamp: 7128.497876041998
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 9]), tensor([2, 7]), tensor([3, 8]), tensor([4, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.024955620989203453, epochs needed: 250
+Rejecting!
+
+Generation 28
+Mean loss in evaluation epoch: 0.017144622281193733, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 10
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017144622281193733
+Timestamp: 7391.674679885
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 6]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 9]), tensor([2, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([4, 9]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.030943488702178, epochs needed: 250
+Rejecting!
+
+Generation 29
+Mean loss in evaluation epoch: 0.01671372726559639, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 11
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01671372726559639
+Timestamp: 7654.8888455350025
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 7]), tensor([1, 9]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9]), tensor([6, 8]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.030815953388810158, epochs needed: 250
+Rejecting!
+
+Generation 30
+Mean loss in evaluation epoch: 0.017363959923386574, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 12
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017363959923386574
+Timestamp: 7917.139029796002
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 5]), tensor([4, 7]), tensor([4, 9]), tensor([5, 9]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.02960859052836895, epochs needed: 250
+Rejecting!
+
+Generation 31
+Mean loss in evaluation epoch: 0.016721606254577637, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 13
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.016721606254577637
+Timestamp: 8174.534771505998
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 9]), tensor([2, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.030615702271461487, epochs needed: 250
+Rejecting!
+
+Generation 32
+Mean loss in evaluation epoch: 0.016834383830428123, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 14
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.016834383830428123
+Timestamp: 8439.000146924998
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([3, 6]), tensor([4, 5]), tensor([4, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.030382543802261353, epochs needed: 250
+Rejecting!
+
+Generation 33
+Mean loss in evaluation epoch: 0.016689935699105263, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 15
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.016689935699105263
+Timestamp: 8708.724783327998
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 7]), tensor([1, 3]), tensor([1, 5]), tensor([1, 7]), tensor([1, 9]), tensor([3, 8]), tensor([4, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.0251102726906538, epochs needed: 250
+Rejecting!
+
+Generation 34
+Mean loss in evaluation epoch: 0.017674243077635765, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 16
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017674243077635765
+Timestamp: 8985.340468745002
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 4]), tensor([1, 6]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([3, 6]), tensor([4, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.03001580946147442, epochs needed: 250
+Rejecting!
+
+Generation 35
+Mean loss in evaluation epoch: 0.017483612522482872, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 17
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017483612522482872
+Timestamp: 9247.072261328998
+---------------------------------------------------------------
+[tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([2, 9]), tensor([3, 6]), tensor([4, 5]), tensor([4, 7]), tensor([4, 9]), tensor([5, 9]), tensor([6, 8]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.032745297998189926, epochs needed: 250
+Rejecting!
+
+Generation 36
+Mean loss in evaluation epoch: 0.01814158633351326, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 18
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01814158633351326
+Timestamp: 9516.606993898997
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 6]), tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 6]), tensor([1, 7]), tensor([1, 8]), tensor([1, 9]), tensor([2, 7]), tensor([3, 4]), tensor([3, 6]), tensor([3, 8]), tensor([4, 5]), tensor([4, 7]), tensor([4, 9]), tensor([5, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.03422389551997185, epochs needed: 250
+Rejecting!
+
+Generation 37
+Mean loss in evaluation epoch: 0.017341312021017075, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 19
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017341312021017075
+Timestamp: 9775.665524172997
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 7]), tensor([1, 3]), tensor([1, 4]), tensor([1, 7]), tensor([1, 9]), tensor([3, 4]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.028299076482653618, epochs needed: 250
+Rejecting!
+
+Generation 38
+Mean loss in evaluation epoch: 0.018186086788773537, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 20
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.018186086788773537
+Timestamp: 10047.254089278998
+---------------------------------------------------------------
+[tensor([0, 6]), tensor([1, 4]), tensor([1, 5]), tensor([1, 7]), tensor([1, 9]), tensor([3, 4]), tensor([3, 8]), tensor([4, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.026599181815981865, epochs needed: 250
+Rejecting!
+
+Generation 39
+Mean loss in evaluation epoch: 0.017488587647676468, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 21
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017488587647676468
+Timestamp: 10321.176104757003
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 6]), tensor([1, 3]), tensor([1, 4]), tensor([1, 8]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.0258743017911911, epochs needed: 250
+Rejecting!
+
+Generation 40
+Mean loss in evaluation epoch: 0.01772274449467659, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 22
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01772274449467659
+Timestamp: 10588.951153044
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 5]), tensor([1, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.02136451005935669, epochs needed: 250
+Rejecting!
+
+Generation 41
+Mean loss in evaluation epoch: 0.017457140609622, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 23
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017457140609622
+Timestamp: 10856.279519486001
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 3]), tensor([1, 5]), tensor([1, 7]), tensor([1, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 5]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.027185190469026566, epochs needed: 250
+Rejecting!
+
+Generation 42
+Mean loss in evaluation epoch: 0.01725023053586483, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 24
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01725023053586483
+Timestamp: 11133.308606370003
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 4]), tensor([1, 8]), tensor([3, 4]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.03141702339053154, epochs needed: 250
+Rejecting!
+
+Generation 43
+Mean loss in evaluation epoch: 0.017047107219696045, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 25
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017047107219696045
+Timestamp: 11413.808381677001
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([1, 4]), tensor([1, 8]), tensor([1, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 5]), tensor([4, 7]), tensor([4, 9]), tensor([5, 7]), tensor([5, 9]), tensor([7, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.02809274196624756, epochs needed: 250
+Rejecting!
+
+Generation 44
+Mean loss in evaluation epoch: 0.01762496307492256, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 26
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01762496307492256
+Timestamp: 11683.93813761
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 7]), tensor([1, 3]), tensor([1, 9]), tensor([3, 8]), tensor([4, 7]), tensor([4, 9]), tensor([5, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.02411482110619545, epochs needed: 250
+Rejecting!
+
+Generation 45
+Mean loss in evaluation epoch: 0.019409090280532837, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 27
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.019409090280532837
+Timestamp: 11937.506007475
+---------------------------------------------------------------
+[tensor([0, 1]), tensor([0, 7]), tensor([1, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.023396139964461327, epochs needed: 250
+Rejecting!
+
+Generation 46
+Mean loss in evaluation epoch: 0.017693698406219482, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 28
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017693698406219482
+Timestamp: 12191.277671288
+---------------------------------------------------------------
+[tensor([1, 7]), tensor([1, 9]), tensor([2, 7]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9])]
+Mean loss in evaluation epoch: 0.021828992292284966, epochs needed: 250
+Rejecting!
+
+Generation 47
+Mean loss in evaluation epoch: 0.018805628642439842, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 29
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.018805628642439842
+Timestamp: 12451.8603296
+---------------------------------------------------------------
+[tensor([0, 6]), tensor([1, 3]), tensor([1, 4]), tensor([1, 7]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([4, 9]), tensor([5, 7]), tensor([5, 9]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.02547895908355713, epochs needed: 250
+Rejecting!
+
+Generation 48
+Mean loss in evaluation epoch: 0.017283007502555847, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 30
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.017283007502555847
+Timestamp: 12699.344086992998
+---------------------------------------------------------------
+[tensor([1, 3]), tensor([1, 4]), tensor([1, 5]), tensor([1, 7]), tensor([1, 9]), tensor([3, 4]), tensor([3, 6]), tensor([3, 8]), tensor([4, 5]), tensor([4, 7]), tensor([5, 9]), tensor([7, 9])]
+Mean loss in evaluation epoch: 0.0275533739477396, epochs needed: 250
+Rejecting!
+
+Generation 49
+Mean loss in evaluation epoch: 0.01772705279290676, epochs needed: 250
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 31
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01772705279290676
+Timestamp: 12953.246031390001
+---------------------------------------------------------------
+[tensor([1, 3]), tensor([1, 7]), tensor([2, 7]), tensor([2, 9]), tensor([3, 6]), tensor([3, 8]), tensor([4, 7]), tensor([5, 7]), tensor([5, 9]), tensor([8, 9])]
+Mean loss in evaluation epoch: 0.02511986903846264, epochs needed: 250
+Rejecting!
+------------------------- TRACKING ---------------------------
+Matrix Hash: 59c4b3622f39ab05, num_times_seen_before: 32
+ACC: 0.9111111111111111
+TPR/FPR: 1.0, 0.13793103448275862
+Loss: 0.01772705279290676
+Timestamp: 13076.212762743002
+---------------------------------------------------------------
+Time needed: 13226.218286823998 sec
+----------------- Final results across all experiments ---------------
+accs: [0.9555555555555556, 1.0, 0.9555555555555556, 1.0, 0.9111111111111111]
+tprs: [0.9375, 1.0, 1.0, 1.0, 1.0]
+fprs: [0.034482758620689655, 0.0, 0.06896551724137931, 0.0, 0.13793103448275862]
+mean acc: 0.9644444584846497
+mean tpr: 0.987500011920929
+mean fpr: 0.048275865614414215

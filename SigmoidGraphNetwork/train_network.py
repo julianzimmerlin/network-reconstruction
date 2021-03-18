@@ -12,8 +12,8 @@ import sys
 import pickle
 
 USE_GPU = True
-SERIES_ADDRESS = '../data/final/Voter/timeseries_ba20_100.pickle'
-ADJ_ADDRESS = '../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = '../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
+ADJ_ADDRESS = '../data/final/edges_ba10.pickle'
 SEED = 0
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
@@ -21,9 +21,9 @@ NUM_DYN_EPOCHS_PER_CYCLE = 10
 NUM_NET_EPOCHS_PER_CYCLE = 20
 NUM_CYCLES = 100
 FORMAT = 'old'
-USE_GUMBEL = True
-TEMP_DROP_FACTOR = .98
-EXPERIMENTS = 1
+USE_GUMBEL = False
+TEMP_DROP_FACTOR = .95
+EXPERIMENTS = 5
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)
@@ -34,7 +34,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('GGN_logs/trash' if USE_GUMBEL else 'SGN_logs/trash', original_terminal=orig_terminal)
+    logger = lo.Logger('GGN_logs/final' if USE_GUMBEL else 'SGN_logs/final/SIS_ba10_5k', original_terminal=orig_terminal)
     sys.stdout = logger
 
     print(SERIES_ADDRESS)
@@ -61,31 +61,25 @@ for _ in range(EXPERIMENTS):
 
     # initialize network
     dyn_learner = mo.GraphNetwork(data_loader.dataset.size()[-1], HIDDEN_SIZE, not is_continuous).to(device)
-    network_gen = (mo.GumbelGenerator(num_nodes, temp_drop_frac=TEMP_DROP_FACTOR) if USE_GUMBEL else mo.SigmoidMatrix(num_nodes)).to(device)
+    network_gen = (mo.GumbelGenerator(num_nodes, temp_drop_frac=TEMP_DROP_FACTOR) if USE_GUMBEL else mo.SigmoidMatrix(num_nodes, temp_drop_frac=TEMP_DROP_FACTOR)).to(device)
 
     optimizer_dyn = optim.Adam(dyn_learner.parameters(), lr=0.001 if not is_continuous else 0.0001)
     optimizer_net = optim.Adam(network_gen.parameters(), lr=0.1)
 
     for cycle in range(NUM_CYCLES):
         np.set_printoptions(precision=4, floatmode='fixed', linewidth=1000, suppress=True)
-        network_gen.print_logits()
-        print(network_gen.get_matrix())
-        #print('Raw Matrix: ')
-        #print(network_gen.get_matrix(raw=True).detach().cpu().numpy())
-        #print('Matrix: ')
-        #print(network_gen.get_matrix().detach().cpu().numpy())
-
+        if USE_GUMBEL:
+            print(network_gen.get_logits().cpu().numpy())
+            print(network_gen.get_matrix().detach().cpu().numpy())
+        else:
+            print(network_gen.get_matrix(raw=True).detach().cpu().numpy())
+            print(network_gen.get_matrix().detach().cpu().numpy())
+        
         # TRAIN DYNAMICS
         mean_loss = tu.train_dynamics(dyn_learner, network_gen, optimizer_dyn, data_loader, NUM_DYN_EPOCHS_PER_CYCLE, device, is_continuous, cycle==0, tracker)
         # TRAIN NETWORK
         mean_loss = tu.train_network(dyn_learner, network_gen, optimizer_net, data_loader, NUM_NET_EPOCHS_PER_CYCLE, device, is_continuous)
-        if USE_GUMBEL:
-            network_gen.drop_temperature()
-            network_gen.print_logits()
-            print(network_gen.get_matrix().cpu().numpy())
-        else:
-            print(network_gen.get_matrix(raw=True).cpu().numpy())
-            print(network_gen.get_matrix().cpu().numpy())
+        network_gen.drop_temperature() 
         print('Tracking cycle ' + str(cycle))
         tracker.track(network_gen.get_matrix_hard(), torch.tensor(mean_loss))
 
