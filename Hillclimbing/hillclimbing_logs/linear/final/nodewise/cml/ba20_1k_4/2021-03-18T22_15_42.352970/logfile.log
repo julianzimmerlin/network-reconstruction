@@ -1,0 +1,36 @@
+../data/final/cml/timeseries_ba20_1k_4_restart.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: False
+CONT_ADDRESS: ./hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816
+SEED: 0
+NUM_DYN_EPOCHS: 200
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: False
+USE_NODEWISE_LOSS: True
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 45
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+FORMAT: standard
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 200
+IS_CONTINUOUS: True
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: [[0.08338113129138947], [0.184265598654747], [0.11609641462564468], [0.10762544721364975], [0.08690580725669861], [0.1051981970667839], [0.08765812963247299], [0.13212844729423523], [0.09502827376127243], [0.11290057003498077], [0.09878276288509369], [0.12564007937908173], [0.1124640703201294], [0.13480840623378754], [0.13350653648376465], [0.125601127743721], [0.15571783483028412], [0.1298191398382187], [0.13043029606342316], [0.1404784619808197]], epochs needed: 200
+------------------------- TRACKING ---------------------------
+Matrix Hash: bcfde9534d3bfd59, num_times_seen_before: 0
+ACC: 0.4789473684210527
+TPR/FPR: 0.5833333333333334, 0.5454545454545454
+Loss: [[0.08338113129138947], [0.184265598654747], [0.11609641462564468], [0.10762544721364975], [0.08690580725669861], [0.1051981970667839], [0.08765812963247299], [0.13212844729423523], [0.09502827376127243], [0.11290057003498077], [0.09878276288509369], [0.12564007937908173], [0.1124640703201294], [0.13480840623378754], [0.13350653648376465], [0.125601127743721], [0.15571783483028412], [0.1298191398382187], [0.13043029606342316], [0.1404784619808197]]
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([0, 4]), tensor([0, 6]), tensor([ 0, 10]), tensor([ 0, 19]), tensor([1, 3]), tensor([1, 9]), tensor([ 1, 10]), tensor([ 1, 12]), tensor([ 1, 19]), tensor([2, 9]), tensor([ 2, 11]), tensor([ 2, 15]), tensor([ 2, 16]), tensor([3, 4]), tensor([3, 6]), tensor([3, 8]), tensor([ 3, 15]), tensor([ 3, 16]), tensor([ 3, 18]), tensor([4, 7]), tensor([ 4, 11]), tensor([ 4, 13]), tensor([ 4, 15]), tensor([5, 7]), tensor([ 5, 17]), tensor([ 5, 18]), tensor([ 6, 11]), tensor([7, 8]), tensor([7, 9]), tensor([ 7, 10]), tensor([ 7, 11]), tensor([ 7, 12]), tensor([ 7, 15]), tensor([ 7, 17]), tensor([ 7, 18]), tensor([ 7, 19]), tensor([8, 9]), tensor([ 8, 14]), tensor([ 9, 12]), tensor([11, 14]), tensor([11, 16]), tensor([11, 19]), tensor([12, 15]), tensor([12, 18]), tensor([13, 19]), tensor([14, 15]), tensor([14, 18]), tensor([16, 17]), tensor([17, 19]), tensor([18, 19])]
