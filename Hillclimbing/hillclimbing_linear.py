@@ -11,13 +11,13 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/cml/timeseries_ba20_1k_3.5_restart.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
+SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba10_5k_0.15.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 200
+NUM_DYN_EPOCHS = 40
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'standard'
+FORMAT = 'timeseries'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
 USE_NODEWISE_LOSS = True
 USE_DYNAMIC_STEPS = True
@@ -25,7 +25,7 @@ NUM_GEN = 45
 DETERMINISTIC_EVAL = False
 RANDOM = False
 FREE_WALK = False
-EXPERIMENTS = 1
+EXPERIMENTS = 5
 
 CONTINUATION = False
 CONT_ADDRESS = './hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816'
@@ -38,7 +38,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/linear/final/nodewise/cml/ba20_1k_3.5', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/linear/final/nodewise/SIS/ba20_5k', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
@@ -133,12 +133,12 @@ for _ in range(EXPERIMENTS):
                     cand[list(index)] = new_cand.detach()[list(index)]
                     cand[list(index.flip(dims=(0,)))] = new_cand.detach()[list(index.flip(dims=(0,)))]
             cand.requires_grad_(True)
-            print('count_changes: ' + str(count_changes))
-            if count_changes == 0:
-                if MAX_CHANGES > 1:
-                    MAX_CHANGES = MAX_CHANGES // 2
-                else:
-                    MAX_CHANGES = NUM_NODES
+            print('count_changes: ' + str(count_changes ) + ' / ' + str(len(indices)))
+            #if count_changes == 0:
+            #    if MAX_CHANGES > 1:
+            #        MAX_CHANGES = MAX_CHANGES // 2
+            #    else:
+            #        MAX_CHANGES = NUM_NODES
         else:
             #print('new_loss: ' + str(new_loss.item()))
             #print('loss: ' + str(loss.item()))
