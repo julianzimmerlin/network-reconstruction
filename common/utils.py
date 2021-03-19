@@ -184,8 +184,8 @@ def calc_S_eval(matrix, dyn_learner, evaluator,  matrix_loss=None):
             neighbor[i, j] = 1 - neighbor[i, j]
             neighbor[j, i] = 1 - neighbor[j, i]
             loss = evaluator.evaluate_individual_no_training(neighbor, dyn_learner)
-            S[i,j] = matrix_loss - loss.mean()
-            S[j,i] = matrix_loss - loss.mean()
+            S[i,j] = matrix_loss.mean() - loss.mean()
+            S[j,i] = matrix_loss.mean() - loss.mean()
     if torch.all(S<=0):
         print('S IS ALL NEGATIVE!')
     return S
