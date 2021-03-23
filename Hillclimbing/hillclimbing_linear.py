@@ -11,24 +11,24 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/Voter/timeseries_ba20_100.pickle'
+SERIES_ADDRESS = r'../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
 ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 300
+NUM_DYN_EPOCHS = 200
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'old'
+FORMAT = 'standard'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
-USE_NODEWISE_LOSS = True
+USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = True
-NUM_GEN = 45
+NUM_GEN = 20
 DETERMINISTIC_EVAL = False
 RANDOM = False
 FREE_WALK = False
 EXPERIMENTS = 5
 
-CONTINUATION = False
-CONT_ADDRESS = './hillclimbing_logs/linear/final/heuristics_comp/deterministic/cml/ba10_1k_restart_3.5_random/2021-03-04T15_54_10.394816'
+CONTINUATION = True
+CONT_ADDRESS = r'../GA\GA_logs\final\cml_ba20_1k_4_restart_shortcut_eval\2021-03-11T03_17_31.151794'
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)
@@ -38,7 +38,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/linear/final/nodewise/SIS/ba20_100_eval', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/linear/final/check_PBLS_vs_HC/cml_ba20_1k_4', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
@@ -74,9 +74,13 @@ for _ in range(EXPERIMENTS):
 
     start_time = time.process_time()
     if CONTINUATION:
-        with open(CONT_ADDRESS+'/matrices.pickle', 'rb') as f:
-            matrices = pickle.load(f)
-            cand = matrices[-1]
+        #with open(CONT_ADDRESS+'/matrices.pickle', 'rb') as f:
+        #    matrices = pickle.load(f)
+        #    cand = matrices[-1]
+        with open(CONT_ADDRESS+'/all_populations.pickle', 'rb') as f:
+            all_pops = pickle.load(f)
+            start_pop = all_pops[0]
+            cand = start_pop[8]
     else:
         cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
     #DEBUG::::::::::::
