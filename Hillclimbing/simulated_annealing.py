@@ -21,8 +21,9 @@ DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'standard'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
 EXPERIMENTS = 5
-CONTINUATION = False
-CONT_ADDRESS = '/content/drive/MyDrive/BA_Code/hillclimbing_logs/annealing/first/2021-01-27T18_56_40.854852'
+
+CONTINUATION = True
+CONT_ADDRESS = '../GA/GA_logs/final/cml_ba20_1k_4_restart_shortcut_eval/2021-03-11T03_17_31.151794'
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)
@@ -61,7 +62,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/annealing/final/cml_ba20_1k_4_restart_eval', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/annealing/final/check_PBLS_vs_HC/cml_ba20_1k_4', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
@@ -87,9 +88,13 @@ for _ in range(EXPERIMENTS):
 
     start_time = time.process_time()
     if CONTINUATION:
-        with open(CONT_ADDRESS+'/matrices.pickle', 'rb') as f:
-            matrices = pickle.load(f)
-            cand = matrices[-1]
+        #with open(CONT_ADDRESS+'/matrices.pickle', 'rb') as f:
+        #    matrices = pickle.load(f)
+        #    cand = matrices[-1]
+        with open(CONT_ADDRESS+'/all_populations.pickle', 'rb') as f:
+            all_pops = pickle.load(f)
+            start_pop = all_pops[0]
+            cand = start_pop[8]
     else:
         cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
 
