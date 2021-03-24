@@ -10,7 +10,7 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 0
+SEED = 1
 SERIES_ADDRESS = r'../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
 ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
@@ -28,7 +28,7 @@ FREE_WALK = False
 EXPERIMENTS = 5
 
 CONTINUATION = True
-CONT_ADDRESS = r'../GA\GA_logs\final\cml_ba20_1k_4_restart_shortcut_eval\2021-03-11T03_17_31.151794'
+CONT_ADDRESS = '../GA/GA_logs/final/cml_ba20_1k_4_restart_shortcut_eval/2021-03-11T03_17_31.151794'
 
 torch.manual_seed(SEED)
 np.random.seed(SEED)
