@@ -1,0 +1,62 @@
+../data/final/cml/timeseries_ba20_1k_4_restart.pickle
+../data/final/edges_ba20.pickle
+CONTINUATION: True
+CONT_ADDRESS: ../GA/GA_logs/final/cml_ba20_1k_4_restart_shortcut_eval/2021-03-11T03_17_31.151794
+SEED: 1
+NUM_DYN_EPOCHS: 200
+DETECT_EARLY_CONVERGENCE: False
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+USE_NODEWISE_LOSS: False
+USE_DYNAMIC_STEPS: True
+NUM_GEN: 20
+DETERMINISTIC_EVAL: False
+FREE WALK: False
+EXPERIMENTS: 5
+FORMAT: standard
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 200
+IS_CONTINUOUS: True
+USE_MAX: False
+
+Generation 0
+Mean loss in evaluation epoch: 0.09115997701883316, epochs needed: 200
+------------------------- TRACKING ---------------------------
+Matrix Hash: e3e497f83e6e3c09, num_times_seen_before: 0
+ACC: 0.9
+TPR/FPR: 1.0, 0.12337662337662338
+Loss: 0.09115997701883316
+Timestamp: 0
+---------------------------------------------------------------
+[tensor([ 2, 17]), tensor([3, 6]), tensor([ 4, 14]), tensor([ 7, 14]), tensor([14, 18]), tensor([17, 18])]
+Mean loss in evaluation epoch: 0.10820891708135605, epochs needed: 200
+Rejecting!
+
+Generation 1
+Mean loss in evaluation epoch: 0.09958149492740631, epochs needed: 200
+------------------------- TRACKING ---------------------------
+Matrix Hash: e3e497f83e6e3c09, num_times_seen_before: 1
+ACC: 0.9
+TPR/FPR: 1.0, 0.12337662337662338
+Loss: 0.09958149492740631
+Timestamp: 136.93397095300043
+---------------------------------------------------------------
+[tensor([3, 6]), tensor([14, 18]), tensor([17, 18]), tensor([17, 19])]
+Mean loss in evaluation epoch: 0.0812932476401329, epochs needed: 200
+Accepting!
+
+Generation 2
+Mean loss in evaluation epoch: 0.08332820981740952, epochs needed: 200
+------------------------- TRACKING ---------------------------
+Matrix Hash: 703043207a79147e, num_times_seen_before: 0
+ACC: 0.9210526315789473
+TPR/FPR: 1.0, 0.09740259740259741
+Loss: 0.08332820981740952
+Timestamp: 272.7059783750001
+---------------------------------------------------------------
+[tensor([ 2, 17]), tensor([ 7, 14]), tensor([ 9, 15]), tensor([15, 16])]
