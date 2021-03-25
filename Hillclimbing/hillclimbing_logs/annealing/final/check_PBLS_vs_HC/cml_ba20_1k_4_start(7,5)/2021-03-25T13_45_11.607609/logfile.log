@@ -1,0 +1,61 @@
+../data/final/cml/timeseries_ba20_1k_4_restart.pickle
+../data/final/edges_ba20.pickle
+SEED: 0
+NUM_DYN_EPOCHS: 200
+DETECT_EARLY_CONVERGENCE: False
+CONTINUATION: True
+CONT_ADDRESS: ../GA/GA_logs/final/cml_ba20_1k_4_restart_shortcut_eval/2021-03-11T03_17_31.151794
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+NUM_GEN: 20
+FORMAT: standard
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 200
+IS_CONTINUOUS: True
+USE_MAX: False
+Mean loss in evaluation epoch: 0.10632500797510147, epochs needed: 200
+
+
+ Tracking generation 0
+------------------------- TRACKING ---------------------------
+Matrix Hash: e3e497f83e6e3c09, num_times_seen_before: 0
+ACC: 0.9
+TPR/FPR: 1.0, 0.12337662337662338
+Loss: 0.10632500797510147
+Timestamp: 0
+---------------------------------------------------------------
+Candidate: bb56a6769a2a7311. Changes:6
+Mean loss in evaluation epoch: 0.11121983826160431, epochs needed: 200
+will accept with prob tensor(0.5974)
+accepting!
+Mean loss in evaluation epoch: 0.08170343190431595, epochs needed: 200
+
+
+ Tracking generation 1
+------------------------- TRACKING ---------------------------
+Matrix Hash: bb56a6769a2a7311, num_times_seen_before: 0
+ACC: 0.9315789473684211
+TPR/FPR: 1.0, 0.08441558441558442
+Loss: 0.08170343190431595
+Timestamp: 139.09097056999963
+---------------------------------------------------------------
+Candidate: e4972e38d31852aa. Changes:4
+Mean loss in evaluation epoch: 0.11380960047245026, epochs needed: 200
+will accept with prob tensor(0.0282)
+rejecting.
+Mean loss in evaluation epoch: 0.08026653528213501, epochs needed: 200
+
+
+ Tracking generation 2
+------------------------- TRACKING ---------------------------
+Matrix Hash: bb56a6769a2a7311, num_times_seen_before: 1
+ACC: 0.9315789473684211
+TPR/FPR: 1.0, 0.08441558441558442
+Loss: 0.08026653528213501
+Timestamp: 277.3767255699986
+---------------------------------------------------------------
