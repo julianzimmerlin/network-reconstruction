@@ -10,13 +10,13 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 1
+SEED = 0
 SERIES_ADDRESS = r'../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
 ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 200
-NUM_GEN = 45
+NUM_GEN = 20
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'standard'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
@@ -62,7 +62,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/annealing/final/check_PBLS_vs_HC/cml_ba20_1k_4', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/annealing/final/check_PBLS_vs_HC/cml_ba20_1k_4_start(5,2)', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
@@ -93,8 +93,8 @@ for _ in range(EXPERIMENTS):
         #    cand = matrices[-1]
         with open(CONT_ADDRESS+'/all_populations.pickle', 'rb') as f:
             all_pops = pickle.load(f)
-            start_pop = all_pops[0]
-            cand = start_pop[8]
+            start_pop = all_pops[5]
+            cand = start_pop[2]
     else:
         cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
 

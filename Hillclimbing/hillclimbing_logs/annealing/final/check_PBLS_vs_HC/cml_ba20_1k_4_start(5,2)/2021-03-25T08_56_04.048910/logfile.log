@@ -1,0 +1,64 @@
+../data/final/cml/timeseries_ba20_1k_4_restart.pickle
+../data/final/edges_ba20.pickle
+SEED: 0
+NUM_DYN_EPOCHS: 200
+DETECT_EARLY_CONVERGENCE: False
+CONTINUATION: True
+CONT_ADDRESS: ../GA/GA_logs/final/cml_ba20_1k_4_restart_shortcut_eval/2021-03-11T03_17_31.151794
+USE_EVALEPOCH_FOR_GUIDED_MUTATION: True
+NUM_GEN: 20
+FORMAT: standard
+num samples: 1000
+NUM_TRAIN_SAMPLES: 1000
+NUM_TRAIN_BATCHES: 10
+NUM_TEST_SAMPLES: 1000
+NUM_TEST_BATCHES: 10
+BATCH_SIZE: 100
+HIDDEN_SIZE: 128
+NUM_DYN_EPOCHS: 200
+IS_CONTINUOUS: True
+USE_MAX: False
+Mean loss in evaluation epoch: 0.10695929825305939, epochs needed: 200
+
+
+ Tracking generation 0
+------------------------- TRACKING ---------------------------
+Matrix Hash: f858825d8f152304, num_times_seen_before: 0
+ACC: 0.7631578947368421
+TPR/FPR: 1.0, 0.2922077922077922
+Loss: 0.10695929825305939
+Timestamp: 0
+---------------------------------------------------------------
+Candidate: 05260e33784ba3dc. Changes:4
+Mean loss in evaluation epoch: 0.10940041393041611, epochs needed: 200
+will accept with prob tensor(0.7734)
+accepting!
+Mean loss in evaluation epoch: 0.10928255319595337, epochs needed: 200
+
+
+ Tracking generation 1
+------------------------- TRACKING ---------------------------
+Matrix Hash: 05260e33784ba3dc, num_times_seen_before: 0
+ACC: 0.7631578947368421
+TPR/FPR: 1.0, 0.2922077922077922
+Loss: 0.10928255319595337
+Timestamp: 136.41958075999997
+---------------------------------------------------------------
+Candidate: 33e02ddb3d2fc5cd. Changes:12
+Mean loss in evaluation epoch: 0.11567585915327072, epochs needed: 200
+will accept with prob tensor(0.4915)
+accepting!
+Mean loss in evaluation epoch: 0.1124429926276207, epochs needed: 200
+
+
+ Tracking generation 2
+------------------------- TRACKING ---------------------------
+Matrix Hash: 33e02ddb3d2fc5cd, num_times_seen_before: 0
+ACC: 0.7315789473684211
+TPR/FPR: 0.7777777777777778, 0.2792207792207792
+Loss: 0.1124429926276207
+Timestamp: 272.38149111499996
+---------------------------------------------------------------
+Candidate: 367458ac0275aff3. Changes:17
+Mean loss in evaluation epoch: 0.11163163185119629, epochs needed: 200
+smaller, so accepting
