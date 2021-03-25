@@ -38,7 +38,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/linear/final/check_PBLS_vs_HC/cml_ba20_1k_4_start(5,2)', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/linear/final/check_PBLS_vs_HC/cml_ba20_1k_4_start(7,5)', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
@@ -79,8 +79,8 @@ for _ in range(EXPERIMENTS):
         #    cand = matrices[-1]
         with open(CONT_ADDRESS+'/all_populations.pickle', 'rb') as f:
             all_pops = pickle.load(f)
-            start_pop = all_pops[5]
-            cand = start_pop[2]
+            start_pop = all_pops[7]
+            cand = start_pop[5]
     else:
         cand = ut.sample_undirected_matrix_uniform(NUM_NODES)
     #DEBUG::::::::::::
