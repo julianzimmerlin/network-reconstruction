@@ -10,7 +10,7 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 0
+SEED = 1
 SERIES_ADDRESS = r'../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
 ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
 BATCH_SIZE = 100
