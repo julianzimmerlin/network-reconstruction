@@ -10,24 +10,24 @@ import tracker as tr
 import copy
 import search_utils as su
 
-SEED = 1
-SERIES_ADDRESS = r'../data/final/cml/timeseries_ba20_1k_4_restart.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba20.pickle'
+SEED = 0
+SERIES_ADDRESS = r'../data/final/Voter/timeseries_ba100_100.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba100.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 200
+NUM_DYN_EPOCHS = 300
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'standard'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
-USE_NODEWISE_LOSS = False
+FORMAT = 'old'
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
+USE_NODEWISE_LOSS = True
 USE_DYNAMIC_STEPS = True
-NUM_GEN = 20
+NUM_GEN = 45
 DETERMINISTIC_EVAL = False
 RANDOM = False
 FREE_WALK = False
-EXPERIMENTS = 5
+EXPERIMENTS = 1
 
-CONTINUATION = True
+CONTINUATION = False
 CONT_ADDRESS = '../GA/GA_logs/final/cml_ba20_1k_4_restart_shortcut_eval/2021-03-11T03_17_31.151794'
 
 torch.manual_seed(SEED)
@@ -38,7 +38,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/linear/final/check_PBLS_vs_HC/cml_ba20_1k_4_start(7,5)', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/linear/final/nodewise/Voter/ba100_100', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
