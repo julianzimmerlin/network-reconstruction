@@ -11,11 +11,11 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/Voter/timeseries_ba100_100.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba100.pickle'
+SERIES_ADDRESS = r'../data/final/Voter/timeseries_ba300_1k.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba300.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
-NUM_DYN_EPOCHS = 300
+NUM_DYN_EPOCHS = 30
 DETECT_EARLY_CONVERGENCE = False
 FORMAT = 'old'
 USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
@@ -25,7 +25,7 @@ NUM_GEN = 45
 DETERMINISTIC_EVAL = False
 RANDOM = False
 FREE_WALK = False
-EXPERIMENTS = 1
+EXPERIMENTS = 5
 
 CONTINUATION = False
 CONT_ADDRESS = '../GA/GA_logs/final/cml_ba20_1k_4_restart_shortcut_eval/2021-03-11T03_17_31.151794'
@@ -38,7 +38,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/linear/final/nodewise/Voter/ba100_100', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/linear/final/nodewise/Voter/ba300_1k', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
