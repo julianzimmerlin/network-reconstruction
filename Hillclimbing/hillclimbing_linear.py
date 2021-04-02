@@ -11,15 +11,15 @@ import copy
 import search_utils as su
 
 SEED = 0
-SERIES_ADDRESS = r'../data/final/cml/timeseries_ba50_1k_4.pickle'
-ADJ_ADDRESS = r'../data/final/edges_ba50.pickle'
+SERIES_ADDRESS = r'../data/final/netrd/SIS/timeseries_ba10_1k_0.15.pickle'
+ADJ_ADDRESS = r'../data/final/edges_ba10.pickle'
 BATCH_SIZE = 100
 HIDDEN_SIZE = 128
 NUM_DYN_EPOCHS = 200
 DETECT_EARLY_CONVERGENCE = False
-FORMAT = 'standard'
-USE_EVALEPOCH_FOR_GUIDED_MUTATION = False
-USE_NODEWISE_LOSS = True
+FORMAT = 'timeseries'
+USE_EVALEPOCH_FOR_GUIDED_MUTATION = True
+USE_NODEWISE_LOSS = False
 USE_DYNAMIC_STEPS = True
 NUM_GEN = 45
 DETERMINISTIC_EVAL = False
@@ -38,7 +38,7 @@ exp_final_accs = list()
 exp_final_tprs = list()
 exp_final_fprs = list()
 for _ in range(EXPERIMENTS):
-    logger = lo.Logger('hillclimbing_logs/linear/final/nodewise/cml/ba50_1k_4', original_terminal=orig_terminal)
+    logger = lo.Logger('hillclimbing_logs/linear/final/SIS_ba10_1k_grad_timing', original_terminal=orig_terminal)
     sys.stdout = logger
     print(SERIES_ADDRESS)
     print(ADJ_ADDRESS)
@@ -120,9 +120,9 @@ for _ in range(EXPERIMENTS):
                 new_cand, indices = ut.exec_single_step_eval(cand, dyn_learner, evaluator, loss) if USE_EVALEPOCH_FOR_GUIDED_MUTATION else ut.exec_single_step_grad(cand)
 
         print(indices)
-        if len(indices)==0:
-            print('skipping.')
-            continue
+        #if len(indices)==0:
+        #    print('skipping.')
+        #    continue
             #new_cand, indices = ut.exec_dynamic_step_grad(cand)
 
         new_cand.requires_grad_(True)
